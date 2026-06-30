@@ -366,115 +366,14 @@ const initOrbitDots = () => {
   });
 };
 
-// ============================================
-// SCROLL-TRIGGERED ANIMATIONS
-// ============================================
-const initScrollAnimations = () => {
-  // Blur reveal elements
-  const blurElements = document.querySelectorAll('.blur-reveal');
-  const blurObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        blurObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
-  
-  blurElements.forEach(el => {
-  blurObserver.observe(el);
-});
 
-  // Fade-up elements
-  const fadeElements = document.querySelectorAll('.fade-up');
-  const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const siblings = Array.from(entry.target.parentElement?.children || []);
-        const index = siblings.indexOf(entry.target);
-        entry.target.style.animationDelay = `${index * 0.02}s`;
-        entry.target.classList.add('revealed');
-        fadeObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
 
-  fadeElements.forEach(el => fadeObserver.observe(el));
 
-  // Timeline line animation
-  const timelineLine = document.getElementById('timelineLine');
-  if (timelineLine) {
-    const lineObserver = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        timelineLine.classList.add('animate');
-        lineObserver.unobserve(timelineLine);
-      }
-    }, { threshold: 0.3 });
-    lineObserver.observe(timelineLine);
-  }
-};
 
-// ============================================
-// COUNTER ANIMATIONS
-// ============================================
-const initCounters = () => {
-  const counters = document.querySelectorAll('[data-target]');
-  if (!counters.length) return;
 
-  const animateCounter = (el, target, duration = 2000) => {
-    const startTime = performance.now();
-    const step = (now) => {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(eased * target);
-      el.textContent = current.toLocaleString();
-      if (progress < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.dataset.target, 10);
-        if (!isNaN(target)) {
-          animateCounter(el, target, 1500);
-        }
-        observer.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
 
-  counters.forEach(counter => observer.observe(counter));
-};
 
-// ============================================
-// STAT BAR ANIMATIONS
-// ============================================
-const initStatBars = () => {
-  const bars = document.querySelectorAll('.stat-fill');
-  if (!bars.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Stagger animation
-        const allBars = Array.from(bars);
-        allBars.forEach((bar, i) => {
-          setTimeout(() => {
-            bar.classList.add('animate');
-          }, i * 200);
-        });
-        observer.disconnect();
-      }
-    });
-  }, { threshold: 0.5 });
-
-  const card = document.getElementById('heroCard1');
-  if (card) observer.observe(card);
-};
 
 // ============================================
 // ACCORDION
@@ -566,24 +465,8 @@ const initNavigation = () => {
   window.addEventListener('scroll', highlightNav);
 };
 
-// ============================================
-// HERO CARD ENTRANCE
-// ============================================
-const initHeroCards = () => {
-  const cards = document.querySelectorAll('.hero-card');
-  if (!cards.length) return;
 
-  cards.forEach((card, i) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(40px) scale(0.95)';
-    card.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
 
-    setTimeout(() => {
-      card.style.opacity = '1';
-      card.style.transform = 'translateY(0) scale(1)';
-    }, 800 + i * 200);
-  });
-};
 
 // ============================================
 // NOISE TEXTURE GENERATION
@@ -677,15 +560,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initMeshGradient();
   initGeometricGrid();
   initOrbitDots();
-  initScrollAnimations();
-  initCounters();
-  initStatBars();
   initAccordion();
   initNavigation();
-  initHeroCards();
   initNoiseTexture();
   initParallax();
   initSmoothScroll();
   initCursorSpotlight();
 });
-
