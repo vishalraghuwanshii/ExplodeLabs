@@ -273,6 +273,47 @@ button {
 /* ============================================
    ANIMATION CLASSES
    ============================================ */
+.blur-reveal {
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.blur-reveal.revealed {
+  animation: blurReveal 0.2s var(--ease-out) forwards;
+}
+
+@keyframes blurReveal {
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-up.revealed {
+  animation: fadeUp 0.2s var(--ease-out) forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger children */
+.stagger-children .fade-up:nth-child(1) { animation-delay: 0s; }
+.stagger-children .fade-up:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children .fade-up:nth-child(3) { animation-delay: 0.2s; }
+.stagger-children .fade-up:nth-child(4) { animation-delay: 0.2s; }
+.stagger-children .fade-up:nth-child(5) { animation-delay: 0.2s; }
+.stagger-children .fade-up:nth-child(6) { animation-delay: 0.2s; }
+.stagger-children .fade-up:nth-child(7) { animation-delay: 0.2s; }
+.stagger-children .fade-up:nth-child(8) { animation-delay: 0.2s; }
 
 /* ============================================
    NAVIGATION
@@ -408,6 +449,35 @@ button {
   align-items: center;
   overflow: hidden;
   padding-top: 72px;
+}
+
+/* Hero animation sequence */
+.hero .eyebrow.blur-reveal {
+    animation-delay: 0s;
+}
+
+.hero .hero-headline span:nth-child(1).blur-reveal {
+    animation-delay: .15s;
+}
+
+.hero .hero-headline span:nth-child(2).blur-reveal {
+    animation-delay: .25s;
+}
+
+.hero .hero-headline span:nth-child(3).blur-reveal {
+    animation-delay: .35s;
+}
+
+.hero .hero-sub.blur-reveal {
+    animation-delay: .45s;
+}
+
+.hero .hero-buttons.blur-reveal {
+    animation-delay: .55s;
+}
+
+.hero .hero-trust.blur-reveal {
+    animation-delay: .65s;
 }
 
 
@@ -582,11 +652,15 @@ button {
 
 .stat-fill {
   height: 100%;
-  width: var(--fill-width);
+  width: 0;
   border-radius: 3px;
   background: var(--fill-color);
+  transition: width 1s var(--ease-out);
 }
 
+.stat-fill.animate {
+  width: var(--fill-width);
+}
 
 .card-preview {
   top: 40px;
@@ -595,6 +669,12 @@ button {
   padding: 0;
   overflow: hidden;
   z-index: 2;
+  animation: cardFloat 6s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 .card-orbits {
@@ -836,6 +916,7 @@ button {
   width: 100%;
   max-width: 540px;
   padding: 24px;
+  animation: cardFloat 5s ease-in-out infinite;
 }
 
 /* ============================================
@@ -1133,8 +1214,14 @@ button {
   right: 10%;
   height: 2px;
   background: linear-gradient(90deg, rgba(192, 132, 252, 0.3), rgba(78, 205, 196, 0.3));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.2s var(--ease-smooth);
 }
 
+.timeline-line.animate {
+  transform: scaleX(1);
+}
 
 .process-steps {
   display: flex;
