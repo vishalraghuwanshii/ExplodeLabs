@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExplodeLabs — Roofing Websites That Convert</title>
+  <meta name="description" content="We redesign roofing company websites with zero risk. Pay nothing upfront. See your new site first. Only $500 if you love it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================
+       NOISE OVERLAY
+       ============================================ -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+    <span class="brand-accent">Explode</span>Labs
+</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#comparison" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="explodelabs.com/tools" class="nav-link">Tools</a>
+      </div>
+      <a href="#cta" class="nav-cta">Get A Free Redesign</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero" id="hero">
+    <!-- Mesh Gradient Canvas -->
+    <canvas class="mesh-gradient-canvas" id="meshCanvas" aria-hidden="true"></canvas>
+    <!-- Geometric Grid SVG -->
+    <svg class="geometric-grid" id="geoGrid" aria-hidden="true"></svg>
+    <!-- Vignette overlay applied via CSS pseudo-element -->
+
+    <div class="hero-container">
+      <!-- Left Column -->
+      <div class="hero-left">
+        <span class="eyebrow">WEB DESIGN FOR ROOFING COMPANIES</span>
+        <h1 class="hero-headline">
+          <span class="">We Build Roofing Websites That</span>
+          <span class="">Convert Visitors Into</span>
+          <span class="accent-glow">Booked Inspections</span>
+        </h1>
+        <p class="hero-sub">We redesign roofing company websites with zero risk. You only pay if you love the result. No upfront costs, no contracts, no hidden fees.</p>
+        <div class="hero-buttons">
+          <a href="#cta" class="btn btn-primary">Get A Free Redesign</a>
+          <a href="#process" class="btn btn-secondary">View Our Process</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f7b731;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>5.0 Rating</span>
+          </div>
+          <div class="trust-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>100+ Roofing Sites</span>
+          </div>
+          <div class="trust-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>$0 Upfront</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column — Floating Cards -->
+      <div class="hero-right">
+        <!-- Card 1: Lead Gen Stats -->
+        <div class="glass-card hero-card card-stats" id="heroCard1">
+          <h3 class="card-title">Lead Generation</h3>
+          <div class="stat-row">
+            <div class="stat-label">
+              <span class="dot" style="background: #22c55e;"></span>
+              <span>Website Visits</span>
+            </div>
+            <span class="stat-value mono">2,847</span>
+          </div>
+          <div class="stat-bar"><div class="stat-fill" style="--fill-width: 70%; --fill-color: #22c55e;"></div></div>
+          <div class="stat-row">
+            <div class="stat-label">
+              <span class="dot" style="background: #c084fc;"></span>
+              <span>Form Submissions</span>
+            </div>
+            <span class="stat-value mono">186</span>
+          </div>
+          <div class="stat-bar"><div class="stat-fill" style="--fill-width: 45%; --fill-color: #c084fc;"></div></div>
+          <div class="stat-row">
+            <div class="stat-label">
+              <span class="dot" style="background: #4ecdc4;"></span>
+              <span>Call Requests</span>
+            </div>
+            <span class="stat-value mono">94</span>
+          </div>
+          <div class="stat-bar"><div class="stat-fill" style="--fill-width: 30%; --fill-color: #4ecdc4;"></div></div>
+        </div>
+
+        <!-- Card 2: Website Preview -->
+        <div class="glass-card hero-card card-preview" id="heroCard2">
+          <div class="browser-chrome">
+            <span class="chrome-dot" style="background: #ff5f56;"></span>
+            <span class="chrome-dot" style="background: #ffbd2e;"></span>
+            <span class="chrome-dot" style="background: #27c93f;"></span>
+          </div>
+          <div class="browser-content">
+            <img src="assets/portfolio-6.jpg" alt="Premium roofing website preview" loading="eager">
+          </div>
+        </div>
+
+        <!-- Card 3: Orbiting Dots -->
+        <div class="glass-card hero-card card-orbits" id="heroCard3">
+          <h3 class="card-title">Live Activity</h3>
+          <div class="orbits-row">
+            <div class="orbit-container" data-orbit="{&quot;count&quot;:4,&quot;radius&quot;:32,&quot;duration&quot;:8,&quot;direction&quot;:1,&quot;colors&quot;:[&quot;#ff6b9d&quot;,&quot;#4ecdc4&quot;,&quot;#c084fc&quot;,&quot;#f7b731&quot;]}"></div>
+            <div class="orbit-container" data-orbit="{&quot;count&quot;:3,&quot;radius&quot;:24,&quot;duration&quot;:12,&quot;direction&quot;:-1,&quot;colors&quot;:[&quot;#4ecdc4&quot;,&quot;#f7b731&quot;,&quot;#ff6b9d&quot;]}"></div>
+            <div class="orbit-container" data-orbit="{&quot;count&quot;:5,&quot;radius&quot;:40,&quot;duration&quot;:16,&quot;direction&quot;:1,&quot;colors&quot;:[&quot;#c084fc&quot;,&quot;#4ecdc4&quot;,&quot;#ff6b9d&quot;,&quot;#f7b731&quot;,&quot;#ffffff&quot;]}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TRUST BAR
+       ============================================ -->
+  <section class="trust-bar" id="trustBar">
+    <div class="marquee">
+      <div class="marquee-track">
+        <div class="marquee-item"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f7b731" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f7b731" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f7b731" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f7b731" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f7b731" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span>5.0 Rating</span></div>
+        <div class="marquee-sep"></div>
+        <div class="marquee-item">100+ Roofing Companies Served</div>
+        <div class="marquee-sep"></div>
+        <div class="marquee-item">Google Partner</div>
+        <div class="marquee-sep"></div>
+        <div class="marquee-item">$0 Upfront Cost</div>
+        <div class="marquee-sep"></div>
+        <div class="marquee-item">5-Day Turnaround</div>
+        <div class="marquee-sep"></div>
+        <div class="marquee-item">100% Satisfaction</div>
+        <div class="marquee-sep"></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="marquee-item"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f7b731" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f7b731" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f7b731" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f7b731" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#f7b731" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span>5.0 Rating</span></div>
+        <div class="marquee-sep"></div>
+        <div class="marquee-item">100+ Roofing Companies Served</div>
+        <div class="marquee-sep"></div>
+        <div class="marquee-item">Google Partner</div>
+        <div class="marquee-sep"></div>
+        <div class="marquee-item">$0 Upfront Cost</div>
+        <div class="marquee-sep"></div>
+        <div class="marquee-item">5-Day Turnaround</div>
+        <div class="marquee-sep"></div>
+        <div class="marquee-item">100% Satisfaction</div>
+        <div class="marquee-sep"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROBLEM SECTION
+       ============================================ -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <span class="eyebrow">THE PROBLEM</span>
+      <h2 class="section-title">Your Current Website Is Costing You Jobs Every Single Day</h2>
+      <p class="section-sub">Most roofing websites are outdated, slow, and fail to turn visitors into leads.</p>
+
+      <div class="problem-grid">
+        <!-- Card 1 -->
+        <div class="problem-card">
+          <div class="problem-icon" style="--icon-bg: rgba(192,132,252,.1); --icon-color: #c084fc;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Outdated Design</h3>
+          <p>Your website looks like it was built in 2012. First impressions matter, and an outdated site makes potential customers question your professionalism before they even call.</p>
+          <div class="problem-stat">78% of visitors judge credibility by design</div>
+        </div>
+        <!-- Card 2 -->
+        <div class="problem-card">
+          <div class="problem-icon" style="--icon-bg: rgba(78,205,196,.1); --icon-color: #4ecdc4;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h3>No Mobile Optimization</h3>
+          <p>Over 70% of your potential customers are searching for roofers on their phones. If your site doesn't load perfectly on mobile, you're losing jobs to competitors.</p>
+          <div class="problem-stat">71% of roofing searches happen on mobile</div>
+        </div>
+        <!-- Card 3 -->
+        <div class="problem-card">
+          <div class="problem-icon" style="--icon-bg: rgba(255,107,157,.1); --icon-color: #ff6b9d;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" x2="22" y1="8" y2="13"/><line x1="22" x2="17" y1="8" y2="13"/></svg>
+          </div>
+          <h3>Zero Lead Capture</h3>
+          <p>Your website is just a digital brochure. No clear call-to-action, no easy way to request a quote, no system to capture visitor information and follow up.</p>
+          <div class="problem-stat">96% of visitors leave without contacting you</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SOLUTION SECTION
+       ============================================ -->
+  <section class="solution" id="solution">
+    <div class="container solution-layout">
+      <div class="solution-left">
+        <span class="eyebrow">THE SOLUTION</span>
+        <h2 class="section-title">A Website Engineered To Book More Roofing Jobs</h2>
+        <div class="solution-features">
+          <div class="feature-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>Modern, Premium Design</h3>
+              <p>A visually stunning website that immediately builds trust and positions you as the top roofing company in your area.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>Built for Mobile-First</h3>
+              <p>Lightning-fast load times and perfect responsiveness on every device, from iPhones to desktops.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>Conversion-Optimized</h3>
+              <p>Strategic call-to-action placement, quote request forms, and click-to-call buttons designed to maximize leads.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h3>SEO-Ready Structure</h3>
+              <p>Clean code, fast performance, and proper markup that helps Google rank you above competitors.</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://calendly.com/vishalraghu7772023598/30min" class="btn btn-primary">Get Your Free Redesign</a>
+      </div>
+
+      <div class="solution-right">
+        <div class="solution-card glass-card">
+          <div class="browser-chrome">
+            <span class="chrome-dot" style="background: #ff5f56;"></span>
+            <span class="chrome-dot" style="background: #ffbd2e;"></span>
+            <span class="chrome-dot" style="background: #27c93f;"></span>
+          </div>
+          <div class="browser-content">
+            <img src="assets/portfolio-1.jpg" alt="Premium roofing website design preview" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PORTFOLIO SECTION
+       ============================================ -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <span class="eyebrow">TRUSTED BY ROOFING COMPANIES</span>
+      <h2 class="section-title">Trusted By Roofing Companies Nationwide</h2>
+      <p class="section-sub">We've redesigned 100+ roofing websites. Here's a look at some of our recent work.</p>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-1.jpg" alt="nealrfg.com roofing website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>nealrfg.com</h4>
+            <a href="https://nealrfg.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-2.jpg" alt="jcroofingfw.com roofing website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>jcroofingfw.com</h4>
+            <a href="https://jcroofingfw.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-3.jpg" alt="smartroof.com roofing website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>smartroof.com</h4>
+            <a href="https://smartroof.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-4.jpg" alt="onpointcontractingusa.com roofing website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>onpointcontractingusa.com</h4>
+            <a href="https://www.onpointcontractingusa.com/roofing/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-5.jpg" alt="volthome.com roofing website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>volthome.com</h4>
+            <a href="https://volthome.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-6.jpg" alt="arringtonroofing.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>arringtonroofing.com</h4>
+            <a href="https://arringtonroofing.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-7.jpg" alt="clcroofing.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>clcroofing.com</h4>
+            <a href="https://www.clcroofing.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-8.jpg" alt="abcseamless.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>abcseamless.com</h4>
+            <a href="https://abcseamless.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-9.jpg" alt="txroofingproject.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>txroofingproject.com</h4>
+            <a href="https://txroofingproject.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-11.jpg" alt="texasroofrepair.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>texasroofrepair.com</h4>
+            <a href="https://texasroofrepair.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-12.jpg" alt="texaspremiercontractors.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>texaspremiercontractors.com</h4>
+            <a href="https://www.texaspremiercontractors.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-13.jpg" alt="suntexroofs.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>suntexroofs.com</h4>
+            <a href="https://www.suntexroofs.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-14.jpg" alt="togetherdesignbuild.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>togetherdesignbuild.com</h4>
+            <a href="https://togetherdesignbuild.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-16.jpg" alt="terzoroofingtexas.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>terzoroofingtexas.com</h4>
+            <a href="https://www.terzoroofingtexas.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-18.jpg" alt="redbirdresto.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>redbirdresto.com</h4>
+            <a href="https://redbirdresto.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-19.jpg" alt="onesourceroofs.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>onesourceroofs.com</h4>
+            <a href="https://onesourceroofs.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-20.jpg" alt="blackrockroofingtx.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>blackrockroofingtx.com</h4>
+            <a href="https://www.blackrockroofingtx.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-21.jpg" alt="arproofing.com website" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h4>arproofing.com</h4>
+            <a href="https://arproofing.com/" target="_blank" rel="noopener" class="portfolio-link">View Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       OFFER SECTION
+       ============================================ -->
+  <section class="offer" id="offer">
+    <div class="offer-bg" aria-hidden="true"></div>
+    <div class="container offer-container">
+      <div class="offer-card glass-card-premium">
+        <div class="offer-corners">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="offer-badge">ZERO-RISK OFFER</div>
+        <h2 class="offer-title">Try Your New Website Before Paying a Single Dollar</h2>
+        <p class="offer-desc">We believe in our work so much that we're willing to prove it upfront. Here's how our zero-risk process works:</p>
+
+        <div class="offer-steps">
+          <div class="offer-step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h3>Send Us Your Current Website</h3>
+              <p>Fill out a quick 2-minute form with your website link and business details. No calls required.</p>
+            </div>
+          </div>
+          <div class="offer-step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h3>We Redesign It in 5 Days</h3>
+              <p>Our team builds a complete redesign of your homepage with modern design, mobile optimization, and lead capture.</p>
+            </div>
+          </div>
+          <div class="offer-step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h3>Review Your New Site</h3>
+              <p>You'll get a live preview link to see your new website in action on desktop and mobile.</p>
+            </div>
+          </div>
+          <div class="offer-step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h3>Love It? Pay $500. Don't? Pay $0.</h3>
+              <p>If you love the redesign, it's yours for a one-time $500 fee. If not, you owe absolutely nothing.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#cta" class="btn btn-primary btn-large btn-pulse">Start Your Free Redesign</a>
+        <p class="offer-note">Takes 2 minutes. No credit card required.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHY CHOOSE ME SECTION
+       ============================================ -->
+  <section class="why" id="why">
+    <div class="container">
+      <span class="eyebrow">WHY CHOOSE EXPLODELABS</span>
+      <h2 class="section-title">Everything You Need, Nothing You Don't</h2>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon" style="--icon-bg: rgba(192,132,252,.1); --icon-color: #c084fc;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="3" x2="21" y1="9" y2="9"/><line x1="9" x2="9" y1="21" y2="9"/></svg>
+          </div>
+          <h3>Modern Design</h3>
+          <p>Clean, professional aesthetics that reflect the quality of your roofing work and build instant trust.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon" style="--icon-bg: rgba(78,205,196,.1); --icon-color: #4ecdc4;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h3>Mobile-First</h3>
+          <p>Every site is built for phones first, ensuring 70%+ of your visitors get a flawless experience.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon" style="--icon-bg: rgba(247,183,49,.1); --icon-color: #f7b731;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Lightning Fast</h3>
+          <p>Sub-3-second load times on every page. Slow sites kill conversions — speed is our priority.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon" style="--icon-bg: rgba(106,90,249,.1); --icon-color: #6a5af9;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <h3>SEO Ready</h3>
+          <p>Proper heading structure, meta tags, and semantic markup to help you climb local search rankings.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon" style="--icon-bg: rgba(34,197,94,.1); --icon-color: #22c55e;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3>Zero Risk</h3>
+          <p>Pay nothing upfront. See your new site first. Only pay $500 if you're 100% satisfied.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon" style="--icon-bg: rgba(255,107,157,.1); --icon-color: #ff6b9d;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Clean Code</h3>
+          <p>Hand-written, lightweight HTML/CSS/JS. No bloated page builders slowing your site down.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon" style="--icon-bg: rgba(192,132,252,.1); --icon-color: #c084fc;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          </div>
+          <h3>Easy Communication</h3>
+          <p>Direct access via Slack or email. No account managers, no delays, no confusion.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon" style="--icon-bg: rgba(34,197,94,.1); --icon-color: #22c55e;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <h3>Conversion Focused</h3>
+          <p>Every element is placed to drive quote requests and phone calls, not just look pretty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROCESS SECTION
+       ============================================ -->
+  <section class="process" id="process">
+    <div class="container">
+      <span class="eyebrow">OUR PROCESS</span>
+      <h2 class="section-title">From Old Site To New Leads In 5 Simple Steps</h2>
+
+      <div class="process-timeline">
+        <div class="timeline-line" id="timelineLine"></div>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-circle active">1</div>
+            <h3>Submit Your Site</h3>
+            <p>Share your current website and a few details about your roofing business.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-circle">2</div>
+            <h3>We Get To Work</h3>
+            <p>Our team analyzes your market and crafts a custom redesign in 3-5 days.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-circle">3</div>
+            <h3>Review The Design</h3>
+            <p>Get a live preview link. See your new site on desktop and mobile.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-circle">4</div>
+            <h3>Request Tweaks</h3>
+            <p>We make any adjustments you want. Unlimited revisions until you're happy.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-circle">5</div>
+            <h3>Launch & Pay</h3>
+            <p>Love it? Pay $500 one-time. We deploy your site and you start getting leads.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       COMPARISON SECTION
+       ============================================ -->
+  <section class="comparison" id="comparison">
+    <div class="container comparison-container">
+      <h2 class="section-title">See How We Compare</h2>
+
+      <div class="comparison-table">
+        <div class="table-header">
+          <div class="table-col feature-col"></div>
+          <div class="table-col">Typical Agency</div>
+          <div class="table-col accent-col">ExplodeLabs</div>
+        </div>
+        <div class="table-row">
+          <div class="table-col feature-col">Upfront Cost</div>
+          <div class="table-col">$3,000 - $10,000</div>
+          <div class="table-col accent-col"><span class="highlight-green">$0</span></div>
+        </div>
+        <div class="table-row">
+          <div class="table-col feature-col">Design Preview</div>
+          <div class="table-col">Pay first, see later</div>
+          <div class="table-col accent-col"><span class="highlight-green">See first, pay later</span></div>
+        </div>
+        <div class="table-row">
+          <div class="table-col feature-col">Contract</div>
+          <div class="table-col">6-12 month lock</div>
+          <div class="table-col accent-col"><span class="highlight-green">No contract</span></div>
+        </div>
+        <div class="table-row">
+          <div class="table-col feature-col">Turnaround</div>
+          <div class="table-col">4-8 weeks</div>
+          <div class="table-col accent-col"><strong>5 days</strong></div>
+        </div>
+        <div class="table-row">
+          <div class="table-col feature-col">Revisions</div>
+          <div class="table-col">2-3 rounds</div>
+          <div class="table-col accent-col"><strong>Unlimited</strong></div>
+        </div>
+        <div class="table-row">
+          <div class="table-col feature-col">Mobile Speed</div>
+          <div class="table-col">Often neglected</div>
+          <div class="table-col accent-col"><strong>Sub-3 seconds</strong></div>
+        </div>
+        <div class="table-row">
+          <div class="table-col feature-col">Lead Capture</div>
+          <div class="table-col">Extra cost</div>
+          <div class="table-col accent-col"><strong>Built-in</strong></div>
+        </div>
+        <div class="table-row">
+          <div class="table-col feature-col">Ongoing Fees</div>
+          <div class="table-col">$200-500/month</div>
+          <div class="table-col accent-col"><span class="highlight-green">$0 — one time</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FAQ SECTION
+       ============================================ -->
+  <section class="faq" id="faq">
+    <div class="container faq-container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>What exactly do I get for $500?</span>
+            <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>A complete homepage redesign with modern visuals, mobile optimization, fast load times, lead capture forms, click-to-call buttons, and SEO-ready structure. If you want additional pages (services, about, contact), we can discuss a separate package.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>What if I don't like the redesign?</span>
+            <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>You pay absolutely nothing. No hidden fees, no hard feelings. We're confident you'll love it, but if you don't, there's zero obligation.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>How long does the process take?</span>
+            <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>From the moment you submit your site, you'll have a live preview of your new design within 5 business days. Revisions typically take 1-2 additional days.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Do I need to sign a contract?</span>
+            <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>Nope. No contracts, no commitments, no monthly fees. Just a simple one-time payment of $500 if you decide to keep the redesign.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Will my new site work on phones?</span>
+            <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>Absolutely. Every site we build is mobile-first, meaning it's designed for phones before desktops. Your site will look and perform flawlessly on every device.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Can I make changes to the site after it's done?</span>
+            <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>Yes. We build with clean, well-documented code. You or any developer can easily make edits. We also offer affordable maintenance packages if you prefer we handle updates.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Do you work with all types of roofing companies?</span>
+            <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>We specialize in residential and commercial roofing companies across the United States. Whether you're a one-person operation or a multi-million dollar company, we can help.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FINAL CTA SECTION
+       ============================================ -->
+  <section class="final-cta" id="cta">
+    <div class="cta-bg" aria-hidden="true">
+      <span class="cta-orb"></span>
+      <span class="cta-orb"></span>
+      <span class="cta-orb"></span>
+      <span class="cta-orb"></span>
+    </div>
+    <div class="container cta-container">
+      <h2 class="section-title">Ready To Turn Your Website Into a Lead Machine?</h2>
+      <p class="cta-sub">I'll redesign your roofing website before you spend a single dollar. If you love it, it's yours for $500. If not, you owe absolutely nothing.</p>
+      <a href="https://calendly.com/vishalraghu7772023598/30min" class="btn btn-primary btn-large">Book My Free Strategy Call</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vishal@explodelabs.com&su=Free%20Website%20Redesign%20Request&body=Hi%20Vishal%2C%0A%0AI%27d%20like%20to%20claim%20the%20Free%20Website%20Redesign.%0A%0ACompany%20Name%3A%0AWebsite%3A%0AName%3A%0APhone%3A%0A%0AThanks!"
+   target="_blank"
+   rel="noopener"
+   class="btn btn-secondary btn-large">
+    Prefer Email?
+</a>
+      <p class="cta-note">Takes 2 minutes &bull; No credit card &bull; No obligation</p>
+    </div>
+    
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#" class="footer-brand">ExplodeLabs</a>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#process">Process</a>
+          <a href="#comparison">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="mailto:hello@explodelabs.com">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ExplodeLabs. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="mailto:hello@explodelabs.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       SCRIPTS
+       ============================================ -->
+  <script src="script.js"></script>
+</body>
+</html>
