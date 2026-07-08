@@ -111,8 +111,8 @@ const initMeshGradient = () => {
   const ctx = canvas.getContext('2d', { alpha: false });
   const simplex = new SimplexNoise(42);
   const palette = [
-    chroma('#1a1a4e'), chroma('#ff6b9d'), chroma('#4ecdc4'),
-    chroma('#f7b731'), chroma('#6a5af9')
+    chroma('#1c1c1e'), chroma('#3a3a3d'), chroma('#4d4d50'),
+    chroma('#2e2e30'), chroma('#565658')
   ];
 
   const config = { gridSize: 5, speed: 0.0008, noiseScale: 0.3, colorSmoothness: 2.5, paletteSize: 5 };
