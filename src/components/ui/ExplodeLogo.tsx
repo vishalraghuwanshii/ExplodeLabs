@@ -19,7 +19,7 @@ export function ExplodeLogo({ className = '', size = 30 }: ExplodeLogoProps) {
         }}
       />
 
-      {/* SVG Icon: 4 Razor-Sharp Corners with Ultra-Thin Middle Negative Space X */}
+      {/* SVG Icon: 4 Sharp Corners with Bold, Thick Negative Space X Channels */}
       <svg
         width={size}
         height={size}
@@ -65,35 +65,35 @@ export function ExplodeLogo({ className = '', size = 30 }: ExplodeLogoProps) {
           </linearGradient>
         </defs>
 
-        {/* TOP QUADRANT (Sharp outer corners, thin center apex) */}
+        {/* TOP QUADRANT (Sharp outer corners, bold negative space X) */}
         <path
-          d="M 4 4 L 96 4 Q 73 20 50 48.8 Q 27 20 4 4 Z"
+          d="M 10 4 H 90 L 85 9 Q 50 45 15 9 L 10 4 Z"
           fill="url(#quadGradTop)"
         />
         <path
-          d="M 4 4 L 96 4 Q 73 20 50 48.8 Q 27 20 4 4 Z"
+          d="M 10 4 H 90 L 85 9 Q 50 45 15 9 L 10 4 Z"
           fill="url(#quadSpecular)"
         />
 
         {/* BOTTOM QUADRANT */}
         <path
-          d="M 4 96 L 96 96 Q 73 80 50 51.2 Q 27 80 4 96 Z"
+          d="M 10 96 H 90 L 85 91 Q 50 55 15 91 L 10 96 Z"
           fill="url(#quadGradBottom)"
         />
 
         {/* LEFT QUADRANT */}
         <path
-          d="M 4 4 L 4 96 Q 20 73 48.8 50 Q 20 27 4 4 Z"
+          d="M 4 10 V 90 L 9 85 Q 45 50 9 15 L 4 10 Z"
           fill="url(#quadGradLeft)"
         />
         <path
-          d="M 4 4 L 4 96 Q 20 73 48.8 50 Q 20 27 4 4 Z"
+          d="M 4 10 V 90 L 9 85 Q 45 50 9 15 L 4 10 Z"
           fill="url(#quadSpecular)"
         />
 
         {/* RIGHT QUADRANT */}
         <path
-          d="M 96 4 L 96 96 Q 80 73 51.2 50 Q 80 27 96 4 Z"
+          d="M 96 10 V 90 L 91 85 Q 55 50 91 15 L 96 10 Z"
           fill="url(#quadGradRight)"
         />
       </svg>
