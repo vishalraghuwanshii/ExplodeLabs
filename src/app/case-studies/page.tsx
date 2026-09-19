@@ -56,7 +56,7 @@ export default function CaseStudiesPage() {
               href="/portfolio" 
               className="px-3 py-1 bg-[#141414] hover:bg-[#1f1f1f] text-[#8e8e93] hover:text-[#f5f5f0] border border-[#222222] rounded-lg text-xs font-medium transition-colors"
             >
-              🎨 Visual Portfolio Grid (35)
+              🎨 Client Portfolio Grid
             </Link>
           </div>
         </div>
