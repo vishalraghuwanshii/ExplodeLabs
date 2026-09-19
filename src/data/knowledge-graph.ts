@@ -2176,9 +2176,30 @@ const slugAliases: Record<string, string> = {
   'appointment-setting-agency': 'b2b-lead-generation-sdr',
   'klaviyo-agency': 'email-marketing-automation',
   'programmatic-ads': 'programmatic-and-connected-tv-advertising',
-  'ctv-advertising-agency': 'programmatic-and-connected-tv-advertising',
   'abm-services': 'account-based-marketing-abm',
-  'influencer-marketing': 'influencer-and-creator-marketing'
+  'influencer-marketing': 'influencer-and-creator-marketing',
+  'video-editing-service': 'video-production-editing',
+  'commercial-video-editing': 'video-production-editing',
+  'davinci-resolve-color-grading': 'video-production-editing',
+  'youtube-video-editing': 'video-production-editing',
+  'motion-graphics-vfx': 'motion-graphics-animation',
+  '2d-3d-explainer-videos': 'motion-graphics-animation',
+  'lottie-animation-services': 'motion-graphics-animation',
+  '3d-product-rendering': '3d-design-visualization',
+  'cgi-product-rendering': '3d-design-visualization',
+  '3d-animation-agency': '3d-design-visualization',
+  'cad-rendering-services': '3d-design-visualization',
+  'product-design-agency': 'ui-ux-design-systems',
+  'figma-design-systems': 'ui-ux-design-systems',
+  'ui-ux-design-agency': 'ui-ux-design-systems',
+  'brand-identity-design': 'brand-identity-creative',
+  'corporate-identity-design': 'brand-identity-creative',
+  'branding-agency': 'brand-identity-creative',
+  'visual-identity-design': 'brand-identity-creative',
+  'graphic-design-services': 'graphic-design-visual-assets',
+  'drone-video-services': 'drone-and-commercial-media-production',
+  'commercial-video-production': 'drone-and-commercial-media-production',
+  'fpv-drone-filming': 'drone-and-commercial-media-production'
 };
 
 export function getServiceBySlug(slug: string): ServiceEntity | undefined {
