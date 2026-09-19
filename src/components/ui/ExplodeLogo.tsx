@@ -19,7 +19,7 @@ export function ExplodeLogo({ className = '', size = 30 }: ExplodeLogoProps) {
         }}
       />
 
-      {/* SVG Icon: 4-Quadrant Inward-Curving Explosion / Negative Space X-Star Mark */}
+      {/* SVG Icon: 4-Quadrant Inward-Curving Explosion / Negative Space X-Star Mark with 50% Slimmer X */}
       <svg
         width={size}
         height={size}
@@ -65,39 +65,38 @@ export function ExplodeLogo({ className = '', size = 30 }: ExplodeLogoProps) {
           </linearGradient>
         </defs>
 
-        {/* TOP QUADRANT */}
+        {/* TOP QUADRANT (50% Slimmer Negative Space X) */}
         <path
-          d="M 14 8 H 86 A 6 6 0 0 1 92 14 Q 50 47 8 14 A 6 6 0 0 1 14 8 Z"
+          d="M 12 6 H 88 A 6 6 0 0 1 94 12 L 89 17 Q 50 48.5 11 17 L 6 12 A 6 6 0 0 1 12 6 Z"
           fill="url(#quadGradTop)"
         />
         <path
-          d="M 14 8 H 86 A 6 6 0 0 1 92 14 Q 50 47 8 14 A 6 6 0 0 1 14 8 Z"
+          d="M 12 6 H 88 A 6 6 0 0 1 94 12 L 89 17 Q 50 48.5 11 17 L 6 12 A 6 6 0 0 1 12 6 Z"
           fill="url(#quadSpecular)"
         />
 
         {/* BOTTOM QUADRANT */}
         <path
-          d="M 14 92 H 86 A 6 6 0 0 0 92 86 Q 50 53 8 86 A 6 6 0 0 0 14 92 Z"
+          d="M 12 94 H 88 A 6 6 0 0 0 94 88 L 89 83 Q 50 51.5 11 83 L 6 88 A 6 6 0 0 0 12 94 Z"
           fill="url(#quadGradBottom)"
         />
 
         {/* LEFT QUADRANT */}
         <path
-          d="M 8 14 V 86 A 6 6 0 0 0 14 92 Q 47 50 14 8 A 6 6 0 0 0 8 14 Z"
+          d="M 6 12 V 88 A 6 6 0 0 0 12 94 L 17 89 Q 48.5 50 17 11 L 12 6 A 6 6 0 0 0 6 12 Z"
           fill="url(#quadGradLeft)"
         />
         <path
-          d="M 8 14 V 86 A 6 6 0 0 0 14 92 Q 47 50 14 8 A 6 6 0 0 0 8 14 Z"
+          d="M 6 12 V 88 A 6 6 0 0 0 12 94 L 17 89 Q 48.5 50 17 11 L 12 6 A 6 6 0 0 0 6 12 Z"
           fill="url(#quadSpecular)"
         />
 
         {/* RIGHT QUADRANT */}
         <path
-          d="M 92 14 V 86 A 6 6 0 0 1 86 92 Q 53 50 86 8 A 6 6 0 0 1 92 14 Z"
+          d="M 94 12 V 88 A 6 6 0 0 1 88 94 L 83 89 Q 51.5 50 83 11 L 88 6 A 6 6 0 0 1 94 12 Z"
           fill="url(#quadGradRight)"
         />
       </svg>
     </div>
   );
 }
-
