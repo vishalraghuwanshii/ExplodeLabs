@@ -315,18 +315,18 @@ export function Header() {
         className="sticky top-0 z-40 w-full border-b border-[#181818] bg-[#080808]/95 backdrop-blur-xl transition-all"
         onMouseLeave={handleMouseLeave}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           
           {/* Brand Logo with Custom Vector Starburst Mark */}
           <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-            <ExplodeLogo size={30} />
-            <span className="font-bold tracking-tight text-lg text-[#f5f5f0] flex items-center gap-1">
+            <ExplodeLogo size={28} />
+            <span className="font-bold tracking-tight text-[15px] text-[#f5f5f0] flex items-center gap-1">
               EXPLODE<span className="text-[#8e8e93] font-normal">LABS</span>
             </span>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden xl:flex items-center gap-1">
+          <nav className="hidden xl:flex items-center gap-0.5">
             {navLinks.map(({ key, label }) => {
               const isOpen = activeDropdown === key;
 
@@ -336,14 +336,14 @@ export function Header() {
                   type="button"
                   onMouseEnter={() => handleMouseEnter(key)}
                   onClick={() => setActiveDropdown(activeDropdown === key ? null : key)}
-                  className={`flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium transition-all rounded-lg cursor-pointer ${
+                  className={`flex items-center gap-1 px-3 py-1.5 text-[13px] font-medium tracking-tight transition-all rounded-lg cursor-pointer ${
                     isOpen 
                       ? 'text-[#ff5500] bg-[#141414] shadow-[0_0_15px_rgba(255,85,0,0.15)] border border-[#ff5500]/20' 
                       : 'text-[#8e8e93] hover:text-[#f5f5f0] hover:bg-[#111111] border border-transparent'
                   }`}
                 >
                   <span>{label}</span>
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? 'rotate-180 text-[#ff5500]' : 'text-[#5c5c60]'}`} />
+                  <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${isOpen ? 'rotate-180 text-[#ff5500]' : 'text-[#5c5c60]'}`} />
                 </button>
               );
             })}
@@ -352,7 +352,7 @@ export function Header() {
             <Link 
               href="/case-studies" 
               onMouseEnter={() => setActiveDropdown(null)}
-              className="px-3.5 py-2 text-sm font-medium text-[#8e8e93] hover:text-[#f5f5f0] hover:bg-[#111111] rounded-lg transition-colors"
+              className="px-3 py-1.5 text-[13px] font-medium tracking-tight text-[#8e8e93] hover:text-[#f5f5f0] hover:bg-[#111111] rounded-lg transition-colors"
             >
               Work
             </Link>
@@ -360,7 +360,7 @@ export function Header() {
             <Link 
               href="/about" 
               onMouseEnter={() => setActiveDropdown(null)}
-              className="px-3.5 py-2 text-sm font-medium text-[#8e8e93] hover:text-[#f5f5f0] hover:bg-[#111111] rounded-lg transition-colors"
+              className="px-3 py-1.5 text-[13px] font-medium tracking-tight text-[#8e8e93] hover:text-[#f5f5f0] hover:bg-[#111111] rounded-lg transition-colors"
             >
               About
             </Link>
@@ -582,7 +582,7 @@ export function Header() {
         {/* Backdrop Overlay when Mega Dropdown is active */}
         {currentMenu && (
           <div 
-            className="fixed inset-0 top-[72px] bg-black/65 backdrop-blur-[2px] z-30 transition-opacity"
+            className="fixed inset-0 top-[64px] bg-black/65 backdrop-blur-[2px] z-30 transition-opacity"
             onClick={() => setActiveDropdown(null)}
           />
         )}
