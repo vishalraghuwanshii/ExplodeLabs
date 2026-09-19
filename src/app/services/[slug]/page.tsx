@@ -441,9 +441,9 @@ export default async function ServiceDetailPage({
         {portfolioArtifact && (
           <div className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
-              badge="Visual & Technical Portfolio"
-              title={`Production Artifact: ${portfolioArtifact.title}.`}
-              description="Real-world system design, design token specification, and production architecture."
+              badge="Client Portfolio Case"
+              title={`Production Showcase: ${portfolioArtifact.clientName}.`}
+              description={`Live production deployment and verified business impact delivered by our ${service.name} practice.`}
             />
             <div className="p-8 rounded-2xl bg-[#0c0c0c] border border-[#222222] relative overflow-hidden">
               <div 
@@ -454,24 +454,27 @@ export default async function ServiceDetailPage({
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7 space-y-4">
                   <div className="flex items-center gap-2">
-                    <Badge variant="orange">{portfolioArtifact.pillarLabel}</Badge>
-                    <span className="text-xs font-mono text-[#71717a]">{portfolioArtifact.clientArchetype}</span>
+                    <Badge variant="orange">{portfolioArtifact.categoryLabel}</Badge>
+                    <span className="text-xs font-mono text-[#71717a]">{portfolioArtifact.industry}</span>
                   </div>
 
                   <h3 className="text-2xl font-bold text-[#f5f5f0]">
-                    {portfolioArtifact.visualPreview.heroHeadline}
+                    {portfolioArtifact.clientName}
                   </h3>
+                  <div className="text-sm font-semibold text-[#ff5500]">
+                    {portfolioArtifact.projectTitle}
+                  </div>
 
                   <p className="text-sm text-[#8e8e93] leading-relaxed">
-                    {portfolioArtifact.summary}
+                    {portfolioArtifact.overview}
                   </p>
 
-                  {/* Micro KPIs */}
+                  {/* Verified Results */}
                   <div className="grid grid-cols-3 gap-2 pt-2">
-                    {portfolioArtifact.visualPreview.mockupDetails.kpis.map((kpi, idx) => (
+                    {portfolioArtifact.results.map((res, idx) => (
                       <div key={idx} className="p-2.5 bg-[#141414] rounded-lg border border-[#202020] text-center">
-                        <div className="font-mono text-sm font-bold text-[#f5f5f0]">{kpi.value}</div>
-                        <div className="text-[10px] font-mono text-[#71717a]">{kpi.label}</div>
+                        <div className="font-mono text-sm font-bold text-[#f5f5f0]">{res.metric}</div>
+                        <div className="text-[10px] font-mono text-[#71717a] truncate">{res.label}</div>
                       </div>
                     ))}
                   </div>
@@ -490,12 +493,13 @@ export default async function ServiceDetailPage({
                   <div>
                     <div className="text-xs font-mono uppercase tracking-wider text-[#71717a] mb-3 flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5 text-[#ff5500]" />
-                      <span>Key Technical Innovations</span>
+                      <span>Key Deliverables Delivered</span>
                     </div>
                     <div className="space-y-2">
-                      {portfolioArtifact.keyInnovations.map((inn, i) => (
-                        <div key={i} className="text-xs text-[#a1a1aa] leading-relaxed p-2 bg-[#0c0c0c] rounded border border-[#181818]">
-                          • {inn}
+                      {portfolioArtifact.deliverables.slice(0, 3).map((del, i) => (
+                        <div key={i} className="text-xs text-[#a1a1aa] leading-relaxed p-2.5 bg-[#0c0c0c] rounded-lg border border-[#181818] flex items-start gap-2">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#ff5500] shrink-0 mt-0.5" />
+                          <span>{del}</span>
                         </div>
                       ))}
                     </div>
@@ -507,7 +511,7 @@ export default async function ServiceDetailPage({
                       className="inline-flex items-center justify-center w-full gap-2 px-4 py-2.5 rounded-xl bg-[#ff5500] hover:bg-[#e04a00] text-white text-xs font-semibold shadow-lg shadow-[#ff5500]/20 transition-all"
                     >
                       <Eye className="w-4 h-4" />
-                      <span>Explore 35-Service Portfolio Showcase</span>
+                      <span>Explore Verified Client Portfolio</span>
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
