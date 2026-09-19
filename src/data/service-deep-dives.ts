@@ -33,21 +33,32 @@ export const serviceDeepDives: Record<string, ServiceDeepDive> = {
 };
 
 const deepDiveAliases: Record<string, string> = {
-  // Pillar 1 Aliases
+  // Pillar 1 Aliases (AI Search, Technical SEO, Local SEO, Digital PR, CRO)
   'generative-engine-optimization-aeo': 'chatgpt-and-perplexity-ai-seo',
   'chatgpt-and-perplexity-ai-seo': 'chatgpt-and-perplexity-ai-seo',
+  'ai-seo-services': 'chatgpt-and-perplexity-ai-seo',
+  'geo-services': 'chatgpt-and-perplexity-ai-seo',
+  'aeo-services': 'chatgpt-and-perplexity-ai-seo',
   'technical-seo': 'technical-and-programmatic-seo',
   'technical-and-programmatic-seo': 'technical-and-programmatic-seo',
+  'seo-audit-services': 'technical-and-programmatic-seo',
+  'enterprise-seo-services': 'technical-and-programmatic-seo',
+  'programmatic-seo-services': 'technical-and-programmatic-seo',
   'local-and-franchise-seo': 'local-and-franchise-seo',
   'local-seo-services': 'local-and-franchise-seo',
+  'franchise-seo-services': 'local-and-franchise-seo',
   'ecommerce-and-shopify-seo': 'ecommerce-and-shopify-seo',
   'shopify-seo-services': 'ecommerce-and-shopify-seo',
+  'ecommerce-seo-services': 'ecommerce-and-shopify-seo',
   'digital-pr-and-authority-link-building': 'digital-pr-and-authority-link-building',
   'digital-pr-reputation': 'digital-pr-and-authority-link-building',
+  'link-building-services': 'digital-pr-and-authority-link-building',
   'conversion-rate-optimization-cro': 'conversion-rate-optimization-cro',
   'cro-services': 'conversion-rate-optimization-cro',
   'technical-copywriting-and-editorial': 'technical-copywriting-and-editorial',
   'website-copywriting-services': 'technical-copywriting-and-editorial',
+  'content-strategy-copywriting': 'technical-copywriting-and-editorial',
+  'content-marketing-strategy': 'technical-copywriting-and-editorial',
   'online-reputation-management-and-reviews': 'online-reputation-management-and-reviews',
   'orm-services': 'online-reputation-management-and-reviews',
 

@@ -619,6 +619,55 @@ export default async function ServiceDetailPage({
           </div>
         )}
 
+        {/* Interactive AEO / GEO Knowledge Graph Schema Inspector */}
+        <div className="py-16 border-b border-[#1a1a1a]">
+          <div className="p-6 sm:p-8 bg-[#0a0a0a] border border-[#222222] rounded-2xl relative overflow-hidden">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+              <div>
+                <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#ff5500]/10 border border-[#ff5500]/25 text-[#ff5500] text-xs font-mono mb-2">
+                  <Zap className="w-3.5 h-3.5" />
+                  <span>AEO & GEO Knowledge Graph Schema</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#f5f5f0]">
+                  Verifiable Structured Data for AI & Search Engine Crawlers
+                </h3>
+              </div>
+              <Badge variant="outline" className="font-mono text-xs">
+                W3C JSON-LD Compliant
+              </Badge>
+            </div>
+
+            <div className="p-4 bg-[#050505] border border-[#1a1a1a] rounded-xl overflow-x-auto font-mono text-xs text-[#a1a1aa] mb-6">
+              <pre className="text-[11px] leading-relaxed text-[#c4c4c8]">
+                {JSON.stringify(serviceSchema, null, 2)}
+              </pre>
+            </div>
+
+            {/* Instant Growth Diagnostic & Estimator Callouts */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-[#181818]">
+              <div className="p-4 bg-[#121212] border border-[#242424] rounded-xl flex items-center justify-between">
+                <div>
+                  <div className="text-xs font-bold text-[#f5f5f0] mb-0.5">Test Your Domain Citability</div>
+                  <div className="text-[11px] text-[#71717a]">Run a free 60-second AI & SEO diagnostic scan</div>
+                </div>
+                <Button href="/tools/seo-auditor" size="sm" variant="outline" className="shrink-0 text-xs">
+                  Scan Domain
+                </Button>
+              </div>
+
+              <div className="p-4 bg-[#121212] border border-[#242424] rounded-xl flex items-center justify-between">
+                <div>
+                  <div className="text-xs font-bold text-[#f5f5f0] mb-0.5">Calculate Milestone Scope</div>
+                  <div className="text-[11px] text-[#71717a]">Estimate timelines & investment with zero lock-in</div>
+                </div>
+                <Button href="/tools/project-estimator" size="sm" variant="primary" className="shrink-0 text-xs" withArrow>
+                  Estimate
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Relevant Case Studies */}
         {caseStudies.length > 0 && (
           <div className="py-16 border-b border-[#1a1a1a]">
