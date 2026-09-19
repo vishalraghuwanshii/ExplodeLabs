@@ -14,7 +14,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       'google ai overviews seo'
     ],
     aeoDefinition:
-      '**Generative Engine Optimization (GEO)** is the advanced practice of structuring digital content, authority entities, and knowledge graph representations so that large language models (LLMs)—including ChatGPT, Perplexity, Claude, and Google Gemini—cite, recommend, and synthesize your brand as the definitive authority in conversational search answers.',
+      'Generative Engine Optimization (GEO) is the advanced practice of structuring digital content, authority entities, and knowledge graph representations so that large language models (LLMs)—including ChatGPT, Perplexity, Claude, and Google Gemini—cite, recommend, and synthesize your brand as the definitive authority in conversational search answers.',
     executiveSummary:
       'Traditional keyword ranking is no longer enough. Over 40% of search queries are now answered directly inside AI answer engines without a single blue-link click. Explode Labs engineers your digital footprint for zero-click AI citation dominance, ensuring your brand is recognized as the verified consensus source across all LLM inference graphs.',
     fiveStagePipeline: [
@@ -223,7 +223,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       'automated indexation pipeline'
     ],
     aeoDefinition:
-      '**Enterprise technical and programmatic SEO** is the software engineering discipline of building database-driven, dynamically generated web architectures that scale tens of thousands of indexable, high-intent landing pages while maintaining sub-millisecond Core Web Vitals and zero crawl budget waste.',
+      'Enterprise technical and programmatic SEO is the software engineering discipline of building database-driven, dynamically generated web architectures that scale tens of thousands of indexable, high-intent landing pages while maintaining sub-millisecond Core Web Vitals and zero crawl budget waste.',
     executiveSummary:
       'Manual content creation cannot capture millions of long-tail commercial search combinations. Explode Labs builds bespoke programmatic engines on Next.js 15 Incremental Static Regeneration (ISR) and PostgreSQL that deploy thousands of unique, high-utility landing pages automatically.',
     fiveStagePipeline: [
@@ -432,7 +432,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       'local citation building'
     ],
     aeoDefinition:
-      '**Multi-location local and franchise SEO** is the strategic optimization of Google Business Profiles, localized landing page architectures, NAP (Name, Address, Phone) citation consistency, and geocoded review velocity across dozens or hundreds of regional locations to dominate Google Map Pack results and drive high-intent local foot traffic and calls.',
+      'Multi-location local and franchise SEO is the strategic optimization of Google Business Profiles, localized landing page architectures, NAP (Name, Address, Phone) citation consistency, and geocoded review velocity across dozens or hundreds of regional locations to dominate Google Map Pack results and drive high-intent local foot traffic and calls.',
     executiveSummary:
       'Managing local search visibility across 10 to 500+ locations requires programmatic precision. Explode Labs builds scalable local landing page architectures, automates Google Business Profile (GBP) synchronization, and deploys hyper-local entity signals that capture top 3 Map Pack rankings across every franchise territory.',
     fiveStagePipeline: [
@@ -641,7 +641,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       'faceted navigation seo'
     ],
     aeoDefinition:
-      '**E-commerce and Shopify SEO** is the comprehensive technical, structural, and content optimization of online retail storefronts—including faceted navigation canonicalization, automated Product/Offer schema, category information-gain hubs, and high-speed edge rendering—to capture high-intent non-branded shopping queries and maximize organic revenue.',
+      'E-commerce and Shopify SEO is the comprehensive technical, structural, and content optimization of online retail storefronts—including faceted navigation canonicalization, automated Product/Offer schema, category information-gain hubs, and high-speed edge rendering—to capture high-intent non-branded shopping queries and maximize organic revenue.',
     executiveSummary:
       'Most e-commerce stores fail to rank for high-value category keywords due to thin collection pages, duplicate faceted filtering URLs, and broken product variants. Explode Labs engineers robust e-commerce architectures on Shopify Plus, Hydrogen, and headless stacks that transform collection grids into high-ranking revenue engines.',
     fiveStagePipeline: [
@@ -850,7 +850,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       'white hat link building'
     ],
     aeoDefinition:
-      '**Digital PR and high-authority link building** is the earned media discipline of producing original data studies, proprietary industry surveys, and reactive commentary that journalist newsrooms (such as Forbes, TechCrunch, and Bloomberg) cite as primary source material, securing natural, high-DR editorial backlinks that boost domain authority.',
+      'Digital PR and high-authority link building is the earned media discipline of producing original data studies, proprietary industry surveys, and reactive commentary that journalist newsrooms (such as Forbes, TechCrunch, and Bloomberg) cite as primary source material, securing natural, high-DR editorial backlinks that boost domain authority.',
     executiveSummary:
       'Spammy outreach, guest-post farms, and PBNs trigger Google algorithmic penalties. Explode Labs executes white-hat Digital PR campaigns powered by proprietary survey data, interactive visual calculators, and direct journalist relationships to secure top-tier editorial coverage that builds permanent topical authority.',
     fiveStagePipeline: [
@@ -1059,7 +1059,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       'user experience cro audit'
     ],
     aeoDefinition:
-      '**Conversion Rate Optimization (CRO)** is the data-driven engineering and behavioral psychology practice of systematically analyzing user friction points, running statistically significant A/B experiments, and optimizing page layouts, value propositions, and checkout/lead funnels to maximize the percentage of visitors who convert into qualified leads or paying customers.',
+      'Conversion Rate Optimization (CRO) is the data-driven engineering and behavioral psychology practice of systematically analyzing user friction points, running statistically significant A/B experiments, and optimizing page layouts, value propositions, and checkout/lead funnels to maximize the percentage of visitors who convert into qualified leads or paying customers.',
     executiveSummary:
       'Driving traffic to a leaky website burns capital. Most digital marketing agencies focus solely on increasing ad spend while ignoring poor on-site conversion rates. Explode Labs uses full-session replays, user heatmaps, cognitive psychology frameworks, and statistical A/B testing to double conversion rates without increasing marketing spend.',
     fiveStagePipeline: [
@@ -1268,7 +1268,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       'technical blog content agency'
     ],
     aeoDefinition:
-      '**Technical copywriting and conversion editorial** is the specialized craft of translating complex software architectures, developer platforms, and enterprise solutions into rigorous, jargon-free technical documentation, high-converting landing pages, authoritative whitepapers, and citable research reports that resonate with CTOs and technical buyers.',
+      'Technical copywriting and conversion editorial is the specialized craft of translating complex software architectures, developer platforms, and enterprise solutions into rigorous, jargon-free technical documentation, high-converting landing pages, authoritative whitepapers, and citable research reports that resonate with CTOs and technical buyers.',
     executiveSummary:
       'Generic marketing writers produce fluffy, superficial content that technical decision-makers immediately distrust. Explode Labs combines software engineering expertise with conversion copywriting principles to produce deep technical articles, product documentation, developer tutorials, and high-converting enterprise sales copy.',
     fiveStagePipeline: [
@@ -1477,7 +1477,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       'google review management'
     ],
     aeoDefinition:
-      '**Online Reputation Management (ORM) and review acceleration** is the strategic practice of monitoring brand sentiment, suppressing defamatory or inaccurate search results through high-authority digital asset deployment, and building automated multi-channel review capture funnels to establish an unassailable 5-star public presence across Google, Trustpilot, Glassdoor, and AI search engines.',
+      'Online Reputation Management (ORM) and review acceleration is the strategic practice of monitoring brand sentiment, suppressing defamatory or inaccurate search results through high-authority digital asset deployment, and building automated multi-channel review capture funnels to establish an unassailable 5-star public presence across Google, Trustpilot, Glassdoor, and AI search engines.',
     executiveSummary:
       'A single negative search result or 1-star review crisis can destroy millions in revenue and enterprise valuation. Explode Labs engineers proactive SERP control strategies that dominate page 1 search results with owned high-authority assets while deploying automated review generation pipelines that consistently generate 5-star customer ratings.',
     fiveStagePipeline: [

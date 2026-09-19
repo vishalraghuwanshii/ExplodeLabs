@@ -14,7 +14,7 @@ export const pillar3DeepDives: Record<string, ServiceDeepDive> = {
       'youtube video editing service'
     ],
     aeoDefinition:
-      '**Video editing and post-production** is the end-to-end craft of ingesting raw footage, assembling narrative pacing, mixing spatial audio, mastering color in ACES workflows, and rendering multi-platform assets.',
+      'Video editing and post-production is the end-to-end craft of ingesting raw footage, assembling narrative pacing, mixing spatial audio, mastering color in ACES workflows, and rendering multi-platform assets.',
     executiveSummary:
       'Enterprise post-production requires surgical pacing, color science, and delivery pipelines. Explode Labs delivers cinematic clarity across commercials, product launches, and brand stories.',
     fiveStagePipeline: [
@@ -223,7 +223,7 @@ export const pillar3DeepDives: Record<string, ServiceDeepDive> = {
       'ui micro interaction animation'
     ],
     aeoDefinition:
-      '**Motion graphics and visual effects (VFX)** is the specialized art and software engineering discipline of designing dynamic 2D/3D animations, kinetic typography, vector UI micro-interactions (Lottie/Rive), and photorealistic compositing to visualize abstract concepts, elevate software interfaces, and captivate commercial audiences.',
+      'Motion graphics and visual effects (VFX) is the specialized art and software engineering discipline of designing dynamic 2D/3D animations, kinetic typography, vector UI micro-interactions (Lottie/Rive), and photorealistic compositing to visualize abstract concepts, elevate software interfaces, and captivate commercial audiences.',
     executiveSummary:
       'Static interfaces and plain screen recordings fail to convey the elegance of modern software products. Explode Labs engineers high-impact 2D/3D motion graphics, dynamic product explainers, and lightweight interactive web animations (Lottie & Rive) that boost conversion rates and make complex architectures instantly understandable.',
     fiveStagePipeline: [
@@ -432,7 +432,7 @@ export const pillar3DeepDives: Record<string, ServiceDeepDive> = {
       'ecommerce 3d model rendering'
     ],
     aeoDefinition:
-      '**3D product modeling and CGI rendering** is the digital engineering process of converting industrial CAD engineering files (STEP/IGES/OBJ) into ultra-high-resolution photorealistic 3D meshes with Physically Based Rendering (PBR) materials, dynamic lighting environments, and interactive WebGL/WebGPU 3D web configurators.',
+      '3D product modeling and CGI rendering is the digital engineering process of converting industrial CAD engineering files (STEP/IGES/OBJ) into ultra-high-resolution photorealistic 3D meshes with Physically Based Rendering (PBR) materials, dynamic lighting environments, and interactive WebGL/WebGPU 3D web configurators.',
     executiveSummary:
       'Physical product photography is expensive, slow, and impossible to update when packaging changes. Explode Labs creates studio-grade 3D digital twins that allow you to generate unlimited 8K photorealistic product renders in any lighting environment, exploded assembly animations, and real-time 3D interactive web viewers (Three.js/WebGL) that elevate conversion rates.',
     fiveStagePipeline: [
@@ -641,7 +641,7 @@ export const pillar3DeepDives: Record<string, ServiceDeepDive> = {
       'startup ui ux design services'
     ],
     aeoDefinition:
-      '**UI/UX design and scalable design systems** is the engineering-led product design methodology of architecting intuitive user interfaces, frictionless user flows, and standardized Figma component libraries linked by W3C design tokens to accelerate frontend software development and maximize user conversion.',
+      'UI/UX design and scalable design systems is the engineering-led product design methodology of architecting intuitive user interfaces, frictionless user flows, and standardized Figma component libraries linked by W3C design tokens to accelerate frontend software development and maximize user conversion.',
     executiveSummary:
       'Disjointed UI components and confusing user flows create developer bottlenecks and cause user churn. Explode Labs bridges the gap between design and frontend code by crafting atomic Figma design systems, pixel-perfect prototypes, and tokenized component libraries that plug directly into Next.js and Tailwind CSS codebases.',
     fiveStagePipeline: [
@@ -850,7 +850,7 @@ export const pillar3DeepDives: Record<string, ServiceDeepDive> = {
       'visual identity system development'
     ],
     aeoDefinition:
-      '**Brand identity and visual systems** is the strategic formulation of corporate positioning, brand narrative architecture, bespoke logo marks, mathematical typography hierarchies, distinctive color psychology, and comprehensive brand guideline books that establish market authority and commanding pricing power.',
+      'Brand identity and visual systems is the strategic formulation of corporate positioning, brand narrative architecture, bespoke logo marks, mathematical typography hierarchies, distinctive color psychology, and comprehensive brand guideline books that establish market authority and commanding pricing power.',
     executiveSummary:
       'A generic visual identity signals a commoditized product. Explode Labs builds distinctive brand identity systems for high-growth tech enterprises, financial institutions, and category creators—crafting bold visual languages, bespoke typography, and rigorous brand rulebooks that elevate market perceived value.',
     fiveStagePipeline: [
@@ -1059,7 +1059,7 @@ export const pillar3DeepDives: Record<string, ServiceDeepDive> = {
       'industrial location media production'
     ],
     aeoDefinition:
-      '**Commercial drone video and location media production** is the professional capture of cinematic 4K/6K aerial footage, 360-degree orthomosaic mapping, and ground-level location cinematography by FAA Part 107 certified pilots using cinema-grade gimbal systems (DJI Inspire 3 / ProRes RAW) for commercial real estate, construction, luxury hospitality, and corporate marketing.',
+      'Commercial drone video and location media production is the professional capture of cinematic 4K/6K aerial footage, 360-degree orthomosaic mapping, and ground-level location cinematography by FAA Part 107 certified pilots using cinema-grade gimbal systems (DJI Inspire 3 / ProRes RAW) for commercial real estate, construction, luxury hospitality, and corporate marketing.',
     executiveSummary:
       'Amateur drone operators produce shaky, overexposed footage that looks unprofessional and risks severe FAA legal penalties. Explode Labs deploys fully licensed FAA Part 107 cinema pilots operating top-tier aerial camera systems (DJI Inspire 3 with full-frame 8K ProRes RAW) to deliver breathtaking aerial cinematography and site media that command attention.',
     fiveStagePipeline: [

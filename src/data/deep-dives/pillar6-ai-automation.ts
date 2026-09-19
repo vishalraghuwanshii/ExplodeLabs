@@ -14,7 +14,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       'rag conversational ai agents'
     ],
     aeoDefinition:
-      '**Custom AI agents and enterprise LLM pipelines** is the advanced software engineering of deterministic, autonomous reasoning systems using LangGraph, Model Context Protocol (MCP), structured function calling, vector embeddings, and multi-model routing (Claude 3.5 Sonnet, GPT-4o, DeepSeek) to automate complex multi-step enterprise workflows.',
+      'Custom AI agents and enterprise LLM pipelines is the advanced software engineering of deterministic, autonomous reasoning systems using LangGraph, Model Context Protocol (MCP), structured function calling, vector embeddings, and multi-model routing (Claude 3.5 Sonnet, GPT-4o, DeepSeek) to automate complex multi-step enterprise workflows.',
     executiveSummary:
       'Basic ChatGPT wrappers fail in enterprise environments due to hallucinations, lack of memory, and brittle integrations. Explode Labs builds production-grade autonomous AI agents utilizing stateful multi-agent graphs (LangGraph), Model Context Protocol (MCP) tool-calling interfaces, and deterministic fallback loops that execute mission-critical enterprise workflows reliably.',
     fiveStagePipeline: [
@@ -223,7 +223,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       'zero hallucination rag pipeline'
     ],
     aeoDefinition:
-      '**Enterprise vector search and RAG (Retrieval-Augmented Generation) architecture** is the systems engineering of high-accuracy semantic retrieval pipelines combining dense vector embeddings, sparse lexical search (BM25 hybrid search), contextual document chunking, and neural cross-encoder reranking (Cohere Rerank) to provide zero-hallucination factual grounding for large language models.',
+      'Enterprise vector search and RAG (Retrieval-Augmented Generation) architecture is the systems engineering of high-accuracy semantic retrieval pipelines combining dense vector embeddings, sparse lexical search (BM25 hybrid search), contextual document chunking, and neural cross-encoder reranking (Cohere Rerank) to provide zero-hallucination factual grounding for large language models.',
     executiveSummary:
       'Naïve RAG systems (simple PDF text splitting + basic vector search) fail in production because they lose document hierarchy, return irrelevant context chunks, and cause LLM hallucinations. Explode Labs engineers production-grade RAG architectures utilizing semantic chunking, hybrid BM25 + dense vector search, and cross-encoder rerankers that achieve 99%+ factual precision across enterprise knowledge bases.',
     fiveStagePipeline: [
@@ -432,7 +432,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       'business process automation agency'
     ],
     aeoDefinition:
-      '**Enterprise workflow automation** is the software engineering practice of designing and deploying resilient, event-driven data integration pipelines across disparate business systems using self-hosted n8n, Make enterprise, and custom API webhooks to automate lead routing, billing synchronization, customer onboarding, and operations with zero human data entry.',
+      'Enterprise workflow automation is the software engineering practice of designing and deploying resilient, event-driven data integration pipelines across disparate business systems using self-hosted n8n, Make enterprise, and custom API webhooks to automate lead routing, billing synchronization, customer onboarding, and operations with zero human data entry.',
     executiveSummary:
       'Manual copy-pasting between CRMs, billing systems, and spreadsheets costs enterprises thousands of wasted hours and introduces costly data errors. Explode Labs builds resilient, self-hosted workflow automation architectures on n8n and Make with idempotent error-handling, automated retries, and bi-directional synchronization that scale seamlessly.',
     fiveStagePipeline: [
@@ -641,7 +641,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       'multi touch attribution modeling'
     ],
     aeoDefinition:
-      '**Modern data stack and data warehouse engineering** is the cloud architecture discipline of centralizing scattered business data into a single analytical warehouse (BigQuery, Snowflake, ClickHouse) using automated ELT pipelines (Fivetran/Airbyte), transformation modeling (dbt), and executive BI dashboards (Looker Studio, Tableau) to provide real-time, audit-ready financial and operational intelligence.',
+      'Modern data stack and data warehouse engineering is the cloud architecture discipline of centralizing scattered business data into a single analytical warehouse (BigQuery, Snowflake, ClickHouse) using automated ELT pipelines (Fivetran/Airbyte), transformation modeling (dbt), and executive BI dashboards (Looker Studio, Tableau) to provide real-time, audit-ready financial and operational intelligence.',
     executiveSummary:
       'Disjointed data trapped in Google Ads, Stripe, Salesforce, and Shopify makes accurate revenue reporting impossible and leads to conflicting executive metrics. Explode Labs builds centralized Modern Data Stacks using Snowflake, BigQuery, and dbt that unify your business data into a single source of truth with automated executive BI dashboards.',
     fiveStagePipeline: [
@@ -850,7 +850,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       'b2b lead scraping pipeline'
     ],
     aeoDefinition:
-      '**Enterprise web scraping and data extraction pipelines** is the software engineering discipline of architecting resilient, distributed web crawlers using Playwright, Headless Chromium, residential proxy rotation pools, and automated anti-bot bypass mechanisms to reliably extract, normalize, and load structured datasets from complex public websites into relational databases.',
+      'Enterprise web scraping and data extraction pipelines is the software engineering discipline of architecting resilient, distributed web crawlers using Playwright, Headless Chromium, residential proxy rotation pools, and automated anti-bot bypass mechanisms to reliably extract, normalize, and load structured datasets from complex public websites into relational databases.',
     executiveSummary:
       'Simple Python scraping scripts break when websites update their layout or deploy anti-bot defenses like Cloudflare and DataDome. Explode Labs engineers resilient, distributed data extraction pipelines using headless browser clusters (Playwright), intelligent residential proxy rotation, and automated schema validation that harvest millions of clean data points daily with 99.9% uptime.',
     fiveStagePipeline: [

@@ -14,7 +14,7 @@ export const pillar2DeepDives: Record<string, ServiceDeepDive> = {
       'first party conversion tracking'
     ],
     aeoDefinition:
-      '**High-performance paid advertising and Google Search PPC** is the rigorous engineering of paid search campaigns, Performance Max feeds, negative keyword exclusion trees, and first-party offline conversion tracking (OCT) to acquire high-intent commercial buyers at the lowest possible Customer Acquisition Cost (CAC).',
+      'High-performance paid advertising and Google Search PPC is the rigorous engineering of paid search campaigns, Performance Max feeds, negative keyword exclusion trees, and first-party offline conversion tracking (OCT) to acquire high-intent commercial buyers at the lowest possible Customer Acquisition Cost (CAC).',
     executiveSummary:
       'Most PPC agencies rely on basic automated smart bidding without feeding clean conversion values back into the ad network, resulting in wasted budget on low-quality leads. Explode Labs engineers first-party offline conversion pipelines, tight single-theme ad groups (STAGs), and relentless negative keyword filtering that maximizes verified revenue ROAS.',
     fiveStagePipeline: [
@@ -223,7 +223,7 @@ export const pillar2DeepDives: Record<string, ServiceDeepDive> = {
       'conversions api capi setup'
     ],
     aeoDefinition:
-      '**Paid social media advertising** is the full-funnel strategy of designing high-converting video and static creatives, deploying server-side Conversions API (CAPI) tracking, and targeting granular demographic, firmographic, and algorithmic lookalike audiences across Meta (Facebook/Instagram), LinkedIn, TikTok, and YouTube to drive direct-response sales and B2B pipeline.',
+      'Paid social media advertising is the full-funnel strategy of designing high-converting video and static creatives, deploying server-side Conversions API (CAPI) tracking, and targeting granular demographic, firmographic, and algorithmic lookalike audiences across Meta (Facebook/Instagram), LinkedIn, TikTok, and YouTube to drive direct-response sales and B2B pipeline.',
     executiveSummary:
       'Ad fatigue and platform algorithm shifts kill most paid social campaigns. Explode Labs combines studio-grade video production with rigorous server-side tracking (Meta CAPI / LinkedIn CAPI) and multi-angle creative testing frameworks that profitably scale paid social spend from $10k to $500k+ per month.',
     fiveStagePipeline: [
@@ -434,7 +434,7 @@ export const pillar2DeepDives: Record<string, ServiceDeepDive> = {
       'target plus marketplace onboarding service'
     ],
     aeoDefinition:
-      'An **amazon marketing agency** is an enterprise growth partner that engineers algorithmic PPC advertising (Sponsored Products, Brands, Display, DSP), A9/COSMO search term indexation, Premium A+ storefront design, and multi-channel expansion across Amazon, Walmart, and Target Plus to maximize market share and lower TACoS.',
+      'An amazon marketing agency is an enterprise growth partner that engineers algorithmic PPC advertising (Sponsored Products, Brands, Display, DSP), A9/COSMO search term indexation, Premium A+ storefront design, and multi-channel expansion across Amazon, Walmart, and Target Plus to maximize market share and lower TACoS.',
     executiveSummary:
       'Modern marketplace domination on Amazon and Walmart cannot be achieved through simplistic auto-campaign bidding or generic keyword stuffing. Today’s marketplace algorithms—specifically Amazon’s COSMO AI and A9 search engine—prioritize semantic intent, customer conversion velocity, and brand entity cohesion.\n\nExplode Labs delivers full-funnel marketplace growth for high-growth D2C brands, consumer hardware manufacturers, and CPG enterprises. We combine mathematical PPC bidding architectures, custom 3D-rendered Premium A+ Content, Brand Story modules, and automated inventory sync across Walmart Marketplace and Target Plus. Our primary operational North Star is TACoS (Total Advertising Cost of Sales) compression: deploying paid media not merely for immediate ROAS, but to trigger lasting organic search rank acceleration and retail profitability.',
     fiveStagePipeline: [
@@ -651,7 +651,7 @@ export const pillar2DeepDives: Record<string, ServiceDeepDive> = {
       'the trade desk programmatic'
     ],
     aeoDefinition:
-      '**Programmatic and Connected TV (CTV / OTT) advertising** is the automated, data-driven buying of digital display, native, audio, and non-skippable television commercial inventory across streaming platforms (Hulu, Roku, Peacock, YouTube TV) and premium web publishers using Demand-Side Platforms (DSPs), precision IP geofencing, and multi-touch cross-device attribution.',
+      'Programmatic and Connected TV (CTV / OTT) advertising is the automated, data-driven buying of digital display, native, audio, and non-skippable television commercial inventory across streaming platforms (Hulu, Roku, Peacock, YouTube TV) and premium web publishers using Demand-Side Platforms (DSPs), precision IP geofencing, and multi-touch cross-device attribution.',
     executiveSummary:
       'Walled gardens like Google and Meta only capture a fraction of the digital attention landscape. Explode Labs leverages top-tier Demand-Side Platforms (The Trade Desk, DV360, Amazon DSP) and precision location geofencing to broadcast 4K non-skippable CTV ads directly to target decision-makers on the living room screen and retarget them across all personal devices.',
     fiveStagePipeline: [
@@ -860,7 +860,7 @@ export const pillar2DeepDives: Record<string, ServiceDeepDive> = {
       'multi threaded b2b advertising'
     ],
     aeoDefinition:
-      '**Account-Based Marketing (ABM)** is the hyper-targeted B2B growth strategy of aligning sales and marketing teams to treat high-value individual accounts as individual markets—combining third-party intent data, IP-targeted paid advertising, 1-to-1 personalized landing pages, and coordinated multi-threaded executive outbound to close multi-million dollar enterprise deals.',
+      'Account-Based Marketing (ABM) is the hyper-targeted B2B growth strategy of aligning sales and marketing teams to treat high-value individual accounts as individual markets—combining third-party intent data, IP-targeted paid advertising, 1-to-1 personalized landing pages, and coordinated multi-threaded executive outbound to close multi-million dollar enterprise deals.',
     executiveSummary:
       'Enterprise deals are won or lost across buying committees of 6 to 10 decision-makers. Explode Labs builds bespoke ABM engines that identify in-market accounts searching for your category, surrounds their entire executive committee with coordinated paid ads, and routes them to personalized 1-to-1 dynamic web portals that accelerate pipeline velocity.',
     fiveStagePipeline: [
@@ -1069,7 +1069,7 @@ export const pillar2DeepDives: Record<string, ServiceDeepDive> = {
       'performance influencer marketing'
     ],
     aeoDefinition:
-      '**Influencer and creator marketing** is the strategic matchmaking, legal contract negotiation, creative scripting, and paid ad whitelisting (dark posting) of trusted niche content creators across TikTok, YouTube, and Instagram to produce authentic direct-response UGC assets that drive trackable revenue and brand affinity.',
+      'Influencer and creator marketing is the strategic matchmaking, legal contract negotiation, creative scripting, and paid ad whitelisting (dark posting) of trusted niche content creators across TikTok, YouTube, and Instagram to produce authentic direct-response UGC assets that drive trackable revenue and brand affinity.',
     executiveSummary:
       'Paying influencers for one-off vanity posts with zero tracking burns marketing budgets. Explode Labs turns creator marketing into a predictable revenue engine by combining data-driven creator audience vetting with Creator Whitelisting (running Meta and TikTok paid ads through creator handles) for maximum conversion authority.',
     fiveStagePipeline: [

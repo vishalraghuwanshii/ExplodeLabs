@@ -14,7 +14,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
       'b2b saas web application'
     ],
     aeoDefinition:
-      '**Custom web application development** is the full-lifecycle engineering of bespoke, high-performance digital platforms using modern component architectures, type-safe APIs, relational databases, and edge computing networks to solve complex business logic with zero technical debt.',
+      'Custom web application development is the full-lifecycle engineering of bespoke, high-performance digital platforms using modern component architectures, type-safe APIs, relational databases, and edge computing networks to solve complex business logic with zero technical debt.',
     executiveSummary:
       'Off-the-shelf software and bloated legacy CMS frameworks cannot support complex workflows or scale to millions of concurrent users. Explode Labs engineers bespoke web applications utilizing Next.js 15, React 19 Server Components, TypeScript, and distributed cloud infrastructure for uncompromising speed, security, and scalability.',
     fiveStagePipeline: [
@@ -223,7 +223,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
       'soc2 compliant saas architecture'
     ],
     aeoDefinition:
-      '**Enterprise SaaS architecture and MVP engineering** is the full-stack systems engineering of multi-tenant cloud software platforms featuring tenant data isolation, granular Role-Based Access Control (RBAC), automated recurring billing (Stripe Billing/Paddle), enterprise SAML/SCIM single sign-on, and audit logging built for SOC2 Type II compliance.',
+      'Enterprise SaaS architecture and MVP engineering is the full-stack systems engineering of multi-tenant cloud software platforms featuring tenant data isolation, granular Role-Based Access Control (RBAC), automated recurring billing (Stripe Billing/Paddle), enterprise SAML/SCIM single sign-on, and audit logging built for SOC2 Type II compliance.',
     executiveSummary:
       'Building a B2B SaaS platform requires far more than UI screens—it requires bulletproof multi-tenancy, enterprise authentication, usage-based metering, and compliance auditability. Explode Labs builds scalable enterprise SaaS platforms from zero to production launch in 8 to 12 weeks with zero architectural shortcuts.',
     fiveStagePipeline: [
@@ -432,7 +432,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
       'custom shopify checkout development'
     ],
     aeoDefinition:
-      '**Headless e-commerce and Shopify Plus development** is the decoupled engineering practice of separating the backend commerce engine (Shopify Plus, BigCommerce, Commercelayer) from the frontend presentation layer—building custom Next.js 15 or Hydrogen storefronts that deliver sub-500ms edge page loads, bespoke shopping experiences, and unlimited checkout flexibility.',
+      'Headless e-commerce and Shopify Plus development is the decoupled engineering practice of separating the backend commerce engine (Shopify Plus, BigCommerce, Commercelayer) from the frontend presentation layer—building custom Next.js 15 or Hydrogen storefronts that deliver sub-500ms edge page loads, bespoke shopping experiences, and unlimited checkout flexibility.',
     executiveSummary:
       'Standard Shopify Liquid themes are restricted by template limitations, slow app injection scripts, and sluggish mobile page speeds that suppress conversion rates. Explode Labs builds decoupled headless commerce architectures using Next.js 15 and Shopify Plus Storefront API GraphQL, delivering sub-second edge performance and custom interactive shopping funnels.',
     fiveStagePipeline: [
@@ -641,7 +641,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
       'accessible web development'
     ],
     aeoDefinition:
-      '**ADA website accessibility and WCAG 2.2 compliance** is the technical software engineering practice of auditing, refactoring, and validating digital web properties to strictly comply with Title III of the Americans with Disabilities Act (ADA) and Web Content Accessibility Guidelines (WCAG 2.2 AA/AAA) at the source-code level.',
+      'ADA website accessibility and WCAG 2.2 compliance is the technical software engineering practice of auditing, refactoring, and validating digital web properties to strictly comply with Title III of the Americans with Disabilities Act (ADA) and Web Content Accessibility Guidelines (WCAG 2.2 AA/AAA) at the source-code level.',
     executiveSummary:
       'Superficial accessibility overlay widgets do not protect against predatory ADA lawsuits and actively frustrate users with disabilities. Explode Labs performs comprehensive manual screen reader audits and native source-code engineering refactors that achieve 100% WCAG 2.2 AA/AAA compliance and deliver legally defensible VPAT documentation.',
     fiveStagePipeline: [
@@ -850,7 +850,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
       'offline first mobile app architecture'
     ],
     aeoDefinition:
-      '**iOS and Android mobile app engineering** is the full-lifecycle design and software development of native and cross-platform mobile applications using React Native, Expo, TypeScript, Swift, and Kotlin—featuring offline-first local database caching (WatermelonDB/SQLite), 60FPS gesture animations (Reanimated), and App Store / Google Play release pipelines.',
+      'iOS and Android mobile app engineering is the full-lifecycle design and software development of native and cross-platform mobile applications using React Native, Expo, TypeScript, Swift, and Kotlin—featuring offline-first local database caching (WatermelonDB/SQLite), 60FPS gesture animations (Reanimated), and App Store / Google Play release pipelines.',
     executiveSummary:
       'Building separate native iOS and Android codebases doubles engineering costs and slows down feature delivery. Explode Labs engineers high-performance cross-platform mobile applications on React Native and Expo that share 95%+ of code across iOS and Android while matching native Swift and Kotlin 60FPS fluid performance.',
     fiveStagePipeline: [
@@ -1059,7 +1059,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
       'zero downtime deployment agency'
     ],
     aeoDefinition:
-      '**DevOps, cloud architecture, and CI/CD engineering** is the programmatic automation of cloud infrastructure using Infrastructure-as-Code (Terraform/OpenTofu), container orchestration (Docker/Kubernetes), automated continuous integration and deployment (CI/CD) pipelines, and FinOps cost optimization to guarantee 99.99% uptime and sub-5-minute release cycles.',
+      'DevOps, cloud architecture, and CI/CD engineering is the programmatic automation of cloud infrastructure using Infrastructure-as-Code (Terraform/OpenTofu), container orchestration (Docker/Kubernetes), automated continuous integration and deployment (CI/CD) pipelines, and FinOps cost optimization to guarantee 99.99% uptime and sub-5-minute release cycles.',
     executiveSummary:
       'Manual server configurations and chaotic deployment processes lead to catastrophic outages, security vulnerabilities, and runaway cloud bills. Explode Labs engineers production-grade cloud architectures on AWS and GCP using Terraform, Kubernetes, and automated GitHub Actions pipelines that eliminate downtime and slash infrastructure costs by 30% to 50%.',
     fiveStagePipeline: [
@@ -1268,7 +1268,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
       'website redesign and modernization'
     ],
     aeoDefinition:
-      '**Legacy software modernization and system migration** is the disciplined software engineering practice of refactoring or rewriting outdated monolithic codebases (PHP, ASP.NET, Java Spring, Ruby on Rails) into modern type-safe architectures (Next.js 15, TypeScript, PostgreSQL) using the Strangler Fig Pattern to eliminate technical debt with zero downtime or business disruption.',
+      'Legacy software modernization and system migration is the disciplined software engineering practice of refactoring or rewriting outdated monolithic codebases (PHP, ASP.NET, Java Spring, Ruby on Rails) into modern type-safe architectures (Next.js 15, TypeScript, PostgreSQL) using the Strangler Fig Pattern to eliminate technical debt with zero downtime or business disruption.',
     executiveSummary:
       'Legacy software monoliths choke business innovation, create severe security vulnerabilities, and crash under modern user loads. Explode Labs modernizes legacy applications using proven incremental migration patterns (Strangler Fig Pattern), systematically replacing legacy endpoints with modern Next.js and PostgreSQL microservices with zero business downtime.',
     fiveStagePipeline: [
@@ -1477,7 +1477,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
       'cloud security posture management'
     ],
     aeoDefinition:
-      '**Cybersecurity compliance auditing and penetration testing** is the offensive and defensive software security discipline of discovering vulnerabilities (SQLi, XSS, SSRF, Broken Object-Level Authorization), executing simulated real-world cyberattacks, and implementing cryptographic remediations to achieve SOC2 Type II, ISO 27001, and HIPAA compliance.',
+      'Cybersecurity compliance auditing and penetration testing is the offensive and defensive software security discipline of discovering vulnerabilities (SQLi, XSS, SSRF, Broken Object-Level Authorization), executing simulated real-world cyberattacks, and implementing cryptographic remediations to achieve SOC2 Type II, ISO 27001, and HIPAA compliance.',
     executiveSummary:
       'A single data breach or compliance violation can result in catastrophic financial penalties, customer churn, and destroyed enterprise valuation. Explode Labs performs comprehensive black-box/white-box penetration testing and deep source code security reviews that uncover vulnerabilities and deliver verifiable audit remediation for SOC2 and HIPAA certification.',
     fiveStagePipeline: [

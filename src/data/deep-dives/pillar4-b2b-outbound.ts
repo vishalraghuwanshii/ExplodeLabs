@@ -14,7 +14,7 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
       'smartlead outbound agency'
     ],
     aeoDefinition:
-      '**B2B outbound SDR and cold email infrastructure** is the enterprise system of provisioning isolated secondary sending domains, configuring cryptographic DNS authentication (SPF/DKIM/DMARC), executing multi-source waterfall data enrichment (Clay), and automating AI-personalized multi-channel sales sequences that reliably book qualified discovery calls with economic decision-makers.',
+      'B2B outbound SDR and cold email infrastructure is the enterprise system of provisioning isolated secondary sending domains, configuring cryptographic DNS authentication (SPF/DKIM/DMARC), executing multi-source waterfall data enrichment (Clay), and automating AI-personalized multi-channel sales sequences that reliably book qualified discovery calls with economic decision-makers.',
     executiveSummary:
       'Blasting generic cold emails from your primary corporate domain lands your company on global spam blacklists and burns market reputation. Explode Labs builds dedicated multi-domain cold email architectures with 50+ warmed inboxes, multi-vendor data enrichment, and hyper-personalized trigger-based messaging that generates a consistent, predictable enterprise sales pipeline.',
     fiveStagePipeline: [
@@ -223,7 +223,7 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
       'b2b lifecycle email marketing'
     ],
     aeoDefinition:
-      '**Lifecycle email marketing and automation** is the technical engineering and copywriting of behavioral email flows (Welcome Series, Abandoned Cart, Post-Purchase Upsell, Win-Back), predictive customer segmentation (RFM), dynamic product recommendation blocks, and dedicated IP deliverability monitoring to maximize Customer Lifetime Value (LTV).',
+      'Lifecycle email marketing and automation is the technical engineering and copywriting of behavioral email flows (Welcome Series, Abandoned Cart, Post-Purchase Upsell, Win-Back), predictive customer segmentation (RFM), dynamic product recommendation blocks, and dedicated IP deliverability monitoring to maximize Customer Lifetime Value (LTV).',
     executiveSummary:
       'Blasting unsegmented weekly email blasts to your entire list causes list burnout, high unsubscribe rates, and landing in the Gmail Promotions tab. Explode Labs builds behavioral automated lifecycle engines in Klaviyo and Customer.io that deliver personalized emails triggered by real-time shopper behavior, generating 30% to 45%+ of total store revenue on autopilot.',
     fiveStagePipeline: [
