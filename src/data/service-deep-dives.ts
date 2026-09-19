@@ -184,19 +184,36 @@ const deepDiveAliases: Record<string, string> = {
   'soc2-compliance-consulting': 'cybersecurity-compliance-audits',
   'security-audit-services': 'cybersecurity-compliance-audits',
 
-  // Pillar 6 Aliases
+  // Pillar 6 Aliases (AI Agents, RAG, Automation, Data Stack, Fine-Tuning, Scraping, BI)
   'custom-ai-agents-and-llm-pipelines': 'custom-ai-agents-and-llm-pipelines',
   'generative-ai-agents': 'custom-ai-agents-and-llm-pipelines',
+  'ai-agents-agency': 'custom-ai-agents-and-llm-pipelines',
+  'langgraph-developers': 'custom-ai-agents-and-llm-pipelines',
   'vector-search-and-rag-architecture': 'vector-search-and-rag-architecture',
   'enterprise-rag-architecture': 'vector-search-and-rag-architecture',
+  'rag-consulting': 'vector-search-and-rag-architecture',
+  'pgvector-consulting': 'vector-search-and-rag-architecture',
   'enterprise-workflow-automation': 'enterprise-workflow-automation',
   'n8n-workflow-automation': 'enterprise-workflow-automation',
+  'ai-workflow-automation': 'enterprise-workflow-automation',
+  'n8n-agency': 'enterprise-workflow-automation',
   'modern-data-stack-and-warehousing': 'modern-data-stack-and-warehousing',
   'data-warehousing-bi': 'modern-data-stack-and-warehousing',
+  'data-engineering-analytics': 'modern-data-stack-and-warehousing',
+  'snowflake-consulting': 'modern-data-stack-and-warehousing',
+  'bigquery-consulting': 'modern-data-stack-and-warehousing',
+  'dbt-consulting': 'modern-data-stack-and-warehousing',
   'web-scraping-and-data-pipelines': 'web-scraping-and-data-pipelines',
   'enterprise-web-scraping': 'web-scraping-and-data-pipelines',
-  'ai-model-fine-tuning-and-quantization': 'custom-ai-agents-and-llm-pipelines',
-  'business-intelligence-and-dashboards': 'modern-data-stack-and-warehousing',
+  'web-scraping-services': 'web-scraping-and-data-pipelines',
+  'ai-model-fine-tuning-and-quantization': 'ai-model-fine-tuning-and-quantization',
+  'ai-fine-tuning-services': 'ai-model-fine-tuning-and-quantization',
+  'llm-fine-tuning-agency': 'ai-model-fine-tuning-and-quantization',
+  'lora-fine-tuning': 'ai-model-fine-tuning-and-quantization',
+  'business-intelligence-and-dashboards': 'business-intelligence-and-dashboards',
+  'bi-dashboards-agency': 'business-intelligence-and-dashboards',
+  'looker-studio-consulting': 'business-intelligence-and-dashboards',
+  'tableau-dashboards': 'business-intelligence-and-dashboards'
 };
 
 export function getDeepDiveForService(slug: string): ServiceDeepDive | undefined {
