@@ -2161,7 +2161,24 @@ const slugAliases: Record<string, string> = {
   'generative-engine-optimization-aeo': 'chatgpt-and-perplexity-ai-seo',
   'chatgpt-and-perplexity-ai-seo': 'generative-engine-optimization-aeo',
   'digital-pr-reputation': 'digital-pr-and-authority-link-building',
-  'digital-pr-and-authority-link-building': 'digital-pr-reputation'
+  'digital-pr-and-authority-link-building': 'digital-pr-reputation',
+  'google-ads-management': 'paid-performance-sem',
+  'google-ads-agency': 'paid-performance-sem',
+  'ppc-management-services': 'paid-performance-sem',
+  'amazon-ppc-services': 'amazon-and-marketplace-marketing',
+  'amazon-dsp-agency': 'amazon-and-marketplace-marketing',
+  'paid-social-ads': 'social-media-advertising',
+  'meta-ads-agency': 'social-media-advertising',
+  'tiktok-ads-agency': 'social-media-advertising',
+  'linkedin-ads-agency': 'social-media-advertising',
+  'cold-email-agency': 'b2b-lead-generation-sdr',
+  'b2b-sdr-services': 'b2b-lead-generation-sdr',
+  'appointment-setting-agency': 'b2b-lead-generation-sdr',
+  'klaviyo-agency': 'email-marketing-automation',
+  'programmatic-ads': 'programmatic-and-connected-tv-advertising',
+  'ctv-advertising-agency': 'programmatic-and-connected-tv-advertising',
+  'abm-services': 'account-based-marketing-abm',
+  'influencer-marketing': 'influencer-and-creator-marketing'
 };
 
 export function getServiceBySlug(slug: string): ServiceEntity | undefined {

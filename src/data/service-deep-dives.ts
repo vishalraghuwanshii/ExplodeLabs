@@ -62,20 +62,37 @@ const deepDiveAliases: Record<string, string> = {
   'online-reputation-management-and-reviews': 'online-reputation-management-and-reviews',
   'orm-services': 'online-reputation-management-and-reviews',
 
-  // Pillar 2 Aliases
+  // Pillar 2 Aliases (Paid Media, Google Ads, Meta Ads, Amazon PPC, ABM, CTV)
   'high-performance-paid-advertising': 'high-performance-paid-advertising',
   'paid-advertising-ppc': 'high-performance-paid-advertising',
+  'paid-performance-sem': 'high-performance-paid-advertising',
   'google-ads-management': 'high-performance-paid-advertising',
+  'google-ads-agency': 'high-performance-paid-advertising',
+  'ppc-management-services': 'high-performance-paid-advertising',
+  'performance-marketing-agency': 'high-performance-paid-advertising',
   'social-media-advertising': 'social-media-advertising',
   'paid-social-ads': 'social-media-advertising',
+  'meta-ads-agency': 'social-media-advertising',
+  'facebook-ads-agency': 'social-media-advertising',
+  'tiktok-ads-agency': 'social-media-advertising',
+  'linkedin-ads-agency': 'social-media-advertising',
   'amazon-and-marketplace-marketing': 'amazon-and-marketplace-marketing',
   'amazon-ppc-services': 'amazon-and-marketplace-marketing',
+  'amazon-dsp-agency': 'amazon-and-marketplace-marketing',
+  'amazon-marketing-agency': 'amazon-and-marketplace-marketing',
+  'walmart-marketplace-ads': 'amazon-and-marketplace-marketing',
   'programmatic-and-connected-tv-advertising': 'programmatic-and-connected-tv-advertising',
   'programmatic-ads': 'programmatic-and-connected-tv-advertising',
+  'ctv-advertising-agency': 'programmatic-and-connected-tv-advertising',
+  'ott-advertising-agency': 'programmatic-and-connected-tv-advertising',
   'account-based-marketing-abm': 'account-based-marketing-abm',
   'abm-services': 'account-based-marketing-abm',
+  'account-based-marketing-agency': 'account-based-marketing-abm',
+  'b2b-abm-strategy': 'account-based-marketing-abm',
   'influencer-and-creator-marketing': 'influencer-and-creator-marketing',
   'influencer-marketing': 'influencer-and-creator-marketing',
+  'creator-marketing-agency': 'influencer-and-creator-marketing',
+  'influencer-whitelisting-agency': 'influencer-and-creator-marketing',
 
   // Pillar 3 Aliases
   'video-editing-and-post-production': 'video-editing-and-post-production',
@@ -91,11 +108,16 @@ const deepDiveAliases: Record<string, string> = {
   'drone-and-commercial-media-production': 'drone-and-commercial-media-production',
   'drone-video-services': 'drone-and-commercial-media-production',
 
-  // Pillar 4 Aliases
+  // Pillar 4 Aliases (B2B Outbound SDR, Cold Email Infrastructure)
   'b2b-outbound-sdr-and-lead-generation': 'b2b-outbound-sdr-and-lead-generation',
   'b2b-lead-generation-sdr': 'b2b-outbound-sdr-and-lead-generation',
+  'cold-email-agency': 'b2b-outbound-sdr-and-lead-generation',
+  'b2b-sdr-services': 'b2b-outbound-sdr-and-lead-generation',
+  'appointment-setting-agency': 'b2b-outbound-sdr-and-lead-generation',
   'lifecycle-and-cold-email-infrastructure': 'lifecycle-and-cold-email-infrastructure',
   'email-marketing-automation': 'lifecycle-and-cold-email-infrastructure',
+  'klaviyo-agency': 'lifecycle-and-cold-email-infrastructure',
+  'email-deliverability-services': 'lifecycle-and-cold-email-infrastructure',
 
   // Pillar 5 Aliases
   'custom-web-application-development': 'custom-web-application-development',
