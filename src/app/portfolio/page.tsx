@@ -26,6 +26,8 @@ import {
   TrendingUp
 } from 'lucide-react';
 
+import { MockupRenderer } from '@/components/portfolio/MockupRenderer';
+
 export default function PortfolioPage() {
   const [selectedPillar, setSelectedPillar] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -138,65 +140,13 @@ export default function PortfolioPage() {
               onClick={() => setActiveModalItem(item)}
             >
               {/* Visual Preview Canvas */}
-              <div className="relative aspect-[16/10] bg-[#121212] border-b border-[#1c1c1c] p-4 flex flex-col justify-between overflow-hidden">
-                {/* Background Ambient Glow */}
-                <div 
-                  className="absolute -top-12 -right-12 w-48 h-48 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity pointer-events-none"
-                  style={{ backgroundColor: item.visualPreview.accentColor }}
-                />
-
-                {/* Mockup Topbar */}
-                <div className="relative z-10 flex items-center justify-between">
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]" />
-                  </div>
-                  <span className="text-[10px] font-mono text-[#71717a] truncate max-w-[160px]">
-                    {item.visualPreview.mockupDetails.headerTitle}
-                  </span>
-                </div>
-
-                {/* Center Visual Mockup Representation */}
-                <div className="relative z-10 my-auto py-2">
-                  <div className="text-xs font-bold text-[#f5f5f0] line-clamp-1 mb-1 group-hover:text-[#ff5500] transition-colors">
-                    {item.visualPreview.heroHeadline}
-                  </div>
-                  <div className="text-[11px] text-[#8e8e93] line-clamp-1">
-                    {item.visualPreview.subtext}
-                  </div>
-
-                  {/* Micro KPIs in Mockup */}
-                  <div className="grid grid-cols-3 gap-1.5 mt-3 pt-2 border-t border-[#1c1c1c]">
-                    {item.visualPreview.mockupDetails.kpis.map((kpi, idx) => (
-                      <div key={idx} className="bg-[#0a0a0a]/80 p-1.5 rounded border border-[#222222] text-center">
-                        <div className="font-mono text-[11px] font-bold text-[#f5f5f0]">{kpi.value}</div>
-                        <div className="text-[8px] font-mono text-[#71717a] line-clamp-1">{kpi.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Badges Footer */}
-                <div className="relative z-10 flex items-center justify-between pt-2 border-t border-[#1a1a1a]">
-                  <div className="flex gap-1">
-                    {item.visualPreview.badges.slice(0, 2).map((b) => (
-                      <span key={b} className="text-[9px] font-mono text-[#a1a1aa] bg-[#1a1a1a] px-1.5 py-0.5 rounded">
-                        {b}
-                      </span>
-                    ))}
-                  </div>
-                  {item.visualPreview.statHighlight && (
-                    <span className="text-[11px] font-mono font-bold text-[#ff5500]">
-                      {item.visualPreview.statHighlight.value}
-                    </span>
-                  )}
-                </div>
+              <div className="relative aspect-[16/10] bg-[#121212] border-b border-[#1c1c1c] p-3 flex flex-col justify-between overflow-hidden">
+                <MockupRenderer item={item} />
 
                 {/* Hover Inspect Overlay */}
-                <div className="absolute inset-0 bg-[#080808]/70 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-xs font-mono text-white">
+                <div className="absolute inset-0 bg-[#080808]/70 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-xs font-mono text-white pointer-events-none">
                   <Eye className="w-4 h-4 text-[#ff5500]" />
-                  <span>Inspect Architecture</span>
+                  <span>Inspect System Architecture</span>
                 </div>
               </div>
 
@@ -297,7 +247,12 @@ export default function PortfolioPage() {
               </p>
             </div>
 
-            {/* Visual Preview Banner */}
+            {/* High-Fidelity Interactive Mockup Canvas */}
+            <div className="aspect-[16/9] w-full bg-[#0a0a0a] rounded-xl border border-[#262626] mb-6 p-2 overflow-hidden shadow-2xl">
+              <MockupRenderer item={activeModalItem} interactive={true} />
+            </div>
+
+            {/* Architecture Overview */}
             <div className="p-6 rounded-xl bg-[#121212] border border-[#1e1e1e] mb-8 relative overflow-hidden">
               <div 
                 className="absolute top-0 right-0 w-64 h-64 rounded-full blur-3xl opacity-25 pointer-events-none"
