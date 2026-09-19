@@ -2199,7 +2199,28 @@ const slugAliases: Record<string, string> = {
   'graphic-design-services': 'graphic-design-visual-assets',
   'drone-video-services': 'drone-and-commercial-media-production',
   'commercial-video-production': 'drone-and-commercial-media-production',
-  'fpv-drone-filming': 'drone-and-commercial-media-production'
+  'fpv-drone-filming': 'drone-and-commercial-media-production',
+  'web-development-agency': 'react-nextjs-development',
+  'nextjs-development-agency': 'react-nextjs-development',
+  'custom-software-development': 'react-nextjs-development',
+  'full-stack-development': 'react-nextjs-development',
+  'saas-development-agency': 'saas-mvp-development',
+  'saas-software-engineering': 'saas-mvp-development',
+  'b2b-saas-developers': 'saas-mvp-development',
+  'shopify-plus-agency': 'ecommerce-shopify-growth',
+  'headless-commerce-agency': 'ecommerce-shopify-growth',
+  'wcag-compliance-agency': 'ada-web-accessibility-and-compliance',
+  'web-accessibility-audit': 'ada-web-accessibility-and-compliance',
+  'vpat-compliance-services': 'ada-web-accessibility-and-compliance',
+  'react-native-development': 'mobile-app-development',
+  'flutter-app-development': 'mobile-app-development',
+  'ios-app-development-agency': 'mobile-app-development',
+  'aws-consulting-agency': 'cloud-devops-infrastructure',
+  'terraform-devops-services': 'cloud-devops-infrastructure',
+  'legacy-code-refactoring': 'legacy-system-migration-and-refactoring',
+  'software-modernization-agency': 'legacy-system-migration-and-refactoring',
+  'soc2-compliance-consulting': 'cybersecurity-compliance-audits',
+  'security-audit-services': 'cybersecurity-compliance-audits'
 };
 
 export function getServiceBySlug(slug: string): ServiceEntity | undefined {
