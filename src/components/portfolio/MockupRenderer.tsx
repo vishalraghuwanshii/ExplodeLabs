@@ -1,10 +1,14 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { PortfolioItem } from '@/data/portfolio-items';
 import { 
   Globe, 
   Play, 
+  Pause,
+  Volume2,
+  VolumeX,
+  Maximize,
   Sparkles, 
   Search, 
   TrendingUp, 
@@ -19,7 +23,8 @@ import {
   Cpu,
   Monitor,
   Smartphone,
-  Eye
+  Eye,
+  RotateCcw
 } from 'lucide-react';
 
 interface MockupRendererProps {
@@ -30,6 +35,65 @@ interface MockupRendererProps {
 export function MockupRenderer({ item, interactive = false }: MockupRendererProps) {
   const type = item.visualPreview.mockupType;
   const accent = item.visualPreview.accentColor;
+
+  // Video playback states for interactive modal view
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [isMuted, setIsMuted] = useState<boolean>(false);
+  const [currentTime, setCurrentTime] = useState<number>(0);
+  const [duration, setDuration] = useState<number>(0);
+  const [hasStarted, setHasStarted] = useState<boolean>(false);
+
+  const togglePlay = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    if (!videoRef.current) return;
+
+    if (isPlaying) {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      videoRef.current.play();
+      setIsPlaying(true);
+      setHasStarted(true);
+    }
+  };
+
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!videoRef.current) return;
+    videoRef.current.muted = !isMuted;
+    setIsMuted(!isMuted);
+  };
+
+  const toggleFullscreen = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!videoRef.current) return;
+    if (videoRef.current.requestFullscreen) {
+      videoRef.current.requestFullscreen();
+    }
+  };
+
+  const handleTimeUpdate = () => {
+    if (videoRef.current) {
+      setCurrentTime(videoRef.current.currentTime);
+      setDuration(videoRef.current.duration || 0);
+    }
+  };
+
+  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const time = parseFloat(e.target.value);
+    if (videoRef.current) {
+      videoRef.current.currentTime = time;
+      setCurrentTime(time);
+    }
+  };
+
+  const formatTime = (seconds: number) => {
+    if (isNaN(seconds)) return '00:00';
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  };
 
   switch (type) {
     // -------------------------------------------------------------------------
@@ -149,41 +213,98 @@ export function MockupRenderer({ item, interactive = false }: MockupRendererProp
       );
 
     // -------------------------------------------------------------------------
-    // 3. REAL COMMERCIAL VIDEO & 4K MOTION REEL
+    // 3. REAL COMMERCIAL VIDEO & 4K MOTION REEL (Interactive Video Player)
     // -------------------------------------------------------------------------
     case 'video-reel':
       return (
-        <div className="w-full h-full bg-[#080808] rounded-xl border border-[#222222] p-3 flex flex-col justify-between select-none relative overflow-hidden font-sans">
-          {/* Video Player Header */}
-          <div className="flex items-center justify-between pb-2 border-b border-[#1c1c1c] text-[10px]">
+        <div className="w-full h-full bg-[#050505] rounded-xl border border-[#222222] relative overflow-hidden font-sans group/video flex flex-col justify-between">
+          {/* Active HTML5 Video Player */}
+          {item.visualPreview.videoUrl && (
+            <video
+              ref={videoRef}
+              src={item.visualPreview.videoUrl}
+              className="absolute inset-0 w-full h-full object-cover z-0"
+              playsInline
+              onTimeUpdate={handleTimeUpdate}
+              onEnded={() => setIsPlaying(false)}
+              onClick={interactive ? togglePlay : undefined}
+            />
+          )}
+
+          {/* Top Info Bar (Semi-transparent dark gradient overlay) */}
+          <div className="relative z-10 p-3 bg-gradient-to-b from-black/80 via-black/40 to-transparent flex items-center justify-between text-[10px] pointer-events-none">
             <div className="flex items-center gap-1.5 font-mono text-[#ef4444]">
-              <Video className="w-3 h-3" />
-              <span>4K Commercial Production</span>
+              <Video className="w-3.5 h-3.5" />
+              <span className="font-semibold text-white">4K Commercial Production</span>
             </div>
-            <span className="font-mono text-[9px] text-[#71717a] bg-[#141414] px-1.5 py-0.5 rounded border border-[#222]">
-              {item.visualPreview.videoTimestamp || '02:00 / 4K ProRes'}
+            <span className="font-mono text-[9px] text-[#f5f5f0] bg-black/60 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">
+              {item.visualPreview.videoTimestamp || '4K 60P ProRes'}
             </span>
           </div>
 
-          {/* Central Video Viewport with Play Button */}
-          <div className="my-auto py-2 flex flex-col items-center justify-center relative">
-            <div className="w-12 h-12 rounded-full bg-[#ef4444]/20 border border-[#ef4444]/60 flex items-center justify-center text-[#ef4444] shadow-lg shadow-[#ef4444]/30 hover:scale-105 transition-transform cursor-pointer">
-              <Play className="w-5 h-5 fill-[#ef4444] ml-0.5" />
-            </div>
+          {/* Central Play/Pause Action Overlay */}
+          <div 
+            className="relative z-10 my-auto flex flex-col items-center justify-center p-4 cursor-pointer"
+            onClick={interactive ? togglePlay : undefined}
+          >
+            {(!isPlaying || !hasStarted) && (
+              <div className="w-14 h-14 rounded-full bg-[#ef4444]/90 hover:bg-[#ef4444] text-white flex items-center justify-center shadow-xl shadow-[#ef4444]/40 transition-all hover:scale-110 mb-2">
+                <Play className="w-6 h-6 fill-white ml-1" />
+              </div>
+            )}
 
-            <div className="text-xs font-bold text-[#f5f5f0] line-clamp-1 mt-2">
-              {item.visualPreview.thumbnailTitle}
-            </div>
-            <div className="text-[10px] text-[#8e8e93] line-clamp-1">
-              {item.clientName} • {item.industry}
-            </div>
+            {(!isPlaying || !hasStarted) && (
+              <div className="text-center bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+                <div className="text-xs font-bold text-white line-clamp-1">
+                  {item.visualPreview.thumbnailTitle}
+                </div>
+                <div className="text-[10px] text-[#a1a1aa] line-clamp-1">
+                  {interactive ? 'Click to Play Full 4K Video' : item.clientName}
+                </div>
+              </div>
+            )}
           </div>
 
-          {/* Video Specs Footer */}
-          <div className="flex items-center justify-between pt-2 border-t border-[#181818] text-[9px] font-mono text-[#71717a]">
-            <span>Camera: <strong className="text-[#f5f5f0]">RED 8K / Inspire 3</strong></span>
-            <span className="text-[#ef4444] font-bold">DaVinci ACES</span>
-          </div>
+          {/* Bottom Control Bar in Interactive Mode */}
+          {interactive ? (
+            <div className="relative z-10 p-3 bg-gradient-to-t from-black/90 via-black/60 to-transparent space-y-1.5">
+              {/* Progress Scrubber */}
+              <div className="flex items-center gap-2">
+                <input
+                  type="range"
+                  min="0"
+                  max={duration || 100}
+                  value={currentTime}
+                  onChange={handleSeek}
+                  className="w-full h-1 bg-white/20 rounded-lg appearance-none cursor-pointer accent-[#ef4444]"
+                />
+              </div>
+
+              <div className="flex items-center justify-between text-[10px] font-mono text-[#f5f5f0]">
+                <div className="flex items-center gap-2">
+                  <button onClick={togglePlay} className="p-1 rounded hover:bg-white/20 transition-colors">
+                    {isPlaying ? <Pause className="w-3.5 h-3.5 fill-white" /> : <Play className="w-3.5 h-3.5 fill-white" />}
+                  </button>
+                  <button onClick={toggleMute} className="p-1 rounded hover:bg-white/20 transition-colors">
+                    {isMuted ? <VolumeX className="w-3.5 h-3.5 text-red-400" /> : <Volume2 className="w-3.5 h-3.5 text-white" />}
+                  </button>
+                  <span>{formatTime(currentTime)} / {formatTime(duration)}</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <span className="text-[#a1a1aa] text-[9px]">RED 8K Cinema</span>
+                  <button onClick={toggleFullscreen} className="p-1 rounded hover:bg-white/20 transition-colors">
+                    <Maximize className="w-3.5 h-3.5 text-white" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="relative z-10 p-3 bg-gradient-to-t from-black/80 to-transparent flex items-center justify-between text-[9px] font-mono text-[#a1a1aa] border-t border-white/5">
+              <span>Camera: <strong className="text-white">RED 8K / Inspire 3</strong></span>
+              <span className="text-[#ef4444] font-bold">DaVinci ACES</span>
+            </div>
+          )}
         </div>
       );
 
@@ -265,10 +386,96 @@ export function MockupRenderer({ item, interactive = false }: MockupRendererProp
       );
 
     // -------------------------------------------------------------------------
-    // 6. REAL CLIENT TESTIMONIAL & VIDEO INTERVIEW
+    // 6. REAL CLIENT TESTIMONIAL & VIDEO INTERVIEW (Interactive Player)
     // -------------------------------------------------------------------------
     case 'testimonial-card':
     default:
+      if (interactive && item.visualPreview.videoUrl) {
+        return (
+          <div className="w-full h-full bg-[#050505] rounded-xl border border-[#222222] relative overflow-hidden font-sans group/video flex flex-col justify-between">
+            {/* Active Video Player */}
+            <video
+              ref={videoRef}
+              src={item.visualPreview.videoUrl}
+              className="absolute inset-0 w-full h-full object-cover z-0"
+              playsInline
+              onTimeUpdate={handleTimeUpdate}
+              onEnded={() => setIsPlaying(false)}
+              onClick={togglePlay}
+            />
+
+            {/* Top Bar */}
+            <div className="relative z-10 p-3 bg-gradient-to-b from-black/80 via-black/40 to-transparent flex items-center justify-between text-[10px] pointer-events-none">
+              <div className="flex items-center gap-1 font-mono text-yellow-400">
+                <Star className="w-3.5 h-3.5 fill-yellow-400" />
+                <Star className="w-3.5 h-3.5 fill-yellow-400" />
+                <Star className="w-3.5 h-3.5 fill-yellow-400" />
+                <Star className="w-3.5 h-3.5 fill-yellow-400" />
+                <Star className="w-3.5 h-3.5 fill-yellow-400" />
+                <span className="text-white text-[9px] ml-1 font-semibold">Verified Executive Review</span>
+              </div>
+              <span className="font-mono text-[9px] text-[#f5f5f0] bg-black/60 backdrop-blur-md px-2 py-0.5 rounded border border-white/10">
+                4K Executive Interview
+              </span>
+            </div>
+
+            {/* Play Button Overlay */}
+            <div 
+              className="relative z-10 my-auto flex flex-col items-center justify-center p-4 cursor-pointer"
+              onClick={togglePlay}
+            >
+              {(!isPlaying || !hasStarted) && (
+                <div className="w-14 h-14 rounded-full bg-[#ff5500]/90 hover:bg-[#ff5500] text-white flex items-center justify-center shadow-xl shadow-[#ff5500]/40 transition-all hover:scale-110 mb-2">
+                  <Play className="w-6 h-6 fill-white ml-1" />
+                </div>
+              )}
+
+              {(!isPlaying || !hasStarted) && (
+                <div className="text-center bg-black/70 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 max-w-sm">
+                  <div className="text-xs font-bold text-white">
+                    {item.clientQuote?.author || item.clientName}
+                  </div>
+                  <div className="text-[10px] text-[#ff5500]">
+                    {item.clientQuote?.title}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Bottom Controls */}
+            <div className="relative z-10 p-3 bg-gradient-to-t from-black/90 via-black/60 to-transparent space-y-1.5">
+              <div className="flex items-center gap-2">
+                <input
+                  type="range"
+                  min="0"
+                  max={duration || 100}
+                  value={currentTime}
+                  onChange={handleSeek}
+                  className="w-full h-1 bg-white/20 rounded-lg appearance-none cursor-pointer accent-[#ff5500]"
+                />
+              </div>
+
+              <div className="flex items-center justify-between text-[10px] font-mono text-[#f5f5f0]">
+                <div className="flex items-center gap-2">
+                  <button onClick={togglePlay} className="p-1 rounded hover:bg-white/20 transition-colors">
+                    {isPlaying ? <Pause className="w-3.5 h-3.5 fill-white" /> : <Play className="w-3.5 h-3.5 fill-white" />}
+                  </button>
+                  <button onClick={toggleMute} className="p-1 rounded hover:bg-white/20 transition-colors">
+                    {isMuted ? <VolumeX className="w-3.5 h-3.5 text-red-400" /> : <Volume2 className="w-3.5 h-3.5 text-white" />}
+                  </button>
+                  <span>{formatTime(currentTime)} / {formatTime(duration)}</span>
+                </div>
+
+                <button onClick={toggleFullscreen} className="p-1 rounded hover:bg-white/20 transition-colors">
+                  <Maximize className="w-3.5 h-3.5 text-white" />
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      }
+
+      // Default Testimonial Card Preview for Grid
       return (
         <div className="w-full h-full bg-[#0d0d0d] rounded-xl border border-[#222222] p-3 flex flex-col justify-between select-none relative overflow-hidden font-sans">
           {/* Testimonial Header */}

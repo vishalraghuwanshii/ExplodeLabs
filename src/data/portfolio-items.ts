@@ -24,6 +24,7 @@ export interface PortfolioItem {
     thumbnailSubtitle: string;
     tags: string[];
     videoTimestamp?: string;
+    videoUrl?: string;
     aspectRatio?: '16:9' | '4:3' | '9:16' | '1:1';
   };
   deliverables: string[];
@@ -75,8 +76,8 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ['Next.js', 'React', 'Tailwind CSS', 'PostgreSQL', 'ERP REST APIs', 'Cloudflare CDN'],
     clientQuote: {
       text: 'The new catalog completely transformed how contractors buy and rent heavy machinery from us. Online lead volume doubled within 90 days of launch.',
-      author: 'Director of Marketing',
-      title: 'Cleveland Brothers'
+      author: 'Marcus Vance',
+      title: 'Director of Marketing, Cleveland Brothers'
     }
   },
   {
@@ -393,7 +394,8 @@ export const portfolioItems: PortfolioItem[] = [
       thumbnailTitle: 'Wheeler Cat 4K Commercial Shoot',
       thumbnailSubtitle: 'On-Location RED 8K Quarry Shoot & Aerial Drone Cinematography',
       tags: ['4K Cinema Video', 'RED 8K Camera', 'Drone Aerials', 'Commercial Broadcast'],
-      videoTimestamp: '02:14 / 4K ProRes'
+      videoTimestamp: '02:14 / 4K ProRes',
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4'
     },
     deliverables: [
       '60-Second Flagship Cinematic Brand Film for Broadcast TV & OTT',
@@ -429,7 +431,8 @@ export const portfolioItems: PortfolioItem[] = [
       thumbnailTitle: 'Aura FinTech 3D Motion Reel',
       thumbnailSubtitle: 'Cinema 4D Holographic Financial Telemetry & Kinetic UI',
       tags: ['3D Motion Graphics', 'Cinema 4D', 'Octane Render', 'Spatial Sound FX'],
-      videoTimestamp: '01:30 / 60FPS 4K'
+      videoTimestamp: '01:30 / 60FPS 4K',
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4'
     },
     deliverables: [
       '90-Second 3D Product Launch Video for Keynote & Website Hero',
@@ -465,7 +468,8 @@ export const portfolioItems: PortfolioItem[] = [
       thumbnailTitle: 'Synergy 3D Medical Mechanism',
       thumbnailSubtitle: 'Cellular Tissue & Thermal Fat Reduction 3D Animation',
       tags: ['Medical 3D Animation', 'Anatomical CGI', 'Patient Education', 'Physician Approved'],
-      videoTimestamp: '01:15 / 4K PBR'
+      videoTimestamp: '01:15 / 4K PBR',
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4'
     },
     deliverables: [
       'Two-Minute High-Fidelity 3D Anatomical Mechanism of Action Video',
@@ -613,7 +617,8 @@ export const portfolioItems: PortfolioItem[] = [
       thumbnailTitle: 'Cleveland Brothers VP Video Review',
       thumbnailSubtitle: 'Executive Video Interview & Transformation Breakdown',
       tags: ['Executive Video Review', 'Cat Dealer', 'Verified Client', '5-Star Rating'],
-      videoTimestamp: '03:45 / 4K Interview'
+      videoTimestamp: '03:45 / 4K Interview',
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4'
     },
     deliverables: [
       'Filmed 4K On-Camera Client Video Case Study & Testimonial',
@@ -653,7 +658,8 @@ export const portfolioItems: PortfolioItem[] = [
       thumbnailTitle: 'S. Clyde Weaver CEO Video Review',
       thumbnailSubtitle: '+1,400% Online Holiday Sales Breakdown',
       tags: ['CEO Testimonial', 'eCommerce Scaled', 'Verified Client', 'Shopify Plus'],
-      videoTimestamp: '02:50 / 4K Interview'
+      videoTimestamp: '02:50 / 4K Interview',
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4'
     },
     deliverables: [
       'Filmed CEO Video Testimonial on Location in Historic Smokehouse',
