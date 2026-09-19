@@ -13,13 +13,13 @@ export function ExplodeLogo({ className = '', size = 30 }: ExplodeLogoProps) {
     >
       {/* Subtle Ambient Red-Orange Glow on Hover */}
       <div 
-        className="absolute inset-0 rounded-lg blur-md opacity-25 group-hover:opacity-75 transition-opacity duration-300 pointer-events-none"
+        className="absolute inset-0 blur-md opacity-25 group-hover:opacity-75 transition-opacity duration-300 pointer-events-none"
         style={{
           background: 'radial-gradient(circle, rgba(255, 60, 0, 0.7) 0%, rgba(255, 85, 0, 0) 70%)'
         }}
       />
 
-      {/* SVG Icon: 4-Quadrant Inward-Curving Explosion / Negative Space X-Star Mark with 50% Slimmer X */}
+      {/* SVG Icon: 4 Razor-Sharp Corners with Ultra-Thin Middle Negative Space X */}
       <svg
         width={size}
         height={size}
@@ -65,35 +65,35 @@ export function ExplodeLogo({ className = '', size = 30 }: ExplodeLogoProps) {
           </linearGradient>
         </defs>
 
-        {/* TOP QUADRANT (50% Slimmer Negative Space X) */}
+        {/* TOP QUADRANT (Sharp outer corners, thin center apex) */}
         <path
-          d="M 12 6 H 88 A 6 6 0 0 1 94 12 L 89 17 Q 50 48.5 11 17 L 6 12 A 6 6 0 0 1 12 6 Z"
+          d="M 4 4 L 96 4 Q 73 20 50 48.8 Q 27 20 4 4 Z"
           fill="url(#quadGradTop)"
         />
         <path
-          d="M 12 6 H 88 A 6 6 0 0 1 94 12 L 89 17 Q 50 48.5 11 17 L 6 12 A 6 6 0 0 1 12 6 Z"
+          d="M 4 4 L 96 4 Q 73 20 50 48.8 Q 27 20 4 4 Z"
           fill="url(#quadSpecular)"
         />
 
         {/* BOTTOM QUADRANT */}
         <path
-          d="M 12 94 H 88 A 6 6 0 0 0 94 88 L 89 83 Q 50 51.5 11 83 L 6 88 A 6 6 0 0 0 12 94 Z"
+          d="M 4 96 L 96 96 Q 73 80 50 51.2 Q 27 80 4 96 Z"
           fill="url(#quadGradBottom)"
         />
 
         {/* LEFT QUADRANT */}
         <path
-          d="M 6 12 V 88 A 6 6 0 0 0 12 94 L 17 89 Q 48.5 50 17 11 L 12 6 A 6 6 0 0 0 6 12 Z"
+          d="M 4 4 L 4 96 Q 20 73 48.8 50 Q 20 27 4 4 Z"
           fill="url(#quadGradLeft)"
         />
         <path
-          d="M 6 12 V 88 A 6 6 0 0 0 12 94 L 17 89 Q 48.5 50 17 11 L 12 6 A 6 6 0 0 0 6 12 Z"
+          d="M 4 4 L 4 96 Q 20 73 48.8 50 Q 20 27 4 4 Z"
           fill="url(#quadSpecular)"
         />
 
         {/* RIGHT QUADRANT */}
         <path
-          d="M 94 12 V 88 A 6 6 0 0 1 88 94 L 83 89 Q 51.5 50 83 11 L 88 6 A 6 6 0 0 1 94 12 Z"
+          d="M 96 4 L 96 96 Q 80 73 51.2 50 Q 80 27 96 4 Z"
           fill="url(#quadGradRight)"
         />
       </svg>
