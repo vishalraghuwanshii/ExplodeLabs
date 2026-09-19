@@ -6,11 +6,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/'],
+        disallow: ['/api/', '/portfolio'],
       },
       {
         userAgent: ['GPTBot', 'ChatGPT-User', 'ClaudeBot', 'PerplexityBot', 'Google-Extended', 'Amazonbot', 'Bytespider'],
         allow: '/',
+        disallow: ['/portfolio'],
       },
     ],
     sitemap: 'https://explodelabs.com/sitemap.xml',

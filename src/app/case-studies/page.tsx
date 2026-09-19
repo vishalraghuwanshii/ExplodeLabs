@@ -45,6 +45,20 @@ export default function CaseStudiesPage() {
           <p className="text-base sm:text-lg text-[#8e8e93] leading-relaxed">
             Detailed engineering breakdowns, telemetry benchmarks, and verifiable revenue outcomes achieved across our 35 flagship services.
           </p>
+
+          {/* Switcher to Visual Portfolio */}
+          <div className="flex items-center gap-3 mt-6 pt-6 border-t border-[#1a1a1a]">
+            <span className="text-xs font-mono text-[#71717a]">View Mode:</span>
+            <span className="px-3 py-1 bg-[#ff5500] text-white rounded-lg text-xs font-medium">
+              📊 Deep-Dive Case Studies (12)
+            </span>
+            <Link 
+              href="/portfolio" 
+              className="px-3 py-1 bg-[#141414] hover:bg-[#1f1f1f] text-[#8e8e93] hover:text-[#f5f5f0] border border-[#222222] rounded-lg text-xs font-medium transition-colors"
+            >
+              🎨 Visual Portfolio Grid (35)
+            </Link>
+          </div>
         </div>
 
         {/* Filter and Search Bar */}

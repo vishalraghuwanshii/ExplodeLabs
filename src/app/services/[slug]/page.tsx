@@ -9,6 +9,7 @@ import {
   services 
 } from '@/data/knowledge-graph';
 import { getDeepDiveForService, serviceDeepDives } from '@/data/service-deep-dives';
+import { getPortfolioItemByServiceSlug } from '@/data/portfolio-items';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -29,7 +30,9 @@ import {
   GitBranch,
   Table,
   Briefcase,
-  Sliders
+  Sliders,
+  Eye,
+  Sparkles
 } from 'lucide-react';
 
 export function generateStaticParams() {
@@ -133,6 +136,7 @@ export default async function ServiceDetailPage({
   const deepDive = getDeepDiveForService(service.slug);
   const caseStudies = getCaseStudiesForService(service.slug);
   const relatedServices = getRelatedServices(service.slug);
+  const portfolioArtifact = getPortfolioItemByServiceSlug(service.slug);
 
   const faqsToRender = deepDive ? deepDive.detailedFaqs : service.faqs;
 
@@ -428,6 +432,86 @@ export default async function ServiceDetailPage({
                     <span className="text-xs sm:text-sm text-[#c4c4c8] leading-relaxed">{prob}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Featured Portfolio & Architecture Artifact */}
+        {portfolioArtifact && (
+          <div className="py-16 border-b border-[#1a1a1a]">
+            <SectionHeader
+              badge="Visual & Technical Portfolio"
+              title={`Production Artifact: ${portfolioArtifact.title}.`}
+              description="Real-world system design, design token specification, and production architecture."
+            />
+            <div className="p-8 rounded-2xl bg-[#0c0c0c] border border-[#222222] relative overflow-hidden">
+              <div 
+                className="absolute top-0 right-0 w-80 h-80 rounded-full blur-3xl opacity-20 pointer-events-none"
+                style={{ backgroundColor: portfolioArtifact.visualPreview.accentColor }}
+              />
+
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div className="lg:col-span-7 space-y-4">
+                  <div className="flex items-center gap-2">
+                    <Badge variant="orange">{portfolioArtifact.pillarLabel}</Badge>
+                    <span className="text-xs font-mono text-[#71717a]">{portfolioArtifact.clientArchetype}</span>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-[#f5f5f0]">
+                    {portfolioArtifact.visualPreview.heroHeadline}
+                  </h3>
+
+                  <p className="text-sm text-[#8e8e93] leading-relaxed">
+                    {portfolioArtifact.summary}
+                  </p>
+
+                  {/* Micro KPIs */}
+                  <div className="grid grid-cols-3 gap-2 pt-2">
+                    {portfolioArtifact.visualPreview.mockupDetails.kpis.map((kpi, idx) => (
+                      <div key={idx} className="p-2.5 bg-[#141414] rounded-lg border border-[#202020] text-center">
+                        <div className="font-mono text-sm font-bold text-[#f5f5f0]">{kpi.value}</div>
+                        <div className="text-[10px] font-mono text-[#71717a]">{kpi.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Tech stack */}
+                  <div className="flex flex-wrap gap-1.5 pt-2">
+                    {portfolioArtifact.technologies.map((t) => (
+                      <span key={t} className="px-2.5 py-1 bg-[#161616] border border-[#262626] rounded-md text-xs font-mono text-[#a1a1aa]">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="lg:col-span-5 flex flex-col justify-between p-6 bg-[#111111] rounded-xl border border-[#1e1e1e] space-y-4">
+                  <div>
+                    <div className="text-xs font-mono uppercase tracking-wider text-[#71717a] mb-3 flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-[#ff5500]" />
+                      <span>Key Technical Innovations</span>
+                    </div>
+                    <div className="space-y-2">
+                      {portfolioArtifact.keyInnovations.map((inn, i) => (
+                        <div key={i} className="text-xs text-[#a1a1aa] leading-relaxed p-2 bg-[#0c0c0c] rounded border border-[#181818]">
+                          • {inn}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-[#1a1a1a]">
+                    <Link
+                      href="/portfolio"
+                      className="inline-flex items-center justify-center w-full gap-2 px-4 py-2.5 rounded-xl bg-[#ff5500] hover:bg-[#e04a00] text-white text-xs font-semibold shadow-lg shadow-[#ff5500]/20 transition-all"
+                    >
+                      <Eye className="w-4 h-4" />
+                      <span>Explore 35-Service Portfolio Showcase</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
