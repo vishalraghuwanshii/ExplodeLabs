@@ -294,12 +294,14 @@ export function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#5c5c60]">
           <p>© {new Date().getFullYear()} Explode Labs Inc. All rights reserved. Built for sub-second performance.</p>
           
-          <div className="flex flex-wrap items-center gap-6 font-mono text-[11px]">
-            <Link href="/services" className="hover:text-[#ff5500] transition-colors">All 35 Services</Link>
-            <Link href="/case-studies" className="hover:text-[#ff5500] transition-colors">Case Studies</Link>
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 font-mono text-[11px]">
+            <Link href="/privacy" className="hover:text-[#a1a1aa] transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#a1a1aa] transition-colors">Terms of Service</Link>
+            <Link href="/security" className="hover:text-[#a1a1aa] transition-colors">Security Standards</Link>
             <Link href="/about" className="hover:text-[#a1a1aa] transition-colors">About</Link>
             <Link href="/process" className="hover:text-[#a1a1aa] transition-colors">Process</Link>
             <Link href="/contact" className="hover:text-[#a1a1aa] transition-colors">Contact</Link>
+            <Link href="/llms.txt" className="hover:text-[#ff5500] transition-colors">llms.txt</Link>
             <Link href="/sitemap.xml" className="hover:text-[#ff5500] transition-colors">Sitemap XML</Link>
           </div>
         </div>
