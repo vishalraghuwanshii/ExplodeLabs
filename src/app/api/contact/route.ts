@@ -36,14 +36,6 @@ export async function POST(request: Request) {
             {
               type: "mrkdwn",
               text: `*Service:*\n${data.service}`
-            },
-            {
-              type: "mrkdwn",
-              text: `*Budget:*\n${data.budget}`
-            },
-            {
-              type: "mrkdwn",
-              text: `*Timeline:*\n${data.timeline}`
             }
           ]
         },

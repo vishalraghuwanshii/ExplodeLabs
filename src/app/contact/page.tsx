@@ -14,9 +14,7 @@ export default function ContactPage() {
     name: '',
     email: '',
     company: '',
-    service: 'B2B SaaS / Web Development',
-    budget: '$30,000 - $60,000',
-    timeline: '4 - 8 weeks',
+    service: 'SEO & Organic Growth',
     message: ''
   });
 
@@ -143,53 +141,20 @@ export default function ContactPage() {
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                         className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-sm text-[#f5f5f0] outline-none"
                       >
-                        <option>B2B SaaS / Web Development</option>
-                        <option>Generative AI & Autonomous Agents</option>
-                        <option>Custom Shopify Plus Store</option>
-                        <option>Enterprise Technical SEO</option>
-                        <option>Mobile App Development (React Native)</option>
-                        <option>UI/UX & Design Systems</option>
-                        <option>Other / Multi-disciplinary</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-mono uppercase text-[#71717a] mb-1.5 font-semibold">
-                        Estimated Budget
-                      </label>
-                      <select
-                        value={formData.budget}
-                        onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                        className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-sm text-[#f5f5f0] outline-none"
-                      >
-                        <option>$15,000 - $30,000 (MVP Prototype)</option>
-                        <option>$30,000 - $60,000 (Production Scale)</option>
-                        <option>$60,000 - $100,000+ (Enterprise Architecture)</option>
-                        <option>Monthly Growth Retainer ($5k-$15k/mo)</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-mono uppercase text-[#71717a] mb-1.5 font-semibold">
-                        Target Timeline
-                      </label>
-                      <select
-                        value={formData.timeline}
-                        onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
-                        className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-sm text-[#f5f5f0] outline-none"
-                      >
-                        <option>Immediate (1 - 4 weeks)</option>
-                        <option>Standard (4 - 8 weeks)</option>
-                        <option>Quarterly Roadmap (2 - 4 months)</option>
+                        <option>SEO & Organic Growth</option>
+                        <option>Paid Media & Advertising</option>
+                        <option>Creative Media & Design</option>
+                        <option>B2B Outbound & Lead Gen</option>
+                        <option>Web & Software Engineering</option>
+                        <option>AI & Automation</option>
+                        <option>Other</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-xs font-mono uppercase text-[#71717a] mb-1.5 font-semibold">
-                      Project Details & Core Objectives *
+                      Project Details / Project Description *
                     </label>
                     <textarea
                       required
