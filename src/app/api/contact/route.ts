@@ -50,6 +50,10 @@ export async function POST(request: Request) {
     };
 
     // Send the POST request to Slack
+    if (!SLACK_WEBHOOK_URL) {
+      throw new Error('SLACK_WEBHOOK_URL is not set');
+    }
+    
     const response = await fetch(SLACK_WEBHOOK_URL, {
       method: 'POST',
       headers: {
