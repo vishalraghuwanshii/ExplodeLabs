@@ -41,6 +41,29 @@ export default async function GuideDetailPage({
       logo: 'https://explodelabs.com/logo.png',
     },
     datePublished: guide.publishedDate,
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://explodelabs.com'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Guides',
+          item: 'https://explodelabs.com/guides'
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: guide.title,
+          item: `https://explodelabs.com/guides/${guide.slug}`
+        }
+      ]
+    }
   };
 
   return (

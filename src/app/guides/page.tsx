@@ -5,10 +5,35 @@ import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { FileText, ArrowRight, Clock } from 'lucide-react';
+import { JsonLd } from '@/components/seo/JsonLd';
+
+export const metadata = {
+  title: 'Guides & Strategy Knowledge Base | Explode Labs',
+  description: 'In-depth architectural breakdowns, cost benchmarks, and technical playbooks written by senior practitioners.',
+};
 
 export default function GuidesPage() {
+  const guidesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Explode Labs Technical Guides & Playbooks',
+    url: 'https://explodelabs.com/guides',
+    description: 'In-depth guides, playbooks, and architectural blueprints for SEO, SaaS engineering, and AI systems.',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: guides.map((g, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: g.title,
+        url: `https://explodelabs.com/guides/${g.slug}`,
+        description: g.summary
+      }))
+    }
+  };
+
   return (
     <div className="py-16 sm:py-24">
+      <JsonLd schema={guidesSchema} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
           <Badge variant="orange" className="mb-3">

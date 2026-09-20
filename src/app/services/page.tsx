@@ -9,10 +9,46 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { PillarType } from '@/types';
 import { Search, ArrowRight, Layers, Sparkles } from 'lucide-react';
+import { JsonLd } from '@/components/seo/JsonLd';
 
 export default function ServicesPage() {
   const [filter, setFilter] = useState<string>('all');
   const [search, setSearch] = useState<string>('');
+
+  const servicesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Explode Labs Disciplines & Services',
+    url: 'https://explodelabs.com/services',
+    description: 'Explore the full spectrum of digital growth, commercial video post-production, paid performance media, and modern web development services offered by Explode Labs.',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: services.map((s, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: s.name,
+        url: `https://explodelabs.com/services/${s.slug}`,
+        description: s.tagline
+      }))
+    },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://explodelabs.com'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Services',
+          item: 'https://explodelabs.com/services'
+        }
+      ]
+    }
+  };
 
   const filtered = services.filter((s) => {
     const matchesPillar = filter === 'all' || s.pillar === filter;
@@ -26,6 +62,7 @@ export default function ServicesPage() {
 
   return (
     <div className="py-16 sm:py-24">
+      <JsonLd schema={servicesSchema} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="max-w-3xl mb-12">

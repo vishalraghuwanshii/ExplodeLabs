@@ -7,10 +7,29 @@ import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Trophy, ArrowUpRight, Search, Sparkles, Filter, CheckCircle2, ArrowRight } from 'lucide-react';
+import { JsonLd } from '@/components/seo/JsonLd';
 
 export default function CaseStudiesPage() {
   const [selectedIndustry, setSelectedIndustry] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
+
+  const caseStudiesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Explode Labs Case Studies & Verified Client Results',
+    url: 'https://explodelabs.com/case-studies',
+    description: 'Explore documented case studies and quantifiable business outcomes across SEO, video editing, performance paid media, and web development.',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: caseStudies.map((cs, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: `${cs.client}: ${cs.title}`,
+        url: `https://explodelabs.com/case-studies/${cs.slug}`,
+        description: cs.tagline
+      }))
+    }
+  };
 
   const industries = useMemo(() => {
     const list = ['All', ...new Set(caseStudies.map((cs) => cs.industry))];
@@ -33,6 +52,7 @@ export default function CaseStudiesPage() {
 
   return (
     <div className="py-16 sm:py-24 bg-[#080808]">
+      <JsonLd schema={caseStudiesSchema} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-4xl mb-12">

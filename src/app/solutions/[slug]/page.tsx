@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CheckCircle2, ArrowRight, Target, Clock, DollarSign, Cpu, ArrowUpRight } from 'lucide-react';
+import { JsonLd } from '@/components/seo/JsonLd';
 
 export function generateStaticParams() {
   return solutions.map((s) => ({
@@ -28,8 +29,46 @@ export default async function SolutionDetailPage({
 
   const caseStudy = getCaseStudyBySlug(solution.caseStudySlug);
 
+  const solutionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: solution.title,
+    url: `https://explodelabs.com/solutions/${solution.slug}`,
+    description: solution.tagline,
+    provider: {
+      '@type': 'Organization',
+      name: 'Explode Labs',
+      url: 'https://explodelabs.com'
+    },
+    areaServed: 'Worldwide',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://explodelabs.com'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Solutions',
+          item: 'https://explodelabs.com/solutions'
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: solution.title,
+          item: `https://explodelabs.com/solutions/${solution.slug}`
+        }
+      ]
+    }
+  };
+
   return (
     <div className="py-12 sm:py-20">
+      <JsonLd schema={solutionSchema} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-xs font-mono text-[#71717a] mb-6">

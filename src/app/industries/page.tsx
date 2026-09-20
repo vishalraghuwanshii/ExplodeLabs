@@ -5,10 +5,35 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Building2, ArrowRight, ShieldCheck } from 'lucide-react';
+import { JsonLd } from '@/components/seo/JsonLd';
+
+export const metadata = {
+  title: 'Industry Vertical Solutions | Explode Labs',
+  description: 'Specialized digital growth, video creative, and web engineering architectures built for B2B SaaS, Healthcare, E-Commerce, and FinTech.',
+};
 
 export default function IndustriesPage() {
+  const industriesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Explode Labs Industry Solutions',
+    url: 'https://explodelabs.com/industries',
+    description: 'Industry-specific digital architectures, compliance frameworks, and growth systems.',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: industries.map((ind, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: ind.name,
+        url: `https://explodelabs.com/industries/${ind.slug}`,
+        description: ind.tagline
+      }))
+    }
+  };
+
   return (
     <div className="py-16 sm:py-24">
+      <JsonLd schema={industriesSchema} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
           <Badge variant="orange" className="mb-3">

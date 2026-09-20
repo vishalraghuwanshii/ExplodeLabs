@@ -6,10 +6,35 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Target, ArrowRight, CheckCircle2, Clock, DollarSign } from 'lucide-react';
+import { JsonLd } from '@/components/seo/JsonLd';
+
+export const metadata = {
+  title: 'Outcome-Driven Solutions | Explode Labs',
+  description: 'Multi-disciplinary digital solutions designed for predictable business outcomes: launching SaaS MVPs, scaling e-commerce brands, and automating sales pipelines.',
+};
 
 export default function SolutionsPage() {
+  const solutionsSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Explode Labs Outcome Solutions',
+    url: 'https://explodelabs.com/solutions',
+    description: 'Strategic outcome bundles engineered for rapid execution and revenue generation.',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: solutions.map((sol, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: sol.title,
+        url: `https://explodelabs.com/solutions/${sol.slug}`,
+        description: sol.tagline
+      }))
+    }
+  };
+
   return (
     <div className="py-16 sm:py-24">
+      <JsonLd schema={solutionsSchema} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
           <Badge variant="orange" className="mb-3">

@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Building2, ShieldCheck, CheckCircle2, ArrowRight, ArrowUpRight } from 'lucide-react';
+import { JsonLd } from '@/components/seo/JsonLd';
 
 export function generateStaticParams() {
   return industries.map((i) => ({
@@ -26,8 +27,46 @@ export default async function IndustryDetailPage({
     notFound();
   }
 
+  const industrySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: `${industry.name} Digital Solutions`,
+    url: `https://explodelabs.com/industries/${industry.slug}`,
+    description: industry.overview,
+    provider: {
+      '@type': 'Organization',
+      name: 'Explode Labs',
+      url: 'https://explodelabs.com'
+    },
+    areaServed: 'Worldwide',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://explodelabs.com'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Industries',
+          item: 'https://explodelabs.com/industries'
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: industry.name,
+          item: `https://explodelabs.com/industries/${industry.slug}`
+        }
+      ]
+    }
+  };
+
   return (
     <div className="py-12 sm:py-20">
+      <JsonLd schema={industrySchema} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-xs font-mono text-[#71717a] mb-6">
