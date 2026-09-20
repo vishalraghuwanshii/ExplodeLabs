@@ -40,14 +40,14 @@ export function Hero() {
   };
 
   const quickGoals = [
-    { label: 'Rank in SearchGPT (GEO/AEO)', path: '/services/chatgpt-and-perplexity-ai-seo' },
-    { label: 'DaVinci 4K Video Ads', path: '/services/video-editing-and-post-production' },
-    { label: 'Next.js 15 Web Apps', path: '/services/custom-web-application-development' },
-    { label: 'B2B Outbound Lead Engine', path: '/services/b2b-outbound-sdr-and-lead-generation' },
+    { label: 'Generative Search (GEO/AEO)', path: '/services/chatgpt-and-perplexity-ai-seo' },
+    { label: 'Commercial Video Post-Production', path: '/services/video-editing-and-post-production' },
+    { label: 'Next.js 15 Web Applications', path: '/services/custom-web-application-development' },
+    { label: 'Performance Paid Ads & Outbound SDR', path: '/services/high-performance-paid-advertising' },
   ];
 
   const proofPills = [
-    { label: 'Client Pipeline Generated', val: '$45M+', sub: 'Verified across B2B & D2C' },
+    { label: 'Client Pipeline Generated', val: '$35M+', sub: 'Verified across B2B & D2C' },
     { label: 'Organic Visits Scaled', val: '450k+/mo', sub: 'SearchGPT & Google Top 3' },
     { label: 'Average ROAS on Paid Media', val: '4.8x', sub: 'Meta, Google Ads & Amazon' },
     { label: 'Lighthouse Performance Score', val: '100/100', sub: 'Sub-second edge latency' },
@@ -104,7 +104,7 @@ export function Hero() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ff5500]"></span>
             </span>
             <span className="text-[11px] sm:text-xs font-mono font-medium text-[#f5f5f0] tracking-tight">
-              2026 Growth Engine <span className="text-[#555]">•</span> AEO & SearchGPT Ready <span className="text-[#555]">•</span> DaVinci Video <span className="text-[#555]">•</span> Next.js Web
+              Generative Engine Optimization (GEO/AEO) <span className="text-[#555]">•</span> Commercial Video Systems <span className="text-[#555]">•</span> Performance Paid Media <span className="text-[#555]">•</span> Modern Web Development
             </span>
           </div>
 
