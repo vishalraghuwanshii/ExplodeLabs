@@ -34,19 +34,32 @@ export default function RootLayout({
     name: 'Explode Labs',
     url: 'https://explodelabs.com',
     logo: 'https://explodelabs.com/logo.png',
-    description: 'Premier digital engineering, autonomous AI systems, and high-performance revenue engines.',
+    description: 'Explode Labs is a premier digital growth, creative systems, and modern web development studio delivering high-performance SEO/AEO, commercial video post-production, paid acquisition, and bespoke web platforms.',
+    founder: {
+      '@type': 'Person',
+      name: 'Vishal Raghuwanshi',
+      jobTitle: 'Founder & Principal Director',
+      url: 'https://www.linkedin.com/in/vishal-raghu/',
+      sameAs: [
+        'https://www.linkedin.com/in/vishal-raghu/'
+      ]
+    },
     sameAs: [
       'https://github.com/explodelabs',
       'https://linkedin.com/company/explodelabs',
-      'https://x.com/explodelabs'
+      'https://x.com/explodelabs',
+      'https://www.linkedin.com/in/vishal-raghu/'
     ],
     knowsAbout: [
-      'React & Next.js Development',
-      'SaaS Platform Engineering',
-      'Autonomous AI Agents & RAG',
+      'Generative Engine Optimization (GEO)',
+      'Answer Engine Optimization (AEO)',
       'Enterprise Technical SEO',
-      'Cloud Architecture & DevOps',
-      'Custom Shopify Plus'
+      'Commercial Video Editing & DaVinci Resolve',
+      '3D Product Modeling & CGI Rendering',
+      'Performance Paid Advertising (Google & Meta Ads)',
+      'B2B Outbound Lead Generation & SDR Infrastructure',
+      'Modern Web Development (React & Next.js)',
+      'Headless Shopify Plus Development'
     ]
   };
 

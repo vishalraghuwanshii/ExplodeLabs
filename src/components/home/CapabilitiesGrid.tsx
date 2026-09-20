@@ -49,9 +49,9 @@ export function CapabilitiesGrid() {
       hubHref: '/services'
     },
     { 
-      title: 'Web & E-Commerce Dev', 
+      title: 'Web & E-Commerce', 
       icon: Layout,
-      desc: 'Sub-second Next.js web applications, headless Shopify Plus, and high-converting websites.',
+      desc: 'Sub-second Next.js web applications, headless Shopify Plus storefronts, and conversion-optimized funnels.',
       links: [
         { name: 'Custom Web Application Dev', href: '/services/custom-web-application-development' },
         { name: 'Headless E-Commerce & Shopify Plus', href: '/services/headless-ecommerce-and-shopify-plus' },
@@ -67,11 +67,11 @@ export function CapabilitiesGrid() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Full Service Spectrum"
-          title="Growth, Creative, Web & AI Execution."
-          description="Every service is staffed by dedicated senior specialists with proven domain results. Zero junior handoffs."
+          title="Growth, Creative, Web & Performance Execution."
+          description="Every discipline is led by dedicated senior specialists with proven domain results. Zero junior handoffs."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {categories.map((cat, idx) => {
             const Icon = cat.icon;
             return (
@@ -113,6 +113,30 @@ export function CapabilitiesGrid() {
               </div>
             );
           })}
+        </div>
+
+        {/* Supporting Automation & Data Stack Strip */}
+        <div className="p-6 bg-[#0c0c0c] border border-[#1c1c1c] rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3 text-center sm:text-left">
+            <div className="w-8 h-8 rounded-lg bg-[#161616] border border-[#242424] flex items-center justify-center text-[#ff5500] shrink-0">
+              <Bot className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="text-xs sm:text-sm font-semibold text-[#f5f5f0]">
+                Looking for Custom AI Workflow Automation & Data Pipelines?
+              </div>
+              <div className="text-[11px] text-[#71717a]">
+                We also engineer self-hosted n8n workflows, CRM data syncs, and custom scraping systems.
+              </div>
+            </div>
+          </div>
+          <Link
+            href="/services/enterprise-workflow-automation"
+            className="text-xs text-[#ff5500] hover:underline font-mono font-medium flex items-center gap-1 shrink-0"
+          >
+            <span>View Automation Capabilities</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
       </div>
     </section>
