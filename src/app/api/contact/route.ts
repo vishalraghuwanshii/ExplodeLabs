@@ -1,9 +1,8 @@
 import { NextResponse } from 'next/server';
 
-const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
-
 export async function POST(request: Request) {
   try {
+    const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
     const data = await request.json();
     
     // Format the message for Slack
