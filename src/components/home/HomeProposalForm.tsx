@@ -135,16 +135,16 @@ export function HomeProposalForm() {
               </div>
 
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-4 text-xs font-mono text-[#71717a]">
-                  <span className="flex items-center gap-1">
+                <div className="flex items-center gap-4 text-xs font-mono font-medium text-[#8e8e93]">
+                  <span className="flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5 text-[#ff5500]" />
                     <span>24h SLA</span>
                   </span>
-                  <span className="flex items-center gap-1">
+                  <span className="flex items-center gap-1.5">
                     <Lock className="w-3.5 h-3.5 text-emerald-400" />
                     <span>Strict NDA Protected</span>
                   </span>
-                  <span className="flex items-center gap-1">
+                  <span className="flex items-center gap-1.5">
                     <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
                     <span>Zero Fixed Rate Locks</span>
                   </span>

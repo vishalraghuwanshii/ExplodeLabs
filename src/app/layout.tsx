@@ -65,7 +65,15 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="dark">
-      <body className="bg-[#080808] text-[#f5f5f0] min-h-screen flex flex-col selection:bg-[#ff5500] selection:text-white">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="bg-[#080808] text-[#f5f5f0] min-h-screen flex flex-col font-sans selection:bg-[#ff5500] selection:text-white antialiased">
         <JsonLd schema={organizationSchema} />
         <Header />
         <main className="flex-1">{children}</main>
