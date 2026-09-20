@@ -1,5 +1,8 @@
 export type PillarType = 'build' | 'grow' | 'automate' | 'create';
 export type ServicePriority = 'CORE' | 'HIGH' | 'STANDARD' | 'SPECIALIZED';
+export type PageType = 'PRIMARY_SERVICE' | 'SUB_SERVICE' | 'CAPABILITY' | 'TECHNOLOGY' | 'PLATFORM';
+export type Indexability = 'INDEX' | 'NOINDEX' | 'REGISTRY_ONLY';
+
 export type ServiceCategory = 
   | 'Web & E-commerce' 
   | 'Marketing & Growth' 
@@ -17,6 +20,8 @@ export interface ServiceEntity {
   subCategory?: string;
   pillar: PillarType;
   priority: ServicePriority;
+  pageType: PageType;
+  indexability: Indexability;
   tagline: string;
   shortDescription?: string;
   longDescription?: string;
@@ -25,12 +30,20 @@ export interface ServiceEntity {
   targetAudience: string[];
   problemsSolved: string[];
   deliverables: string[];
+  subServices?: string[];
+  capabilities?: string[];
   technologies: string[];
   platforms?: string[];
   industries?: string[];
-  aliases?: string[];
-  searchIntent?: string;
+  primaryKeyword?: string;
+  primaryIntent?: string;
   secondaryIntents?: string[];
+  aliases?: string[];
+  parentServiceSlug?: string;
+  childServiceSlugs?: string[];
+  relatedServiceSlugs: string[];
+  complementaryServiceSlugs?: string[];
+  alternativeServiceSlugs?: string[];
   pricingRange: {
     min: string;
     avg: string;
@@ -43,7 +56,6 @@ export interface ServiceEntity {
     description: string;
   }[];
   caseStudySlugs: string[];
-  relatedServiceSlugs: string[];
   faqs: {
     question: string;
     answer: string;

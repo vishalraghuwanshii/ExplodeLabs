@@ -1,4 +1,5 @@
-import { ServiceEntity } from '@/types';
+import { ServiceEntity, PageType, Indexability } from '@/types';
+import { checkCannibalization, CannibalizationIssue } from './cannibalization-checker';
 
 export interface ValidationIssue {
   type: 'error' | 'warning';
@@ -8,11 +9,14 @@ export interface ValidationIssue {
   message: string;
 }
 
-export function validateServices(services: ServiceEntity[]): {
+export interface ValidationReport {
   valid: boolean;
   errors: ValidationIssue[];
   warnings: ValidationIssue[];
-} {
+  cannibalizationIssues: CannibalizationIssue[];
+}
+
+export function validateServices(services: ServiceEntity[]): ValidationReport {
   const errors: ValidationIssue[] = [];
   const warnings: ValidationIssue[] = [];
 
@@ -32,6 +36,8 @@ export function validateServices(services: ServiceEntity[]): {
   ]);
 
   const validPriorities = new Set(['CORE', 'HIGH', 'STANDARD', 'SPECIALIZED']);
+  const validPageTypes: Set<PageType> = new Set(['PRIMARY_SERVICE', 'SUB_SERVICE', 'CAPABILITY', 'TECHNOLOGY', 'PLATFORM']);
+  const validIndexabilities: Set<Indexability> = new Set(['INDEX', 'NOINDEX', 'REGISTRY_ONLY']);
 
   services.forEach((service, index) => {
     const loc = `Service[${index}] (${service.slug || service.id || 'unnamed'})`;
@@ -81,7 +87,18 @@ export function validateServices(services: ServiceEntity[]): {
       errors.push({ type: 'error', id: service.id, slug: service.slug, field: 'priority', message: `Invalid priority: "${service.priority}"` });
     }
 
-    // 6. Content Check
+    // 6. PageType & Indexability Checks
+    if (service.pageType && !validPageTypes.has(service.pageType)) {
+      errors.push({ type: 'error', id: service.id, slug: service.slug, field: 'pageType', message: `Invalid pageType: "${service.pageType}"` });
+    }
+    if (service.indexability && !validIndexabilities.has(service.indexability)) {
+      errors.push({ type: 'error', id: service.id, slug: service.slug, field: 'indexability', message: `Invalid indexability: "${service.indexability}"` });
+    }
+    if (service.indexability === 'INDEX' && !service.primaryKeyword) {
+      warnings.push({ type: 'warning', id: service.id, slug: service.slug, field: 'primaryKeyword', message: `Indexable service "${service.slug}" is missing a primaryKeyword` });
+    }
+
+    // 7. Content Check
     if (!service.tagline) {
       errors.push({ type: 'error', id: service.id, slug: service.slug, field: 'tagline', message: `${loc}: Missing tagline` });
     }
@@ -98,7 +115,7 @@ export function validateServices(services: ServiceEntity[]): {
       errors.push({ type: 'error', id: service.id, slug: service.slug, field: 'process', message: `${loc}: Process must be a non-empty array` });
     }
 
-    // 7. Check relatedServiceSlugs cross-references
+    // 8. Cross-reference checks (related, parent, child, complementary, alternative)
     if (Array.isArray(service.relatedServiceSlugs)) {
       service.relatedServiceSlugs.forEach((relSlug) => {
         if (!validSlugs.has(relSlug)) {
@@ -113,7 +130,31 @@ export function validateServices(services: ServiceEntity[]): {
       });
     }
 
-    // 8. Fabricated claim check (sanity check)
+    if (service.parentServiceSlug && !validSlugs.has(service.parentServiceSlug)) {
+      warnings.push({
+        type: 'warning',
+        id: service.id,
+        slug: service.slug,
+        field: 'parentServiceSlug',
+        message: `Service "${service.slug}" references non-existent parent slug "${service.parentServiceSlug}"`
+      });
+    }
+
+    if (Array.isArray(service.childServiceSlugs)) {
+      service.childServiceSlugs.forEach((childSlug) => {
+        if (!validSlugs.has(childSlug)) {
+          warnings.push({
+            type: 'warning',
+            id: service.id,
+            slug: service.slug,
+            field: 'childServiceSlugs',
+            message: `Service "${service.slug}" references non-existent child slug "${childSlug}"`
+          });
+        }
+      });
+    }
+
+    // 9. Fabricated claim check (sanity check)
     const allText = JSON.stringify(service);
     const suspiciousPatterns = [/zero-hallucination/i, /\+340%/i, /4\.8x ROAS/i, /10M\+ views/i];
     suspiciousPatterns.forEach((pat) => {
@@ -129,9 +170,13 @@ export function validateServices(services: ServiceEntity[]): {
     });
   });
 
+  // 10. Check Cannibalization
+  const cannibalizationIssues = checkCannibalization(services);
+
   return {
     valid: errors.length === 0,
     errors,
-    warnings
+    warnings,
+    cannibalizationIssues
   };
 }
