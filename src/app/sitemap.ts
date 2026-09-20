@@ -106,9 +106,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // All 35 Flagship Services + Registered Services
+  // All Canonical & Indexable Services
   const allServiceSlugs = Array.from(
-    new Set([...services.map((s) => s.slug), ...Object.keys(serviceDeepDives)])
+    new Set([
+      ...services.filter((s) => s.indexable !== false).map((s) => s.slug),
+      ...Object.keys(serviceDeepDives)
+    ])
   );
 
   const servicePages: MetadataRoute.Sitemap = allServiceSlugs.map((slug) => ({

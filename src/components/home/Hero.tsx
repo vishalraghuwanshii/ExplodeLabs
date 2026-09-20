@@ -40,10 +40,10 @@ export function Hero() {
   };
 
   const quickGoals = [
-    { label: 'Generative Search (GEO/AEO)', path: '/services/chatgpt-and-perplexity-ai-seo' },
-    { label: 'Commercial Video Post-Production', path: '/services/video-editing-and-post-production' },
-    { label: 'Next.js 15 Web Applications', path: '/services/custom-web-application-development' },
-    { label: 'Performance Paid Ads & Outbound SDR', path: '/services/high-performance-paid-advertising' },
+    { label: 'AI Search & SEO (GEO/AEO)', path: '/services/ai-search-optimization' },
+    { label: 'Video Editing & Creative', path: '/services/video-editing' },
+    { label: 'Website & App Development', path: '/services/website-development' },
+    { label: 'Google & Meta Paid Ads', path: '/services/google-ads' },
   ];
 
   const proofPills = [

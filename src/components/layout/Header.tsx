@@ -11,7 +11,6 @@ import {
   Menu, 
   X, 
   ChevronDown, 
-  TrendingUp, 
   Film, 
   Code2, 
   Bot, 
@@ -47,9 +46,15 @@ import {
   Compass,
   Check,
   ArrowUpRight,
-  Award
+  Award,
+  Cpu,
+  Monitor,
+  Video,
+  PenTool,
+  TrendingUp
 } from 'lucide-react';
 import { SearchModal } from './SearchModal';
+import { canonicalServices } from '@/data/services/registry';
 
 interface NavItem {
   label: string;
@@ -118,193 +123,229 @@ export function Header() {
   };
 
   const megaMenus: Record<string, MegaMenuData> = {
-    seo: {
-      id: 'seo',
-      title: 'AI Search & SEO',
-      tagline: 'Capture high-intent organic demand across Google, SearchGPT, Perplexity & AI Overviews.',
-      badge: 'AEO & LLM SEARCH READY',
+    'web-ecommerce': {
+      id: 'web-ecommerce',
+      title: 'Web & E-commerce',
+      tagline: 'Custom websites, headless Shopify stores, SaaS platforms, and high-performance frontends built for scale.',
+      badge: 'FULL-STACK ENGINEERING',
       columns: [
         {
-          title: 'Search Engine Optimization (SEO)',
+          title: 'Websites & Frontends',
           items: [
-            { label: 'Generative Engine Opt (GEO/AEO)', href: '/services/chatgpt-and-perplexity-ai-seo', desc: 'Rank in SearchGPT, Perplexity & Google AI Overviews', icon: Sparkles, tag: 'AEO' },
-            { label: 'Technical & Programmatic SEO', href: '/services/technical-and-programmatic-seo', desc: 'Database-driven scale with Next.js ISR & Schema graphs', icon: Code2, tag: 'HOT' },
-            { label: 'Local & Franchise SEO', href: '/services/local-and-franchise-seo', desc: 'Multi-location map packs & Google Business Profile ops', icon: Globe, tag: 'LOCAL' },
-            { label: 'Technical SEO Audits & Health', href: '/tools/seo-auditor', desc: 'Crawl budget, Core Web Vitals & indexation health', icon: SearchCheck, tag: 'TOOL' },
+            { label: 'Website Development', href: '/services/website-development', desc: 'Fast, responsive Next.js and custom websites', icon: Code2, tag: 'CORE' },
+            { label: 'Website Design', href: '/services/website-design', desc: 'Conversion-focused UX wireframing & Figma layouts', icon: Layout, tag: 'CORE' },
+            { label: 'Landing Page Development', href: '/services/landing-page-development', desc: 'Sub-second conversion funnels & lead capture', icon: Layers, tag: 'HIGH' },
+            { label: 'SaaS Platform Development', href: '/services/saas-development', desc: 'Multi-tenant apps, billing systems & dashboards', icon: Server, tag: 'CORE' },
           ]
         },
         {
-          title: 'Content, Digital PR & Authority',
+          title: 'E-commerce & Platforms',
           items: [
-            { label: 'Digital PR & Authority Link Building', href: '/services/digital-pr-and-authority-link-building', desc: 'Tier-1 press mentions, DR 75+ backlinks & media tours', icon: Share2, tag: 'PR' },
-            { label: 'Technical & Conversion Copywriting', href: '/services/technical-copywriting-and-editorial', desc: 'Authority whitepapers, teardowns & high-intent copy', icon: FileText },
-            { label: 'Enterprise SEO Playbook', href: '/guides/the-complete-b2b-seo-aeo-playbook', desc: 'Comprehensive organic pipeline execution blueprint', icon: BookOpen, tag: 'GUIDE' },
-            { label: 'Conversion Rate Optimization (CRO)', href: '/services/conversion-rate-optimization-cro', desc: 'Friction reduction & A/B testing on organic funnels', icon: BarChart3, tag: 'CRO' },
+            { label: 'Shopify Development', href: '/services/shopify-development', desc: 'Custom Liquid themes & headless Hydrogen stores', icon: ShoppingBag, tag: 'CORE' },
+            { label: 'E-commerce Development', href: '/services/ecommerce-development', desc: 'Scalable multi-channel digital storefronts', icon: Box, tag: 'CORE' },
+            { label: 'Mobile App Development', href: '/services/mobile-app-development', desc: 'iOS & Android mobile apps with React Native', icon: Smartphone, tag: 'HIGH' },
+            { label: 'Website Maintenance & Support', href: '/services/website-maintenance', desc: 'Updates, security patching, and SLA support', icon: ShieldCheck, tag: 'STANDARD' },
           ]
         }
       ],
       featured: {
-        badge: 'FREE AUDIT TOOL',
-        title: 'Instant SEO & AI Citation Scanner',
-        desc: 'Scan your domain for Generative Engine citations, Schema health, and Core Web Vitals in 60s.',
-        href: '/tools/seo-auditor',
-        buttonText: 'Run Free Audit',
-        statNumber: '+340%',
-        statLabel: 'Avg Organic Traffic Surge',
+        badge: 'ENGINEERING STANDARD',
+        title: 'Modern Full-Stack Architecture',
+        desc: 'Every website and application is engineered with clean code, responsive layouts, and technical SEO foundations.',
+        href: '/architect',
+        buttonText: 'Scope with AI Architect',
+        statNumber: '95+',
+        statLabel: 'Lighthouse Performance Goal',
       }
     },
 
-    creative: {
-      id: 'creative',
-      title: 'Creative, Video & Design',
-      tagline: 'Studio-grade video post-production, 3D CGI product renders, and conversion-first UI/UX design systems.',
-      badge: 'DAVINCI ACES & 3D PIPELINE',
+    'marketing-growth': {
+      id: 'marketing-growth',
+      title: 'Marketing & Growth',
+      tagline: 'Search engine optimization, paid advertising, and conversion optimization to drive measurable revenue.',
+      badge: 'REVENUE-DRIVEN GROWTH',
       columns: [
+        {
+          title: 'Search & Organic Growth',
+          items: [
+            { label: 'Search Engine Optimization (SEO)', href: '/services/seo', desc: 'Rank higher on Google and capture organic demand', icon: SearchCheck, tag: 'CORE' },
+            { label: 'AI Search Optimization (GEO/AEO)', href: '/services/ai-search-optimization', desc: 'Citations across ChatGPT, Perplexity & AI Overviews', icon: Sparkles, tag: 'CORE' },
+            { label: 'Technical SEO', href: '/services/technical-seo', desc: 'Core Web Vitals, crawl budget & schema graphs', icon: Code2, tag: 'HIGH' },
+            { label: 'Content Marketing', href: '/services/content-marketing', desc: 'Keyword-targeted articles, guides & pillar content', icon: FileText, tag: 'HIGH' },
+          ]
+        },
+        {
+          title: 'Paid Media & Conversion',
+          items: [
+            { label: 'Google Ads Management', href: '/services/google-ads', desc: 'Search, Shopping, and YouTube paid campaigns', icon: Target, tag: 'CORE' },
+            { label: 'Meta Ads Management', href: '/services/meta-ads', desc: 'Facebook & Instagram creative and conversion ads', icon: Megaphone, tag: 'CORE' },
+            { label: 'Social Media Marketing', href: '/services/social-media-marketing', desc: 'Multi-channel social strategy & paid audience targeting', icon: Share2, tag: 'STANDARD' },
+            { label: 'Conversion Rate Optimization (CRO)', href: '/services/conversion-rate-optimization', desc: 'A/B testing and checkout friction elimination', icon: TrendingUp, tag: 'HIGH' },
+          ]
+        }
+      ],
+      featured: {
+        badge: 'FREE AUDIT',
+        title: 'Free SEO & AI Search Audit',
+        desc: 'Scan your domain for search visibility, AI engine citation readiness, and technical health in 60s.',
+        href: '/tools/seo-auditor',
+        buttonText: 'Run Domain Audit',
+        statNumber: '360°',
+        statLabel: 'Full-Funnel Measurement',
+      }
+    },
+
+    'design-creative': {
+      id: 'design-creative',
+      title: 'Design & Creative',
+      tagline: 'Brand identity design, video editing, motion graphics, 3D renders, and user interface systems.',
+      badge: 'STUDIO-GRADE CREATIVE',
+      columns: [
+        {
+          title: 'Branding & UI/UX Design',
+          items: [
+            { label: 'Branding & Identity Design', href: '/services/branding', desc: 'Logos, color palettes, brand guidelines & voice', icon: Palette, tag: 'CORE' },
+            { label: 'UI/UX Design', href: '/services/ui-ux-design', desc: 'User journey maps, Figma design systems & prototypes', icon: Layout, tag: 'CORE' },
+            { label: 'Logo Design', href: '/services/logo-design', desc: 'Distinctive brand marks and vector asset packages', icon: PenTool, tag: 'STANDARD' },
+            { label: 'Graphic Design', href: '/services/graphic-design', desc: 'Marketing collateral, pitch decks & digital graphics', icon: Layers, tag: 'STANDARD' },
+          ]
+        },
         {
           title: 'Video & Motion Production',
           items: [
-            { label: 'Video Editing & Post-Production', href: '/services/video-editing-and-post-production', desc: 'DaVinci Resolve ACES color, pacing & sound design', icon: Film, tag: 'HOT' },
-            { label: 'Motion Graphics & Visual Effects', href: '/services/motion-graphics-and-visual-effects', desc: 'Kinetic typography, 2D/3D explainers & Lottie animations', icon: Sparkles, tag: 'VFX' },
-            { label: '3D Product Rendering & CGI', href: '/services/3d-product-modeling-and-rendering', desc: 'Photorealistic CAD visualization & interactive 3D viewers', icon: Box, tag: 'CGI' },
-            { label: 'Drone & Commercial Video Sprints', href: '/services/drone-and-commercial-media-production', desc: 'High-velocity 4K FPV cinematic commercial captures', icon: Smartphone, tag: '4K' },
-          ]
-        },
-        {
-          title: 'Brand, UI/UX & Digital Design',
-          items: [
-            { label: 'UI/UX & Design Systems', href: '/services/ui-ux-design-and-design-systems', desc: 'Atomic design tokens, Figma libraries & WCAG AAA', icon: Layout, tag: 'FIGMA' },
-            { label: 'Brand Identity & Visual Systems', href: '/services/brand-identity-and-visual-systems', desc: 'Corporate visual systems, typography & styleguides', icon: Palette, tag: 'BRAND' },
-            { label: 'High-Converting Ad Creatives', href: '/services/high-performance-paid-advertising', desc: 'Iterative UGC, video hooks & Meta ad variations', icon: Megaphone },
-            { label: 'Landing Page & Funnel Design', href: '/services/conversion-rate-optimization-cro', desc: 'High-converting responsive layouts engineered for CRO', icon: Layers, tag: 'CRO' },
+            { label: 'Video Editing & Post-Production', href: '/services/video-editing', desc: 'DaVinci color grading, pacing, audio & captions', icon: Film, tag: 'CORE' },
+            { label: 'YouTube Video Editing', href: '/services/youtube-video-editing', desc: 'Retention-optimized YouTube long-form & Shorts', icon: Video, tag: 'HIGH' },
+            { label: 'Motion Graphics & Animation', href: '/services/motion-graphics', desc: 'Kinetic typography, 2D explainers & Lottie animations', icon: Sparkles, tag: 'HIGH' },
+            { label: '3D Modeling & Rendering', href: '/services/3d-modeling', desc: 'Photorealistic CGI product renders & animations', icon: Box, tag: 'HIGH' },
           ]
         }
       ],
       featured: {
-        badge: 'PORTFOLIO REEL',
-        title: 'Cinematic Work & Creative Case Studies',
-        desc: 'Explore how our DaVinci post-production and 3D modeling pipelines elevated high-growth brands.',
+        badge: 'CASE STUDIES',
+        title: 'Featured Creative Portfolio',
+        desc: 'Explore our studio post-production, 3D CGI product renders, and UI/UX systems across high-growth brands.',
         href: '/case-studies',
-        buttonText: 'View Creative Reel',
-        statNumber: '10M+',
-        statLabel: 'Video Views Generated',
+        buttonText: 'View Work & Reel',
+        statNumber: '100%',
+        statLabel: 'Tailored Brand Assets',
       }
     },
 
-    ads: {
-      id: 'ads',
-      title: 'Paid Media & Outbound',
-      tagline: 'High-ROAS paid ad management, cold email domain fleets, and B2B SDR lead generation engines.',
-      badge: 'PROVEN REVENUE PIPELINES',
+    'ai-automation': {
+      id: 'ai-automation',
+      title: 'AI & Automation',
+      tagline: 'Custom AI agents, enterprise workflow automation, RAG pipelines, and intelligent data integration.',
+      badge: 'INTELLIGENT SYSTEMS',
       columns: [
         {
-          title: 'Performance Paid Advertising (PPC)',
+          title: 'AI Solutions & Agents',
           items: [
-            { label: 'High-Performance Paid Ads (PPC)', href: '/services/high-performance-paid-advertising', desc: 'Google Search, YouTube & Meta CAPI campaign management', icon: Target, tag: 'PPC' },
-            { label: 'Amazon & Marketplace Marketing', href: '/services/amazon-and-marketplace-marketing', desc: 'Amazon PPC, DSP ads, A+ content & Walmart scaling', icon: ShoppingBag, tag: 'HOT' },
-            { label: 'Social Media Advertising', href: '/services/social-media-advertising', desc: 'Hyper-targeted Meta, LinkedIn & TikTok ad scaling', icon: Megaphone, tag: 'ADS' },
-            { label: 'Influencer & Creator Marketing', href: '/services/influencer-and-creator-marketing', desc: 'Performance creator whitelisting & sponsor networks', icon: Share2 },
+            { label: 'AI Agent Development', href: '/services/ai-agent-development', desc: 'Autonomous multi-step agents with tool-calling', icon: Bot, tag: 'CORE' },
+            { label: 'AI Chatbot Development', href: '/services/ai-chatbot-development', desc: '24/7 intelligent customer service & sales bots', icon: Zap, tag: 'HIGH' },
+            { label: 'Enterprise RAG Systems', href: '/services/rag-development', desc: 'Semantic search over private company documents', icon: Database, tag: 'HIGH' },
+            { label: 'Web Scraping Automation', href: '/services/web-scraping-automation', desc: 'Automated data extraction and structured pipelines', icon: ShieldCheck, tag: 'STANDARD' },
           ]
         },
         {
-          title: 'B2B Outbound & Lead Engines',
+          title: 'Workflows & Integration',
           items: [
-            { label: 'B2B Outbound SDR & Lead Gen', href: '/services/b2b-outbound-sdr-and-lead-generation', desc: 'Secondary domains, SPF/DMARC & Clay waterfall enrichment', icon: MailCheck, tag: 'B2B' },
-            { label: 'Lifecycle & Cold Email Infrastructure', href: '/services/lifecycle-and-cold-email-infrastructure', desc: 'Automated inbox warmup pools & 99% inbox placement', icon: Inbox, tag: 'EMAIL' },
-            { label: 'B2B SaaS Lead Engine Solution', href: '/solutions/scale-b2b-lead-engine', desc: 'Turnkey outbound SDR & paid pipeline acquisition machine', icon: Rocket, tag: 'HOT' },
-            { label: 'Conversion Rate Optimization (CRO)', href: '/services/conversion-rate-optimization-cro', desc: 'Landing page A/B testing & friction reduction', icon: TrendingUp },
+            { label: 'Workflow Automation', href: '/services/workflow-automation', desc: 'Connect apps and eliminate repetitive manual tasks', icon: Workflow, tag: 'CORE' },
+            { label: 'CRM Setup & Management', href: '/services/crm-setup-management', desc: 'HubSpot, Salesforce, and pipeline automations', icon: Users, tag: 'HIGH' },
+            { label: 'Data Engineering & Pipelines', href: '/services/data-engineering', desc: 'ETL pipelines, data warehousing & modeling', icon: Database, tag: 'HIGH' },
+            { label: 'Cloud Infrastructure & DevOps', href: '/services/cloud-infrastructure-devops', desc: 'AWS/GCP cloud setup, CI/CD, and monitoring', icon: Cloud, tag: 'HIGH' },
           ]
         }
       ],
       featured: {
-        badge: 'COST ESTIMATOR',
-        title: 'Milestone Scope & Cost Estimator',
-        desc: 'Calculate estimated project milestones and timelines with zero rigid price locks.',
+        badge: 'TECHNICAL GUIDE',
+        title: 'Enterprise RAG Blueprint',
+        desc: 'Read our engineering guide on deploying vector search, citation verification, and data governance.',
+        href: '/guides/enterprise-rag-architecture-blueprint',
+        buttonText: 'Read RAG Blueprint',
+        statNumber: '24/7',
+        statLabel: 'Autonomous Execution',
+      }
+    },
+
+    'content-sales': {
+      id: 'content-sales',
+      title: 'Content & Sales',
+      tagline: 'Strategic copywriting, B2B lead generation, cold email infrastructure, and digital PR.',
+      badge: 'PIPELINE GENERATION',
+      columns: [
+        {
+          title: 'Content & Messaging',
+          items: [
+            { label: 'Copywriting & Editorial', href: '/services/copywriting', desc: 'High-converting sales copy, website copy & scripts', icon: FileText, tag: 'CORE' },
+            { label: 'Content Marketing Strategy', href: '/services/content-marketing', desc: 'High-intent search articles & customer education', icon: BookOpen, tag: 'CORE' },
+            { label: 'Digital PR & Authority Building', href: '/services/digital-pr', desc: 'Editorial mentions, brand features & authoritative links', icon: Share2, tag: 'HIGH' },
+            { label: 'Email Marketing', href: '/services/email-marketing', desc: 'Klaviyo automated flows, newsletters & retention', icon: MailCheck, tag: 'CORE' },
+          ]
+        },
+        {
+          title: 'Sales & Outbound',
+          items: [
+            { label: 'B2B Lead Generation', href: '/services/lead-generation', desc: 'Targeted account lists and verified sales prospects', icon: Target, tag: 'CORE' },
+            { label: 'CRM Setup & Pipelines', href: '/services/crm-setup-management', desc: 'HubSpot sales stages and automated lead routing', icon: Users, tag: 'HIGH' },
+            { label: 'B2B Revenue Blueprint', href: '/solutions/scale-b2b-lead-engine', desc: 'Turnkey multichannel outbound and search pipeline', icon: Rocket, tag: 'SOLUTION' },
+            { label: 'Conversion Optimization', href: '/services/conversion-rate-optimization', desc: 'Sales funnel optimization and lead capture forms', icon: TrendingUp, tag: 'HIGH' },
+          ]
+        }
+      ],
+      featured: {
+        badge: 'SCOPE ESTIMATOR',
+        title: 'Project Scope & Cost Estimator',
+        desc: 'Calculate estimated milestones, timelines, and requirements with transparent scoping.',
         href: '/tools/project-estimator',
         buttonText: 'Estimate Project',
-        statNumber: '4.8x',
-        statLabel: 'Avg Paid Media ROAS',
+        statNumber: '100%',
+        statLabel: 'Transparent Scoping',
       }
     },
 
-    web: {
-      id: 'web',
-      title: 'Web Design & Development',
-      tagline: 'Sub-second Next.js web applications, headless Shopify Plus, and high-converting websites.',
-      badge: 'NEXT.JS 15 & SHOPIFY PLUS',
+    'more-services': {
+      id: 'more-services',
+      title: 'More Specialized Disciplines',
+      tagline: 'Deep analytics, enterprise security, compliance audits, and specialized emerging technologies.',
+      badge: 'SPECIALIZED EXPERTISE',
       columns: [
         {
-          title: 'Custom Web & Software Development',
+          title: 'Data & Analytics',
           items: [
-            { label: 'Custom Web App Development', href: '/services/custom-web-application-development', desc: 'Next.js 15, React 19, TypeScript & PostgreSQL', icon: Code2, tag: 'NEXT.JS' },
-            { label: 'Enterprise SaaS Architecture', href: '/services/enterprise-saas-architecture', desc: 'Multi-tenant apps, Stripe billing & Postgres RLS', icon: Server, tag: 'SAAS' },
-            { label: 'ADA Web Accessibility & WCAG', href: '/services/ada-web-accessibility-and-compliance', desc: 'WCAG 2.2 AA/AAA audits, screen reader fixes & VPAT 2.5', icon: ShieldCheck, tag: 'ADA' },
-            { label: 'iOS & Android Mobile App Engineering', href: '/services/ios-and-android-mobile-apps', desc: 'Cross-platform React Native & Expo applications', icon: Smartphone, tag: 'APPS' },
+            { label: 'Data Analytics & Dashboards', href: '/services/data-analytics', desc: 'Executive KPI reporting and business intelligence', icon: BarChart3, tag: 'HIGH' },
+            { label: 'Data Engineering & ETL', href: '/services/data-engineering', desc: 'Data warehouse architecture with BigQuery & Snowflake', icon: Database, tag: 'HIGH' },
+            { label: 'Web Scraping Automation', href: '/services/web-scraping-automation', desc: 'Automated catalog extraction and market monitoring', icon: ShieldCheck, tag: 'STANDARD' },
           ]
         },
         {
-          title: 'E-Commerce & Modern Web',
+          title: 'Infrastructure & Specialized Tech',
           items: [
-            { label: 'Headless E-Commerce & Shopify Plus', href: '/services/headless-ecommerce-and-shopify-plus', desc: 'Shopify Storefront API GraphQL & custom Hydrogen', icon: ShoppingBag, tag: 'HOT' },
-            { label: 'DevOps, Cloud Architecture & CI/CD', href: '/services/devops-cloud-and-cicd-infrastructure', desc: 'Terraform, AWS, Cloudflare Workers & Docker', icon: Cloud, tag: 'CLOUD' },
-            { label: 'Legacy Migration & Refactoring', href: '/services/legacy-system-migration-and-refactoring', desc: 'Modernize monoliths to edge-rendered Next.js', icon: RefreshCw },
-            { label: 'Sub-Second Landing Pages', href: '/services/custom-web-application-development', desc: 'Ultra-fast conversion funnels with 100/100 Lighthouse', icon: Layout, tag: 'CRO' },
+            { label: 'Cloud Infrastructure & DevOps', href: '/services/cloud-infrastructure-devops', desc: 'AWS/GCP architecture, Docker, and CI/CD pipelines', icon: Cloud, tag: 'HIGH' },
+            { label: 'Cybersecurity Audits', href: '/services/cybersecurity-audits', desc: 'Vulnerability assessment, code review & compliance', icon: Lock, tag: 'SPECIALIZED' },
+            { label: 'QA Software Testing', href: '/services/qa-software-testing', desc: 'Automated test suites, regression & load testing', icon: CheckCircle2, tag: 'STANDARD' },
+            { label: 'Web Accessibility (ADA/WCAG)', href: '/services/web-accessibility', desc: 'WCAG 2.2 AA audit and code remediation', icon: ShieldCheck, tag: 'STANDARD' },
           ]
         }
       ],
       featured: {
-        badge: 'INTERACTIVE INTAKE',
-        title: 'Scope with AI Project Architect',
-        desc: 'Describe your vision to our AI Architect to generate an instant engineering blueprint.',
-        href: '/architect',
-        buttonText: 'Open AI Architect',
-        statNumber: '100/100',
-        statLabel: 'Lighthouse Performance',
-      }
-    },
-
-    automation: {
-      id: 'automation',
-      title: 'AI, Automation & Data',
-      tagline: 'Custom AI agents, enterprise workflow automation (n8n/Make), and real-time revenue analytics.',
-      badge: 'LANGGRAPH & MODERN DATA STACK',
-      columns: [
-        {
-          title: 'Artificial Intelligence & Agents',
-          items: [
-            { label: 'Custom AI Agents & LLM Pipelines', href: '/services/custom-ai-agents-and-llm-pipelines', desc: 'LangGraph, Model Context Protocol (MCP) & tools', icon: Bot, tag: 'HOT' },
-            { label: 'Vector Search & Enterprise RAG', href: '/services/vector-search-and-rag-architecture', desc: 'pgvector, Qdrant hybrid search & zero hallucination', icon: Database, tag: 'RAG' },
-            { label: 'Enterprise RAG Architecture Guide', href: '/guides/enterprise-rag-architecture-blueprint', desc: 'Technical blueprint for enterprise doc search', icon: BookOpen, tag: 'GUIDE' },
-            { label: 'AI Model Fine-Tuning & Quantization', href: '/services/ai-model-fine-tuning-and-quantization', desc: 'Custom domain models & private VPC deployment', icon: Zap },
-          ]
-        },
-        {
-          title: 'Automation & Business Intelligence',
-          items: [
-            { label: 'Enterprise Workflow Automation', href: '/services/enterprise-workflow-automation', desc: 'Self-hosted n8n, Make & bidirectional CRM sync', icon: Workflow, tag: 'N8N' },
-            { label: 'Modern Data Stack & Warehousing', href: '/services/modern-data-stack-and-warehousing', desc: 'Snowflake, BigQuery, dbt & data modeling', icon: Database, tag: 'DATA' },
-            { label: 'Real-Time Dashboards & Analytics', href: '/services/business-intelligence-and-dashboards', desc: 'Looker, Metabase & executive KPI dashboards', icon: BarChart3 },
-            { label: 'Web Scraping & Data Pipelines', href: '/services/web-scraping-and-data-pipelines', desc: 'Automated extraction & lead enrichment pipelines', icon: ShieldCheck },
-          ]
-        }
-      ],
-      featured: {
-        badge: 'CONSULTATION',
-        title: 'Talk to a Senior Solutions Architect',
-        desc: 'Schedule a technical discovery session with our senior engineers and growth directors.',
-        href: '/contact',
-        buttonText: 'Book Discovery Call',
-        statNumber: '80%',
-        statLabel: 'Operational Cost Reduction',
+        badge: 'ALL DISCIPLINES',
+        title: 'Complete Services Directory',
+        desc: 'Browse our full catalog of digital agency services organized across web, marketing, design, AI, and data.',
+        href: '/services',
+        buttonText: 'View All Services',
+        statNumber: `${canonicalServices.length}+`,
+        statLabel: 'Full Agency Offerings',
       }
     }
   };
 
   const navLinks = [
-    { key: 'seo', label: 'AI Search & SEO' },
-    { key: 'creative', label: 'Creative & Video' },
-    { key: 'ads', label: 'Paid Ads & Outbound' },
-    { key: 'web', label: 'Web & Development' },
-    { key: 'automation', label: 'AI & Automation' },
+    { key: 'web-ecommerce', label: 'Web & E-commerce' },
+    { key: 'marketing-growth', label: 'Marketing & Growth' },
+    { key: 'design-creative', label: 'Design & Creative' },
+    { key: 'ai-automation', label: 'AI & Automation' },
+    { key: 'content-sales', label: 'Content & Sales' },
+    { key: 'more-services', label: 'More' },
   ];
 
   const currentMenu = activeDropdown ? megaMenus[activeDropdown] : null;
@@ -373,8 +414,8 @@ export function Header() {
             <button
               onClick={() => setIsSearchOpen(true)}
               className="w-9 h-9 flex items-center justify-center text-[#8e8e93] hover:text-[#f5f5f0] bg-[#121212] hover:bg-[#181818] border border-[#222222] hover:border-[#333333] rounded-lg transition-all cursor-pointer group"
-              title="Search knowledge graph (Cmd+K)"
-              aria-label="Search knowledge graph"
+              title="Search services & knowledge graph (Cmd+K)"
+              aria-label="Search services & knowledge graph"
             >
               <Search className="w-4 h-4 text-[#8e8e93] group-hover:text-[#ff5500] transition-colors" />
             </button>
@@ -407,7 +448,7 @@ export function Header() {
               {/* Main 12-Column Grid */}
               <div className="grid grid-cols-12 gap-8 items-stretch">
                 
-                {/* COLUMN 1 (3 Cols): Pillar Identity & Quick Switcher Rail */}
+                {/* COLUMN 1 (3 Cols): Category Identity & Quick Switcher Rail */}
                 <div className="col-span-3 pr-6 border-r border-[#181818] flex flex-col justify-between">
                   <div>
                     <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#141414] border border-[#222] text-[#ff5500] text-xs font-medium mb-3">
@@ -423,10 +464,10 @@ export function Header() {
                       {currentMenu.tagline}
                     </p>
 
-                    {/* Quick Switcher across other pillars */}
+                    {/* Quick Switcher across other categories */}
                     <div className="space-y-1.5 pt-4 border-t border-[#181818]">
                       <div className="text-xs font-semibold text-[#5c5c60] mb-2">
-                        Explore Disciplines
+                        Explore Categories
                       </div>
                       {navLinks.map(({ key, label }) => {
                         const isCurrent = currentMenu.id === key;
@@ -455,7 +496,7 @@ export function Header() {
                       href="/services" 
                       className="text-xs font-medium text-[#ff5500] hover:text-white transition-colors flex items-center gap-1.5 group"
                     >
-                      <span>Explore all 35 services</span>
+                      <span>Explore all services directory</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
@@ -536,7 +577,7 @@ export function Header() {
 
                       <div className="flex items-center justify-center gap-1.5 text-xs text-[#71717a]">
                         <Check className="w-3.5 h-3.5 text-emerald-400" />
-                        <span>Zero rigid lock-in contracts</span>
+                        <span>Milestone delivery • Zero rigid lock-in</span>
                       </div>
                     </div>
                   </div>
@@ -547,7 +588,7 @@ export function Header() {
               {/* BOTTOM UTILITY FOOTER STRIP */}
               <div className="mt-6 pt-4 border-t border-[#181818] flex items-center justify-between text-xs text-[#71717a]">
                 <div className="flex items-center gap-4 flex-wrap">
-                  <span className="font-mono text-[#5c5c60] text-[11px] uppercase font-semibold">Fast Resources:</span>
+                  <span className="font-mono text-[#5c5c60] text-[11px] uppercase font-semibold">Quick Tools:</span>
                   <Link href="/tools/seo-auditor" className="hover:text-[#ff5500] transition-colors flex items-center gap-1 font-mono text-[11px]">
                     <SearchCheck className="w-3 h-3 text-[#ff5500]" />
                     <span>Free SEO Auditor</span>
@@ -565,7 +606,7 @@ export function Header() {
                   <span className="text-[#262626]">•</span>
                   <Link href="/guides/the-complete-b2b-seo-aeo-playbook" className="hover:text-[#ff5500] transition-colors flex items-center gap-1 font-mono text-[11px]">
                     <BookOpen className="w-3 h-3 text-[#ff5500]" />
-                    <span>2026 B2B SEO Playbook</span>
+                    <span>2026 SEO Playbook</span>
                   </Link>
                 </div>
 
@@ -591,34 +632,34 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="xl:hidden border-b border-[#1f1f1f] bg-[#0c0c0c] px-4 pt-3 pb-6 space-y-4 max-h-[80vh] overflow-y-auto">
             <div className="space-y-3">
-              <div className="text-[11px] font-mono uppercase text-[#71717a] font-semibold">Core Disciplines</div>
+              <div className="text-[11px] font-mono uppercase text-[#71717a] font-semibold">Service Categories</div>
               
               <div className="space-y-2">
-                <Link href="/services/chatgpt-and-perplexity-ai-seo" className="flex items-center gap-2 p-2.5 bg-[#121212] border border-[#222] rounded-xl text-xs text-[#f5f5f0]">
-                  <Sparkles className="w-4 h-4 text-[#ff5500]" />
-                  <span>AI Search & SEO (GEO/AEO, Technical SEO)</span>
-                </Link>
-                <Link href="/services/video-editing-and-post-production" className="flex items-center gap-2 p-2.5 bg-[#121212] border border-[#222] rounded-xl text-xs text-[#f5f5f0]">
-                  <Film className="w-4 h-4 text-[#ff5500]" />
-                  <span>Creative & Video (DaVinci Editing, 3D CGI, UI/UX)</span>
-                </Link>
-                <Link href="/services/high-performance-paid-advertising" className="flex items-center gap-2 p-2.5 bg-[#121212] border border-[#222] rounded-xl text-xs text-[#f5f5f0]">
-                  <Target className="w-4 h-4 text-[#ff5500]" />
-                  <span>Paid Ads & Outbound (Google Ads, Meta, Cold SDR)</span>
-                </Link>
-                <Link href="/services/custom-web-application-development" className="flex items-center gap-2 p-2.5 bg-[#121212] border border-[#222] rounded-xl text-xs text-[#f5f5f0]">
+                <Link href="/services/website-development" className="flex items-center gap-2 p-2.5 bg-[#121212] border border-[#222] rounded-xl text-xs text-[#f5f5f0]">
                   <Code2 className="w-4 h-4 text-[#ff5500]" />
-                  <span>Web & E-Commerce (Next.js 15, Shopify Plus)</span>
+                  <span>Web & E-commerce (Websites, Shopify, SaaS)</span>
                 </Link>
-                <Link href="/services/custom-ai-agents-and-llm-pipelines" className="flex items-center gap-2 p-2.5 bg-[#121212] border border-[#222] rounded-xl text-xs text-[#f5f5f0]">
+                <Link href="/services/seo" className="flex items-center gap-2 p-2.5 bg-[#121212] border border-[#222] rounded-xl text-xs text-[#f5f5f0]">
+                  <SearchCheck className="w-4 h-4 text-[#ff5500]" />
+                  <span>Marketing & Growth (SEO, Google Ads, Meta Ads)</span>
+                </Link>
+                <Link href="/services/video-editing" className="flex items-center gap-2 p-2.5 bg-[#121212] border border-[#222] rounded-xl text-xs text-[#f5f5f0]">
+                  <Film className="w-4 h-4 text-[#ff5500]" />
+                  <span>Design & Creative (Video, 3D CGI, Branding, UI/UX)</span>
+                </Link>
+                <Link href="/services/ai-agent-development" className="flex items-center gap-2 p-2.5 bg-[#121212] border border-[#222] rounded-xl text-xs text-[#f5f5f0]">
                   <Bot className="w-4 h-4 text-[#ff5500]" />
-                  <span>AI & Automation (LangGraph, n8n, Data Stack)</span>
+                  <span>AI & Automation (AI Agents, Workflows, RAG)</span>
+                </Link>
+                <Link href="/services/copywriting" className="flex items-center gap-2 p-2.5 bg-[#121212] border border-[#222] rounded-xl text-xs text-[#f5f5f0]">
+                  <FileText className="w-4 h-4 text-[#ff5500]" />
+                  <span>Content & Sales (Lead Gen, Copywriting, Email)</span>
                 </Link>
               </div>
             </div>
 
             <div className="pt-2 border-t border-[#181818] flex flex-col gap-1 text-sm">
-              <Link href="/services" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">All 35 Services</Link>
+              <Link href="/services" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">All Services Directory</Link>
               <Link href="/case-studies" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">Work & Case Studies</Link>
               <Link href="/tools/seo-auditor" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">Free SEO Scanner</Link>
               <Link href="/tools/project-estimator" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">Cost Estimator</Link>
@@ -639,4 +680,3 @@ export function Header() {
     </>
   );
 }
-

@@ -205,10 +205,10 @@ export default async function ServiceDetailPage({
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-xs font-mono text-[#71717a] mb-6">
+        <div className="flex items-center gap-2 text-xs font-mono text-[#71717a] mb-6 flex-wrap">
           <Link href="/services" className="hover:text-[#f5f5f0]">Services</Link>
           <span>/</span>
-          <span className="text-[#ff5500] uppercase">{service.pillar}</span>
+          <span className="text-[#ff5500]">{service.category}</span>
           <span>/</span>
           <span className="text-[#f5f5f0]">{service.name}</span>
         </div>
@@ -216,10 +216,15 @@ export default async function ServiceDetailPage({
         {/* Hero Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-[#1a1a1a]">
           <div className="lg:col-span-8 space-y-6">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-wrap">
               <Badge variant="orange">{service.category}</Badge>
+              {service.subCategory && (
+                <span className="text-xs font-mono text-[#a1a1aa] border border-[#222222] px-2 py-0.5 rounded bg-[#101010]">
+                  {service.subCategory}
+                </span>
+              )}
               <span className="text-xs font-mono text-[#71717a] border border-[#222222] px-2 py-0.5 rounded">
-                Pillar: {service.pillar.toUpperCase()}
+                Tier: {service.priority || 'CORE'}
               </span>
             </div>
 

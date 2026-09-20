@@ -33,7 +33,52 @@ export const serviceDeepDives: Record<string, ServiceDeepDive> = {
 };
 
 const deepDiveAliases: Record<string, string> = {
-  // Pillar 1 Aliases (AI Search, Technical SEO, Local SEO, Digital PR, CRO)
+  // Canonical Service Mappings
+  'website-development': 'custom-web-application-development',
+  'website-design': 'ui-ux-design-and-design-systems',
+  'shopify-development': 'headless-ecommerce-and-shopify-plus',
+  'ecommerce-development': 'headless-ecommerce-and-shopify-plus',
+  'landing-page-development': 'custom-web-application-development',
+  'saas-development': 'enterprise-saas-architecture',
+  'mobile-app-development': 'ios-and-android-mobile-apps',
+  'wordpress-development': 'custom-web-application-development',
+  'webflow-development': 'custom-web-application-development',
+  'website-maintenance': 'devops-cloud-and-cicd-infrastructure',
+  'seo': 'technical-and-programmatic-seo',
+  'ai-search-optimization': 'chatgpt-and-perplexity-ai-seo',
+  'google-ads': 'high-performance-paid-advertising',
+  'meta-ads': 'social-media-advertising',
+  'social-media-marketing': 'social-media-advertising',
+  'conversion-rate-optimization': 'conversion-rate-optimization-cro',
+  'content-marketing': 'technical-copywriting-and-editorial',
+  'branding': 'brand-identity-and-visual-systems',
+  'logo-design': 'brand-identity-and-visual-systems',
+  'video-editing': 'video-editing-and-post-production',
+  'youtube-video-editing': 'video-editing-and-post-production',
+  'ui-ux-design': 'ui-ux-design-and-design-systems',
+  'graphic-design': 'brand-identity-and-visual-systems',
+  'motion-graphics': 'motion-graphics-and-visual-effects',
+  '3d-modeling': '3d-product-modeling-and-rendering',
+  'ai-agent-development': 'custom-ai-agents-and-llm-pipelines',
+  'ai-chatbot-development': 'custom-ai-agents-and-llm-pipelines',
+  'workflow-automation': 'enterprise-workflow-automation',
+  'rag-development': 'vector-search-and-rag-architecture',
+  'web-scraping-automation': 'web-scraping-and-data-pipelines',
+  'copywriting': 'technical-copywriting-and-editorial',
+  'email-marketing': 'lifecycle-and-cold-email-infrastructure',
+  'lead-generation': 'b2b-outbound-sdr-and-lead-generation',
+  'crm-setup-management': 'enterprise-workflow-automation',
+  'digital-pr': 'digital-pr-and-authority-link-building',
+  'data-analytics': 'business-intelligence-and-dashboards',
+  'data-engineering': 'modern-data-stack-and-warehousing',
+  'cloud-infrastructure-devops': 'devops-cloud-and-cicd-infrastructure',
+  'cybersecurity-audits': 'cybersecurity-compliance-audits',
+  'qa-software-testing': 'custom-web-application-development',
+  'web-accessibility': 'ada-web-accessibility-and-compliance',
+  'blockchain-development': 'custom-web-application-development',
+  'ar-vr-development': '3d-product-modeling-and-rendering',
+
+  // Pillar 1 Aliases
   'generative-engine-optimization-aeo': 'chatgpt-and-perplexity-ai-seo',
   'chatgpt-and-perplexity-ai-seo': 'chatgpt-and-perplexity-ai-seo',
   'ai-seo-services': 'chatgpt-and-perplexity-ai-seo',
@@ -62,7 +107,7 @@ const deepDiveAliases: Record<string, string> = {
   'online-reputation-management-and-reviews': 'online-reputation-management-and-reviews',
   'orm-services': 'online-reputation-management-and-reviews',
 
-  // Pillar 2 Aliases (Paid Media, Google Ads, Meta Ads, Amazon PPC, ABM, CTV)
+  // Pillar 2 Aliases
   'high-performance-paid-advertising': 'high-performance-paid-advertising',
   'paid-advertising-ppc': 'high-performance-paid-advertising',
   'paid-performance-sem': 'high-performance-paid-advertising',
@@ -94,13 +139,12 @@ const deepDiveAliases: Record<string, string> = {
   'creator-marketing-agency': 'influencer-and-creator-marketing',
   'influencer-whitelisting-agency': 'influencer-and-creator-marketing',
 
-  // Pillar 3 Aliases (Creative, DaVinci Video, 3D CGI, UI/UX, Brand Identity)
+  // Pillar 3 Aliases
   'video-editing-and-post-production': 'video-editing-and-post-production',
   'video-production-editing': 'video-editing-and-post-production',
   'video-editing-service': 'video-editing-and-post-production',
   'commercial-video-editing': 'video-editing-and-post-production',
   'davinci-resolve-color-grading': 'video-editing-and-post-production',
-  'youtube-video-editing': 'video-editing-and-post-production',
   'motion-graphics-and-visual-effects': 'motion-graphics-and-visual-effects',
   'motion-graphics-animation': 'motion-graphics-and-visual-effects',
   'motion-graphics-vfx': 'motion-graphics-and-visual-effects',
@@ -130,7 +174,7 @@ const deepDiveAliases: Record<string, string> = {
   'commercial-video-production': 'drone-and-commercial-media-production',
   'fpv-drone-filming': 'drone-and-commercial-media-production',
 
-  // Pillar 4 Aliases (B2B Outbound SDR, Cold Email Infrastructure)
+  // Pillar 4 Aliases
   'b2b-outbound-sdr-and-lead-generation': 'b2b-outbound-sdr-and-lead-generation',
   'b2b-lead-generation-sdr': 'b2b-outbound-sdr-and-lead-generation',
   'cold-email-agency': 'b2b-outbound-sdr-and-lead-generation',
@@ -141,7 +185,7 @@ const deepDiveAliases: Record<string, string> = {
   'klaviyo-agency': 'lifecycle-and-cold-email-infrastructure',
   'email-deliverability-services': 'lifecycle-and-cold-email-infrastructure',
 
-  // Pillar 5 Aliases (Next.js Web, SaaS MVP, Headless Shopify, Mobile Apps, DevOps, ADA)
+  // Pillar 5 Aliases
   'custom-web-application-development': 'custom-web-application-development',
   'react-nextjs-development': 'custom-web-application-development',
   'web-development-agency': 'custom-web-application-development',
@@ -166,7 +210,6 @@ const deepDiveAliases: Record<string, string> = {
   'web-accessibility-audit': 'ada-web-accessibility-and-compliance',
   'vpat-compliance-services': 'ada-web-accessibility-and-compliance',
   'ios-and-android-mobile-apps': 'ios-and-android-mobile-apps',
-  'mobile-app-development': 'ios-and-android-mobile-apps',
   'react-native-development': 'ios-and-android-mobile-apps',
   'flutter-app-development': 'ios-and-android-mobile-apps',
   'ios-app-development-agency': 'ios-and-android-mobile-apps',
@@ -184,7 +227,7 @@ const deepDiveAliases: Record<string, string> = {
   'soc2-compliance-consulting': 'cybersecurity-compliance-audits',
   'security-audit-services': 'cybersecurity-compliance-audits',
 
-  // Pillar 6 Aliases (AI Agents, RAG, Automation, Data Stack, Fine-Tuning, Scraping, BI)
+  // Pillar 6 Aliases
   'custom-ai-agents-and-llm-pipelines': 'custom-ai-agents-and-llm-pipelines',
   'generative-ai-agents': 'custom-ai-agents-and-llm-pipelines',
   'ai-agents-agency': 'custom-ai-agents-and-llm-pipelines',

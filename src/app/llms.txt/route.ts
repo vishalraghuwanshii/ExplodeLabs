@@ -17,7 +17,7 @@ Explode Labs is an anti-agency digital studio founded by Vishal Raghuwanshi. We 
 - **Modern Web & E-Commerce Engineering**: Sub-second Next.js 15 App Router web applications, custom Shopify Plus themes, and conversion-optimized landing pages.
 - **Supporting AI Workflow Automation**: Self-hosted n8n automation clusters, CRM synchronization, and automated data pipelines.
 
-## Core Services Directory (35 Flagship Disciplines)
+## Core Services Directory (${services.length} Specialized Capabilities)
 ${services.map(s => `- [${s.name}](https://explodelabs.com/services/${s.slug}): ${s.tagline}`).join('\n')}
 
 ## Industry Vertical Solutions
