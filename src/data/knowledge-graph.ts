@@ -797,7 +797,7 @@ export const guides: GuideEntity[] = [
       name: 'Explode Labs Technical Architecture Team',
       role: 'Senior Product Engineers'
     },
-    summary: 'A transparent, line-by-line financial and technical breakdown of building a modern B2B SaaS MVP—from authentication, database architecture, and Stripe billing to infrastructure and compliance.',
+    summary: 'A transparent, line-by-line financial and technical breakdown of building a modern B2B SaaS MVP (from authentication, database architecture, and Stripe billing to infrastructure and compliance.',
     takeaways: [
       'A true production-grade B2B SaaS MVP ranges from $25,000 to $65,000 depending on real-time features, AI integrations, and compliance requirements.',
       'Using modern stacks like Next.js 15, Supabase (Postgres with RLS), and Tailwind reduces engineering hours by up to 40% compared to legacy architectures.',

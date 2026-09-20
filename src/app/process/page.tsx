@@ -30,7 +30,7 @@ export const metadata = {
   title: 'Our Delivery Process | The Explode Studio Methodology',
   description: 'How Explode Labs delivers high-performance digital growth, creative video systems, and modern web development with fixed-price certainty and zero junior handoffs.',
   openGraph: {
-    title: 'Explode Delivery System | Transparent Sprints & Guaranteed Milestones',
+    title: 'Explode Delivery System | Transparent Sprints & Predictable Milestones',
     description: 'A 4-phase agile delivery methodology designed for high-velocity execution, full IP ownership, and measurable revenue outcomes.',
     url: 'https://explodelabs.com/process',
   },
@@ -74,20 +74,20 @@ export default function ProcessPage() {
     {
       phase: '01',
       title: 'Strategy, Architecture & Scoping',
-      timeframe: 'Days 1 – 5',
+      timeframe: 'Days 1 to 5',
       badge: 'Discovery & Blueprint',
       summary: 'We audit your existing funnel, search visibility, creative assets, and tech stack to define a clear, fixed-price milestone roadmap.',
       deliverables: [
         'Growth & Technical Funnel Audit (SEO, Creative, Paid Ads, Web)',
         'Entity Keyword Graph & Audience Intent Blueprint',
-        'Transparent Milestone Breakdown with Guaranteed Delivery Dates',
+        'Transparent Milestone Breakdown with Agreed Delivery Dates',
         'Dedicated Private Slack Channel Setup with Senior Leads'
       ]
     },
     {
       phase: '02',
       title: 'Sprint Execution & Production',
-      timeframe: 'Weeks 2 – 6+',
+      timeframe: 'Weeks 2 to 6+',
       badge: 'Agile Build Cycles',
       summary: 'We work in focused, bi-weekly sprints where you receive deployable assets, video cuts, or functional staging environments every week.',
       deliverables: [
@@ -141,7 +141,7 @@ export default function ProcessPage() {
     {
       label: 'Delivery Velocity',
       explodeStandard: 'Sprints start in <48 hours; weekly drops',
-      traditionalAgency: '3–6 weeks of onboarding delays',
+      traditionalAgency: '3 to 6 weeks of onboarding delays',
       icon: Clock
     },
     {

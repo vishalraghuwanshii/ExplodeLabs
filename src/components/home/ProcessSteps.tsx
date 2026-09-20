@@ -5,23 +5,23 @@ export function ProcessSteps() {
   const steps = [
     {
       num: '01',
-      title: 'Discovery & System Modeling',
-      description: 'We audit business bottlenecks, state architecture, and user workflows to produce a rigorous engineering blueprint before writing code.'
+      title: 'Discovery & Strategy',
+      description: 'We analyze your business goals and current setup to create a clear project plan before we start working.'
     },
     {
       num: '02',
-      title: 'Precision Architecture Sprint',
-      description: 'Senior architects design database schemas (Postgres with RLS), API contracts, Figma design tokens, and infrastructure as code.'
+      title: 'Architecture & Design',
+      description: 'We design the visual interface and technical foundation so you know exactly how the final product will look and work.'
     },
     {
       num: '03',
-      title: 'Continuous Milestone Delivery',
-      description: 'Bi-weekly deployable production releases with automated CI/CD smoke testing, performance benchmarking, and zero fluff.'
+      title: 'Development & Delivery',
+      description: 'We build your project in phases, sharing progress every two weeks so you can test features and provide feedback.'
     },
     {
       num: '04',
-      title: 'Autonomous Scale & Growth',
-      description: 'Production hardening, high-intent SEO/paid acquisition activation, and ongoing workflow automation monitoring.'
+      title: 'Launch & Growth',
+      description: 'We launch your project safely and begin ongoing marketing, SEO, and automation to start driving immediate results.'
     }
   ];
 
@@ -29,9 +29,9 @@ export function ProcessSteps() {
     <section className="py-20 sm:py-28 bg-[#080808] border-b border-[#141414]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          badge="The Explode Delivery System"
-          title="Predictable, senior-led execution."
-          description="How we eliminate engineering risk, prevent scope creep, and deliver enterprise-grade velocity."
+          badge="How We Work Together"
+          title="No guesswork. No juniors."
+          description="We rely on strict scopes, experienced specialists, and transparent milestones so you know exactly what is happening at every stage of the project."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

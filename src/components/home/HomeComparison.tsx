@@ -9,20 +9,20 @@ export function HomeComparison() {
       metric: 'Delivery Model & Speed',
       explodeLabs: 'Dedicated senior pods; sprints start in <48 hours',
       traditionalAgency: 'Weeks of sales pitches & slow onboarding',
-      inHouse: '3–6 months recruiting & ramp-up curve',
+      inHouse: '3 to 6 months recruiting & ramp-up curve',
       freelancers: 'Unpredictable bandwidth & ghosting risks',
     },
     {
       metric: 'Breadth of Capabilities',
-      explodeLabs: 'Full spectrum (SEO, Video, Ads, Next.js, AI)',
+      explodeLabs: 'Full service (SEO, Video, Ads, Web, AI)',
       traditionalAgency: 'Siloed departments with heavy markups',
-      inHouse: 'Limited to 1–2 individual skillsets',
-      freelancers: 'Single niche; no holistic coordination',
+      inHouse: 'Limited to 1 to 2 individual skillsets',
+      freelancers: 'Single specialty; no team coordination',
     },
     {
       metric: 'Pricing & Scoping Flexibility',
       explodeLabs: 'Custom milestone pricing; no rigid price walls',
-      traditionalAgency: '$10k–$30k/mo minimum retainer lock-in',
+      traditionalAgency: '$10k - $30k/mo minimum retainer lock-in',
       inHouse: '$120k+ base salary + benefits + software',
       freelancers: 'Hourly billing with scope creep',
     },
@@ -48,7 +48,7 @@ export function HomeComparison() {
         <SectionHeader
           badge="Why Explode Labs"
           title="Engineered for high-growth brands."
-          description="How our unified growth, creative, and web engineering model outperforms traditional agency and hiring alternatives."
+          description="See how our studio model eliminates the bloat of traditional agencies, the unreliability of freelancers, and the delays of hiring in-house."
         />
 
         <div className="overflow-x-auto border border-[#1e1e1e] rounded-2xl bg-[#0c0c0c] shadow-2xl">
@@ -91,7 +91,7 @@ export function HomeComparison() {
           <div className="flex items-center gap-3">
             <ShieldCheck className="w-6 h-6 text-emerald-400 shrink-0" />
             <div className="text-xs sm:text-sm text-[#a1a1aa]">
-              <span className="font-semibold text-[#f5f5f0]">Zero Risk Engagement:</span> Receive a comprehensive growth audit & custom scope proposal before signing any contract.
+              <span className="font-semibold text-[#f5f5f0]">Transparent Engagement:</span> Receive a comprehensive growth audit & custom scope proposal before signing any contract.
             </div>
           </div>
           <Button href="/contact" variant="primary" size="sm" withArrow className="shrink-0">

@@ -5,9 +5,9 @@ import { Footer } from '@/components/layout/Footer';
 import { JsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Explode Labs | Full-Stack Engineering, AI Systems & Revenue Architecture',
-  description: 'Explode Labs is a premier digital engineering partner. We architect enterprise web platforms, autonomous AI systems, and high-performance revenue engines.',
-  keywords: ['software development', 'react nextjs agency', 'b2b saas engineering', 'ai agents', 'technical seo', 'shopify plus', 'explodelabs'],
+  title: 'Explode Labs | B2B SaaS Digital Agency | AI, Web & SEO',
+  description: 'Explode Labs is a full-service digital agency specializing in B2B SaaS and enterprise growth. We build scalable Next.js websites, autonomous AI agents, and data-driven SEO & paid media revenue engines.',
+  keywords: ['full-service digital agency', 'b2b saas marketing agency', 'ai automation agency', 'react nextjs development', 'technical seo agency', 'b2b outbound lead generation'],
   authors: [{ name: 'Explode Labs Architecture Team' }],
   openGraph: {
     title: 'Explode Labs | Build. Grow. Automate.',

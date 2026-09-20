@@ -32,64 +32,36 @@ import {
   Briefcase,
   Sliders,
   Eye,
-  Sparkles
+  Sparkles,
+  Package,
+  ListOrdered,
+  Workflow,
+  Scale
 } from 'lucide-react';
 
 export function generateStaticParams() {
   const serviceSlugs = services.map((s) => s.slug);
   const deepDiveSlugs = Object.keys(serviceDeepDives);
   const aliasSlugs = [
-    'generative-engine-optimization-aeo',
-    'chatgpt-and-perplexity-ai-seo',
-    'technical-and-programmatic-seo',
-    'custom-web-application-development',
-    'custom-ai-agents-and-llm-pipelines',
-    'video-editing-and-post-production',
-    'b2b-outbound-sdr-and-lead-generation',
-    'high-performance-paid-advertising',
-    'headless-ecommerce-and-shopify-plus',
-    'ui-ux-design-and-design-systems',
-    'brand-identity-and-visual-systems',
-    'motion-graphics-and-visual-effects',
-    '3d-product-modeling-and-rendering',
-    'lifecycle-and-cold-email-infrastructure',
-    'technical-copywriting-and-editorial',
-    'devops-cloud-and-cicd-infrastructure',
-    'enterprise-workflow-automation',
-    'modern-data-stack-and-warehousing',
-    'enterprise-saas-architecture',
-    'ios-and-android-mobile-apps',
-    'ai-model-fine-tuning-and-quantization',
-    'business-intelligence-and-dashboards'
+    'cloud-infrastructure-devops'
   ];
   const allSlugs = Array.from(new Set([...serviceSlugs, ...deepDiveSlugs, ...aliasSlugs]));
   return allSlugs.map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-  const service = getServiceBySlug(slug);
-  const deepDive = getDeepDiveForService(slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const service = getServiceBySlug(resolvedParams.slug);
+  const deepDive = getDeepDiveForService(resolvedParams.slug);
+  if (!service) return { title: 'Service Not Found | Explode Labs' };
 
-  if (!service) {
-    return {
-      title: 'Service Not Found | Explode Labs',
-    };
-  }
-
-  const title = deepDive?.metaTitle || `${service.name} Services | Explode Labs`;
-  const description = deepDive?.metaDescription || `${service.tagline} Custom milestone-based delivery with Explode Labs.`;
-  const primaryKeyword = deepDive?.primaryKeyword || service.name;
-  const secondaryKeywords = deepDive?.secondaryKeywords || service.technologies;
+  const title = service.metaTitle || deepDive?.metaTitle || `${service.name} Services | Explode Labs`;
+  const description = service.metaDescription || deepDive?.metaDescription || service.shortDescription || service.tagline;
 
   return {
     title,
     description,
-    keywords: [primaryKeyword, ...secondaryKeywords, 'explodelabs', service.category, service.pillar],
+    keywords: [service.primaryKeyword || service.name, ...(service.technologies || []), 'explodelabs', service.category, service.pillar],
     openGraph: {
       title,
       description,
@@ -104,126 +76,113 @@ export async function generateMetadata({
       description,
       creator: '@explodelabs',
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-    alternates: {
-      canonical: `https://explodelabs.com/services/${service.slug}`,
-    },
+    alternates: { canonical: `/services/${service.slug}` }
   };
 }
 
-export default async function ServiceDetailPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const service = getServiceBySlug(slug);
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const service = getServiceBySlug(resolvedParams.slug);
+  if (!service) return notFound();
 
-  if (!service) {
-    notFound();
-  }
+  // Contextual CTA mapping
+  const getContextualCTA = () => {
+    if (service.category.includes('SEO') || service.primaryKeyword?.includes('seo')) return 'Request a Search Audit';
+    if (service.category.includes('Web & E-commerce') || service.slug.includes('development') || service.slug.includes('software')) return 'Discuss Your Project Scope';
+    if (service.category.includes('Design') || service.category.includes('Creative')) return 'Review Design Capabilities';
+    if (service.category.includes('AI') || service.pillar === 'automate') return 'Discuss an AI Integration';
+    if (service.category.includes('Marketing') || service.slug.includes('ads')) return 'Request a Growth Audit';
+    return 'Talk to Our Team';
+  };
+  const ctaText = getContextualCTA();
 
   const deepDive = getDeepDiveForService(service.slug);
   const caseStudies = getCaseStudiesForService(service.slug);
-  const relatedServices = getRelatedServices(service.slug);
+  const relatedServices = getRelatedServices(service, 3);
   const portfolioArtifact = getPortfolioItemByServiceSlug(service.slug);
 
-  const faqsToRender = deepDive ? deepDive.detailedFaqs : service.faqs;
+  const problemsSolved = service.problemsSolved || [];
+  const deliverables = service.deliverables || [];
+  const processSteps = service.process || [];
+  const technologies = service.technologies || [];
+  const platforms = service.platforms || [];
+
+  // Combine FAQs from deepDive and service registry for maximum completeness
+  const deepDiveFaqs = deepDive?.detailedFaqs || [];
+  const registryFaqs = service.faqs || [];
+  const seenFaqQuestions = new Set<string>();
+  const faqsToRender: Array<{ question: string; answer: string }> = [];
+
+  for (const faq of [...deepDiveFaqs, ...registryFaqs]) {
+    if (!seenFaqQuestions.has(faq.question)) {
+      seenFaqQuestions.add(faq.question);
+      faqsToRender.push(faq);
+    }
+  }
 
   const serviceSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: service.name,
-    description: deepDive?.aeoDefinition || service.directAnswer,
-    provider: {
-      '@type': 'Organization',
-      name: 'Explode Labs',
-      url: 'https://explodelabs.com',
-    },
-    serviceType: service.category,
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-      description: 'Custom proposal based on project scope and milestones',
-    },
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqsToRender.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
+    '@graph': [
       {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://explodelabs.com',
+        '@type': 'Service',
+        'name': service.name,
+        'description': service.shortDescription,
+        'provider': {
+          '@type': 'Organization',
+          'name': 'Explode Labs',
+          'url': 'https://explodelabs.com'
+        },
+        'serviceType': service.category,
+        'url': `https://explodelabs.com/services/${service.slug}`
       },
       {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Services',
-        item: 'https://explodelabs.com/services',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://explodelabs.com' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Services', 'item': 'https://explodelabs.com/services' },
+          { '@type': 'ListItem', 'position': 3, 'name': service.name, 'item': `https://explodelabs.com/services/${service.slug}` }
+        ]
       },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: service.name,
-        item: `https://explodelabs.com/services/${service.slug}`,
-      },
-    ],
+      faqsToRender.length > 0 ? {
+        '@type': 'FAQPage',
+        'mainEntity': faqsToRender.map(f => ({
+          '@type': 'Question',
+          'name': f.question,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': f.answer
+          }
+        }))
+      } : {}
+    ]
   };
 
   return (
     <div className="py-12 sm:py-20">
       <JsonLd schema={serviceSchema} />
-      <JsonLd schema={faqSchema} />
-      <JsonLd schema={breadcrumbSchema} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Breadcrumb */}
+        
+        {/* Breadcrumb Bar */}
         <div className="flex items-center gap-2 text-xs font-mono text-[#71717a] mb-6 flex-wrap">
-          <Link href="/services" className="hover:text-[#f5f5f0]">Services</Link>
+          <Link href="/services" className="hover:text-[#f5f5f0] transition-colors">Services</Link>
           <span>/</span>
           <span className="text-[#ff5500]">{service.category}</span>
           <span>/</span>
-          <span className="text-[#f5f5f0]">{service.name}</span>
+          <span className="text-[#f5f5f0] font-medium">{service.name}</span>
         </div>
 
-        {/* Hero Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-[#1a1a1a]">
+        {/* 1. HERO SECTION & ENGAGEMENT SPECS */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-16 border-b border-[#1a1a1a]">
           <div className="lg:col-span-8 space-y-6">
             <div className="flex items-center gap-2 flex-wrap">
               <Badge variant="orange">{service.category}</Badge>
               {service.subCategory && (
-                <span className="text-xs font-mono text-[#a1a1aa] border border-[#222222] px-2 py-0.5 rounded bg-[#101010]">
+                <span className="text-xs font-mono text-[#a1a1aa] border border-[#222222] px-2.5 py-0.5 rounded bg-[#101010]">
                   {service.subCategory}
                 </span>
               )}
-              <span className="text-xs font-mono text-[#71717a] border border-[#222222] px-2 py-0.5 rounded">
+              <span className="text-xs font-mono text-[#71717a] border border-[#222222] px-2.5 py-0.5 rounded">
                 Tier: {service.priority || 'CORE'}
               </span>
             </div>
@@ -232,21 +191,21 @@ export default async function ServiceDetailPage({
               {service.name}
             </h1>
 
-            <p className="text-xl text-[#a1a1aa] leading-relaxed font-normal">
+            <p className="text-lg sm:text-xl text-[#a1a1aa] leading-relaxed font-normal">
               {service.tagline}
             </p>
 
-            {/* Core Capability Definition Card */}
+            {/* Core Capability Brief Card */}
             <div className="p-6 bg-[#0f0f0f] border border-[#262626] rounded-xl relative shadow-2xl">
               <div className="text-xs font-mono uppercase text-[#ff5500] font-semibold mb-2.5 flex items-center justify-between">
                 <div className="flex items-center gap-1.5">
                   <Zap className="w-4 h-4 text-[#ff5500]" />
-                  <span>Core Capability Brief & Definition</span>
+                  <span>What We Do & How It Helps You</span>
                 </div>
-                <span className="text-[10px] text-[#71717a] uppercase tracking-wider font-mono">Executive Scope</span>
+                <span className="text-[10px] text-[#71717a] uppercase tracking-wider font-mono">Overview</span>
               </div>
               <p className="text-sm sm:text-base text-[#f5f5f0] leading-relaxed font-medium">
-                {deepDive?.aeoDefinition || service.directAnswer}
+                {service.directAnswer || deepDive?.aeoDefinition}
               </p>
             </div>
 
@@ -256,9 +215,9 @@ export default async function ServiceDetailPage({
               </p>
             )}
 
-            <div className="flex flex-wrap items-center gap-4 pt-4">
+            <div className="flex flex-wrap items-center gap-4 pt-2">
               <Button href="/contact" size="lg" variant="primary" withArrow>
-                Request Custom Proposal
+                {ctaText}
               </Button>
               <Button href="/architect" size="lg" variant="outline">
                 Scope with AI Architect
@@ -266,60 +225,102 @@ export default async function ServiceDetailPage({
             </div>
           </div>
 
-          {/* Engagement Specs Card */}
+          {/* Right Column: Engagement Specs Card */}
           <div className="lg:col-span-4">
-            <div className="p-6 bg-[#0e0e0e] border border-[#222222] rounded-xl space-y-6 sticky top-24">
-              <h3 className="text-xs font-mono uppercase tracking-wider text-[#71717a] font-semibold">
-                Engagement Specs
+            <div className="p-6 bg-[#0e0e0e] border border-[#222222] rounded-xl space-y-6 sticky top-24 shadow-xl">
+              <h3 className="text-xs font-mono uppercase tracking-wider text-[#71717a] font-semibold flex items-center gap-2">
+                <Sliders className="w-3.5 h-3.5 text-[#ff5500]" />
+                <span>Project Details</span>
               </h3>
 
               <div className="space-y-4 text-xs">
                 <div>
                   <div className="text-[#71717a] mb-1 flex items-center gap-1">
                     <Target className="w-3.5 h-3.5 text-[#ff5500]" />
-                    <span>Pricing & Scoping Model</span>
+                    <span>Pricing Model</span>
                   </div>
-                  <div className="text-base font-bold font-mono text-[#ff5500]">Custom Proposal</div>
-                  <div className="text-[11px] text-[#8e8e93]">Tailored to your exact project scope, timeline & budget tier</div>
+                  <div className="text-base font-bold font-mono text-[#ff5500]">
+                    {service.pricingRange?.avg || 'Custom Milestone'}
+                  </div>
+                  <div className="text-[11px] text-[#8e8e93] mt-0.5">
+                    Clear deliverables, fixed sprint scopes, no unexpected fees
+                  </div>
                 </div>
 
                 <div className="pt-3 border-t border-[#181818]">
                   <div className="text-[#71717a] mb-1 flex items-center gap-1">
                     <Clock className="w-3.5 h-3.5 text-[#ff5500]" />
-                    <span>Typical Delivery Speed</span>
+                    <span>Delivery Timeline</span>
                   </div>
-                  <div className="text-sm font-semibold font-mono text-[#f5f5f0]">{service.typicalTimeline}</div>
+                  <div className="text-sm font-semibold font-mono text-[#f5f5f0]">
+                    {service.typicalTimeline || '2 to 6 weeks'}
+                  </div>
                 </div>
 
-                <div className="pt-3 border-t border-[#181818]">
-                  <div className="text-[#71717a] mb-2 flex items-center gap-1">
-                    <Cpu className="w-3.5 h-3.5 text-[#ff5500]" />
-                    <span>Core Technologies</span>
+                {technologies.length > 0 && (
+                  <div className="pt-3 border-t border-[#181818]">
+                    <div className="text-[#71717a] mb-2 flex items-center gap-1">
+                      <Cpu className="w-3.5 h-3.5 text-[#ff5500]" />
+                      <span>Tools & Tech Stack</span>
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {technologies.slice(0, 8).map((t) => (
+                        <span key={t} className="text-[11px] font-mono text-[#a1a1aa] bg-[#141414] border border-[#202020] px-2 py-0.5 rounded">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {service.technologies.map((t) => (
-                      <span key={t} className="text-[11px] font-mono text-[#a1a1aa] bg-[#141414] border border-[#202020] px-2 py-0.5 rounded">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                )}
               </div>
 
               <Button href="/contact" variant="primary" size="sm" className="w-full" withArrow>
-                Get Free Project Estimate
+                Request Custom Scope
               </Button>
             </div>
           </div>
         </div>
 
-        {/* 5-Phase Technical Blueprint (Deep Dive) */}
-        {deepDive && deepDive.fiveStagePipeline && (
+        {/* 2. PROBLEMS WE SOLVE */}
+        {problemsSolved.length > 0 && (
           <div className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
-              badge="Execution Blueprint"
-              title="5-Stage Technical & Production Pipeline."
-              description="How our senior engineering and production pods execute this service from ingestion to final delivery."
+              badge="Common Roadblocks"
+              title="Problems This Solves."
+              description="Challenges companies face before partnering with us."
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {problemsSolved.map((prob, i) => (
+                <div key={i} className="p-5 bg-[#0c0c0c] border border-[#1e1e1e] rounded-xl flex items-start gap-3 hover:border-[#2e2e2e] transition-colors">
+                  <ShieldCheck className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
+                  <span className="text-sm text-[#c4c4c8] leading-relaxed">{prob}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* 3. WHAT WE DO (DETAILED OVERVIEW) */}
+        <div className="py-16 border-b border-[#1a1a1a]">
+          <SectionHeader
+            badge="Our Approach"
+            title={`How Explode Labs delivers ${service.name}.`}
+            description="Our customer-first approach to building, optimizing, and deploying reliable solutions."
+          />
+          <div className="max-w-4xl">
+            <p className="text-base sm:text-lg text-[#a1a1aa] leading-relaxed">
+              {service.longDescription}
+            </p>
+          </div>
+        </div>
+
+        {/* 4. 5-STAGE PRODUCTION PIPELINE (DEEP DIVE OR PROCESS STEPS) */}
+        {deepDive?.fiveStagePipeline && deepDive.fiveStagePipeline.length > 0 ? (
+          <div className="py-16 border-b border-[#1a1a1a]">
+            <SectionHeader
+              badge="How We Deliver"
+              title="Our 5-Step Delivery Process."
+              description="How our team executes your project from kickoff to final launch."
             />
             <div className="space-y-6">
               {deepDive.fiveStagePipeline.map((phase, idx) => (
@@ -348,118 +349,125 @@ export default async function ServiceDetailPage({
                       </div>
                       <ul className="space-y-1.5 text-[#c4c4c8]">
                         {phase.deliverables.map((del, i) => (
-                          <li key={i} className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#ff5500]" />
+                          <li key={i} className="flex items-start gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#ff5500] shrink-0 mt-1.5" />
                             <span>{del}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div>
-                      <div className="text-[#71717a] font-mono uppercase font-semibold mb-2 flex items-center gap-1.5">
-                        <Sliders className="w-3.5 h-3.5 text-[#ff5500]" />
-                        <span>Tooling & Environment</span>
+                    {phase.tools && phase.tools.length > 0 && (
+                      <div>
+                        <div className="text-[#71717a] font-mono uppercase font-semibold mb-2 flex items-center gap-1.5">
+                          <Cpu className="w-3.5 h-3.5 text-[#ff5500]" />
+                          <span>Technologies & Tools</span>
+                        </div>
+                        <div className="flex flex-wrap gap-1.5">
+                          {phase.tools.map((t, i) => (
+                            <span key={i} className="px-2 py-0.5 bg-[#141414] border border-[#222222] rounded text-[11px] font-mono text-[#a1a1aa]">
+                              {t}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {phase.tools.map((tool, i) => (
-                          <span key={i} className="px-2 py-0.5 bg-[#141414] border border-[#242424] text-[#8e8e93] rounded font-mono text-[11px]">
-                            {tool}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        )}
-
-        {/* Deliverables Matrix (Table format for Deep Dive or Grid for Standard) */}
-        {deepDive && deepDive.deliverablesMatrix ? (
+        ) : processSteps.length > 0 ? (
           <div className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
-              badge="Concrete Artifacts"
-              title="Exact Deliverables & Production Standards."
-              description="Every deliverable is accompanied by production documentation, acceptance benchmarks, and full IP transfer."
+              badge="How It Works"
+              title="Step-by-Step Delivery Process."
+              description="A clear breakdown of how we execute from kickoff to launch."
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {deepDive.deliverablesMatrix.map((delCat, idx) => (
+            <div className="space-y-4 max-w-4xl">
+              {processSteps.map((step, i) => (
+                <div key={i} className="flex gap-4 p-5 bg-[#0a0a0a] border border-[#1e1e1e] rounded-xl hover:border-[#333] transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-[#ff5500]/10 border border-[#ff5500]/25 flex items-center justify-center text-[#ff5500] font-mono text-sm font-bold shrink-0">
+                    {step.step || i + 1}
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-[#f5f5f0] mb-1">{step.title}</h3>
+                    <p className="text-sm text-[#8e8e93] leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {/* 5. DELIVERABLES & PRODUCTION STANDARDS */}
+        {deepDive?.deliverablesMatrix && deepDive.deliverablesMatrix.length > 0 ? (
+          <div className="py-16 border-b border-[#1a1a1a]">
+            <SectionHeader
+              badge="Quality Standards"
+              title="What You Receive & Our Quality Standards."
+              description="Clear deliverables backed by verified quality and performance benchmarks."
+            />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {deepDive.deliverablesMatrix.map((matrix, idx) => (
                 <div key={idx} className="p-6 bg-[#0c0c0c] border border-[#1e1e1e] rounded-xl flex flex-col justify-between">
                   <div>
-                    <h3 className="text-base font-bold text-[#f5f5f0] mb-4 flex items-center gap-2">
-                      <FileCode2 className="w-4 h-4 text-[#ff5500]" />
-                      <span>{delCat.category}</span>
-                    </h3>
+                    <div className="text-xs font-mono uppercase text-[#ff5500] font-semibold mb-3 flex items-center gap-1.5">
+                      <Package className="w-3.5 h-3.5 text-[#ff5500]" />
+                      <span>{matrix.category}</span>
+                    </div>
                     <ul className="space-y-2 mb-6">
-                      {delCat.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#a1a1aa] leading-relaxed">
-                          <CheckCircle2 className="w-4 h-4 text-[#ff5500] shrink-0 mt-0.5" />
+                      {matrix.items.map((item, i) => (
+                        <li key={i} className="text-xs text-[#a1a1aa] flex items-start gap-2 leading-relaxed">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="pt-3 border-t border-[#181818] text-[11px] font-mono text-[#71717a]">
-                    <span className="text-[#ff5500]">Quality Benchmark:</span> {delCat.standards}
+                    <span className="text-[#f5f5f0] font-semibold">Standard:</span> {matrix.standards}
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        ) : (
-          <div className="py-16 grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-[#1a1a1a]">
-            <div>
-              <h2 className="text-2xl font-bold text-[#f5f5f0] mb-6 flex items-center gap-2">
-                <Layers className="w-5 h-5 text-[#ff5500]" />
-                <span>Exact Production Deliverables</span>
-              </h2>
-              <div className="space-y-3">
-                {service.deliverables.map((del, i) => (
-                  <div key={i} className="flex items-start gap-3 p-3.5 bg-[#0e0e0e] border border-[#1c1c1c] rounded-lg">
-                    <CheckCircle2 className="w-4 h-4 text-[#ff5500] shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm text-[#c4c4c8] leading-relaxed">{del}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold text-[#f5f5f0] mb-6 flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-emerald-400" />
-                <span>Core Bottlenecks Solved</span>
-              </h2>
-              <div className="space-y-3">
-                {service.problemsSolved.map((prob, i) => (
-                  <div key={i} className="flex items-start gap-3 p-3.5 bg-[#0e0e0e] border border-[#1c1c1c] rounded-lg">
-                    <div className="w-2 h-2 rounded-full bg-emerald-400 shrink-0 mt-1.5" />
-                    <span className="text-xs sm:text-sm text-[#c4c4c8] leading-relaxed">{prob}</span>
-                  </div>
-                ))}
-              </div>
+        ) : deliverables.length > 0 ? (
+          <div className="py-16 border-b border-[#1a1a1a]">
+            <SectionHeader
+              badge="What You Receive"
+              title="Concrete Deliverables."
+              description="Exactly what we hand over at milestone completion."
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl">
+              {deliverables.map((del, i) => (
+                <div key={i} className="flex items-start gap-3 p-4 bg-[#0c0c0c] border border-[#1e1e1e] rounded-xl">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                  <span className="text-sm text-[#f5f5f0] leading-relaxed">{del}</span>
+                </div>
+              ))}
             </div>
           </div>
-        )}
+        ) : null}
 
-        {/* Featured Portfolio & Architecture Artifact */}
+        {/* 6. CLIENT PRODUCTION SHOWCASE */}
         {portfolioArtifact && (
           <div className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
-              badge="Client Portfolio Case"
+              badge="Client Showcase"
               title={`Production Showcase: ${portfolioArtifact.clientName}.`}
-              description={`Live production deployment and verified business impact delivered by our ${service.name} practice.`}
+              description={`Real client results and impact delivered by our ${service.name} practice.`}
             />
-            <div className="p-8 rounded-2xl bg-[#0c0c0c] border border-[#222222] relative overflow-hidden">
+            <div className="p-6 sm:p-8 rounded-2xl bg-[#0c0c0c] border border-[#222222] relative overflow-hidden shadow-2xl">
               <div 
                 className="absolute top-0 right-0 w-80 h-80 rounded-full blur-3xl opacity-20 pointer-events-none"
-                style={{ backgroundColor: portfolioArtifact.visualPreview.accentColor }}
+                style={{ backgroundColor: portfolioArtifact.visualPreview?.accentColor || '#ff5500' }}
               />
 
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7 space-y-4">
                   <div className="flex items-center gap-2">
-                    <Badge variant="orange">{portfolioArtifact.categoryLabel}</Badge>
+                    <Badge variant="orange">{portfolioArtifact.categoryLabel || 'Client Result'}</Badge>
                     <span className="text-xs font-mono text-[#71717a]">{portfolioArtifact.industry}</span>
                   </div>
 
@@ -474,24 +482,28 @@ export default async function ServiceDetailPage({
                     {portfolioArtifact.overview}
                   </p>
 
-                  {/* Verified Results */}
-                  <div className="grid grid-cols-3 gap-2 pt-2">
-                    {portfolioArtifact.results.map((res, idx) => (
-                      <div key={idx} className="p-2.5 bg-[#141414] rounded-lg border border-[#202020] text-center">
-                        <div className="font-mono text-sm font-bold text-[#f5f5f0]">{res.metric}</div>
-                        <div className="text-[10px] font-mono text-[#71717a] truncate">{res.label}</div>
-                      </div>
-                    ))}
-                  </div>
+                  {/* Verified Results Metrics */}
+                  {portfolioArtifact.results && portfolioArtifact.results.length > 0 && (
+                    <div className="grid grid-cols-3 gap-2 pt-2">
+                      {portfolioArtifact.results.map((res, idx) => (
+                        <div key={idx} className="p-2.5 bg-[#141414] rounded-lg border border-[#202020] text-center">
+                          <div className="font-mono text-sm font-bold text-[#f5f5f0]">{res.metric}</div>
+                          <div className="text-[10px] font-mono text-[#71717a] truncate">{res.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
 
                   {/* Tech stack */}
-                  <div className="flex flex-wrap gap-1.5 pt-2">
-                    {portfolioArtifact.technologies.map((t) => (
-                      <span key={t} className="px-2.5 py-1 bg-[#161616] border border-[#262626] rounded-md text-xs font-mono text-[#a1a1aa]">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+                  {portfolioArtifact.technologies && portfolioArtifact.technologies.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {portfolioArtifact.technologies.map((t) => (
+                        <span key={t} className="px-2.5 py-1 bg-[#161616] border border-[#262626] rounded-md text-xs font-mono text-[#a1a1aa]">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 <div className="lg:col-span-5 flex flex-col justify-between p-6 bg-[#111111] rounded-xl border border-[#1e1e1e] space-y-4">
@@ -501,7 +513,7 @@ export default async function ServiceDetailPage({
                       <span>Key Deliverables Delivered</span>
                     </div>
                     <div className="space-y-2">
-                      {portfolioArtifact.deliverables.slice(0, 3).map((del, i) => (
+                      {portfolioArtifact.deliverables?.slice(0, 3).map((del, i) => (
                         <div key={i} className="text-xs text-[#a1a1aa] leading-relaxed p-2.5 bg-[#0c0c0c] rounded-lg border border-[#181818] flex items-start gap-2">
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#ff5500] shrink-0 mt-0.5" />
                           <span>{del}</span>
@@ -526,48 +538,50 @@ export default async function ServiceDetailPage({
           </div>
         )}
 
-        {/* Tool Decision Tree */}
-        {deepDive && deepDive.toolDecisionTree && (
+        {/* 7. TOOLING & TECHNOLOGY SELECTION RATIONALE */}
+        {deepDive?.toolDecisionTree && deepDive.toolDecisionTree.length > 0 && (
           <div className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
-              badge="Engineering Decisions"
-              title="Tooling & Technology Selection Rationale."
-              description="Why we select specific frameworks, engines, and protocols over common alternatives."
+              badge="Tech Stack"
+              title="Tooling & Software Selection Rationale."
+              description="Why we choose specific tools and software over common alternatives."
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {deepDive.toolDecisionTree.map((decision, idx) => (
-                <div key={idx} className="p-6 bg-[#0c0c0c] border border-[#1e1e1e] rounded-xl space-y-4">
-                  <div className="text-xs font-mono uppercase text-[#71717a] font-semibold">
-                    {decision.category}
-                  </div>
-                  <div className="flex items-center justify-between pb-3 border-b border-[#181818]">
-                    <div>
-                      <div className="text-xs text-[#5c5c60]">Selected Engine</div>
-                      <div className="text-base font-bold text-[#ff5500] font-mono">{decision.primaryChoice}</div>
+                <div key={idx} className="p-6 bg-[#0c0c0c] border border-[#1e1e1e] rounded-xl flex flex-col justify-between h-full">
+                  <div>
+                    <div className="text-xs font-mono uppercase text-[#71717a] font-semibold mb-1">
+                      {decision.category}
                     </div>
-                    <div className="text-right">
-                      <div className="text-xs text-[#5c5c60]">Alternatives Considered</div>
-                      <div className="text-xs font-mono text-[#8e8e93]">{decision.alternatives}</div>
+                    <div className="flex items-center justify-between pb-3 border-b border-[#181818] mb-3">
+                      <div>
+                        <div className="text-xs text-[#5c5c60]">Selected Tool</div>
+                        <div className="text-base font-bold text-[#ff5500] font-mono">{decision.primaryChoice}</div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-xs text-[#5c5c60]">Alternatives Passed On</div>
+                        <div className="text-xs font-mono text-[#8e8e93]">{decision.alternatives}</div>
+                      </div>
                     </div>
+                    <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed">
+                      {decision.rationale}
+                    </p>
                   </div>
-                  <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed">
-                    {decision.rationale}
-                  </p>
                 </div>
               ))}
             </div>
           </div>
         )}
 
-        {/* 4-Column Decision Matrix */}
-        {deepDive && deepDive.comparisonMatrix && (
+        {/* 8. COMPARATIVE ANALYSIS MATRIX */}
+        {deepDive?.comparisonMatrix && deepDive.comparisonMatrix.length > 0 && (
           <div className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
-              badge="Comparative Analysis"
+              badge="How We Compare"
               title="Explode Labs vs Alternative Models."
-              description="An honest breakdown of cost, speed, code quality, and intellectual property ownership across delivery options."
+              description="An honest breakdown of cost, speed, quality, and asset ownership across delivery options."
             />
-            <div className="overflow-x-auto border border-[#1e1e1e] rounded-xl">
+            <div className="overflow-x-auto border border-[#1e1e1e] rounded-xl shadow-xl">
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
                   <tr className="bg-[#111111] border-b border-[#1e1e1e] text-[#71717a] font-mono uppercase">
@@ -594,28 +608,28 @@ export default async function ServiceDetailPage({
           </div>
         )}
 
-        {/* Industry Execution Blueprints */}
-        {deepDive && deepDive.industryScenarios && (
+        {/* 9. INDUSTRY EXECUTION BLUEPRINTS */}
+        {deepDive?.industryScenarios && deepDive.industryScenarios.length > 0 && (
           <div className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
-              badge="Vertical Applications"
+              badge="Real-World Results"
               title="Execution Blueprints by Industry."
-              description="How we tailor this capability for B2B SaaS, E-Commerce, FinTech, and high-growth brands."
+              description="How we tailor this capability for B2B SaaS, E-Commerce, FinTech, and growing brands."
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {deepDive.industryScenarios.map((scenario, idx) => (
                 <div key={idx} className="p-6 bg-[#0c0c0c] border border-[#1e1e1e] rounded-xl flex flex-col justify-between space-y-4">
                   <div>
                     <Badge variant="orange" className="mb-3">{scenario.industry}</Badge>
-                    <div className="text-xs text-[#71717a] mb-1 font-mono uppercase font-semibold">Core Bottleneck</div>
+                    <div className="text-xs text-[#71717a] mb-1 font-mono uppercase font-semibold">The Challenge</div>
                     <p className="text-xs text-[#a1a1aa] mb-4">{scenario.challenge}</p>
                     
-                    <div className="text-xs text-[#71717a] mb-1 font-mono uppercase font-semibold">Engineered Architecture</div>
+                    <div className="text-xs text-[#71717a] mb-1 font-mono uppercase font-semibold">How We Solved It</div>
                     <p className="text-xs sm:text-sm text-[#f5f5f0] leading-relaxed">{scenario.architecture}</p>
                   </div>
                   
                   <div className="pt-4 border-t border-[#181818] flex items-center justify-between text-xs">
-                    <span className="text-[#71717a] font-mono">Impact Metric:</span>
+                    <span className="text-[#71717a] font-mono">Result:</span>
                     <span className="font-mono font-bold text-emerald-400">{scenario.impactMetric}</span>
                   </div>
                 </div>
@@ -624,7 +638,7 @@ export default async function ServiceDetailPage({
           </div>
         )}
 
-        {/* Instant Growth Diagnostic & Estimator Callouts */}
+        {/* 10. INTERACTIVE AUDIT & ESTIMATOR TOOLS CALLOUT */}
         <div className="py-16 border-b border-[#1a1a1a]">
           <div className="p-6 sm:p-8 bg-[#0a0a0a] border border-[#222222] rounded-2xl relative overflow-hidden">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
@@ -666,7 +680,7 @@ export default async function ServiceDetailPage({
           </div>
         </div>
 
-        {/* Relevant Case Studies */}
+        {/* 11. RELEVANT CASE STUDIES */}
         {caseStudies.length > 0 && (
           <div className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
@@ -702,13 +716,32 @@ export default async function ServiceDetailPage({
           </div>
         )}
 
-        {/* FAQs */}
+        {/* 12. TECHNOLOGIES & PLATFORMS */}
+        {(technologies.length > 0 || platforms.length > 0) && (
+          <div className="py-16 border-b border-[#1a1a1a]">
+            <SectionHeader
+              badge="Ecosystem"
+              title="Technologies & Platforms."
+              description="The frameworks, engines, and protocols we use to execute this capability."
+            />
+            <div className="flex flex-wrap gap-3">
+              {[...new Set([...technologies, ...platforms])].map((tech, i) => (
+                <div key={i} className="px-4 py-2 bg-[#0e0e0e] border border-[#222222] rounded-lg text-sm text-[#f5f5f0] font-medium flex items-center gap-2">
+                  <Cpu className="w-4 h-4 text-[#ff5500]" />
+                  {tech}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* 13. COMPREHENSIVE FAQS */}
         {faqsToRender.length > 0 && (
           <div className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="Frequently Asked Questions"
               title="Technical, commercial & operational inquiries."
-              description="Everything you need to know about SLAs, source file ownership, turnaround times, and workflows."
+              description="Clear answers regarding pricing models, code sovereignty, testing, and turnaround times."
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {faqsToRender.map((faq, i) => (
@@ -726,11 +759,11 @@ export default async function ServiceDetailPage({
           </div>
         )}
 
-        {/* Related Services */}
+        {/* 14. COMPLEMENTARY CAPABILITIES / RELATED SERVICES */}
         {relatedServices.length > 0 && (
-          <div className="py-16">
+          <div className="py-16 border-b border-[#1a1a1a]">
             <h3 className="text-xs font-mono uppercase tracking-wider text-[#71717a] font-semibold mb-6">
-              Complementary Capabilities
+              Complementary Services & Related Capabilities
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {relatedServices.map((rel) => (
@@ -748,6 +781,30 @@ export default async function ServiceDetailPage({
             </div>
           </div>
         )}
+
+        {/* 15. BOTTOM CONVERSION CTA BANNER */}
+        <div className="py-16">
+          <div className="p-8 sm:p-12 bg-gradient-to-br from-[#141414] to-[#090909] border border-[#242424] rounded-2xl flex flex-col items-center text-center shadow-2xl">
+            <Badge variant="orange" className="mb-4">
+              Ready to Build?
+            </Badge>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f5f0] mb-4">
+              Let’s Scope Your {service.name} Project.
+            </h2>
+            <p className="text-[#a1a1aa] mb-8 max-w-xl text-sm sm:text-base leading-relaxed">
+              Get a custom milestone proposal with transparent sprint deliverables, clear timelines, and full source code ownership.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Button href="/contact" size="lg" variant="primary" withArrow>
+                {ctaText}
+              </Button>
+              <Button href="/tools/project-estimator" size="lg" variant="outline">
+                Calculate Milestone Scope
+              </Button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

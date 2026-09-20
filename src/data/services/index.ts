@@ -39,6 +39,8 @@ export function getIndexableServices(): ServiceEntity[] {
   return canonicalServices.filter((s) => s.status !== 'draft' && s.indexable !== false);
 }
 
+import { serviceDeepDives } from '../service-deep-dives';
+
 /**
  * Find service by exact slug or match against search aliases.
  */
@@ -57,6 +59,49 @@ export function getServiceBySlug(slug: string): ServiceEntity | undefined {
     s.aliases?.some((alias) => alias.toLowerCase() === normalized || alias.toLowerCase().replace(/\s+/g, '-') === normalized)
   );
   if (aliasMatch) return aliasMatch;
+
+  // 3. Direct Deep-Dive match for full standalone support
+  const dd = serviceDeepDives[normalized];
+  if (dd) {
+    return {
+      id: `srv_dd_${dd.slug.replace(/[^a-zA-Z0-9_]/g, '_')}`,
+      slug: dd.slug,
+      name: dd.metaTitle ? dd.metaTitle.split('|')[0].replace(/Agency|Services/gi, '').trim() : dd.slug.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()),
+      category: 'Marketing & Growth',
+      pillar: 'grow',
+      priority: 'HIGH',
+      pageType: 'PRIMARY_SERVICE',
+      indexability: 'INDEX',
+      tagline: dd.executiveSummary.length > 150 ? `${dd.executiveSummary.slice(0, 147)}...` : dd.executiveSummary,
+      shortDescription: dd.executiveSummary,
+      longDescription: dd.executiveSummary,
+      directAnswer: dd.aeoDefinition,
+      definition: dd.aeoDefinition,
+      targetAudience: ['Enterprise Buyers', 'Growing Businesses', 'Commercial Decision-Makers'],
+      problemsSolved: [
+        'Struggling with low conversion rates and wasted ad spend',
+        'Inaccurate tracking making ROI impossible to measure',
+        'Difficulty scaling pipeline across competitive channels'
+      ],
+      deliverables: dd.deliverablesMatrix ? dd.deliverablesMatrix.flatMap((d) => d.items).slice(0, 8) : [],
+      technologies: dd.fiveStagePipeline ? Array.from(new Set(dd.fiveStagePipeline.flatMap((p) => p.tools || []))).slice(0, 8) : [],
+      relatedServiceSlugs: ['google-ads', 'meta-ads', 'social-media-marketing'],
+      pricingRange: { min: 'Custom', avg: 'Monthly Retainer', model: 'Performance Retainer' },
+      typicalTimeline: 'Ongoing Monthly Management',
+      process: dd.fiveStagePipeline ? dd.fiveStagePipeline.map((p, idx) => ({
+        step: idx + 1,
+        title: p.title,
+        description: p.description
+      })) : [],
+      caseStudySlugs: [],
+      faqs: dd.detailedFaqs ? dd.detailedFaqs.map((f) => ({ question: f.question, answer: f.answer })) : [],
+      metaTitle: dd.metaTitle,
+      metaDescription: dd.metaDescription,
+      primaryKeyword: dd.primaryKeyword,
+      status: 'published',
+      indexable: true
+    };
+  }
 
   return undefined;
 }

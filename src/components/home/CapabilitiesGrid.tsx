@@ -15,7 +15,7 @@ export function CapabilitiesGrid() {
     { 
       title: 'AI Search & SEO', 
       icon: Search,
-      desc: 'Generative engine optimization (GEO), programmatic SEO, and high-intent organic ranking.',
+      desc: 'Improve your search rankings and make sure AI chatbots like ChatGPT understand your business.',
       links: [
         { name: 'Generative Engine Optimization (GEO/AEO)', href: '/services/generative-engine-optimization-aeo' },
         { name: 'Technical & Programmatic SEO', href: '/services/technical-and-programmatic-seo' },
@@ -27,7 +27,7 @@ export function CapabilitiesGrid() {
     { 
       title: 'Creative, Video & 3D', 
       icon: Video,
-      desc: 'High-retention video editing, 3D CGI product renders, motion graphics, and UI/UX design systems.',
+      desc: 'Professional video editing, 3D product rendering, motion graphics, and clean user interface design.',
       links: [
         { name: 'Video Editing & Post-Production', href: '/services/video-editing-and-post-production' },
         { name: '3D Product Modeling & CGI', href: '/services/3d-product-modeling-and-rendering' },
@@ -39,7 +39,7 @@ export function CapabilitiesGrid() {
     { 
       title: 'Paid Media & Outbound', 
       icon: TrendingUp,
-      desc: 'High-ROAS Google/Meta ads, cold email domain fleets, and B2B SDR meeting booking engines.',
+      desc: 'Manage profitable Google/Meta ads, run safe cold email campaigns, and automate your B2B lead generation.',
       links: [
         { name: 'High-Performance Paid Ads (PPC)', href: '/services/high-performance-paid-advertising' },
         { name: 'B2B Outbound SDR & Lead Gen', href: '/services/b2b-outbound-sdr-and-lead-generation' },
@@ -51,7 +51,7 @@ export function CapabilitiesGrid() {
     { 
       title: 'Web & E-Commerce', 
       icon: Layout,
-      desc: 'Sub-second Next.js web applications, headless Shopify Plus storefronts, and conversion-optimized funnels.',
+      desc: 'Build fast, custom websites and high-converting Shopify stores built for fast load times.',
       links: [
         { name: 'Custom Web Application Dev', href: '/services/custom-web-application-development' },
         { name: 'Headless E-Commerce & Shopify Plus', href: '/services/headless-ecommerce-and-shopify-plus' },

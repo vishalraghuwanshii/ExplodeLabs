@@ -104,7 +104,7 @@ export function Hero() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ff5500]"></span>
             </span>
             <span className="text-[11px] sm:text-xs font-mono font-medium text-[#f5f5f0] tracking-tight">
-              Generative Engine Optimization (GEO/AEO) <span className="text-[#555]">•</span> Commercial Video Systems <span className="text-[#555]">•</span> Performance Paid Media <span className="text-[#555]">•</span> Modern Web Development
+              SEO & AI Search <span className="text-[#555]">•</span> Video Production <span className="text-[#555]">•</span> Paid Advertising <span className="text-[#555]">•</span> Web Development
             </span>
           </div>
 
@@ -115,7 +115,7 @@ export function Hero() {
 
           {/* AEO / GEO Declarative Entity Statement (Authoritative ground truth for AI & Human visitors) */}
           <p className="text-base sm:text-lg text-[#9e9ea3] max-w-3xl mx-auto font-normal leading-relaxed mb-8">
-            <strong className="text-[#f5f5f0] font-semibold">Explode Labs</strong> is an elite full-service digital agency. We engineer enterprise Generative Engine Optimization (GEO/AEO), DaVinci ACES video post-production, high-ROAS paid media acquisition, and sub-second Next.js web applications to generate predictable revenue.
+            <strong className="text-[#f5f5f0] font-semibold">Explode Labs</strong> helps high-growth brands break through revenue plateaus. We fix your technical bottlenecks and scale your pipeline with high-performance web engineering, studio-grade video creative, and data-driven search campaigns.
           </p>
 
           {/* Frictionless High-Converting Lead Intake */}
@@ -190,7 +190,7 @@ export function Hero() {
                     <div className="w-7 h-7 rounded-lg bg-[#141414] border border-[#2a2a2a] flex items-center justify-center text-[#ff5500]">
                       <Sparkles className="w-3.5 h-3.5" />
                     </div>
-                    <span className="text-xs font-mono font-semibold text-[#f5f5f0]">AEO & SearchGPT Engine</span>
+                    <span className="text-xs font-mono font-semibold text-[#f5f5f0]">AI Search & SEO</span>
                   </div>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#ff5500]/10 text-[#ff5500] border border-[#ff5500]/25">
                     #1 CITATION
@@ -225,7 +225,7 @@ export function Hero() {
                     <div className="w-7 h-7 rounded-lg bg-[#141414] border border-[#2a2a2a] flex items-center justify-center text-[#ff5500]">
                       <Film className="w-3.5 h-3.5" />
                     </div>
-                    <span className="text-xs font-mono font-semibold text-[#f5f5f0]">DaVinci 4K Video Pipeline</span>
+                    <span className="text-xs font-mono font-semibold text-[#f5f5f0]">Video Production</span>
                   </div>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/25">
                     ACES COLOR
@@ -263,7 +263,7 @@ export function Hero() {
                     <div className="w-7 h-7 rounded-lg bg-[#141414] border border-[#2a2a2a] flex items-center justify-center text-[#ff5500]">
                       <Code2 className="w-3.5 h-3.5" />
                     </div>
-                    <span className="text-xs font-mono font-semibold text-[#f5f5f0]">Next.js 15 Edge Engineering</span>
+                    <span className="text-xs font-mono font-semibold text-[#f5f5f0]">Web Development</span>
                   </div>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/25">
                     100/100 SPEED

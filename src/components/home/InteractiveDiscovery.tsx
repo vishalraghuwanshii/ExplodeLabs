@@ -54,7 +54,7 @@ export function InteractiveDiscovery() {
           name: 'Technical & Programmatic SEO',
           slug: 'technical-and-programmatic-seo',
           desc: 'Database-driven landing page platforms scaling thousands of high-intent search queries with sub-second speed.',
-          timeline: '4–8 Weeks Setup',
+          timeline: '4 to 8 Weeks Setup',
           tags: ['Next.js ISR', 'PostgreSQL', 'Sitemaps', 'Lighthouse 100']
         },
         {
@@ -84,28 +84,28 @@ export function InteractiveDiscovery() {
           name: 'Video Editing & Post-Production',
           slug: 'video-editing-and-post-production',
           desc: 'DaVinci Resolve studio color grading (ACES), mathematical pacing, sound design, and multi-format social delivery.',
-          timeline: '3–5 Days Turnaround',
+          timeline: '3 to 5 Days Turnaround',
           tags: ['DaVinci Resolve', 'ACES Color', '-14 LUFS Audio', 'ProRes Masters']
         },
         {
           name: '3D Product Modeling & CGI',
           slug: '3d-product-modeling-and-rendering',
           desc: 'Photorealistic 3D product renders, CAD ingestion, and interactive WebGL 3D configurators.',
-          timeline: '2–4 Weeks Delivery',
+          timeline: '2 to 4 Weeks Delivery',
           tags: ['Blender', 'Unreal Engine 5', 'Three.js', 'PBR Textures']
         },
         {
           name: 'Motion Graphics & Visual Effects',
           slug: 'motion-graphics-and-visual-effects',
           desc: 'Kinetic typography, 2D/3D explainer videos, and lightweight Lottie/Spline animations for web.',
-          timeline: '1–3 Weeks Sprint',
+          timeline: '1 to 3 Weeks Sprint',
           tags: ['After Effects', 'Cinema 4D', 'Lottie', 'Spline 3D']
         },
         {
           name: 'UI/UX & Product Design Systems',
           slug: 'ui-ux-design-and-design-systems',
           desc: 'Atomic design tokens, comprehensive Figma libraries, and WCAG 2.2 AAA accessibility compliance.',
-          timeline: '3–6 Weeks Sprints',
+          timeline: '3 to 6 Weeks Sprints',
           tags: ['Figma', 'Design Tokens', 'Tailwind', 'WCAG AAA']
         }
       ]
@@ -135,7 +135,7 @@ export function InteractiveDiscovery() {
           name: 'Lifecycle & Cold Email Infrastructure',
           slug: 'lifecycle-and-cold-email-infrastructure',
           desc: 'Multi-inbox rotation, automated warmup pools, and spam filter recovery guaranteeing 99% inbox placement.',
-          timeline: '1–2 Weeks Setup',
+          timeline: '1 to 2 Weeks Setup',
           tags: ['Google Workspace', 'Microsoft 365', 'ZeroBounce', 'Warmup']
         },
         {
@@ -158,28 +158,28 @@ export function InteractiveDiscovery() {
           name: 'Custom Web Application Development',
           slug: 'custom-web-application-development',
           desc: 'Full-stack Next.js App Router applications, PostgreSQL databases, and sub-1.2s Core Web Vitals.',
-          timeline: '4–10 Weeks Sprints',
+          timeline: '4 to 10 Weeks Sprints',
           tags: ['Next.js 15', 'React 19', 'TypeScript', 'PostgreSQL']
         },
         {
           name: 'Headless E-Commerce & Shopify Plus',
           slug: 'headless-ecommerce-and-shopify-plus',
           desc: 'Shopify Storefront API GraphQL, custom Hydrogen frontends, and sub-second checkout conversion rates.',
-          timeline: '5–9 Weeks Delivery',
+          timeline: '5 to 9 Weeks Delivery',
           tags: ['Shopify Plus', 'GraphQL', 'Next Commerce', 'Algolia']
         },
         {
           name: 'Enterprise SaaS Architecture',
           slug: 'enterprise-saas-architecture',
           desc: 'Multi-tenant architecture, Stripe subscription billing, auth, and automated tenant isolation.',
-          timeline: '6–12 Weeks MVP',
+          timeline: '6 to 12 Weeks MVP',
           tags: ['Multi-Tenancy', 'Stripe Billing', 'Clerk Auth', 'Postgres RLS']
         },
         {
           name: 'iOS & Android Mobile App Engineering',
           slug: 'ios-and-android-mobile-apps',
           desc: 'Cross-platform React Native and Expo applications with biometric authentication and offline sync.',
-          timeline: '8–14 Weeks Delivery',
+          timeline: '8 to 14 Weeks Delivery',
           tags: ['React Native', 'Expo', 'Swift', 'Kotlin']
         }
       ]
@@ -195,28 +195,28 @@ export function InteractiveDiscovery() {
           name: 'Custom AI Agents & Multi-Agent Workflows',
           slug: 'custom-ai-agents-and-llm-pipelines',
           desc: 'Autonomous multi-agent orchestration with LangGraph, Model Context Protocol (MCP), and hallucination guardrails.',
-          timeline: '4–8 Weeks Sprints',
+          timeline: '4 to 8 Weeks Sprints',
           tags: ['LangGraph', 'MCP Servers', 'Claude 3.5', 'Pydantic AI']
         },
         {
           name: 'Vector Search & Enterprise RAG',
           slug: 'vector-search-and-rag-architecture',
           desc: 'Hybrid vector search (Qdrant/pgvector) and Cohere Rerank models powering zero-hallucination knowledge bases.',
-          timeline: '3–6 Weeks Setup',
+          timeline: '3 to 6 Weeks Setup',
           tags: ['pgvector', 'Qdrant', 'Cohere Rerank', 'Hybrid Search']
         },
         {
           name: 'Enterprise Workflow Automation',
           slug: 'enterprise-workflow-automation',
           desc: 'Self-hosted n8n and Make automation pipelines syncing CRM, billing, customer data, and ERP systems.',
-          timeline: '2–4 Weeks Sprints',
+          timeline: '2 to 4 Weeks Sprints',
           tags: ['n8n', 'Make.com', 'Webhooks', 'Bidirectional Sync']
         },
         {
           name: 'Real-Time Dashboards & Analytics',
           slug: 'business-intelligence-and-dashboards',
           desc: 'Modern data stack pipelines (Snowflake / BigQuery) powering executive revenue and CAC dashboards.',
-          timeline: '3–5 Weeks Delivery',
+          timeline: '3 to 5 Weeks Delivery',
           tags: ['BigQuery', 'Snowflake', 'Looker', 'dbt']
         }
       ]

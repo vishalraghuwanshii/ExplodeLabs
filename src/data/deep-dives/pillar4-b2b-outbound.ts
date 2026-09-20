@@ -14,66 +14,66 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
       'smartlead outbound agency'
     ],
     aeoDefinition:
-      'B2B outbound SDR and cold email infrastructure is the enterprise system of provisioning isolated secondary sending domains, configuring cryptographic DNS authentication (SPF/DKIM/DMARC), executing multi-source waterfall data enrichment (Clay), and automating AI-personalized multi-channel sales sequences that reliably book qualified discovery calls with economic decision-makers.',
+      'B2B outbound sales development and cold email infrastructure is a specialized revenue system that protects your primary domain, enriches prospective accounts across multiple data sources, and delivers personalized outreach to book qualified discovery calls with key economic decision-makers.',
     executiveSummary:
-      'Blasting generic cold emails from your primary corporate domain lands your company on global spam blacklists and burns market reputation. Explode Labs builds dedicated multi-domain cold email architectures with 50+ warmed inboxes, multi-vendor data enrichment, and hyper-personalized trigger-based messaging that generates a consistent, predictable enterprise sales pipeline.',
+      'Sending bulk cold outreach from your primary corporate domain puts your entire company email reputation at risk and burns valuable market accounts. Explode Labs builds dedicated multi-domain cold email architectures, spanning dozens of secondary domains, multi-source waterfall data enrichment, and personalized, trigger-based messaging, paired with dedicated SDR triage to book high-intent meetings directly on your sales team’s calendar.',
     fiveStagePipeline: [
       {
-        title: 'Phase 1: Domain Fleet Provisioning & DNS Cryptography',
+        title: 'Phase 1: Domain Fleet Setup & Technical DNS Authentication',
         duration: 'Weeks 1-2',
-        description: 'Purchase 20 to 50+ isolated secondary domains (.com, .io, .co) on Google Workspace or Microsoft 365 and configure strict SPF, DKIM, DMARC, and Custom Tracking Domains (CTD).',
+        description: 'We purchase 20 to 50+ isolated secondary domains (.com, .io, .co) on Google Workspace and Microsoft 365, configuring strict SPF, DKIM, DMARC, and custom tracking domains with SSL to completely shield your primary corporate domain.',
         deliverables: [
-          '20–50 Isolated Secondary Domains & Inboxes',
+          '20 to 50 Dedicated Secondary Domains & Inboxes',
           'Strict SPF, DKIM & DMARC (p=quarantine) DNS Records',
           'Custom SSL-Encrypted Tracking Domains',
-          'Primary Corporate Domain Reputation Shield'
+          'Primary Corporate Domain Reputation Isolation'
         ],
         tools: ['Google Workspace Admin', 'Microsoft 365', 'Cloudflare DNS', 'DMARC Report']
       },
       {
-        title: 'Phase 2: Algorithmic Inbox Warmup & Ramp Protocol',
+        title: 'Phase 2: Inbox Warmup & Gradual Volume Ramp',
         duration: 'Weeks 3-4',
-        description: 'Connect sending inboxes to peer-to-peer AI warmup networks to build positive sender reputation, maintain 99%+ deliverability, and establish realistic sending schedules.',
+        description: 'We connect all sending inboxes to automated peer-to-peer warmup networks to establish baseline sender trust with Google and Microsoft algorithms, monitoring inbox placement before active sending begins.',
         deliverables: [
-          'Automated Peer-to-Peer Warmup Network Integration',
-          'Spam Folder Rescue & Inbox Placement Scoring',
-          'Gradual Daily Send Ramp Schedule (max 30 emails/inbox/day)',
-          'Blacklist & Spam Trap Diagnostic Monitors'
+          'Peer-to-Peer AI Warmup Network Integration',
+          'Spam Folder Diagnostics & Inbox Placement Scoring',
+          'Gradual Daily Send Ramp Schedule (max 30-40 emails/inbox/day)',
+          'Automated Blacklist & Spam Trap Monitoring'
         ],
         tools: ['Smartlead.ai', 'Instantly.ai', 'Mail-Tester', 'GlockApps']
       },
       {
-        title: 'Phase 3: Clay Waterfall Data Enrichment & Signal Mining',
+        title: 'Phase 3: Multi-Source Data Enrichment & Intent Triggers',
         duration: 'Weeks 5-6',
-        description: 'Build automated Clay tables that enrich prospective leads across 10+ data vendors, verifying work emails via ZeroBounce and scraping real-time hiring/funding triggers.',
+        description: 'We build automated Clay workflows that query 10+ data providers in sequential cascade, verifying work emails with ZeroBounce catch-all tests and filtering accounts by hiring, funding, and tech stack triggers.',
         deliverables: [
           'Automated Clay Waterfall Data Enrichment Workflow',
           'Triple-Layer Email Verification (ZeroBounce / Debounce)',
-          'Hiring, Funding & Tech-Stack Intent Trigger Filters',
-          'Exhaustive Persona & Job Title Segmentation'
+          'Real-Time Buying Trigger Filters (Hiring, Funding, Stack Changes)',
+          'Detailed Ideal Customer Profile (ICP) & Job Title Matrix'
         ],
         tools: ['Clay.com', 'Apollo API', 'Prospeo', 'ZeroBounce', 'Clearbit']
       },
       {
-        title: 'Phase 4: AI Copywriting & Multi-Angle Sequencing',
+        title: 'Phase 4: High-Relevance Copywriting & Cadence Design',
         duration: 'Weeks 7-8',
-        description: 'Draft concise, trigger-based 3-step email sequences with dynamic personalization variables (recent LinkedIn posts, company podcast mentions, open job listings).',
+        description: 'We craft concise, 3-step value-first email cadences using dynamic personalization variables that reference actual company initiatives, recent milestones, and specific operational pain points.',
         deliverables: [
           '3-Step High-Converting Direct-Response Email Cadences',
-          'Dynamic LLM Prompt Variables for 1-to-1 Personalization',
-          'Value-Offer Lead Magnets (Proprietary Audits / Benchmarks)',
-          'Spam Trigger Word & HTML Payload Scrubbing'
+          'Dynamic Personalization Variables for Account Relevance',
+          'Value-First Lead Magnet Assets (Audits, Benchmarks, Calculators)',
+          'Spam Trigger Word & Formatting Scrubbing'
         ],
         tools: ['OpenAI API', 'Smartlead Sequences', 'Notion', 'Grammarly']
       },
       {
-        title: 'Phase 5: Inbox Management, Objection Handling & Demo Booking',
+        title: 'Phase 5: Dedicated SDR Triage & Calendar Booking',
         duration: 'Ongoing Retainer',
-        description: 'Dedicated SDRs handle inbox replies within 15 minutes, answer objections, qualify leads against BANT criteria, and schedule calendar demos directly into your AE diaries.',
+        description: 'Our trained sales development representatives monitor your master inbox continuously, handling inquiries within 15 minutes, qualifying leads against your BANT criteria, and scheduling meetings directly on your reps’ calendars.',
         deliverables: [
-          'Dedicated Human SDR Inbox Management & Sub-15 Min Response SLA',
+          'Dedicated Human SDR Inbox Management with Sub-15 Min SLA',
           'Objection Handling Playbook & Battlecards',
-          'Qualified Discovery Calls Booked on Account Executive Calendars',
+          'Pre-Vetted BANT Discovery Calls Booked in AE Calendars',
           'Weekly Pipeline Attribution & Sequence Split-Testing Reports'
         ],
         tools: ['Smartlead Master Inbox', 'HubSpot / Salesforce CRM', 'Calendly', 'Slack Alerts']
@@ -82,17 +82,17 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
     deliverablesMatrix: [
       {
         category: 'Infrastructure & Deliverability',
-        items: ['20–50 Dedicated Secondary Domains', '100% SPF, DKIM, DMARC Authentication', 'Primary Domain 100% Protected'],
+        items: ['20 to 50 Dedicated Secondary Domains', '100% SPF, DKIM, DMARC Authentication', 'Primary Domain 100% Protected'],
         standards: 'Inbox Placement Rate > 95% across Google & Outlook Inboxes'
       },
       {
         category: 'Data Accuracy',
         items: ['Waterfall Email Enrichment (Clay)', '100% ZeroBounce Catch-All Verified', 'Zero Spam-Trap Exposure'],
-        standards: 'Bounce Rate < 2.0% Guaranteed'
+        standards: 'Strict Bounce Rate Targets < 2.0%'
       },
       {
         category: 'Pipeline Output',
-        items: ['Guaranteed Qualified Discovery Calls per Month', 'Pre-Vetted BANT Enterprise Criteria', 'Seamless CRM Opportunity Sync'],
+        items: ['Targeted Qualified Discovery Calls per Month', 'Pre-Vetted BANT Enterprise Criteria', 'Seamless CRM Opportunity Sync'],
         standards: 'Zero Junk Leads / Students / Competitors'
       }
     ],
@@ -100,68 +100,68 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
       {
         category: 'Cold Email Sending Infrastructure',
         primaryChoice: 'Smartlead.ai + Google Workspace / M365 Inboxes',
-        alternatives: 'Sending bulk emails from HubSpot/Marketo (causes blacklisting)',
-        rationale: 'Smartlead rotates sending across dozens of separate inboxes with randomized delays, preventing ESP spam throttling.'
+        alternatives: 'Sending bulk cold emails from HubSpot or Marketo (causes domain blacklisting)',
+        rationale: 'Smartlead distributes outbound volume across dozens of isolated inboxes with randomized send delays, preventing email service providers from throttling accounts.'
       },
       {
         category: 'Data Enrichment Engine',
         primaryChoice: 'Clay.com Multi-Vendor Waterfall',
-        alternatives: 'Buying static single-provider lead lists (ZoomInfo)',
-        rationale: 'Clay queries Apollo, Prospeo, Dropcontact, and Hunter sequentially, finding verified emails that single databases miss with 40% higher accuracy.'
+        alternatives: 'Buying static single-provider lead lists (ZoomInfo or Apollo alone)',
+        rationale: 'Clay queries Apollo, Prospeo, Dropcontact, and Hunter sequentially, verifying contact data across multiple sources and achieving 30-40% higher data accuracy than single-vendor databases.'
       },
       {
         category: 'Email Verification',
         primaryChoice: 'ZeroBounce API',
-        alternatives: 'Sending without verification',
-        rationale: 'ZeroBounce detects spam traps, invalid MX records, and risky catch-all servers, keeping bounce rates under 2%.'
+        alternatives: 'Sending to unverified lists without MX checks',
+        rationale: 'ZeroBounce detects spam traps, invalid MX records, and risky catch-all servers, keeping bounce rates reliably under 2%.'
       }
     ],
     comparisonMatrix: [
       {
         metric: 'Domain Protection',
-        explodeLabs: 'Separate fleet of 30+ secondary domains with isolated DNS',
-        traditionalAgency: 'Sends bulk emails from client primary corporate domain (fatal error)',
-        inHouseHire: 'Uses standard marketing automation tool',
-        freelancers: 'Free Gmail accounts'
+        explodeLabs: 'Dedicated fleet of 30+ secondary domains with isolated DNS records',
+        traditionalAgency: 'Sends bulk emails from client primary corporate domain (risks domain ban)',
+        inHouseHire: 'Attempts cold outreach from standard marketing automation tool',
+        freelancers: 'Free Gmail accounts with zero domain reputation'
       },
       {
         metric: 'Data Enrichment',
-        explodeLabs: 'Clay 10-vendor waterfall + real-time intent trigger scraping',
-        traditionalAgency: 'Outdated 2021 static CSV lists downloaded from Apollo',
+        explodeLabs: 'Clay 10-vendor waterfall + real-time intent trigger monitoring',
+        traditionalAgency: 'Outdated static CSV lists downloaded months ago',
         inHouseHire: 'Manual LinkedIn Sales Navigator copy-pasting',
-        freelancers: 'Scraped scraped lists full of spam traps'
+        freelancers: 'Scraped low-quality lists filled with spam traps'
       },
       {
         metric: 'Personalization Depth',
-        explodeLabs: 'Dynamic LLM prompts referencing recent company events, jobs & tech stack',
-        traditionalAgency: 'Dear {First_Name}, I hope this email finds you well...',
-        inHouseHire: 'Slow manual research (5 emails a day)',
-        freelancers: 'Generic blast templates'
+        explodeLabs: 'Dynamic prompts referencing actual company events, hiring, and tech stacks',
+        traditionalAgency: 'Generic "Dear {First_Name}, I hope this email finds you well..."',
+        inHouseHire: 'Slow manual research limited to 5-10 accounts per day',
+        freelancers: 'Uncustomized bulk mass templates'
       },
       {
         metric: 'Lead Qualification',
-        explodeLabs: 'Dedicated human SDRs triage replies and book qualified BANT demos',
-        traditionalAgency: 'Dumps raw unverified replies into your inbox',
-        inHouseHire: 'High turnover SDR hiring and training costs',
-        freelancers: 'No lead qualification'
+        explodeLabs: 'Dedicated human SDRs triage replies and book qualified BANT meetings',
+        traditionalAgency: 'Forwards raw unverified replies for your team to qualify',
+        inHouseHire: 'High SDR hiring, onboarding, and turnover overhead',
+        freelancers: 'No lead qualification or objection handling'
       }
     ],
     industryScenarios: [
       {
         industry: 'B2B Enterprise HR Tech',
-        challenge: 'A Series A recruitment platform struggled with high SDR turnover and a 0.4% cold email response rate using static lists.',
-        architecture: 'Provisioned 35 secondary domains, built a Clay workflow scraping companies with 50+ open engineering roles, and deployed personalized trigger emails.',
+        challenge: 'A Series A recruitment platform struggled with high SDR turnover and a 0.4% cold email response rate using static database exports.',
+        architecture: 'Provisioned 35 secondary domains, built a Clay workflow identifying companies with 50+ open engineering roles, and deployed personalized trigger emails.',
         impactMetric: 'Booked 58 qualified enterprise discovery calls in 60 days, generating $1.6M in qualified new ARR pipeline.'
       },
       {
         industry: 'Commercial Fleet Telematics & IoT',
-        challenge: 'A logistics IoT firm needed to reach VP of Fleet Operations across 4,000 regional trucking companies with verified direct phone and email data.',
-        architecture: 'Enriched DOT registration data through Clay, verified mobile numbers, and launched multi-channel email and phone outreach cadences.',
-        impactMetric: 'Achieved a 4.2% reply rate and closed $850,000 in fleet tracking contracts within 90 days.'
+        challenge: 'A logistics IoT company needed to reach VP of Fleet Operations across 4,000 regional trucking companies with verified direct phone and email data.',
+        architecture: 'Enriched Department of Transportation registration data through Clay, verified mobile numbers, and launched multi-channel email and phone cadences.',
+        impactMetric: 'Achieved a 4.2% positive reply rate and closed $850,000 in fleet tracking contracts within 90 days.'
       },
       {
         industry: 'Healthcare Compliance SaaS',
-        challenge: 'A HIPAA software provider was burning their primary domain sender reputation by blasting 10,000 emails/week from HubSpot.',
+        challenge: 'A HIPAA software provider was burning their primary domain sender reputation by blasting 10,000 emails per week from HubSpot.',
         architecture: 'Rehabilitated primary domain DNS, isolated all cold outbound into 40 secondary Google Workspace inboxes on Smartlead, and filtered for HIPAA hiring triggers.',
         impactMetric: 'Primary domain deliverability restored to 100%; generated 34 monthly qualified hospital demo meetings.'
       }
@@ -175,7 +175,7 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
       {
         question: 'What is Clay waterfall data enrichment and why is it superior to single lead databases?',
         answer:
-          'No single data provider (Apollo, ZoomInfo, Clearbit) has complete coverage. Clay waterfall enrichment queries multiple data vendors in sequential cascade: if Provider A doesn not have a verified email, it instantly queries Provider B, Provider C, and Provider D. This achieves 75-85% verified email coverage compared to 40-50% with single tools.'
+          'No single data provider (Apollo, ZoomInfo, Clearbit) has complete coverage. Clay waterfall enrichment queries multiple data vendors in sequential cascade: if Provider A does not have a verified email, it instantly queries Provider B, Provider C, and Provider D. This achieves 75-85% verified email coverage compared to 40-50% with single tools.'
       },
       {
         question: 'How many cold emails can be sent per day without landing in the spam folder?',
@@ -195,12 +195,12 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
       {
         question: 'Who handles incoming positive replies and objection handling?',
         answer:
-          'Our trained human SDR team monitors your master inbox continuously, responding to questions and objections within 15 minutes and scheduling qualified discovery meetings directly into your sales reps calendars.'
+          'Our trained human SDR team monitors your master inbox continuously, responding to questions and objections within 15 minutes and scheduling qualified discovery meetings directly into your sales reps\' calendars.'
       },
       {
         question: 'What qualification criteria do you use before passing a lead to our sales team?',
         answer:
-          'We customize qualification against your specific BANT criteria (Budget, Authority, Need, Timeline)—confirming company size, industry, current software stack, and decision-maker role before booking the call.'
+          'We customize qualification against your specific BANT criteria (Budget, Authority, Need, Timeline), confirming company size, industry, current software stack, and decision-maker role before booking the call.'
       },
       {
         question: 'What is your pricing model for B2B Outbound Lead Generation?',
@@ -223,14 +223,14 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
       'b2b lifecycle email marketing'
     ],
     aeoDefinition:
-      'Lifecycle email marketing and automation is the technical engineering and copywriting of behavioral email flows (Welcome Series, Abandoned Cart, Post-Purchase Upsell, Win-Back), predictive customer segmentation (RFM), dynamic product recommendation blocks, and dedicated IP deliverability monitoring to maximize Customer Lifetime Value (LTV).',
+      'Lifecycle email marketing is an automated customer retention system that sends targeted, behavior-triggered messages across the customer journey (from welcome series and cart recovery to post-purchase education and win-backs - maximizing customer lifetime value, repeat order rates, and retention revenue.',
     executiveSummary:
-      'Blasting unsegmented weekly email blasts to your entire list causes list burnout, high unsubscribe rates, and landing in the Gmail Promotions tab. Explode Labs builds behavioral automated lifecycle engines in Klaviyo and Customer.io that deliver personalized emails triggered by real-time shopper behavior, generating 30% to 45%+ of total store revenue on autopilot.',
+      'Sending generic weekly email blasts to your entire list causes subscriber fatigue, high unsubscribe rates, and landing in the spam or promotions folder. Explode Labs builds intelligent, behavior-driven lifecycle email and SMS engines in Klaviyo and Customer.io that automatically nurture buyers based on real-time actions - turning your email channel into a predictable revenue driver that generates 30% to 45%+ of total store revenue.',
     fiveStagePipeline: [
       {
-        title: 'Phase 1: Deliverability, DNS & Dedicated IP Warming Audit',
+        title: 'Phase 1: Deliverability Audit & Technical DNS Setup',
         duration: 'Weeks 1-2',
-        description: 'Audit sending reputation, configure custom dedicated sending domains with DMARC/BIMI records, clean inactive subscribers, and establish inbox placement benchmarks.',
+        description: 'We audit your sending reputation, configure custom dedicated sending domains with DMARC and BIMI authentication, clean inactive contacts, and establish Google Postmaster baseline telemetry.',
         deliverables: [
           'Full Email Deliverability & Inbox Placement Audit',
           'Dedicated Sending Domain (DSD) & BIMI / VMC Certification',
@@ -240,9 +240,9 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
         tools: ['Klaviyo', 'Google Postmaster Tools', 'SendForensics', 'Cloudflare DNS']
       },
       {
-        title: 'Phase 2: Core Revenue Flow Architecture & Wireframing',
+        title: 'Phase 2: Core Revenue Flow Architecture',
         duration: 'Weeks 3-4',
-        description: 'Design the 8 essential automated e-commerce lifecycle flows with multi-branch logic based on cart value, customer purchase history, and product category viewed.',
+        description: 'We design the 8 essential automated e-commerce lifecycle flows with multi-branch logic based on cart value, purchase history, and product category engagement.',
         deliverables: [
           'High-Converting Welcome Series (Non-Buyers vs Buyers)',
           'High-Intent Abandoned Cart & Checkout Recovery Flows',
@@ -252,21 +252,21 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
         tools: ['Klaviyo Flow Builder', 'Figma', 'Notion Lifecycle Architecture', 'Whimsical']
       },
       {
-        title: 'Phase 3: Custom Responsive HTML / Dark-Mode Email Design',
+        title: 'Phase 3: Custom Dark-Mode Responsive HTML Design',
         duration: 'Weeks 5-6',
-        description: 'Design and code mobile-first, dark-mode compatible responsive HTML email templates with dynamic product recommendation blocks and live countdown timers.',
+        description: 'We design and code mobile-first, dark-mode compatible responsive HTML email templates with dynamic product recommendation blocks and live countdown timers.',
         deliverables: [
           'Bespoke Mobile-First Responsive HTML Email Templates',
-          'Dark-Mode Optimization & Contrast QA across Outlook/Apple/Gmail',
+          'Dark-Mode Optimization & Contrast QA across Outlook, Apple & Gmail',
           'Dynamic Product Feed & Dynamic Discount Code Injection',
-          'Interactive AMP / Live Countdown Timer Modules'
+          'Interactive AMP & Live Countdown Timer Modules'
         ],
         tools: ['Litmus', 'Email on Acid', 'Figma', 'Klaviyo Template Studio']
       },
       {
-        title: 'Phase 4: Predictive RFM Segmentation & Campaign Calendar',
+        title: 'Phase 4: Predictive Customer Segmentation & Content Calendar',
         duration: 'Weeks 7-8',
-        description: 'Construct advanced Recency, Frequency, Monetary (RFM) customer segments and deploy a structured monthly promotional campaign calendar with predictive send-time optimization.',
+        description: 'We build advanced Recency, Frequency, Monetary (RFM) customer segments and deploy a structured monthly promotional campaign calendar with predictive send-time optimization.',
         deliverables: [
           'Predictive RFM Segments (VIP Champions, At-Risk, Lapsed)',
           'Smart Send-Time & Predictive Churn Optimization',
@@ -276,9 +276,9 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
         tools: ['Klaviyo Predictive Analytics', 'Shopify Plus API', 'Excel Cohort Models']
       },
       {
-        title: 'Phase 5: Continuous Attribution, SMS Synergy & LTV Scaling',
+        title: 'Phase 5: Email + SMS Synergy & Ongoing LTV Optimization',
         duration: 'Ongoing Retainer',
-        description: 'Synchronize email flows with transactional SMS (Attentive / Postscript), optimize customer repeat purchase rates, and attribute revenue directly in GA4 and Triple Whale.',
+        description: 'We synchronize email flows with transactional SMS (Attentive / Postscript), optimize customer repeat purchase rates, and attribute revenue directly in GA4 and Triple Whale.',
         deliverables: [
           'Email + SMS Omnichannel Trigger Orchestration',
           'Cohort Customer Lifetime Value (LTV) Retention Reports',
@@ -310,49 +310,49 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
         category: 'E-Commerce Lifecycle Platform',
         primaryChoice: 'Klaviyo (Shopify Plus native)',
         alternatives: 'Mailchimp, Constant Contact',
-        rationale: 'Klaviyo has deep bidirectional integration with Shopify, syncing catalog updates, real-time inventory, and customer purchase histories instantly.'
+        rationale: 'Klaviyo provides deep bidirectional synchronization with Shopify, syncing catalog updates, real-time inventory levels, and customer purchase history instantly.'
       },
       {
         category: 'B2B & Product Lifecycle Platform',
         primaryChoice: 'Customer.io',
         alternatives: 'HubSpot Marketing Hub',
-        rationale: 'Customer.io allows complex behavioral event tracking and webhook triggers based on in-app SaaS user actions.'
+        rationale: 'Customer.io enables granular behavioral event tracking and webhook triggers based on in-app user actions for SaaS platforms.'
       },
       {
         category: 'Email Client Testing & QA',
         primaryChoice: 'Litmus / Email on Acid',
         alternatives: 'Sending test emails to personal Gmail accounts',
-        rationale: 'Litmus renders email templates across 70+ client configurations, verifying that dark-mode styles and Outlook tables render without breaking.'
+        rationale: 'Litmus renders email templates across 70+ client configurations, ensuring dark-mode styles and Outlook tables render without layout distortion.'
       }
     ],
     comparisonMatrix: [
       {
         metric: 'Flow Complexity & Logic',
         explodeLabs: 'Multi-branch conditional logic based on customer LTV, viewed SKUs, and cart size',
-        traditionalAgency: '1 basic single-step abandoned cart email with a coupon',
-        inHouseHire: 'Standard default Shopify templates',
-        freelancers: 'Static unsegmented email blasts'
+        traditionalAgency: '1 basic single-step abandoned cart email with a generic coupon',
+        inHouseHire: 'Standard default Shopify notification templates',
+        freelancers: 'Static unsegmented weekly email blasts'
       },
       {
         metric: 'Dark-Mode & HTML Compatibility',
         explodeLabs: 'Custom coded responsive HTML tested across Litmus on 70+ email clients',
-        traditionalAgency: 'Single sliced image that displays blank when images are blocked',
+        traditionalAgency: 'Single sliced image that displays blank when recipient images are blocked',
         inHouseHire: 'Basic drag-and-drop builder with broken mobile padding',
-        freelancers: 'Inconsistent rendering'
+        freelancers: 'Inconsistent layout rendering across Outlook and mobile'
       },
       {
         metric: 'Deliverability & DNS',
         explodeLabs: 'Dedicated sending domains, DMARC, BIMI verification & automated sunsetting',
-        traditionalAgency: 'Shares shared IP pools with spammers, landing in spam folders',
-        inHouseHire: 'Unaware of 2024 Google/Yahoo sender requirements',
-        freelancers: 'No deliverability knowledge'
+        traditionalAgency: 'Shares pooled IPs with low-quality senders, triggering spam filters',
+        inHouseHire: 'Unaware of 2024 Google and Yahoo sender requirements',
+        freelancers: 'No deliverability or DNS configuration knowledge'
       },
       {
         metric: 'Revenue Contribution',
-        explodeLabs: 'Consistently drives 30–45%+ of total store revenue from automated flows',
-        traditionalAgency: '5–10% revenue from occasional discount blasts',
-        inHouseHire: 'Low flow optimization priority',
-        freelancers: 'No revenue tracking'
+        explodeLabs: 'Consistently drives 30 to 45%+ of total store revenue from automated flows',
+        traditionalAgency: '5 to 10% revenue from occasional discount blasts',
+        inHouseHire: 'Low flow optimization priority due to competing duties',
+        freelancers: 'No revenue attribution tracking'
       }
     ],
     industryScenarios: [

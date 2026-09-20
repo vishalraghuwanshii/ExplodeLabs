@@ -56,9 +56,9 @@ export function HomeLiveScanner() {
         schemaScore: Math.floor(Math.random() * 20) + 60, // 60-80
         overallGrade: 'B-',
         criticalFindings: [
-          'Missing Structured Entity Graph (Schema.org JSON-LD for AI Search engines)',
-          'High INP / Layout Shift latency on mobile devices (>2.4s LCP)',
-          'Zero Direct Answer definitions optimized for SearchGPT & Perplexity AI Overviews'
+          'Missing technical data that helps AI search engines understand your business',
+          'Website loads slowly on mobile devices',
+          'Missing simple text definitions optimized for AI chatbots like SearchGPT and Perplexity'
         ]
       });
     }, 2100);
@@ -85,7 +85,7 @@ export function HomeLiveScanner() {
             Test your domain's AI search & conversion readiness.
           </h2>
           <p className="text-sm sm:text-base text-[#8e8e93]">
-            Enter your website URL to simulate our proprietary AI Citability, Core Web Vitals, and organic conversion audit in real-time.
+            Enter your website URL to instantly see how well your site ranks on search engines, how fast it loads, and whether AI chatbots recommend you.
           </p>
         </div>
 

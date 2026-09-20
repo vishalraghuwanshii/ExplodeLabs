@@ -8,6 +8,8 @@ import { Check, Sparkles, ShieldCheck, Clock, Mail, Phone, MessageSquare } from 
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,9 +20,32 @@ export default function ContactPage() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError(null);
+    
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setError(result.message || "Failed to submit. Please try again.");
+      }
+    } catch (err) {
+      setError("An error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -176,8 +201,21 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button type="submit" size="lg" variant="primary" className="w-full" withArrow>
-                    Submit Project Inquiry
+                  {error && (
+                    <div className="p-3 bg-red-500/10 border border-red-500/20 text-red-400 rounded-lg text-sm">
+                      {error}
+                    </div>
+                  )}
+
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    variant="primary" 
+                    className="w-full" 
+                    withArrow={!isSubmitting}
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Submitting...' : 'Submit Project Inquiry'}
                   </Button>
                 </form>
               ) : (

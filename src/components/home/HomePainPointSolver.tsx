@@ -41,14 +41,14 @@ export function HomePainPointSolver() {
       problemBadge: 'Organic Search & AI Citability',
       icon: TrendingDown,
       problemTitle: 'Traffic is dropping or invisible in AI search.',
-      problemDesc: 'Traditional keyword stuffing is losing traffic to Google AI Overviews, SearchGPT, and Perplexity answer engines.',
-      solutionTitle: 'Generative Engine Optimization (GEO) & Programmatic SEO Architecture',
-      solutionDesc: 'We structure bold 45-word direct answer blocks, Schema.org entity graphs, and database-driven landing pages that AI engines parse and cite as authoritative sources.',
+      problemDesc: 'Your competitors are showing up in AI answers and top search results while your traffic stagnates because search engines don\'t understand your site structure.',
+      solutionTitle: 'AI Search & Content Optimization',
+      solutionDesc: 'We rebuild your site\'s technical foundation and content structure so both Google and new AI platforms recognize your business as the definitive answer for your buyers.',
       deliverables: [
         'SearchGPT & Perplexity citation engineering',
         'Next.js 15 Programmatic SEO landing page engine',
         'Schema.org JSON-LD Knowledge Graph integration',
-        'Sub-second Core Web Vitals (100/100 Lighthouse)'
+        'Instant page load speeds optimized for mobile'
       ],
       impactMetric: '340% increase in qualified organic search pipeline in 90 days',
       targetServiceUrl: '/services/generative-engine-optimization-aeo',
@@ -59,12 +59,12 @@ export function HomePainPointSolver() {
       problemBadge: 'Creative & Video Ads',
       icon: Video,
       problemTitle: 'Video ads are fatiguing with high CPA on Meta/TikTok.',
-      problemDesc: 'Generic video edits and dry product demos fail to stop the scroll, leading to low retention and declining ROAS.',
-      solutionTitle: 'Studio-Grade DaVinci Resolve Post-Production & High-Velocity Ad Sprints',
-      solutionDesc: 'We execute retention-paced assembly, DaVinci ACES color grading, custom sound design (-14 LUFS), and modular 3-second hook variations to maximize watch time.',
+      problemDesc: 'Your ads look like everyone else\'s. Buyers are scrolling past your content, causing your ad costs to spike and your returns to drop.',
+      solutionTitle: 'High-Retention Video Editing & Creative Ad Testing',
+      solutionDesc: 'We produce studio-quality video campaigns built specifically for social feeds. We test multiple hooks and edits to find exactly what makes your audience stop and buy.',
       deliverables: [
-        'Batch 15–30 high-converting ad variations per sprint',
-        'DaVinci Resolve Studio color grading & ACES workflows',
+        'Batch 15 to 30 high-converting ad variations per sprint',
+        'Professional color grading and audio mixing for social feeds',
         'Multi-format mastering (9:16 vertical, 16:9 widescreen, 1:1)',
         'Full .drp / .prproj project files and stems included'
       ],
@@ -77,12 +77,12 @@ export function HomePainPointSolver() {
       problemBadge: 'Website Conversion Rate',
       icon: MousePointerClick,
       problemTitle: 'Website receives traffic but fails to convert leads.',
-      problemDesc: 'Slow load times, confusing navigation, and heavy form friction cause high-intent buyers to bounce without booking.',
-      solutionTitle: 'Full-Stack Next.js Replatforming & High-Converting CRO Funnels',
-      solutionDesc: 'We re-architect your digital experience in Next.js 15 and Tailwind CSS with sub-1.2s mobile page loads, atomic design systems, and frictionless micro-intakes.',
+      problemDesc: 'Your sales team is starved for pipeline because visitors can\'t figure out what you do, or the site is too slow and frustrating to use.',
+      solutionTitle: 'Custom Website Rebuilding & Conversion Optimization',
+      solutionDesc: 'We rebuild your website using modern code to ensure fast mobile page loads, clear navigation, and easy-to-use contact forms.',
       deliverables: [
-        'Sub-second edge-rendered web application in Next.js 15',
-        'Headless Shopify Plus or custom SaaS dashboard architecture',
+        'Custom, fast-loading website built with modern code',
+        'Custom Shopify stores or web application dashboards',
         'Quantitative A/B testing & heatmaps (PostHog / Clarity)',
         '100% full intellectual property and GitHub repository transfer'
       ],
@@ -96,15 +96,15 @@ export function HomePainPointSolver() {
       icon: MailWarning,
       problemTitle: 'Cold emails land in spam and miss decision-makers.',
       problemDesc: 'Sending from primary domains risks blacklisting, while single-source scraped lists suffer 20%+ bounce rates.',
-      solutionTitle: 'Isolated Secondary Domain Fleet & 5-Tier Clay Waterfall SDR Engine',
-      solutionDesc: 'We deploy 10–50 dedicated secondary domains with full SPF, DKIM, and DMARC (p=reject) alignment, automated warmup pools, and verified B2B prospect waterfalls.',
+      solutionTitle: 'Safe Email Infrastructure & Automated Lead Research',
+      solutionDesc: 'We set up completely separate email domains so your main website never gets marked as spam, and use automated tools to build highly accurate prospect lists.',
       deliverables: [
-        '25+ authenticated sending inboxes with 0% risk to primary domain',
-        '5-tier Clay waterfall lead enrichment (<1.5% bounce rate guarantee)',
+        'Separate email infrastructure designed to protect your primary domain',
+        'Verified prospect lists designed to reduce bounced emails',
         'Dynamic spintax copywriting and trigger-based personalization',
         'Bi-directional CRM sync (HubSpot/Salesforce) & Slack alert bots'
       ],
-      impactMetric: '20–45 qualified executive sales meetings booked per month',
+      impactMetric: '20 to 45 qualified executive sales meetings booked per month',
       targetServiceUrl: '/services/b2b-outbound-sdr-and-lead-generation',
       targetServiceName: 'Explore B2B Outbound SDR Engine'
     }

@@ -94,7 +94,7 @@ export default function ServicesPage() {
             Capabilities & Services.
           </h1>
           <p className="text-base sm:text-lg text-[#8e8e93] leading-relaxed">
-            Full-spectrum digital services engineered for growth. From custom websites and high-converting e-commerce to performance advertising, video post-production, and autonomous AI systems.
+            A complete directory of our services. We build custom websites, manage paid advertising campaigns, edit video content, and develop AI automations for businesses.
           </p>
         </div>
 

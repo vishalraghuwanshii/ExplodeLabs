@@ -35,6 +35,8 @@ export interface ServiceEntity {
   technologies: string[];
   platforms?: string[];
   industries?: string[];
+  metaTitle?: string;
+  metaDescription?: string;
   primaryKeyword?: string;
   primaryIntent?: string;
   secondaryIntents?: string[];

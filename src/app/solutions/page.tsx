@@ -74,7 +74,7 @@ export default function SolutionsPage() {
                 {/* Outcome Callout */}
                 <div className="p-4 rounded-xl bg-[#141414] border border-[#202020] mb-6">
                   <div className="text-[11px] font-mono uppercase text-[#ff5500] font-semibold mb-1">
-                    Guaranteed Engagement Outcome
+                    Predictable Engagement Outcome
                   </div>
                   <p className="text-xs text-[#f5f5f0] leading-relaxed">
                     {sol.outcome}

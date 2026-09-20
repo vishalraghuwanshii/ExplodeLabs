@@ -415,10 +415,10 @@ export const portfolioItems: PortfolioItem[] = [
     serviceSlug: '3d-motion-graphics-and-vfx',
     serviceName: '3D Motion Graphics & Animation',
     projectTitle: '3D Kinetic Motion Graphics Product Launch & Explainer Film',
-    tagline: 'High-energy 60FPS 3D UI animation and holographic financial telemetry visualization.',
+    tagline: 'High-energy 60FPS 3D UI animation and financial data visualization.',
     overview: 'Aura is an institutional treasury management platform. They needed a visually arresting 90-second product launch video to headline their Series B announcement and keynote.',
     challenge: 'Explaining complex multi-currency liquidity routing and real-time ledger settlement without boring 2D screen recordings.',
-    solution: 'Modeled the entire UI in 3D space with floating holographic financial telemetry, glassmorphism cards, kinetic typography, and custom spatial sound design.',
+    solution: 'Modeled the entire UI in 3D space with floating financial data dashboards, glassmorphism cards, kinetic typography, and custom sound design.',
     results: [
       { metric: '$28M', label: 'Series B Funding Round Headlined' },
       { metric: '140k+', label: 'Landing Page Video Completions' },
@@ -429,7 +429,7 @@ export const portfolioItems: PortfolioItem[] = [
       accentColor: '#8b5cf6',
       mockupType: 'video-reel',
       thumbnailTitle: 'Aura FinTech 3D Motion Reel',
-      thumbnailSubtitle: 'Cinema 4D Holographic Financial Telemetry & Kinetic UI',
+      thumbnailSubtitle: 'Cinema 4D 3D Financial Visualization & Kinetic UI',
       tags: ['3D Motion Graphics', 'Cinema 4D', 'Octane Render', 'Spatial Sound FX'],
       videoTimestamp: '01:30 / 60FPS 4K',
       videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4'
@@ -477,6 +477,48 @@ export const portfolioItems: PortfolioItem[] = [
       'YouTube Educational Series with Custom Medical Title Cards'
     ],
     technologies: ['Blender 4.2', 'Houdini Medical VFX', 'DaVinci Resolve', 'Adobe Premiere Pro']
+  },
+  {
+    id: 'port_video_yt',
+    slug: 'hyperscale-media-youtube-channel-growth',
+    clientName: 'HyperScale Creator Studio',
+    industry: 'Creator Economy & Digital Media',
+    category: 'video-motion',
+    categoryLabel: 'YouTube Video Editing & Shorts',
+    serviceSlug: 'youtube-video-editing',
+    serviceName: 'YouTube Video Editing & Retention Pipeline',
+    projectTitle: 'Weekly YouTube Video Editing, High-CTR Thumbnails & Viral Shorts',
+    tagline: 'High-retention editing and thumbnail packaging scaling channel from 15k to 240k subscribers.',
+    overview: 'HyperScale Creator Studio produces weekly educational business breakdown videos and podcast conversations. They needed a reliable video editing partner to eliminate production bottlenecks, boost viewer retention, and repurpose long episodes into viral vertical Shorts.',
+    challenge: 'The founder was spending 18+ hours per week editing videos, resulting in irregular upload schedules, slow pacing, and low viewer retention curves in the first 60 seconds.',
+    solution: 'Built an end-to-end weekly post-production pipeline in DaVinci Resolve: cutting dead air, introducing visual pattern interrupts every 5 seconds, designing 3 custom high-CTR thumbnails per video, and generating 4 vertical Shorts per episode.',
+    results: [
+      { metric: '+185%', label: 'Average Watch Duration' },
+      { metric: '2.4M+', label: 'Monthly YouTube Views' },
+      { metric: '9.2%', label: 'Average Thumbnail CTR' }
+    ],
+    visualPreview: {
+      theme: 'dark-obsidian',
+      accentColor: '#ff5500',
+      mockupType: 'video-reel',
+      thumbnailTitle: 'HyperScale YouTube Channel Editing',
+      thumbnailSubtitle: 'Retention-Optimized Long-Form Videos, Custom Thumbnails & Vertical Shorts',
+      tags: ['YouTube Video Editing', 'High Retention', 'Custom Thumbnails', 'Shorts Repurposing'],
+      videoTimestamp: '12:45 / 4K YouTube',
+      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+    },
+    deliverables: [
+      'Full-Length Retention-Optimized Weekly YouTube Video Edits in 4K',
+      'High-CTR Custom Photoshop Thumbnails (3 Concepts Per Video)',
+      'Four Vertical Shorts/Reels with Animated Dynamic Subtitles Per Episode',
+      'Complete Timecoded Video Chapter Bookmarks and SEO Descriptions'
+    ],
+    technologies: ['DaVinci Resolve Studio', 'Adobe Premiere Pro', 'Adobe After Effects', 'Photoshop', 'Frame.io', 'Epidemic Sound'],
+    clientQuote: {
+      text: 'Explode Labs took all editing completely off my plate. Our average watch time doubled immediately, and having upload-ready 4K cuts and thumbnails delivered on time every single week allowed us to 10x our channel growth.',
+      author: 'Julian Reed',
+      title: 'Founder & Host, HyperScale Media'
+    }
   },
 
   // =========================================================================
@@ -551,6 +593,46 @@ export const portfolioItems: PortfolioItem[] = [
       'ServiceTitan Field Management Software CRM Webhook Integration'
     ],
     technologies: ['Google LSA', 'Google Ads', 'CallRail', 'ServiceTitan API', 'Looker Studio']
+  },
+  {
+    id: 'port_smm_1',
+    slug: 'veritas-social-media-marketing-campaign',
+    clientName: 'Veritas Consumer Products',
+    industry: 'Consumer Goods & Multi-Channel Retail',
+    category: 'paid-media',
+    categoryLabel: 'Social Media Marketing & Paid Ads',
+    serviceSlug: 'social-media-marketing',
+    serviceName: 'Full-Funnel Social Media Marketing',
+    projectTitle: 'Multi-Channel Social Media Marketing, Paid Ad Sprints & Community Growth',
+    tagline: 'Integrated social media campaign driving +420% brand reach, 3.8x ROAS, and 14,000+ new customers.',
+    overview: 'Veritas wanted to expand brand awareness and drive direct online sales across Meta (Facebook & Instagram), TikTok, and YouTube. Explode Labs developed high-converting video creatives, launched full-funnel ad campaigns, and managed daily social interactions.',
+    challenge: 'Previous social campaigns suffered from low engagement and high customer acquisition costs due to generic stock images and unoptimized ad targeting.',
+    solution: 'Produced 24 custom vertical video ads and carousels, deployed multi-platform conversion tracking, executed targeted demographic ad campaigns, and engaged daily with customer comments and direct messages.',
+    results: [
+      { metric: '+420%', label: 'Social Reach & Impressions' },
+      { metric: '3.8x', label: 'Blended Return on Ad Spend' },
+      { metric: '+160%', label: 'Inbound Sales Inquiries' }
+    ],
+    visualPreview: {
+      theme: 'dark-obsidian',
+      accentColor: '#ff5500',
+      mockupType: 'ad-creative',
+      thumbnailTitle: 'Veritas Social Media Campaign',
+      thumbnailSubtitle: '+420% Reach, 3.8x ROAS & Community Growth',
+      tags: ['Meta Ads', 'TikTok Ads', 'Social Content', 'Community Management']
+    },
+    deliverables: [
+      'Custom Direct-Response Video Ads & Slide Carousels',
+      'Full-Funnel Paid Advertising Campaigns (Meta, TikTok, LinkedIn)',
+      'Conversion Tracking Setup (Meta Pixel, CAPI, TikTok Events)',
+      'Daily Community Management & Monthly ROI Performance Reports'
+    ],
+    technologies: ['Meta Ads Manager', 'TikTok Ads Manager', 'LinkedIn Campaign Manager', 'Figma', 'Adobe Premiere Pro', 'Sprout Social'],
+    clientQuote: {
+      text: 'Explode Labs completely revitalized our social presence. Our ads are consistently profitable, our community is buzzing with engagement, and we finally have transparent monthly reporting tied directly to revenue.',
+      author: 'Rachel Bennett',
+      title: 'VP of Marketing, Veritas Brands'
+    }
   },
   {
     id: 'port_seo_3',
@@ -672,9 +754,241 @@ export const portfolioItems: PortfolioItem[] = [
       author: 'Elizabeth Weaver-King',
       title: 'Chief Executive Officer, S. Clyde Weaver'
     }
+  },
+  {
+    id: 'port_amazon_1',
+    slug: 'therapure-wellness-amazon-ppc-and-storefront',
+    clientName: 'TheraPure Wellness',
+    industry: 'Nutritional Supplements & Health E-Commerce',
+    category: 'paid-media',
+    categoryLabel: 'Amazon & Marketplace Growth',
+    serviceSlug: 'amazon-and-marketplace-marketing',
+    serviceName: 'Amazon PPC & Marketplace Marketing',
+    projectTitle: 'Amazon Full-Catalog PPC Restructure & Premium A+ Brand Overhaul',
+    tagline: 'Reduced TACoS from 24% to 11.8% while scaling monthly marketplace revenue past $350k.',
+    overview: 'TheraPure Wellness manufactures premium dietary supplements. They struggled with soaring Amazon PPC costs and unauthorized resellers cannibalizing their Buy Box share.',
+    challenge: 'High ACoS on unsegmented auto-campaigns, zero negative keyword sculpting, and unauthorized third-party listings eroding brand trust.',
+    solution: 'Rebuilt single-keyword campaign structures, authored conversion-first benefit bullets, designed 3D photorealistic Premium A+ modules, and enforced Brand Registry Project Zero protections.',
+    results: [
+      { metric: '11.8%', label: 'Reduced Blended TACoS' },
+      { metric: '+142%', label: 'Organic Top-3 Keyword Rankings' },
+      { metric: '$350k+', label: 'Monthly Marketplace Revenue' }
+    ],
+    visualPreview: {
+      theme: 'ecommerce',
+      accentColor: '#10b981',
+      mockupType: 'ad-creative',
+      thumbnailTitle: 'TheraPure Amazon Growth',
+      thumbnailSubtitle: 'TACoS Reduced to 11.8% & $350k/Mo Marketplace Sales',
+      tags: ['Amazon PPC', 'Premium A+ Design', 'Helium 10', 'Walmart Connect']
+    },
+    deliverables: [
+      'Comprehensive ASIN Keyword Harvesting & Title/Bullet Optimization',
+      'Single-Keyword Ad Groups (SKAGs) for Top Converting Search Queries',
+      'Custom 3D Photorealistic Premium A+ Content & Brand Story Modules',
+      'Brand Registry Defense & Automated Unauthorized Seller Removal'
+    ],
+    technologies: ['Helium 10', 'Amazon Brand Registry', 'Pacvue', 'Cinema 4D', 'Amazon Advertising Console'],
+    clientQuote: {
+      text: 'Explode Labs brought mathematical discipline to our Amazon ad spend. Our TACoS dropped by more than half while our total catalog revenue reached all-time highs within 90 days.',
+      author: 'David Thorne',
+      title: 'Head of E-Commerce, TheraPure Wellness'
+    }
+  },
+  {
+    id: 'port_ctv_1',
+    slug: 'vanguard-cyber-connected-tv-and-geofencing',
+    clientName: 'Vanguard Cybersecurity Solutions',
+    industry: 'Enterprise Cyber Threat Intelligence',
+    category: 'paid-media',
+    categoryLabel: 'Connected TV & Programmatic Media',
+    serviceSlug: 'programmatic-and-connected-tv-advertising',
+    serviceName: 'Programmatic & Connected TV Advertising',
+    projectTitle: 'Precision B2B Connected TV & RSA Conference Geofencing Campaign',
+    tagline: 'Broadcasting 4K non-skippable streaming TV ads to 4,000+ enterprise CISOs with cross-device retargeting.',
+    overview: 'Vanguard provides threat intelligence for Fortune 1000 financial institutions. They needed to dominate mindshare among C-level security leaders attending RSA Conference in San Francisco.',
+    challenge: 'Official conference sponsorships were cost-prohibitive ($400k+), while standard Google search ads had high $90+ CPCs with low enterprise committee engagement.',
+    solution: 'Deployed location geofencing around the Moscone Center and surrounding executive hotels, broadcasting 4K streaming TV ads on Hulu, ESPN, and Bloomberg, paired with household cross-device display and LinkedIn retargeting.',
+    results: [
+      { metric: '97.2%', label: 'Video Completion Rate on CTV' },
+      { metric: '1,420', label: 'Verified Target Account Visits' },
+      { metric: '$4.6M', label: 'New Enterprise Sales Pipeline' }
+    ],
+    visualPreview: {
+      theme: 'dark-obsidian',
+      accentColor: '#3b82f6',
+      mockupType: 'ad-creative',
+      thumbnailTitle: 'Vanguard CTV & Geofencing Campaign',
+      thumbnailSubtitle: '97.2% VCR on Connected TV & $4.6M Pipeline Generated',
+      tags: ['The Trade Desk', 'Connected TV', 'Polygon Geofencing', 'LiveRamp']
+    },
+    deliverables: [
+      '4K Broadcast 15s and 30s Non-Skippable Streaming Commercials',
+      'Moscone Center & Hotel Precision Polygon Geofencing Configuration',
+      'The Trade Desk B2B IP and Mobile Device Graph Retargeting Setup',
+      'Cross-Device Attributed Enterprise Sales Pipeline Dashboard'
+    ],
+    technologies: ['The Trade Desk', 'LiveRamp', 'Bombora Intent Data', 'Simplifi', 'DaVinci Resolve Studio'],
+    clientQuote: {
+      text: 'The ability to surround enterprise security executives on their living room TV screens and follow up on their mobile devices created unprecedented brand awareness and closed multiple 6-figure enterprise deals.',
+      author: 'Elena Rostova',
+      title: 'CMO, Vanguard Cyber'
+    }
+  },
+  {
+    id: 'port_abm_1',
+    slug: 'apex-logistics-multi-threaded-abm',
+    clientName: 'Apex Global Logistics Platform',
+    industry: 'Enterprise Supply Chain & Fleet Telematics',
+    category: 'paid-media',
+    categoryLabel: 'Account-Based Marketing (ABM)',
+    serviceSlug: 'account-based-marketing-abm',
+    serviceName: 'Account-Based Marketing (ABM)',
+    projectTitle: 'Multi-Threaded 1-to-1 ABM Campaign for 300 Target Enterprise Retailers',
+    tagline: 'Surrounding 8-person buying committees with role-tailored ads and edge-personalized web portals.',
+    overview: 'Apex Logistics provides enterprise transportation management software with $150k+ Average Contract Value (ACV). They suffered from extended 12-month sales cycles and deal drop-offs in early stages.',
+    challenge: 'Reaching only single champions inside massive retail enterprises led to deals stalling in executive budget reviews.',
+    solution: 'Engineered an orchestrated 1-to-1 ABM engine combining Bombora buyer intent triggers, role-specific ads (CFO ROI proofs, VP Logistics efficiency demos), and edge-personalized Next.js landing pages with real-time Slack alerts to sales reps.',
+    results: [
+      { metric: '64%', label: 'Target Account Engagement Rate' },
+      { metric: '-45%', label: 'Sales Cycle Length Reduction' },
+      { metric: '$6.2M', label: 'Closed-Won ARR in 6 Months' }
+    ],
+    visualPreview: {
+      theme: 'dark-obsidian',
+      accentColor: '#8b5cf6',
+      mockupType: 'ad-creative',
+      thumbnailTitle: 'Apex Multi-Threaded ABM Engine',
+      thumbnailSubtitle: '64% Account Engagement & $6.2M Closed-Won Revenue',
+      tags: ['1-to-1 ABM', 'Bombora Intent', 'LinkedIn Ads', 'Next.js Dynamic Portals']
+    },
+    deliverables: [
+      '300 Target Account List Tiering & Intent Signal Configuration',
+      'Dynamic Next.js 1-to-1 Edge-Rendered Personalized Company Portals',
+      'Multi-Threaded LinkedIn and Programmatic Ads for CFO, CTO, and VP Roles',
+      'Real-Time Slack Webhook Integration for Instant Sales Follow-Up'
+    ],
+    technologies: ['LinkedIn Campaign Manager', 'Bombora Intent', 'Next.js 15', 'Clearbit Reveal', 'HubSpot Enterprise'],
+    clientQuote: {
+      text: 'Apex went from cold outreach to being invited directly to RFP presentations. The personalized company portals blew our enterprise prospects away.',
+      author: 'Julian Vance',
+      title: 'VP of Sales, Apex Logistics'
+    }
+  },
+  {
+    id: 'port_influencer_1',
+    slug: 'lumina-glow-skincare-creator-whitelisting',
+    clientName: 'Lumina Glow Skincare',
+    industry: 'Direct-to-Consumer Beauty & Wellness',
+    category: 'paid-media',
+    categoryLabel: 'Influencer Marketing & Creator Whitelisting',
+    serviceSlug: 'influencer-and-creator-marketing',
+    serviceName: 'Influencer Marketing & Creator Whitelisting',
+    projectTitle: 'Performance Creator Whitelisting & TikTok Spark Ads Scaling Engine',
+    tagline: 'Partnering with 30+ licensed estheticians and scaling whitelisted dark posts to 4.2x ROAS.',
+    overview: 'Lumina Glow is a clean skincare brand looking to scale direct-to-consumer sales without relying on expensive celebrity endorsements.',
+    challenge: 'Previous sponsored influencer posts had low return on investment and zero trackable conversions after 48 hours.',
+    solution: 'Recruited 30 vetted micro-creators with licensed dermatology credentials, secured commercial advertising usage rights, produced 45 direct-response UGC videos, and scaled winning hooks via Meta Partnership Ads and TikTok Spark Ads.',
+    results: [
+      { metric: '4.2x', label: 'Blended ROAS on Whitelisted Ads' },
+      { metric: '-38%', label: 'Customer Acquisition Cost Reduction' },
+      { metric: '18,500+', label: 'New Direct Customers in 90 Days' }
+    ],
+    visualPreview: {
+      theme: 'luxury-gradient',
+      accentColor: '#ec4899',
+      mockupType: 'ad-creative',
+      thumbnailTitle: 'Lumina Glow Creator Engine',
+      thumbnailSubtitle: '4.2x ROAS & 18,500+ New Direct Customers',
+      tags: ['Creator Whitelisting', 'TikTok Spark Ads', 'Meta Partnership Ads', 'Triple Whale']
+    },
+    deliverables: [
+      'Audience Vetting & Fake Follower Audit for 60+ Niche Beauty Creators',
+      'Commercial Usage Rights Negotiation & Product Seeding Logistics',
+      '45 Direct-Response UGC Videos with Hook Rate Optimization',
+      'Meta Partnership Ads & TikTok Spark Ads Paid Scaling Architecture'
+    ],
+    technologies: ['Modash', 'Meta Business Manager', 'TikTok Spark Ads', 'Triple Whale', 'DaVinci Resolve Studio'],
+    clientQuote: {
+      text: 'Creator whitelisting through Explode Labs completely changed our unit economics. We stopped guessing which influencers worked and started running high-converting ads directly through trusted creator handles.',
+      author: 'Samantha Reed',
+      title: 'Co-Founder, Lumina Glow'
+    }
   }
 ];
 
+const serviceToPortfolioMap: Record<string, string> = {
+  // Video & Motion
+  'video-editing': 'port_video_1',
+  'video-editing-and-post-production': 'port_video_1',
+  'commercial-video-production': 'port_video_1',
+  'drone-and-commercial-media-production': 'port_video_1',
+  'youtube-video-editing': 'port_video_yt',
+  'short-form-video-editing': 'port_video_yt',
+  'motion-graphics': 'port_video_2',
+  'motion-graphics-and-visual-effects': 'port_video_2',
+  '3d-modeling': 'port_video_3',
+  '3d-product-modeling-and-rendering': 'port_video_3',
+  'ar-vr-development': 'port_video_3',
+
+  // UI/UX & Web Design
+  'ui-ux-design': 'port_web_2',
+  'ui-ux-design-and-design-systems': 'port_web_2',
+  'website-design': 'port_web_2',
+  'custom-web-design-and-ui-ux': 'port_web_2',
+
+  // Branding & Logo
+  'branding': 'port_logo_1',
+  'brand-identity-and-visual-systems': 'port_logo_1',
+  'logo-design': 'port_logo_1',
+  'graphic-design': 'port_logo_4',
+  'pitch-deck-design': 'port_logo_1',
+
+  // Social Media & Paid Ads
+  'social-media-marketing': 'port_smm_1',
+  'social-media-management': 'port_smm_1',
+  'social-media-advertising': 'port_smm_1',
+  'meta-ads': 'port_smm_1',
+  'google-ads': 'port_seo_2',
+  'high-performance-paid-advertising': 'port_seo_2',
+  'local-seo': 'port_seo_2',
+  'amazon-marketing': 'port_amazon_1',
+  'amazon-and-marketplace-marketing': 'port_amazon_1',
+  'programmatic-advertising': 'port_ctv_1',
+  'programmatic-ads': 'port_ctv_1',
+  'programmatic-and-connected-tv-advertising': 'port_ctv_1',
+  'account-based-marketing': 'port_abm_1',
+  'account-based-marketing-abm': 'port_abm_1',
+  'influencer-marketing': 'port_influencer_1',
+  'influencer-and-creator-marketing': 'port_influencer_1',
+
+  // SEO & Organic
+  'seo': 'port_seo_1',
+  'technical-seo': 'port_seo_1',
+  'technical-and-programmatic-seo': 'port_seo_1',
+  'ai-search-optimization': 'port_seo_3',
+  'chatgpt-and-perplexity-ai-seo': 'port_seo_3',
+
+  // E-commerce
+  'shopify-development': 'port_web_3',
+  'shopify-plus-development': 'port_web_3',
+  'ecommerce-development': 'port_web_3',
+  'headless-ecommerce-and-shopify-plus': 'port_web_3',
+
+  // Web & App Dev
+  'website-development': 'port_web_1',
+  'custom-web-application-development': 'port_web_1',
+  'saas-development': 'port_web_5',
+  'enterprise-saas-architecture': 'port_web_5',
+  'mobile-app-development': 'port_web_2',
+  'ios-and-android-mobile-apps': 'port_web_2',
+};
+
 export function getPortfolioItemByServiceSlug(slug: string): PortfolioItem | undefined {
+  const targetId = serviceToPortfolioMap[slug];
+  if (targetId) {
+    const matched = portfolioItems.find((item) => item.id === targetId);
+    if (matched) return matched;
+  }
   return portfolioItems.find((item) => item.serviceSlug === slug) || portfolioItems[0];
 }

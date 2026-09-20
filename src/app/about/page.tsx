@@ -81,7 +81,7 @@ export default function AboutPage() {
       title: 'Studio Creative & Video Systems',
       badge: 'DaVinci 4K / 3D CGI / Design',
       icon: Video,
-      desc: 'High-craft visual assets that build instant brand prestige — from commercial DaVinci Resolve color grading and motion VFX to photorealistic 3D product renders.',
+      desc: 'High-craft visual assets that build instant brand prestige - from commercial DaVinci Resolve color grading and motion VFX to photorealistic 3D product renders.',
       highlights: ['Commercial Video Post-Production', 'ACES Color Grading & Master Audio', '3D Product CGI & Modeling', 'Figma Scalable Design Systems']
     },
     {
@@ -119,7 +119,7 @@ export default function AboutPage() {
     {
       icon: ShieldCheck,
       title: 'Fixed-Price Certainty',
-      desc: 'No vague hourly billing or unexpected scope creep. Every project scope and milestone is clearly documented upfront with guaranteed delivery schedules.'
+      desc: 'No vague hourly billing or unexpected scope creep. Every project scope and milestone is clearly documented upfront with agreed delivery schedules.'
     }
   ];
 
@@ -219,7 +219,7 @@ export default function AboutPage() {
               </div>
 
               <p>
-                At Explode Labs, we cut out the agency overhead, the layers of junior account managers, and the endless slide decks. Every project is handled directly by senior specialists who take ownership of the end result — whether that means getting your brand cited at the top of ChatGPT Search and Google, producing commercial 4K video ads in DaVinci Resolve, or launching a lightning-fast Next.js web application.
+                At Explode Labs, we cut out the agency overhead, the layers of junior account managers, and the endless slide decks. Every project is handled directly by senior specialists who take ownership of the end result - whether that means getting your brand cited at the top of ChatGPT Search and Google, producing commercial 4K video ads in DaVinci Resolve, or launching a lightning-fast Next.js web application.
               </p>
 
               <p>

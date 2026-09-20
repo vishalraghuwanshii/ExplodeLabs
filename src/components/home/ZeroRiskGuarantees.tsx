@@ -17,12 +17,12 @@ export function ZeroRiskGuarantees() {
     {
       icon: ShieldCheck,
       title: '30-Day Post-Launch Warranty',
-      desc: 'Every web build, campaign launch, and video delivery includes 30 days of proactive monitoring, telemetry calibration, and rapid bug remediation via private Slack.'
+      desc: 'Every project delivery includes 30 days of active monitoring and bug fixes via a private Slack channel.'
     },
     {
       icon: Lock,
       title: '100% Full IP & Source Sovereignty',
-      desc: 'You own 100% of all deliverables upon milestone completion. We provide raw DaVinci project files, 4K ProRes exports, Figma design tokens, clean GitHub repos, and direct ad account ownership.'
+      desc: 'You own 100% of all deliverables upon milestone completion. We provide all raw project files, design assets, code repositories, and direct ad account ownership.'
     },
     {
       icon: FileCheck,
@@ -32,7 +32,7 @@ export function ZeroRiskGuarantees() {
     {
       icon: Zap,
       title: 'Fixed-Price Milestone Certainty',
-      desc: 'Zero vague hourly billing and zero scope creep surprises. Every project scope, timeline, and deliverable is agreed upon upfront with transparent milestone release schedules.'
+      desc: 'No vague hourly billing or scope creep surprises. Every project scope, timeline, and deliverable is agreed upon upfront with transparent milestone release schedules.'
     }
   ];
 
@@ -45,10 +45,10 @@ export function ZeroRiskGuarantees() {
             Client Assurance & Security
           </Badge>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#f5f5f0]">
-            The Zero-Risk Engagement Standard.
+            Working With Us.
           </h2>
           <p className="text-sm sm:text-base text-[#8e8e93] mt-3 leading-relaxed">
-            We eliminate the standard risks of working with external studios through guaranteed warranties, full IP sovereignty, and fixed milestone pricing.
+            Hiring an external partner shouldn't feel like a gamble. We operate with strict confidentiality, clear scopes, and full intellectual property transfer so you stay in control.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export function ZeroRiskGuarantees() {
                 </div>
                 <div className="mt-6 pt-4 border-t border-[#161616] flex items-center gap-1.5 text-[11px] font-mono text-emerald-400">
                   <CheckCircle2 className="w-3.5 h-3.5" />
-                  <span>Guaranteed in Contract</span>
+                  <span>Stipulated in Contract</span>
                 </div>
               </div>
             );

@@ -3,7 +3,7 @@ import { services, caseStudies, industries, solutions } from '@/data/knowledge-g
 import { serviceDeepDives } from '@/data/service-deep-dives';
 
 export async function GET() {
-  let markdown = `# Explode Labs — Complete AI Knowledge Base (llms-full.txt)
+  let markdown = `# Explode Labs - Complete AI Knowledge Base (llms-full.txt)
 > Digital Growth, Studio Creative, Performance Paid Media, and Modern Web Development Studio.
 > Founder & Principal Director: Vishal Raghuwanshi (https://www.linkedin.com/in/vishal-raghu/)
 > Canonical URL: https://explodelabs.com
@@ -91,7 +91,7 @@ ${s.faqs.length > 0 ? `- **Core FAQ**: Q: ${s.faqs[0].question} | A: ${s.faqs[0]
 `;
 
   caseStudies.forEach((cs) => {
-    markdown += `### Case Study: ${cs.client} — ${cs.title}
+    markdown += `### Case Study: ${cs.client} - ${cs.title}
 - **URL**: https://explodelabs.com/case-studies/${cs.slug}
 - **Industry & Timeline**: ${cs.industry} | ${cs.timeline}
 - **Primary Hero Metric**: ${cs.heroMetric.value} (${cs.heroMetric.label})
@@ -99,7 +99,7 @@ ${s.faqs.length > 0 ? `- **Core FAQ**: Q: ${s.faqs[0].question} | A: ${s.faqs[0]
 - **Challenge**: ${cs.challenge}
 - **Strategy & Execution**: ${cs.strategy}
 - **Key Technologies**: ${cs.technologies.join(', ')}
-${cs.testimonial ? `- **Testimonial**: "${cs.testimonial.quote}" — ${cs.testimonial.author} (${cs.testimonial.role}, ${cs.testimonial.company})` : ''}
+${cs.testimonial ? `- **Testimonial**: "${cs.testimonial.quote}" - ${cs.testimonial.author} (${cs.testimonial.role}, ${cs.testimonial.company})` : ''}
 
 `;
   });
