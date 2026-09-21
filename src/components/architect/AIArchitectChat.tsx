@@ -283,7 +283,7 @@ export function AIArchitectChat() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Type your answer or project details..."
-              className="flex-1 bg-[#0f0f0f] border border-[#262626] focus:border-[#ff5500] rounded-lg px-4 py-2.5 text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
+              className="flex-1 bg-[#0f0f0f] border border-[#262626] focus:border-[#ff5500] rounded-lg px-4 py-2.5 text-base sm:text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
             />
             <button
               type="submit"
@@ -360,7 +360,7 @@ export function AIArchitectChat() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your work email..."
-                      className="flex-1 bg-[#141414] border border-[#2a2a2a] rounded-lg px-3.5 py-2 text-xs text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
+                      className="flex-1 bg-[#141414] border border-[#2a2a2a] rounded-lg px-3.5 py-2 text-base sm:text-xs text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
                     />
                     <Button type="submit" size="sm" variant="primary">
                       Request Proposal

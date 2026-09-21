@@ -39,7 +39,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             autoFocus
-            className="flex-1 bg-transparent text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
+            className="flex-1 bg-transparent text-base sm:text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
           />
           {query && (
             <button

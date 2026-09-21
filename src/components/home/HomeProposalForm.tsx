@@ -106,7 +106,7 @@ export function HomeProposalForm() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Alex Morgan"
-                    className="w-full bg-[#141414] border border-[#262626] focus:border-[#ff5500] rounded-xl px-3.5 py-2.5 text-sm text-[#f5f5f0] placeholder-[#555555] outline-none transition-colors"
+                    className="w-full bg-[#141414] border border-[#262626] focus:border-[#ff5500] rounded-xl px-3.5 py-2.5 text-base sm:text-sm text-[#f5f5f0] placeholder-[#555555] outline-none transition-colors"
                   />
                 </div>
 
@@ -118,7 +118,7 @@ export function HomeProposalForm() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="alex@company.com"
-                    className="w-full bg-[#141414] border border-[#262626] focus:border-[#ff5500] rounded-xl px-3.5 py-2.5 text-sm text-[#f5f5f0] placeholder-[#555555] outline-none transition-colors"
+                    className="w-full bg-[#141414] border border-[#262626] focus:border-[#ff5500] rounded-xl px-3.5 py-2.5 text-base sm:text-sm text-[#f5f5f0] placeholder-[#555555] outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -132,7 +132,7 @@ export function HomeProposalForm() {
                     value={formData.website}
                     onChange={(e) => setFormData({ ...formData, website: e.target.value })}
                     placeholder="https://company.com"
-                    className="w-full bg-[#141414] border border-[#262626] focus:border-[#ff5500] rounded-xl px-3.5 py-2.5 text-sm text-[#f5f5f0] placeholder-[#555555] outline-none transition-colors"
+                    className="w-full bg-[#141414] border border-[#262626] focus:border-[#ff5500] rounded-xl px-3.5 py-2.5 text-base sm:text-sm text-[#f5f5f0] placeholder-[#555555] outline-none transition-colors"
                   />
                 </div>
 
@@ -141,7 +141,7 @@ export function HomeProposalForm() {
                   <select
                     value={formData.serviceNeed}
                     onChange={(e) => setFormData({ ...formData, serviceNeed: e.target.value })}
-                    className="w-full bg-[#141414] border border-[#262626] focus:border-[#ff5500] rounded-xl px-3.5 py-2.5 text-sm text-[#f5f5f0] outline-none transition-colors cursor-pointer"
+                    className="w-full bg-[#141414] border border-[#262626] focus:border-[#ff5500] rounded-xl px-3.5 py-2.5 text-base sm:text-sm text-[#f5f5f0] outline-none transition-colors cursor-pointer"
                   >
                     <option value="AI Search & SEO">AI Search & Programmatic SEO</option>
                     <option value="Video Editing & Creative">Video Editing, 3D & Creative</option>
@@ -160,7 +160,7 @@ export function HomeProposalForm() {
                   value={formData.details}
                   onChange={(e) => setFormData({ ...formData, details: e.target.value })}
                   placeholder="Tell us what you are trying to achieve (e.g., scale organic traffic, 10 YouTube videos/mo, website redesign)..."
-                  className="w-full bg-[#141414] border border-[#262626] focus:border-[#ff5500] rounded-xl p-3.5 text-sm text-[#f5f5f0] placeholder-[#555555] outline-none transition-colors resize-none"
+                  className="w-full bg-[#141414] border border-[#262626] focus:border-[#ff5500] rounded-xl p-3.5 text-base sm:text-sm text-[#f5f5f0] placeholder-[#555555] outline-none transition-colors resize-none"
                 />
               </div>
 

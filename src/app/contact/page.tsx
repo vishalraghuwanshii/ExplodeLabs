@@ -185,7 +185,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="David Vance"
-                        className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
+                        className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-base sm:text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
                       />
                     </div>
 
@@ -199,7 +199,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="david@company.com"
-                        className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
+                        className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-base sm:text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
                       />
                     </div>
                   </div>
@@ -214,7 +214,7 @@ export default function ContactPage() {
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         placeholder="Acme Corp"
-                        className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
+                        className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-base sm:text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
                       />
                     </div>
 
@@ -225,7 +225,7 @@ export default function ContactPage() {
                       <select
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-sm text-[#f5f5f0] outline-none"
+                        className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-base sm:text-sm text-[#f5f5f0] outline-none"
                       >
                         <option>SEO & Organic Growth</option>
                         <option>Paid Media & Advertising</option>
@@ -252,7 +252,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="(555) 000-0000"
-                        className="flex-1 bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
+                        className="flex-1 bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-base sm:text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
                       />
                     </div>
                   </div>
@@ -267,7 +267,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Describe what you want to build or scale, key requirements, or existing tech stack..."
-                      className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none resize-none"
+                      className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-base sm:text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none resize-none"
                     />
                   </div>
 

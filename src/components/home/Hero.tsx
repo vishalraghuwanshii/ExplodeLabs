@@ -132,7 +132,7 @@ export function Hero() {
                 value={websiteUrl}
                 onChange={(e) => setWebsiteUrl(e.target.value)}
                 placeholder="Enter your website domain (e.g. yourbrand.com)"
-                className="w-full bg-transparent text-[13px] sm:text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none px-3 py-2 sm:py-1.5 text-center sm:text-left"
+                className="w-full bg-transparent text-base sm:text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none px-3 py-2 sm:py-1.5 text-center sm:text-left"
               />
               <button
                 type="submit"

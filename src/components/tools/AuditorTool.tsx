@@ -94,7 +94,7 @@ export function AuditorTool() {
               value={url}
               onChange={(e) => setUrl(e.target.value)}
               placeholder="Enter your website URL (e.g., acme.com)..."
-              className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-xl pl-11 pr-4 py-3.5 text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
+              className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-xl pl-11 pr-4 py-3.5 text-base sm:text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
             />
           </div>
           <Button type="submit" size="lg" variant="primary" disabled={isScanning}>
@@ -132,7 +132,7 @@ export function AuditorTool() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your work email..."
-              className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-xl px-4 py-3.5 text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none text-center"
+              className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-xl px-4 py-3.5 text-base sm:text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none text-center"
             />
             <Button type="submit" size="lg" variant="primary" disabled={isSubmittingEmail} className="w-full">
               {isSubmittingEmail ? 'Unlocking Report...' : 'Unlock My Full Report'}

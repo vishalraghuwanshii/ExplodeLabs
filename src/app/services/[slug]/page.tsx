@@ -582,7 +582,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               description="An honest breakdown of cost, speed, quality, and asset ownership across delivery options."
             />
             <div className="overflow-x-auto border border-[#1e1e1e] rounded-xl shadow-xl">
-              <table className="w-full text-left text-xs border-collapse">
+              <table className="w-full min-w-[620px] text-left text-xs border-collapse">
                 <thead>
                   <tr className="bg-[#111111] border-b border-[#1e1e1e] text-[#71717a] font-mono uppercase">
                     <th className="p-4 sm:p-5 w-1/4">Evaluation Metric</th>

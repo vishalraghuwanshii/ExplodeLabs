@@ -52,7 +52,7 @@ export function HomeComparison() {
         />
 
         <div className="overflow-x-auto border border-[#1e1e1e] rounded-2xl bg-[#0c0c0c] shadow-2xl">
-          <table className="w-full text-left text-xs sm:text-sm border-collapse">
+          <table className="w-full min-w-[640px] text-left text-xs sm:text-sm border-collapse">
             <thead>
               <tr className="bg-[#121212] border-b border-[#1e1e1e] text-[#8e8e93] font-semibold text-xs">
                 <th className="p-4 sm:p-5 w-1/4">Evaluation Criterion</th>

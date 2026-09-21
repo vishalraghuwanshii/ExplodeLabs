@@ -63,7 +63,7 @@ export function FloatingBookingPill() {
   return (
     <aside 
       aria-label="Quick consultation and inquiry actions"
-      className="fixed bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 z-40 max-w-[96vw] sm:max-w-xl w-auto animate-in fade-in slide-in-from-bottom-5 duration-300 pointer-events-auto"
+      className="fixed bottom-[max(1rem,env(safe-area-inset-bottom,1rem))] sm:bottom-7 left-1/2 -translate-x-1/2 z-40 max-w-[96vw] sm:max-w-xl w-auto animate-in fade-in slide-in-from-bottom-5 duration-300 pointer-events-auto"
     >
       <div className="bg-[#0e0e0e]/95 hover:bg-[#111111] backdrop-blur-2xl border border-[#262626] hover:border-[#383838] shadow-[0_16px_48px_rgba(0,0,0,0.9)] rounded-full px-3 sm:px-4 py-2 flex items-center justify-between gap-2 sm:gap-3 text-xs transition-all">
         

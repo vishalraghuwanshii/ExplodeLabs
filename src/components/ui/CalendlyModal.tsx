@@ -115,7 +115,7 @@ export function CalendlyModal() {
         </div>
 
         {/* Embedded Iframe Container */}
-        <div className="relative flex-1 w-full bg-[#0c0c0c] min-h-[580px] sm:min-h-[640px]">
+        <div className="relative flex-1 w-full bg-[#0c0c0c] h-[72vh] sm:h-[640px] min-h-[460px] sm:min-h-[600px]">
           {isLoading && (
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#0c0c0c] text-[#8e8e93] z-10">
               <Loader2 className="w-7 h-7 text-[#ff5500] animate-spin" />
