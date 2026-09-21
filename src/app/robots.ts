@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/portfolio'],
+        disallow: ['/api/'],
       },
       {
         userAgent: [
@@ -27,7 +27,7 @@ export default function robots(): MetadataRoute.Robots {
           'DuckAssistBot'
         ],
         allow: '/',
-        disallow: ['/portfolio'],
+        disallow: ['/api/'],
       },
     ],
     sitemap: 'https://explodelabs.com/sitemap.xml',
