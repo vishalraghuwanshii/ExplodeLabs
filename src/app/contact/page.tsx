@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
-import { Check, Sparkles, ShieldCheck, Clock, Mail, Phone, MessageSquare } from 'lucide-react';
+import { Check, Sparkles, ShieldCheck, Clock, Mail, Phone, MessageSquare, ArrowUpRight } from 'lucide-react';
 
 export default function ContactPage() {
   const [activeTab, setActiveTab] = useState<'form' | 'calendar'>('form');
@@ -124,34 +124,51 @@ export default function ContactPage() {
                       <Sparkles className="w-3.5 h-3.5" />
                       <span>Want to skip the wait?</span>
                     </div>
-                    <h4 className="text-lg font-bold text-[#f5f5f0] mb-6">Book your kickoff call right now:</h4>
-                    <div className="rounded-xl overflow-hidden border border-[#242424] bg-[#141414]">
-                      <iframe 
-                        src="https://calendly.com/vishal-invokeiq/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0d0d0d&text_color=f5f5f0&primary_color=ff5500"
-                        width="100%" 
-                        height="650" 
-                        frameBorder="0" 
-                        title="Book a Discovery Call"
-                        className="w-full"
-                      ></iframe>
+                    <div className="p-6 sm:p-8 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] border border-[#2a2a2a] rounded-2xl flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden group">
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff5500]/10 blur-[50px] rounded-full pointer-events-none group-hover:bg-[#ff5500]/20 transition-all duration-500" />
+                      <div className="w-12 h-12 rounded-full bg-[#1e1e1e] border border-[#333] flex items-center justify-center mb-4 text-[#ff5500] group-hover:scale-110 transition-transform duration-300">
+                        <Clock className="w-6 h-6" />
+                      </div>
+                      <h4 className="text-xl font-bold text-[#f5f5f0] mb-2">Book your kickoff call right now</h4>
+                      <p className="text-sm text-[#8e8e93] max-w-sm mb-6">Select a time on our calendar that works for you, and we'll jump straight into scoping your project.</p>
+                      <a 
+                        href="https://calendly.com/vishal-invokeiq/30min" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold tracking-wide text-white bg-[#ff5500] hover:bg-[#e04a00] rounded-xl transition-all shadow-[0_0_20px_rgba(255,85,0,0.3)] hover:shadow-[0_0_30px_rgba(255,85,0,0.5)] w-full sm:w-auto"
+                      >
+                        <span>Open Calendly</span>
+                        <Sparkles className="w-4 h-4" />
+                      </a>
                     </div>
                   </div>
                 </div>
               ) : activeTab === 'calendar' ? (
                 <div className="animate-in fade-in duration-300">
-                  <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-[#f5f5f0] mb-2">Schedule your Discovery Call</h3>
-                    <p className="text-sm text-[#8e8e93]">Pick a time that works for you. We'll discuss your goals, scope out technical requirements, and build a custom milestone plan.</p>
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-[#f5f5f0] mb-2">Schedule your Discovery Call</h3>
+                    <p className="text-sm text-[#8e8e93] max-w-sm mx-auto">Skip the project brief and jump straight into a call. We'll discuss your goals and build a custom milestone plan.</p>
                   </div>
-                  <div className="rounded-xl overflow-hidden border border-[#242424] bg-[#141414] shadow-2xl">
-                    <iframe 
-                      src="https://calendly.com/vishal-invokeiq/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0d0d0d&text_color=f5f5f0&primary_color=ff5500"
-                      width="100%" 
-                      height="650" 
-                      frameBorder="0" 
-                      title="Book a Discovery Call"
-                      className="w-full"
-                    ></iframe>
+                  
+                  <div className="p-8 sm:p-12 bg-gradient-to-br from-[#141414] to-[#0a0a0a] border border-[#242424] rounded-2xl flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden group">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] bg-[#ff5500]/5 blur-[60px] rounded-full pointer-events-none group-hover:bg-[#ff5500]/10 transition-all duration-700" />
+                    
+                    <div className="relative z-10 w-16 h-16 rounded-full bg-[#1e1e1e] border border-[#333] flex items-center justify-center mb-6 text-[#f5f5f0] shadow-xl group-hover:-translate-y-1 transition-transform duration-300">
+                      <Clock className="w-7 h-7" />
+                    </div>
+                    
+                    <h4 className="relative z-10 text-xl font-bold text-[#f5f5f0] mb-3">Direct Calendar Access</h4>
+                    <p className="relative z-10 text-sm text-[#8e8e93] max-w-sm mb-8">Click below to open our scheduling interface in a new window for the fastest, most reliable booking experience.</p>
+                    
+                    <a 
+                      href="https://calendly.com/vishal-invokeiq/30min" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="relative z-10 inline-flex items-center justify-center gap-2 px-8 py-4 text-[15px] font-bold tracking-wide text-white bg-[#ff5500] hover:bg-[#e04a00] rounded-xl transition-all shadow-[0_0_25px_rgba(255,85,0,0.35)] hover:shadow-[0_0_40px_rgba(255,85,0,0.5)] w-full sm:w-auto"
+                    >
+                      <span>Book on Calendly</span>
+                      <ArrowUpRight className="w-4 h-4" />
+                    </a>
                   </div>
                 </div>
               ) : (
