@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server';
+
+export const runtime = 'edge';
 import { services, caseStudies, industries, solutions } from '@/data/knowledge-graph';
 
 export async function GET() {
