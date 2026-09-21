@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Check, Sparkles, ShieldCheck, Clock, Mail, Phone, MessageSquare, ArrowUpRight } from 'lucide-react';
+import { topCountryCodes, allCountryCodes } from '@/lib/countryCodes';
 
 export default function ContactPage() {
   const [activeTab, setActiveTab] = useState<'form' | 'calendar'>('form');
@@ -245,18 +246,19 @@ export default function ContactPage() {
                       <select 
                         value={formData.countryCode} 
                         onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
-                        className="w-[100px] shrink-0 bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-2 py-2.5 text-sm text-[#f5f5f0] outline-none cursor-pointer"
+                        className="w-[105px] shrink-0 bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-2 py-2.5 text-sm text-[#f5f5f0] outline-none cursor-pointer"
                       >
-                        <option value="+1">🇺🇸 +1</option>
-                        <option value="+44">🇬🇧 +44</option>
-                        <option value="+91">🇮🇳 +91</option>
-                        <option value="+61">🇦🇺 +61</option>
-                        <option value="+49">🇩🇪 +49</option>
-                        <option value="+33">🇫🇷 +33</option>
-                        <option value="+81">🇯🇵 +81</option>
-                        <option value="+86">🇨🇳 +86</option>
-                        <option value="+55">🇧🇷 +55</option>
-                        <option value="+27">🇿🇦 +27</option>
+                        {topCountryCodes.map((country, idx) => (
+                          <option key={`top-${idx}`} value={country.code}>
+                            {country.flag} {country.code}
+                          </option>
+                        ))}
+                        <option disabled>──────────</option>
+                        {allCountryCodes.map((country, idx) => (
+                          <option key={`all-${idx}`} value={country.code}>
+                            {country.flag} {country.code}
+                          </option>
+                        ))}
                       </select>
                       <input
                         type="tel"
