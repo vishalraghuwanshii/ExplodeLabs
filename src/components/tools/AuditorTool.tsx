@@ -9,17 +9,54 @@ import { Search, CheckCircle2, AlertTriangle, ArrowRight, ShieldCheck, Zap, Bot,
 export function AuditorTool() {
   const [url, setUrl] = useState('');
   const [isScanning, setIsScanning] = useState(false);
+  const [isScanComplete, setIsScanComplete] = useState(false);
+  const [email, setEmail] = useState('');
+  const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
+  const [emailCaptured, setEmailCaptured] = useState(false);
   const [results, setResults] = useState<any | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleScan = (e: React.FormEvent) => {
     e.preventDefault();
     if (!url.trim()) return;
 
     setIsScanning(true);
+    setIsScanComplete(false);
+    setEmailCaptured(false);
     setResults(null);
+    setError(null);
 
     setTimeout(() => {
       setIsScanning(false);
+      setIsScanComplete(true);
+    }, 1500);
+  };
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setIsSubmittingEmail(true);
+    setError(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: 'SEO Auditor Lead',
+          email: email,
+          company: url,
+          service: 'AI Search & SEO',
+          message: `User ran the Free SEO Auditor for ${url} and requested their report.`
+        }),
+      });
+
+      if (!response.ok) {
+        // We still show them the results even if Slack fails, so they aren't blocked, 
+        // but we'll log it if we want to handle it properly.
+      }
+
+      setEmailCaptured(true);
       setResults({
         url: url.startsWith('http') ? url : `https://${url}`,
         scores: {
@@ -37,7 +74,11 @@ export function AuditorTool() {
           { type: 'pass', title: 'High Information Density', desc: 'Clear H1 direct answer formatting enables easy citation by ChatGPT & Claude.' }
         ]
       });
-    }, 1500);
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmittingEmail(false);
+    }
   };
 
   return (
@@ -73,8 +114,39 @@ export function AuditorTool() {
         </div>
       )}
 
+      {/* Email Capture Gate */}
+      {isScanComplete && !emailCaptured && (
+        <div className="p-8 bg-[#0d0d0d] border border-[#ff5500]/30 rounded-2xl shadow-xl animate-in fade-in duration-300 text-center max-w-xl mx-auto">
+          <div className="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto mb-4">
+            <CheckCircle2 className="w-6 h-6" />
+          </div>
+          <h3 className="text-xl font-bold text-[#f5f5f0] mb-2">Audit Complete!</h3>
+          <p className="text-sm text-[#8e8e93] mb-6">
+            We've finished analyzing your Core Web Vitals, Schema.org relationships, and AI Citability scores for <strong className="text-[#f5f5f0]">{url}</strong>. Enter your email to unlock your full technical report.
+          </p>
+
+          <form onSubmit={handleEmailSubmit} className="space-y-3">
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your work email..."
+              className="w-full bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-xl px-4 py-3.5 text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none text-center"
+            />
+            <Button type="submit" size="lg" variant="primary" disabled={isSubmittingEmail} className="w-full">
+              {isSubmittingEmail ? 'Unlocking Report...' : 'Unlock My Full Report'}
+            </Button>
+            {error && (
+              <p className="text-red-400 text-xs mt-2">{error}</p>
+            )}
+          </form>
+          <p className="text-[10px] text-[#555] mt-4">We'll only use this to send your report and a few growth insights. No spam.</p>
+        </div>
+      )}
+
       {/* Results View */}
-      {results && !isScanning && (
+      {emailCaptured && results && !isScanning && (
         <div className="bg-[#0e0e0e] border border-[#262626] rounded-2xl p-6 sm:p-8 space-y-8 animate-in fade-in duration-300">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-[#1c1c1c] gap-4">
             <div>

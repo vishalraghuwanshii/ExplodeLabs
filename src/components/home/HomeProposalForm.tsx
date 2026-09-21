@@ -23,9 +23,39 @@ export function HomeProposalForm() {
     details: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.website, // Using website field as company info
+          service: formData.serviceNeed,
+          message: formData.details || "No additional details provided. Submitted via Homepage Proposal Form."
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Something went wrong');
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to send proposal request. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -134,6 +164,12 @@ export function HomeProposalForm() {
                 />
               </div>
 
+              {error && (
+                <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-lg text-sm text-red-400">
+                  {error}
+                </div>
+              )}
+
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-4 text-xs font-mono font-medium text-[#8e8e93]">
                   <span className="flex items-center gap-1.5">
@@ -150,8 +186,8 @@ export function HomeProposalForm() {
                   </span>
                 </div>
 
-                <Button type="submit" size="md" variant="primary" withArrow className="w-full sm:w-auto">
-                  Send Proposal Request
+                <Button type="submit" size="md" variant="primary" withArrow className="w-full sm:w-auto" disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending Request...' : 'Send Proposal Request'}
                 </Button>
               </div>
             </form>
