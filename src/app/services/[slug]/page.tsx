@@ -125,15 +125,55 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     '@graph': [
       {
         '@type': 'Service',
+        '@id': `https://explodelabs.com/services/${service.slug}#service`,
         'name': service.name,
-        'description': service.shortDescription,
+        'description': service.shortDescription || service.tagline,
         'provider': {
           '@type': 'Organization',
+          '@id': 'https://explodelabs.com/#organization',
           'name': 'Explode Labs',
           'url': 'https://explodelabs.com'
         },
+        'brand': {
+          '@type': 'Brand',
+          'name': 'Explode Labs'
+        },
         'serviceType': service.category,
-        'url': `https://explodelabs.com/services/${service.slug}`
+        'areaServed': {
+          '@type': 'Country',
+          'name': 'Global'
+        },
+        'url': `https://explodelabs.com/services/${service.slug}`,
+        'offers': {
+          '@type': 'Offer',
+          'priceCurrency': 'USD',
+          'description': `${service.pricingRange?.model || 'Milestone Pricing'} (${service.pricingRange?.avg || 'Custom Scope'})`,
+          'availability': 'https://schema.org/InStock',
+          'url': 'https://explodelabs.com/contact'
+        },
+        'hasOfferCatalog': deliverables.length > 0 ? {
+          '@type': 'OfferCatalog',
+          'name': `${service.name} Deliverables`,
+          'itemListElement': deliverables.map((del) => ({
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': del
+            }
+          }))
+        } : undefined,
+        'potentialAction': [
+          {
+            '@type': 'ScheduleAction',
+            'target': 'https://calendly.com/vishal-invokeiq/30min',
+            'name': `Schedule 30-Min Strategy Call for ${service.name}`
+          },
+          {
+            '@type': 'CommunicateAction',
+            'target': 'https://explodelabs.com/contact',
+            'name': `Request Proposal for ${service.name}`
+          }
+        ]
       },
       {
         '@type': 'BreadcrumbList',
@@ -143,6 +183,22 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           { '@type': 'ListItem', 'position': 3, 'name': service.name, 'item': `https://explodelabs.com/services/${service.slug}` }
         ]
       },
+      ...(deepDive?.fiveStagePipeline && deepDive.fiveStagePipeline.length > 0 ? [{
+        '@type': 'HowTo',
+        'name': `How Explode Labs Delivers ${service.name}`,
+        'description': `Our 5-stage production process for ${service.name}.`,
+        'totalTime': service.typicalTimeline || 'P4W',
+        'step': deepDive.fiveStagePipeline.map((p, idx) => ({
+          '@type': 'HowToStep',
+          'position': idx + 1,
+          'name': p.title,
+          'text': p.description,
+          'itemListElement': p.deliverables?.map(d => ({
+            '@type': 'HowToDirection',
+            'text': d
+          }))
+        }))
+      }] : []),
       faqsToRender.length > 0 ? {
         '@type': 'FAQPage',
         'mainEntity': faqsToRender.map(f => ({
@@ -153,8 +209,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             'text': f.answer
           }
         }))
-      } : {}
-    ]
+      } : {},
+      {
+        '@type': 'WebPage',
+        '@id': `https://explodelabs.com/services/${service.slug}#webpage`,
+        'url': `https://explodelabs.com/services/${service.slug}`,
+        'name': `${service.name} | Explode Labs`,
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['h1', '.direct-answer-text', '.faq-question', '.faq-answer']
+        }
+      }
+    ].filter(Boolean)
   };
 
   return (
@@ -173,7 +239,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
 
         {/* 1. HERO SECTION & ENGAGEMENT SPECS */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-16 border-b border-[#1a1a1a]">
+        <div id="overview" className="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-16 border-b border-[#1a1a1a]">
           <div className="lg:col-span-8 space-y-6">
             <div className="flex items-center gap-2 flex-wrap">
               <Badge variant="orange">{service.category}</Badge>
@@ -204,7 +270,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </div>
                 <span className="text-[10px] text-[#71717a] uppercase tracking-wider font-mono">Overview</span>
               </div>
-              <p className="text-sm sm:text-base text-[#f5f5f0] leading-relaxed font-medium">
+              <p className="text-sm sm:text-base text-[#f5f5f0] leading-relaxed font-medium direct-answer-text">
                 {service.directAnswer || deepDive?.aeoDefinition}
               </p>
             </div>
@@ -283,7 +349,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         {/* 2. PROBLEMS WE SOLVE */}
         {problemsSolved.length > 0 && (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="problems-solved" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="Common Roadblocks"
               title="Problems This Solves."
@@ -301,7 +367,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         )}
 
         {/* 3. WHAT WE DO (DETAILED OVERVIEW) */}
-        <div className="py-16 border-b border-[#1a1a1a]">
+        <div id="approach" className="py-16 border-b border-[#1a1a1a]">
           <SectionHeader
             badge="Our Approach"
             title={`How Explode Labs delivers ${service.name}.`}
@@ -316,7 +382,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         {/* 4. 5-STAGE PRODUCTION PIPELINE (DEEP DIVE OR PROCESS STEPS) */}
         {deepDive?.fiveStagePipeline && deepDive.fiveStagePipeline.length > 0 ? (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="delivery-pipeline" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="How We Deliver"
               title="Our 5-Step Delivery Process."
@@ -378,7 +444,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
           </div>
         ) : processSteps.length > 0 ? (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="delivery-pipeline" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="How It Works"
               title="Step-by-Step Delivery Process."
@@ -402,7 +468,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         {/* 5. DELIVERABLES & PRODUCTION STANDARDS */}
         {deepDive?.deliverablesMatrix && deepDive.deliverablesMatrix.length > 0 ? (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="deliverables" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="Quality Standards"
               title="What You Receive & Our Quality Standards."
@@ -433,7 +499,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
           </div>
         ) : deliverables.length > 0 ? (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="deliverables" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="What You Receive"
               title="Concrete Deliverables."
@@ -452,7 +518,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         {/* 6. CLIENT PRODUCTION SHOWCASE */}
         {portfolioArtifact && (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="client-showcase" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="Client Showcase"
               title={`Production Showcase: ${portfolioArtifact.clientName}.`}
@@ -540,7 +606,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         {/* 7. TOOLING & TECHNOLOGY SELECTION RATIONALE */}
         {deepDive?.toolDecisionTree && deepDive.toolDecisionTree.length > 0 && (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="tech-decisions" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="Tech Stack"
               title="Tooling & Software Selection Rationale."
@@ -575,7 +641,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         {/* 8. COMPARATIVE ANALYSIS MATRIX */}
         {deepDive?.comparisonMatrix && deepDive.comparisonMatrix.length > 0 && (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="comparison" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="How We Compare"
               title="Explode Labs vs Alternative Models."
@@ -610,7 +676,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         {/* 9. INDUSTRY EXECUTION BLUEPRINTS */}
         {deepDive?.industryScenarios && deepDive.industryScenarios.length > 0 && (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="industry-blueprints" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="Real-World Results"
               title="Execution Blueprints by Industry."
@@ -639,7 +705,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         )}
 
         {/* 10. INTERACTIVE AUDIT & ESTIMATOR TOOLS CALLOUT */}
-        <div className="py-16 border-b border-[#1a1a1a]">
+        <div id="diagnostics" className="py-16 border-b border-[#1a1a1a]">
           <div className="p-6 sm:p-8 bg-[#0a0a0a] border border-[#222222] rounded-2xl relative overflow-hidden">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
               <div>
@@ -682,7 +748,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         {/* 11. RELEVANT CASE STUDIES */}
         {caseStudies.length > 0 && (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="case-studies" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="Proven Execution"
               title={`Case studies utilizing ${service.name}.`}
@@ -718,7 +784,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         {/* 12. TECHNOLOGIES & PLATFORMS */}
         {(technologies.length > 0 || platforms.length > 0) && (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="tech-stack" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="Ecosystem"
               title="Technologies & Platforms."
@@ -737,7 +803,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         {/* 13. COMPREHENSIVE FAQS */}
         {faqsToRender.length > 0 && (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="faqs" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
               badge="Frequently Asked Questions"
               title="Technical, commercial & operational inquiries."
@@ -746,11 +812,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {faqsToRender.map((faq, i) => (
                 <div key={i} className="p-6 bg-[#0c0c0c] border border-[#1e1e1e] rounded-xl space-y-3">
-                  <h3 className="text-base font-semibold text-[#f5f5f0] flex items-start gap-2.5">
+                  <h3 className="text-base font-semibold text-[#f5f5f0] flex items-start gap-2.5 faq-question">
                     <HelpCircle className="w-4 h-4 text-[#ff5500] shrink-0 mt-1" />
                     <span>{faq.question}</span>
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#8e8e93] leading-relaxed pl-6.5">
+                  <p className="text-xs sm:text-sm text-[#8e8e93] leading-relaxed pl-6.5 faq-answer">
                     {faq.answer}
                   </p>
                 </div>
@@ -761,7 +827,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         {/* 14. COMPLEMENTARY CAPABILITIES / RELATED SERVICES */}
         {relatedServices.length > 0 && (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <div id="related-services" className="py-16 border-b border-[#1a1a1a]">
             <h3 className="text-xs font-mono uppercase tracking-wider text-[#71717a] font-semibold mb-6">
               Complementary Services & Related Capabilities
             </h3>
@@ -783,7 +849,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         )}
 
         {/* 15. BOTTOM CONVERSION CTA BANNER */}
-        <div className="py-16">
+        <div id="get-started" className="py-16">
           <div className="p-8 sm:p-12 bg-gradient-to-br from-[#141414] to-[#090909] border border-[#242424] rounded-2xl flex flex-col items-center text-center shadow-2xl">
             <Badge variant="orange" className="mb-4">
               Ready to Build?

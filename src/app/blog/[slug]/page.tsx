@@ -70,6 +70,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    '@id': `https://explodelabs.com/blog/${post.slug}#article`,
     headline: post.title,
     description: post.excerpt,
     datePublished: post.publishedDate,
@@ -77,18 +78,28 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       '@type': 'Person',
       name: post.author.name,
       jobTitle: post.author.role,
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Explode Labs',
+        '@id': 'https://explodelabs.com/#organization',
+      },
     },
     publisher: {
       '@type': 'Organization',
       name: 'Explode Labs',
       url: 'https://explodelabs.com',
       logo: 'https://explodelabs.com/logo.png',
+      '@id': 'https://explodelabs.com/#organization',
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://explodelabs.com/blog/${post.slug}`,
     },
     keywords: post.tags.join(', '),
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.blog-excerpt', '.takeaway-text'],
+    },
   };
 
   return (
@@ -128,7 +139,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {post.title}
           </h1>
 
-          <p className="text-base sm:text-xl text-[#a1a1aa] leading-relaxed">
+          <p className="blog-excerpt text-base sm:text-xl text-[#a1a1aa] leading-relaxed">
             {post.excerpt}
           </p>
 
@@ -171,7 +182,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <div className="w-5 h-5 rounded bg-[#ff5500]/10 border border-[#ff5500]/30 text-[#ff5500] flex items-center justify-center shrink-0 mt-0.5 font-mono text-[11px] font-bold">
                       {idx + 1}
                     </div>
-                    <span className="leading-relaxed">{takeaway}</span>
+                    <span className="takeaway-text leading-relaxed">{takeaway}</span>
                   </div>
                 ))}
               </div>

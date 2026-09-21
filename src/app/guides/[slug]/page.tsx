@@ -38,20 +38,28 @@ export default async function GuideDetailPage({
 
   const guideSchemaGraph = [
     {
-      '@type': 'Article',
+      '@type': 'TechArticle',
       headline: guide.title,
       description: guide.summary,
+      url: `https://explodelabs.com/guides/${guide.slug}`,
       author: {
-        '@type': 'Organization',
+        '@type': 'Person',
         name: guide.author.name,
+        jobTitle: guide.author.role,
       },
       publisher: {
         '@type': 'Organization',
         name: 'Explode Labs',
+        url: 'https://explodelabs.com',
         logo: 'https://explodelabs.com/logo.png',
+        '@id': 'https://explodelabs.com/#organization',
       },
       datePublished: guide.publishedDate,
-      mainEntityOfPage: `https://explodelabs.com/guides/${guide.slug}`
+      mainEntityOfPage: `https://explodelabs.com/guides/${guide.slug}`,
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['h1', '.guide-summary-text', '.takeaway-text', '.faq-item'],
+      },
     },
     {
       '@type': 'BreadcrumbList',
@@ -110,7 +118,7 @@ export default async function GuideDetailPage({
         </div>
 
         {/* Header */}
-        <div className="space-y-6 pb-10 border-b border-[#1a1a1a]">
+        <header id="overview" className="space-y-6 pb-10 border-b border-[#1a1a1a]">
           <div className="flex flex-wrap items-center gap-3">
             <Badge variant="orange">{guide.category}</Badge>
             <span className="text-xs font-mono text-[#71717a] flex items-center gap-1">
@@ -123,7 +131,7 @@ export default async function GuideDetailPage({
             {guide.title}
           </h1>
 
-          <p className="text-base sm:text-lg text-[#a1a1aa] leading-relaxed">
+          <p className="guide-summary-text text-base sm:text-lg text-[#a1a1aa] leading-relaxed">
             {guide.summary}
           </p>
 
@@ -136,10 +144,10 @@ export default async function GuideDetailPage({
               <div className="text-[#71717a]">{guide.author.role} • Published {guide.publishedDate}</div>
             </div>
           </div>
-        </div>
+        </header>
 
         {/* Executive Takeaway & Key Points Box */}
-        <div className="p-7 sm:p-8 bg-gradient-to-br from-[#121212] via-[#0f0f0f] to-[#0a0a0a] border border-[#242424] rounded-2xl space-y-6">
+        <section id="takeaways" className="p-7 sm:p-8 bg-gradient-to-br from-[#121212] via-[#0f0f0f] to-[#0a0a0a] border border-[#242424] rounded-2xl space-y-6">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-[#ff5500]">
               <Sparkles className="w-4 h-4" />
@@ -150,7 +158,7 @@ export default async function GuideDetailPage({
           </div>
 
           {guide.executiveTakeaway && (
-            <p className="text-sm sm:text-base text-[#f5f5f0] font-medium leading-relaxed bg-[#161616] p-4.5 rounded-xl border border-[#282828]">
+            <p className="takeaway-text text-sm sm:text-base text-[#f5f5f0] font-medium leading-relaxed bg-[#161616] p-4.5 rounded-xl border border-[#282828]">
               {guide.executiveTakeaway}
             </p>
           )}
@@ -163,10 +171,10 @@ export default async function GuideDetailPage({
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Table of Contents Quick Nav */}
-        <div className="p-6 bg-[#0c0c0c] border border-[#1c1c1c] rounded-xl space-y-3">
+        <nav id="structure" aria-label="Guide Sections" className="p-6 bg-[#0c0c0c] border border-[#1c1c1c] rounded-xl space-y-3">
           <div className="text-xs font-mono uppercase text-[#71717a] font-semibold flex items-center gap-2">
             <BookOpen className="w-3.5 h-3.5 text-[#ff5500]" />
             <span>Guide Structure & Sections</span>
@@ -179,12 +187,12 @@ export default async function GuideDetailPage({
               </div>
             ))}
           </div>
-        </div>
+        </nav>
 
         {/* Masterclass Content Sections */}
-        <div className="space-y-12 py-4 border-b border-[#1a1a1a]">
+        <div id="sections" className="space-y-12 py-4 border-b border-[#1a1a1a]">
           {guide.sections.map((sec, i) => (
-            <div key={i} className="space-y-5 pt-4">
+            <section key={i} id={`section-${i + 1}`} className="space-y-5 pt-4">
               <h2 className="text-2xl sm:text-3xl font-bold text-[#f5f5f0] tracking-tight flex items-start gap-3">
                 <span className="text-[#ff5500] font-mono text-xl sm:text-2xl mt-0.5">0{i + 1}</span>
                 <span>{sec.title.replace(/^\d+\.\s*/, '')}</span>
@@ -223,13 +231,13 @@ export default async function GuideDetailPage({
                   </p>
                 </div>
               )}
-            </div>
+            </section>
           ))}
         </div>
 
         {/* Practical FAQs */}
         {guide.faqs && guide.faqs.length > 0 && (
-          <div className="space-y-6 pt-4">
+          <section id="faqs" className="space-y-6 pt-4">
             <div className="space-y-2">
               <div className="text-xs font-mono uppercase text-[#ff5500] font-semibold tracking-wider">
                 Common Questions
@@ -241,7 +249,7 @@ export default async function GuideDetailPage({
 
             <div className="space-y-4">
               {guide.faqs.map((faq, i) => (
-                <div key={i} className="p-6 bg-[#0c0c0c] border border-[#1e1e1e] rounded-xl space-y-2.5">
+                <div key={i} className="faq-item p-6 bg-[#0c0c0c] border border-[#1e1e1e] rounded-xl space-y-2.5">
                   <h4 className="text-base font-bold text-[#f5f5f0] flex items-start gap-2.5 leading-snug">
                     <HelpCircle className="w-4 h-4 text-[#ff5500] shrink-0 mt-0.5" />
                     <span>{faq.question}</span>
@@ -252,12 +260,12 @@ export default async function GuideDetailPage({
                 </div>
               ))}
             </div>
-          </div>
+          </section>
         )}
 
         {/* Related Services */}
         {guide.relatedServiceSlugs && guide.relatedServiceSlugs.length > 0 && (
-          <div className="space-y-6 pt-6 border-t border-[#1a1a1a]">
+          <section id="related-services" className="space-y-6 pt-6 border-t border-[#1a1a1a]">
             <div className="space-y-2">
               <div className="text-xs font-mono uppercase text-[#ff5500] font-semibold tracking-wider">
                 Execution Capabilities
@@ -296,11 +304,11 @@ export default async function GuideDetailPage({
                 );
               })}
             </div>
-          </div>
+          </section>
         )}
 
         {/* Direct Calendly CTA Consultation Banner */}
-        <div className="p-8 sm:p-10 bg-gradient-to-br from-[#141414] via-[#0d0d0d] to-[#080808] border border-[#262626] rounded-2xl text-center space-y-6">
+        <section id="consultation" className="p-8 sm:p-10 bg-gradient-to-br from-[#141414] via-[#0d0d0d] to-[#080808] border border-[#262626] rounded-2xl text-center space-y-6">
           <Badge variant="orange">Direct Senior Consultation</Badge>
           <h3 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#f5f5f0] leading-tight">
             Need help executing this blueprint?
@@ -328,7 +336,7 @@ export default async function GuideDetailPage({
             <span>✓ 100% source code ownership</span>
             <span>✓ Mutual NDA before kickoff</span>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );

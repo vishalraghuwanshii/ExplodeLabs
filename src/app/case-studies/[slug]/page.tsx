@@ -29,18 +29,60 @@ export default async function CaseStudyDetailPage({
 
   const caseStudyArticleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'TechArticle',
     headline: `${cs.client}: ${cs.title}`,
     description: cs.tagline,
+    url: `https://explodelabs.com/case-studies/${cs.slug}`,
+    mainEntityOfPage: `https://explodelabs.com/case-studies/${cs.slug}`,
     author: {
       '@type': 'Organization',
       name: 'Explode Labs',
+      url: 'https://explodelabs.com',
+      '@id': 'https://explodelabs.com/#organization',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Explode Labs',
+      url: 'https://explodelabs.com',
       logo: 'https://explodelabs.com/logo.png',
+      '@id': 'https://explodelabs.com/#organization',
     },
+    about: {
+      '@type': 'Thing',
+      name: cs.client,
+      description: `${cs.client} in the ${cs.industry} industry`,
+    },
+    mentions: cs.technologies.map((t) => ({
+      '@type': 'SoftwareApplication',
+      name: t,
+    })),
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.case-tagline', '.hero-metric-box'],
+    },
+    ...(cs.testimonial
+      ? {
+          review: {
+            '@type': 'Review',
+            reviewBody: cs.testimonial.quote,
+            author: {
+              '@type': 'Person',
+              name: cs.testimonial.author,
+              jobTitle: cs.testimonial.role,
+            },
+            itemReviewed: {
+              '@type': 'Organization',
+              name: 'Explode Labs',
+              '@id': 'https://explodelabs.com/#organization',
+            },
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '5',
+              bestRating: '5',
+            },
+          },
+        }
+      : {}),
   };
 
   return (
@@ -56,7 +98,7 @@ export default async function CaseStudyDetailPage({
         </div>
 
         {/* Hero */}
-        <div className="max-w-4xl space-y-6 pb-16 border-b border-[#1a1a1a]">
+        <section id="overview" className="max-w-4xl space-y-6 pb-16 border-b border-[#1a1a1a]">
           <div className="flex items-center gap-2">
             <Badge variant="orange">{cs.industry}</Badge>
             <span className="text-xs font-mono text-[#71717a]">Engagement: {cs.timeline}</span>
@@ -66,12 +108,12 @@ export default async function CaseStudyDetailPage({
             {cs.client}: {cs.title}
           </h1>
 
-          <p className="text-xl text-[#a1a1aa] leading-relaxed font-normal">
+          <p className="case-tagline text-xl text-[#a1a1aa] leading-relaxed font-normal">
             {cs.tagline}
           </p>
 
           {/* Hero Metrics Dashboard */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 bg-[#0e0e0e] border border-[#242424] rounded-2xl">
+          <div className="hero-metric-box grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 bg-[#0e0e0e] border border-[#242424] rounded-2xl">
             <div>
               <div className="text-3xl sm:text-4xl font-bold font-mono text-[#ff5500]">{cs.heroMetric.value}</div>
               <div className="text-xs uppercase font-mono text-[#8e8e93] mt-1">{cs.heroMetric.label}</div>
@@ -83,10 +125,10 @@ export default async function CaseStudyDetailPage({
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Challenge & Strategy */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-[#1a1a1a]">
+        <section id="challenge-and-strategy" className="py-16 grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-[#1a1a1a]">
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-[#f5f5f0]">The Challenge</h2>
             <p className="text-sm sm:text-base text-[#8e8e93] leading-relaxed">
@@ -100,10 +142,10 @@ export default async function CaseStudyDetailPage({
               {cs.strategy}
             </p>
           </div>
-        </div>
+        </section>
 
         {/* Services Deployed & Technologies */}
-        <div className="py-12 border-b border-[#1a1a1a]">
+        <section id="services-and-tech" className="py-12 border-b border-[#1a1a1a]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-xs font-mono uppercase tracking-wider text-[#71717a] mb-3">Flagship Services Deployed</h3>
@@ -135,10 +177,10 @@ export default async function CaseStudyDetailPage({
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Deliverables Matrix */}
-        <div className="py-12 border-b border-[#1a1a1a]">
+        <section id="deliverables" className="py-12 border-b border-[#1a1a1a]">
           <h2 className="text-2xl font-bold text-[#f5f5f0] flex items-center gap-2 mb-6">
             <Layers className="w-5 h-5 text-[#ff5500]" />
             <span>Key Project Deliverables</span>
@@ -151,11 +193,11 @@ export default async function CaseStudyDetailPage({
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Architecture Details & Execution Timeline */}
         <div className="py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-[#1a1a1a]">
-          <div className="lg:col-span-6 space-y-6">
+          <section id="architecture" className="lg:col-span-6 space-y-6">
             <h2 className="text-2xl font-bold text-[#f5f5f0] flex items-center gap-2">
               <Cpu className="w-5 h-5 text-[#ff5500]" />
               <span>Technical Architecture</span>
@@ -168,9 +210,9 @@ export default async function CaseStudyDetailPage({
                 </div>
               ))}
             </div>
-          </div>
+          </section>
 
-          <div className="lg:col-span-6 space-y-6">
+          <section id="timeline" className="lg:col-span-6 space-y-6">
             <h2 className="text-2xl font-bold text-[#f5f5f0] flex items-center gap-2">
               <Clock className="w-5 h-5 text-[#ff5500]" />
               <span>Execution Timeline</span>
@@ -183,12 +225,12 @@ export default async function CaseStudyDetailPage({
                 </div>
               ))}
             </div>
-          </div>
+          </section>
         </div>
 
         {/* Testimonial Quote */}
         {cs.testimonial && (
-          <div className="py-16 border-b border-[#1a1a1a]">
+          <section id="testimonial" className="py-16 border-b border-[#1a1a1a]">
             <div className="p-8 sm:p-12 bg-gradient-to-r from-[#111111] to-[#0c0c0c] border border-[#262626] rounded-2xl relative">
               <Quote className="w-10 h-10 text-[#ff5500]/20 absolute top-6 right-6" />
               <p className="text-lg sm:text-2xl text-[#f5f5f0] font-normal italic leading-relaxed mb-6 max-w-3xl">
@@ -199,11 +241,11 @@ export default async function CaseStudyDetailPage({
                 <div className="text-xs text-[#8e8e93]">{cs.testimonial.role}, {cs.testimonial.company}</div>
               </div>
             </div>
-          </div>
+          </section>
         )}
 
         {/* CTA */}
-        <div className="py-16 text-center space-y-6">
+        <section id="get-started" className="py-16 text-center space-y-6">
           <h2 className="text-3xl font-bold text-[#f5f5f0]">Need similar results for your business?</h2>
           <p className="text-sm text-[#8e8e93] max-w-xl mx-auto">
             Discuss your technical architecture and commercial targets with our senior team.
@@ -216,7 +258,7 @@ export default async function CaseStudyDetailPage({
               AI Project Architect
             </Button>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
