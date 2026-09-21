@@ -431,8 +431,8 @@ export function Header() {
           {/* Action Area: Book Call & Mobile Toggle */}
           <div className="flex items-center gap-2.5 sm:gap-3">
             {/* Primary Action CTA */}
-            <Button href="https://calendly.com/vishal-invokeiq/30min" size="sm" variant="primary" withArrow>
-              Book Discovery Call
+            <Button href="/contact" size="sm" variant="primary" withArrow>
+              Get a Proposal
             </Button>
 
             {/* Mobile Menu Button */}
