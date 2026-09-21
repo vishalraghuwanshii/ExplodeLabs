@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 
+export const runtime = 'edge';
+
 export async function POST(request: Request) {
   try {
     const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
@@ -69,7 +71,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Error sending to Slack:", error);
     return NextResponse.json(
-      { success: false, message: "Failed to send message to Slack" },
+      { success: false, message: "Submission failed. Please manually email your requirements to support@explodelabs.com" },
       { status: 500 }
     );
   }
