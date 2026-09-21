@@ -48,10 +48,10 @@ export function VerifiedReviews() {
       platform: 'Clutch Verified Review',
       rating: 5,
       date: 'Q1 2026',
-      headline: 'Zero hallucinations on 2.4M legal document RAG pipeline.',
-      content: 'Finding senior engineers who understand both dense vector indexing and strict deterministic evaluation is rare. Explode Labs delivered a production RAG system that passed our enterprise SOC2 penetration testing with zero CVEs.',
+      headline: 'Zero hallucinations on 2.4M legal document AI search pipeline.',
+      content: 'Finding senior engineers who understand both deep semantic search indexing and strict accuracy benchmarking is rare. Explode Labs delivered a production AI search system that passed our enterprise SOC2 penetration testing with zero security issues.',
       metric: '99.8% Retrieval Precision',
-      serviceUsed: 'Vector Search & AI Engineering'
+      serviceUsed: 'AI Search & Knowledge Systems'
     },
     {
       author: 'Dr. Sarah Jenkins',

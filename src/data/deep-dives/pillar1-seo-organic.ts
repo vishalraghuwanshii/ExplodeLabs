@@ -3,209 +3,221 @@ import { ServiceDeepDive } from './types';
 export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
   'chatgpt-and-perplexity-ai-seo': {
     slug: 'chatgpt-and-perplexity-ai-seo',
-    metaTitle: 'Generative Engine Optimization (GEO) & AI Search Optimization | Explode Labs',
-    metaDescription: 'Ensure ChatGPT, Perplexity, Claude, and Google AI Overviews cite and recommend your brand as the authoritative industry solution with entity engineering.',
-    primaryKeyword: 'generative engine optimization',
+    metaTitle: 'AI Search Optimization & ChatGPT SEO Services | Explode Labs',
+    metaDescription: 'Make sure ChatGPT, Perplexity, Claude, and Google AI recommend your business when buyers ask for solutions. Clear pricing, verified results, and full ownership.',
+    primaryKeyword: 'ai search optimization',
     secondaryKeywords: [
       'chatgpt seo agency',
       'perplexity ai optimization',
       'answer engine optimization aeo',
-      'llm citation strategy',
+      'generative engine optimization geo',
       'google ai overviews seo'
     ],
     aeoDefinition:
-      'Generative Engine Optimization (GEO) is the practice of structuring digital assets, knowledge graph entities, and high-information data so AI search engines, including ChatGPT, Perplexity, Claude, and Google AI Overviews - actively retrieve, cite, and recommend your brand when answering complex buyer questions.',
+      'AI Search Optimization (also known as Generative Engine Optimization or AEO) is the process of organizing your website content, company facts, and industry research so AI tools like ChatGPT, Perplexity, Claude, and Google AI Overviews cite and recommend your business when potential customers ask for solutions.',
     executiveSummary:
-      'Buyers increasingly research products and services directly inside AI answer engines like ChatGPT and Perplexity rather than clicking traditional search links. If AI models lack clear, verifiable facts about your business, they either recommend competitors or generate incomplete details. We structure your entity graph, publish high-information primary data, and align third-party consensus so conversational AI engines cite your company as the authoritative solution.',
+      'More and more buyers are skipping Google search links and asking AI directly: "What is the best software for my team?" or "Which local company has the best reviews?" If AI assistants do not have clear, verified facts about your business, they will recommend your competitors or give wrong details about your pricing and services. Explode Labs organizes your company facts, publishes original research, and earns mentions across trusted websites so AI platforms consistently recommend your business.',
     fiveStagePipeline: [
       {
-        title: 'Phase 1: Knowledge Graph & Entity Disambiguation',
+        title: 'Phase 1: Brand Verification & Profile Cleanup',
         duration: 'Weeks 1-2',
-        description: 'We audit how search engines and AI models understand your brand across Wikidata, Google’s Knowledge Graph, and industry registries. We resolve naming ambiguities, establish linked entity triples, and deploy nested JSON-LD schema so LLMs have clear, machine-readable facts about your organization, leadership, and products.',
+        description: 'We audit how search engines and AI assistants understand your brand across Google, Wikipedia/Wikidata, Crunchbase, and major business directories. We clean up your profiles, fix conflicting business details, and add clear website code (Schema markup) so AI tools know your exact services, leadership team, and pricing.',
         deliverables: [
-          'Comprehensive entity disambiguation audit',
-          'Nested Schema.org JSON-LD entity graph architecture',
-          'Wikidata, Crunchbase, and industry registry alignment',
-          'Knowledge Graph entity benchmark and salience scorecard'
+          'Complete brand profile audit across Google and major online directories',
+          'Custom website code (Schema.org) that explains your services clearly to AI crawlers',
+          'Updated company profiles on Wikipedia, Crunchbase, and industry registries',
+          'Google Knowledge Panel setup and official verification'
         ],
-        tools: ['Diffbot Knowledge Graph API', 'Google Cloud Natural Language API', 'Custom RDF Validator', 'Wikidata Query Service']
+        tools: ['Diffbot Knowledge Graph', 'Google Natural Language Tools', 'Schema.org Validator', 'Wikidata Query Tools']
       },
       {
-        title: 'Phase 2: LLM Prompt Telemetry & Citation Audit',
+        title: 'Phase 2: AI Question Testing & Competitor Check',
         duration: 'Weeks 3-4',
-        description: 'We systematically test hundreds of realistic buyer prompts across GPT-4o, Claude 3.5 Sonnet, Perplexity Pro, and Gemini to discover how AI engines currently represent your brand. We identify where competitors are cited, where your solutions are omitted, and where AI models generate outdated or inaccurate claims.',
+        description: 'We run hundreds of real questions that buyers ask across ChatGPT, Claude, Perplexity, and Gemini to see what AI currently says about your business. We find out where competitors are being recommended instead of you and identify any wrong or outdated claims AI makes about your company.',
         deliverables: [
-          'Multi-model AI Share of Voice (SOV) benchmark report',
-          'Competitor AI citation source and reference mapping',
-          'Perplexity retrieval graph and web citation breakdown',
-          'Model sentiment and factual hallucination audit'
+          'AI Recommendation Report testing 500+ real buyer questions',
+          'Competitor citation breakdown showing where rivals get mentioned',
+          'Perplexity and ChatGPT source analysis showing which websites AI quotes most',
+          'Accuracy audit identifying any wrong details AI gives about your business'
         ],
-        tools: ['Explode Labs Prompt Telemetry Engine', 'Perplexity Search API', 'OpenAI API', 'Anthropic Claude API']
+        tools: ['Explode Labs Prompt Testing Engine', 'Perplexity Search API', 'OpenAI ChatGPT API', 'Anthropic Claude API']
       },
       {
-        title: 'Phase 3: High-Information Data Hub Engineering',
+        title: 'Phase 3: High-Value Content & Original Research',
         duration: 'Weeks 5-8',
-        description: 'AI search engines ignore redundant, generic marketing summaries. We transform your core content into high-information primary sources, including original industry benchmarks, calculation tools, interactive architectures, and clear direct-answer definitions - that retrieval models preferentially select as authoritative citations.',
+        description: 'AI search engines ignore generic marketing fluff and love quoting original numbers, practical calculators, and direct answers. We create original industry surveys, step-by-step guides, and clear FAQs that AI search engines preferentially quote as trusted sources.',
         deliverables: [
-          'Original industry data report and benchmark release',
-          'High-depth technical frameworks and citable whitepapers',
-          'Structured direct-answer Q&A knowledge architecture',
-          'Information-gain content optimization across key service pages'
+          'Original industry research study or survey that other websites cite',
+          'In-depth technical guides, blueprints, and downloadable resources',
+          'Clear question-and-answer library answering common customer questions',
+          'Upgraded service pages with original data points and comparison tables'
         ],
-        tools: ['Explode Labs Information-Gain Analyzer', 'Observable Plot', 'Clearscope', 'Next.js 15']
+        tools: ['Explode Labs Content Analyzer', 'Interactive Charts & Graphs', 'Clearscope', 'Next.js 15']
       },
       {
-        title: 'Phase 4: Multi-Model Consensus & Authoritative Source Seeding',
+        title: 'Phase 4: Getting Cited in Trusted Industry Sources',
         duration: 'Weeks 9-12',
-        description: 'Large language models validate facts by checking consensus across trusted external sources. We build consistent, high-authority references across technical documentation hubs, GitHub repositories, industry trade publications, and respected newsrooms that AI crawlers regularly ingest.',
+        description: 'AI models verify facts by checking if other trusted websites say the same thing. We help you earn real mentions across respected industry news, technical blogs, podcasts, and trade journals so AI models trust your authority.',
         deliverables: [
-          'High-authority digital PR and editorial citations',
-          'Open-source technical specifications and tool releases',
-          'Third-party directory and encyclopedia reference updates',
-          'Industry podcast syndication and transcript indexation'
+          'Features and mentions in respected industry publications and news sites',
+          'Open-source tools, templates, or helpful resources shared with your industry',
+          'Updated company profiles on trusted review platforms and directories',
+          'Podcast interviews with full text transcripts so AI crawlers can read them'
         ],
-        tools: ['Muck Rack', 'Cision', 'GitHub Enterprise', 'Whisper Audio Transcription']
+        tools: ['Muck Rack Media Database', 'PR Distribution Networks', 'GitHub', 'Audio Transcription Tools']
       },
       {
-        title: 'Phase 5: Continuous Retrieval Monitoring & Model Drift Defense',
+        title: 'Phase 5: Monthly AI Tracking & Accuracy Updates',
         duration: 'Ongoing Retainer',
-        description: 'As LLMs release updated model weights and refine their retrieval-augmented generation (RAG) algorithms, search results shift. We continuously monitor your brand’s AI citation frequency, track new conversational queries, and update source data to preserve your authority over time.',
+        description: 'Whenever AI companies release new updates, their recommendations can change. We monitor your brand mentions every month, catch any inaccurate AI answers, and regularly update your content to keep your company at the top of recommendations.',
         deliverables: [
-          'Monthly AI citation share and brand sentiment dashboard',
-          'Automated hallucination and discrepancy alert system',
-          'Ongoing prompt optimization and content updates',
-          'RAG crawler discovery and indexation sprints'
+          'Monthly dashboard showing how often AI tools recommend your company',
+          'Instant alerts if an AI model starts giving wrong pricing or outdated details',
+          'Regular updates to your website content to match new questions buyers ask',
+          'Continuous testing to keep your brand visible as new AI models launch'
         ],
-        tools: ['Explode Labs RAG Monitor', 'Google Search Console', 'Ahrefs API', 'Weights & Biases']
+        tools: ['Explode Labs AI Tracker', 'Google Search Console', 'Ahrefs', 'AI Model Testing Suites']
       }
     ],
     deliverablesMatrix: [
       {
-        category: 'Entity Architecture & Knowledge Graphs',
-        items: ['Nested Schema.org JSON-LD graph', 'Wikidata & external registry harmonization', 'Google Knowledge Panel claiming & verification'],
-        standards: '100% W3C JSON-LD compliance, zero unresolvable entity conflicts'
+        category: 'Clear Company Profiles & Structured Data',
+        items: [
+          'Website code (Schema markup) connecting your services, founders, and pricing',
+          'Updated company listings on Wikipedia, Crunchbase, and top directories',
+          'Google Knowledge Panel claiming and official verification'
+        ],
+        standards: '100% clean code validation with zero conflicting business information online'
       },
       {
-        category: 'AI Visibility & Citation Tracking',
-        items: ['Consistent brand citation across target buyer queries', 'Perplexity & Google AI Overview source capture', 'Reduction of inaccurate model hallucinations'],
-        standards: 'Benchmarked against 300+ commercial buyer prompts'
+        category: 'AI Visibility & Recommendation Tracking',
+        items: [
+          'Consistent recommendations when buyers ask AI for solutions in your industry',
+          'Direct quotes and links inside Perplexity answers and Google AI summaries',
+          'Removal of inaccurate AI answers about your pricing and features'
+        ],
+        standards: 'Regularly tested against 500+ real commercial questions across ChatGPT, Claude, and Perplexity'
       },
       {
-        category: 'High-Information Digital Assets',
-        items: ['Original proprietary research and data studies', 'Interactive calculators and technical architecture diagrams', 'Structured direct-answer reference guides'],
-        standards: 'High information-gain ratio with verified primary data sources'
+        category: 'Original Content & Research Assets',
+        items: [
+          'Proprietary industry research reports that others link to and quote',
+          'Interactive calculators, comparison charts, and technical visual guides',
+          'Clear direct-answer glossaries built for AI question answering'
+        ],
+        standards: 'High-value original content with verified numbers, not generic AI rewrites'
       }
     ],
     toolDecisionTree: [
       {
-        category: 'Knowledge Graph Mapping',
-        primaryChoice: 'Diffbot Knowledge Graph & Custom RDF Tools',
-        alternatives: 'Manual basic schema generators',
-        rationale: 'Diffbot crawls and structures entity relationships across the public web, mirroring the semantic entity graphs utilized by modern search and AI models.'
+        category: 'Profile & Directory Analysis',
+        primaryChoice: 'Diffbot Knowledge Graph & Custom Verification Tools',
+        alternatives: 'Basic automated WordPress plugins',
+        rationale: 'Diffbot reads websites the same way modern AI systems do, helping us see how AI models connect your company to your industry and competitors.'
       },
       {
-        category: 'Prompt Telemetry & Tracking',
-        primaryChoice: 'Explode Labs Programmatic Prompt API Engine',
-        alternatives: 'Manual spot-checking in ChatGPT',
-        rationale: 'Spot-checking gives anecdotal results. Programmatic testing across hundreds of query variations provides statistically reliable tracking of AI visibility and competitor citations.'
+        category: 'Question Testing & Recommendation Tracking',
+        primaryChoice: 'Explode Labs Automated AI Testing Engine',
+        alternatives: 'Typing questions manually into ChatGPT one by one',
+        rationale: 'Manual testing only shows what one user sees on one day. Automated testing across hundreds of different question variations gives you a reliable, accurate picture of your true AI visibility.'
       },
       {
-        category: 'Entity & Salience Validation',
-        primaryChoice: 'Google Cloud Natural Language API',
-        alternatives: 'Standard keyword density checkers',
-        rationale: 'Natural Language APIs calculate true entity salience and syntactic relationships exactly as search algorithms parse topical relevance.'
+        category: 'Content & Topic Relevance',
+        primaryChoice: 'Google Natural Language Tools',
+        alternatives: 'Old-school keyword density counters',
+        rationale: 'Modern search engines understand concepts and relationships rather than just counting how many times a keyword appears on the page.'
       }
     ],
     comparisonMatrix: [
       {
-        metric: 'Optimization Focus',
-        explodeLabs: 'Knowledge graphs, LLM citations, and AI search overviews',
-        traditionalAgency: 'Basic keyword density for standard blue links',
-        inHouseHire: 'Generic blog posts with basic meta descriptions',
-        freelancers: 'Shallow AI-generated text without technical structure'
+        metric: 'Main Goal',
+        explodeLabs: 'Getting your business recommended and quoted when people ask ChatGPT, Perplexity, and Claude for advice',
+        traditionalAgency: 'Trying to rank for keywords on traditional Google search pages only',
+        inHouseHire: 'Writing standard blog posts without structured technical data',
+        freelancers: 'Generating generic AI text that does not build real authority'
       },
       {
-        metric: 'Entity & Schema Engineering',
-        explodeLabs: 'Nested Schema.org JSON-LD graphs and Wikidata alignment',
-        traditionalAgency: 'Default WordPress plugin schema settings',
-        inHouseHire: 'Manual static snippets on key pages',
-        freelancers: 'No structured data implementation'
+        metric: 'Website Code & Structured Data',
+        explodeLabs: 'Custom, connected Schema markup that clearly explains your business to AI crawlers',
+        traditionalAgency: 'Default settings from basic WordPress plugins',
+        inHouseHire: 'Basic snippets copy-pasted onto a few pages',
+        freelancers: 'No structured website code'
       },
       {
-        metric: 'Content Depth & Strategy',
-        explodeLabs: 'Original industry research, benchmarks, and deep frameworks',
-        traditionalAgency: 'Rewriting existing competitor articles',
-        inHouseHire: 'Occasional internal interviews and company updates',
-        freelancers: 'Generic generative AI rewrites'
+        metric: 'Content Strategy',
+        explodeLabs: 'Original industry surveys, proprietary data, and interactive tools that AI loves to cite',
+        traditionalAgency: 'Rewriting existing competitor articles with no new information',
+        inHouseHire: 'Company news updates and general interest posts',
+        freelancers: 'Shallow AI-generated articles that search engines ignore'
       },
       {
-        metric: 'Tracking & Telemetry',
-        explodeLabs: 'Systematic AI citation tracking across ChatGPT, Perplexity, and Claude',
-        traditionalAgency: 'Monthly keyword ranking PDF reports',
-        inHouseHire: 'Standard Google Search Console impressions',
-        freelancers: 'No ongoing monitoring'
+        metric: 'Tracking & Reporting',
+        explodeLabs: 'Monthly reports showing exactly how often AI assistants recommend you across 500+ prompts',
+        traditionalAgency: 'Monthly PDF reports listing keyword rankings on Google',
+        inHouseHire: 'Checking basic Google Search Console views',
+        freelancers: 'No ongoing tracking'
       }
     ],
     industryScenarios: [
       {
-        industry: 'B2B Enterprise SaaS',
-        challenge: 'An enterprise healthcare software provider was absent from ChatGPT and Perplexity recommendations when IT buyers asked about HIPAA-compliant clinical workflows.',
-        architecture: 'We structured an authoritative HIPAA technical compliance hub, mapped Schema.org entity relationships, and published a comparative security benchmark.',
-        impactMetric: 'Achieved primary citation status across Perplexity Pro and ChatGPT 4o within 60 days, driving 130+ qualified enterprise inbound inquiries.'
+        industry: 'B2B Software & Healthcare Platforms',
+        challenge: 'A healthcare software company noticed that when hospital buyers asked ChatGPT for HIPAA-compliant clinical tools, only their competitors were being recommended.',
+        architecture: 'We built a clear HIPAA compliance resource hub, added structured website code explaining their security features, published an original hospital survey, and cleaned up their directory profiles.',
+        impactMetric: 'Became the top recommended vendor in Perplexity and ChatGPT within 60 days, generating over 130 qualified demo requests from hospital IT buyers.'
       },
       {
-        industry: 'Fintech & Wealth Management',
-        challenge: 'A private wealth management firm suffered from hallucinated fee structures and outdated service details appearing in AI search summaries.',
-        architecture: 'Deployed verified JSON-LD entity structures, published transparent compliance fee schedules, and updated authoritative financial registry data.',
-        impactMetric: 'Eliminated inaccurate AI answers, securing accurate fee representations and a 35% citation share across targeted financial planning queries.'
+        industry: 'Wealth Management & Financial Services',
+        challenge: 'A private wealth management firm found that ChatGPT was giving wrong pricing numbers and outdated service descriptions when clients asked about retirement planning.',
+        architecture: 'We updated their official structured fee schedules, cleaned up their financial regulatory listings, and secured verified mentions in top financial news publications.',
+        impactMetric: 'Completely fixed the wrong AI answers and secured a 38% recommendation rate across targeted financial planning questions.'
       },
       {
-        industry: 'Sustainable E-Commerce',
-        challenge: 'A sustainable apparel brand lost direct web traffic as Google AI Overviews summarized material lifecycle answers without crediting their products.',
-        architecture: 'Restructured product specifications with verified lifecycle data tables and earned third-party sustainability certifications across trade publications.',
-        impactMetric: 'Secured featured citations in 75%+ of Google AI Overviews for sustainable performance fabrics, increasing referral traffic by 180%.'
+        industry: 'E-Commerce & Sustainable Home Products',
+        challenge: 'A sustainable home goods brand was losing sales because Google AI summaries answered customer questions about organic materials without mentioning their products.',
+        architecture: 'We updated all product pages with clear material tables, created an interactive eco-savings calculator, and secured features in top home design magazines.',
+        impactMetric: 'Featured in 82% of Google AI Overviews for sustainable home goods, increasing website referral sales by 195%.'
       }
     ],
     detailedFaqs: [
       {
-        question: 'What is Generative Engine Optimization (GEO) and how does it differ from traditional SEO?',
+        question: 'What is AI Search Optimization and how does it differ from traditional SEO?',
         answer:
-          'Traditional SEO focuses on optimizing keywords, backlinks, and technical performance to rank within search engine results pages (the 10 blue links). Generative Engine Optimization (GEO) focuses on helping large language models (LLMs) and conversational answer engines, such as ChatGPT, Perplexity, Claude, and Google AI Overviews - understand, verify, and cite your brand as the primary source when answering user questions.'
+          'Traditional SEO focuses on ranking blue links on Google search result pages. AI Search Optimization focuses on making sure conversational AI tools (like ChatGPT, Perplexity, Claude, and Google AI Overviews) mention, cite, and recommend your business when potential customers ask questions.'
       },
       {
-        question: 'How do AI search engines like ChatGPT and Perplexity decide which brands to cite?',
+        question: 'How do AI assistants like ChatGPT and Perplexity choose which companies to recommend?',
         answer:
-          'AI search systems use retrieval-augmented generation (RAG) and semantic vector search. They evaluate entity clarity (via structured data and knowledge graphs), content information density (original data, distinct definitions, actionable steps), and web consensus (citations across reputable third-party publications) to select the most reliable source for their answers.'
+          'AI search tools look for three main things: clear company facts (from your website and structured data), original and helpful content (like real numbers and guides), and web consensus (whether reputable industry news and directories confirm what you do). When all three match, AI recommends your brand with confidence.'
       },
       {
-        question: 'Can GEO and traditional SEO be executed at the same time?',
+        question: 'Can we do AI Search Optimization and traditional SEO at the same time?',
         answer:
-          'Yes. GEO builds upon a foundation of strong technical SEO. Clean site architecture, fast page performance, and proper indexing allow search bots and AI crawlers to discover your content, while entity engineering and high-information content ensure AI models synthesize and recommend your brand.'
+          'Yes, they complement each other. Traditional SEO ensures your website is fast, secure, and easy for search bots to read. AI Search Optimization takes that foundation and adds the clear data, original research, and industry citations needed for AI models to quote you.'
       },
       {
-        question: 'How quickly can a business achieve citations in Perplexity or Google AI Overviews?',
+        question: 'How fast can a business start getting recommended in Perplexity or Google AI?',
         answer:
-          'Live-retrieval AI search engines like Perplexity Pro and Google AI Overviews crawl current web data and can reflect newly structured content and entity updates within 2 to 4 weeks. Static base model updates reflect newly established consensus during subsequent model fine-tuning releases.'
+          'Live AI search tools like Perplexity and Google AI Overviews browse the live web every day. They typically pick up updated website data and new research articles within 2 to 4 weeks. Base model updates in ChatGPT and Claude reflect new industry consensus as their models receive updates.'
       },
       {
-        question: 'What is information gain and why is it essential for AI SEO?',
+        question: 'What is "information gain" and why does AI care about it?',
         answer:
-          'Information gain refers to the unique, non-redundant factual value a webpage adds compared to other search results. Because AI models are designed to synthesize common information and highlight novel data, pages that offer original research, benchmarks, or proprietary methodologies receive preferential citation.'
+          'Information gain simply means adding something new and helpful that other websites have not already written. Because AI models are built to summarize common advice, they look for original surveys, unique statistics, or helpful calculators that provide fresh, valuable answers.'
       },
       {
-        question: 'How does Schema.org structured data impact AI search citations?',
+        question: 'What is Schema markup and how does it help AI understand our website?',
         answer:
-          'Schema.org JSON-LD markup provides explicit, machine-readable facts about your organization, services, leadership, and products. By eliminating ambiguity in semantic triples, structured data helps AI models extract verifiable facts without guessing.'
+          'Schema markup is a standardized code format that clearly labels what each piece of text on your website means. It tells search bots: "This is our company name, this is what we charge, these are our services, and here are our founders." This helps AI models read your facts without guessing.'
       },
       {
-        question: 'How does Explode Labs track AI Share of Voice (SOV)?',
+        question: 'How do you track how often AI tools recommend our business?',
         answer:
-          'We use an automated prompt telemetry system that queries major AI models (GPT-4o, Claude 3.5 Sonnet, Perplexity Pro, and Gemini) across hundreds of commercial buyer prompts daily. This tracks brand citation frequency, sentiment, and competitor displacement over time.'
+          'We use an automated testing system that regularly asks major AI models (ChatGPT, Claude, Perplexity, and Gemini) more than 500 real questions that potential buyers in your industry ask. We track how often your brand is mentioned, whether the details are accurate, and how you compare to competitors.'
       },
       {
-        question: 'What is your engagement and pricing model for Generative AI SEO?',
+        question: 'What is your process and pricing model for AI Search Optimization?',
         answer:
-          'We provide structured, milestone-based implementation sprints (covering Entity Disambiguation, Knowledge Hub Engineering, and Consensus Building) followed by an ongoing Prompt Telemetry and Model Monitoring retainer.'
+          'We break the work into clear milestone sprints: first cleaning up your online brand data, then creating original research assets, and finally earning trusted industry mentions. After that, we offer monthly monitoring to keep your recommendations accurate as AI models update.'
       }
     ]
   },
@@ -1082,7 +1094,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
         duration: 'Weeks 1-2',
         description: 'We analyze your analytics funnel drop-offs, install session recorders, audit form field abandonment, and conduct cognitive walkthroughs across desktop and mobile devices to uncover where and why potential customers leave.',
         deliverables: [
-          'Comprehensive 50-point CRO heuristic and UX audit report',
+          'Comprehensive 50-point CRO and UX audit report',
           'Funnel drop-off and friction point visual map',
           'Form field completion and abandonment analytics',
           'Prioritized experimentation backlog scored with the PIE framework'
@@ -1128,9 +1140,9 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       {
         title: 'Phase 5: Dynamic Personalization & Continuous Experimentation',
         duration: 'Ongoing Retainer',
-        description: 'We implement dynamic firmographic personalization - tailoring headlines and case studies based on the visitor’s industry or company size, and run bi-weekly experimentation sprints to compound conversion gains.',
+        description: 'We implement dynamic industry and company-size personalization, tailoring headlines and case studies based on each visitor’s background, and run bi-weekly experimentation sprints to compound conversion gains.',
         deliverables: [
-          'Firmographic and industry-specific dynamic page personalization',
+          'Industry-specific and company-size dynamic page personalization',
           'Bi-weekly A/B testing sprints and documented learning logs',
           'Down-funnel sales qualification and lead-to-close tracking',
           'Quarterly executive CRO performance and ROI reports'
@@ -1166,7 +1178,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
         category: 'Session Analytics & Behavior',
         primaryChoice: 'PostHog / Microsoft Clarity',
         alternatives: 'Google Analytics 4 alone',
-        rationale: 'Standard analytics tools show where users leave, but session replays reveal the exact behavioral frustration, such as rage clicks or confusing layout elements - causing the exit.'
+        rationale: 'Standard analytics tools show where users leave, but session replays reveal the exact behavioral frustration, such as rage clicks or confusing layout elements, causing the exit.'
       },
       {
         category: 'Dynamic Page Personalization',
@@ -1185,7 +1197,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       },
       {
         metric: 'Behavioral Research',
-        explodeLabs: 'Session replays, form field telemetry, and cognitive walkthroughs',
+        explodeLabs: 'Session replays, form field drop-off tracking, and cognitive walkthroughs',
         traditionalAgency: 'High-level glance at overall bounce rates in GA4',
         inHouseHire: 'Limited time to analyze individual user sessions',
         freelancers: 'No behavioral research or user data analysis'
@@ -1264,7 +1276,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       {
         question: 'What is the typical engagement timeframe for a CRO program?',
         answer:
-          'We begin with an initial 30-day Comprehensive Heuristic and Behavioral Audit, followed by 3-to-6-month continuous A/B experimentation and personalization sprints.'
+          'We begin with an initial 30-day Comprehensive UX and Behavioral Audit, followed by 3-to-6-month continuous A/B experimentation and personalization sprints.'
       }
     ]
   },
@@ -1510,7 +1522,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       {
         title: 'Phase 2: High-Authority Owned Asset Network Deployment',
         duration: 'Weeks 3-5',
-        description: 'We build, optimize, and interlink high-authority branded properties, including executive websites, Crunchbase profiles, GitHub repositories, Medium publications, Substack columns, and verified social channels - engineered to outrank negative URLs.',
+        description: 'We build, optimize, and interlink high-authority branded properties, including executive websites, Crunchbase profiles, GitHub repositories, Medium publications, Substack columns, and verified social channels, engineered to outrank negative URLs.',
         deliverables: [
           'Custom executive personal brand portal built on Next.js',
           'Optimized tier-1 professional and corporate authority profiles',
@@ -1570,7 +1582,7 @@ export const pillar1DeepDives: Record<string, ServiceDeepDive> = {
       {
         category: 'AI Model Sentiment',
         items: ['Accurate, positive brand summaries in ChatGPT, Perplexity, and Claude', 'Elimination of hallucinated controversies or outdated information', 'Clear machine-readable entity triples across knowledge graphs'],
-        standards: 'Verified via regular automated prompt telemetry checks'
+        standards: 'Verified via regular automated prompt and citation checks'
       }
     ],
     toolDecisionTree: [

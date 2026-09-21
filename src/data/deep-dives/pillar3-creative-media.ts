@@ -1148,10 +1148,10 @@ export const pillar3DeepDives: Record<string, ServiceDeepDive> = {
     ],
     toolDecisionTree: [
       {
-        category: 'Vector Design & Typography',
+        category: 'Scalable Design & Typography',
         primaryChoice: 'Adobe Illustrator & Figma',
         alternatives: 'Canva, Photoshop',
-        rationale: 'Illustrator and Figma provide precision bezier curve editing and lossless vector exports required for professional branding across print and digital media.'
+        rationale: 'Illustrator and Figma provide precision bezier curve editing and high-fidelity scalable exports required for professional branding across print and digital media.'
       },
       {
         category: 'Color Standardization',

@@ -359,8 +359,8 @@ export default function AboutPage() {
               <Button href="/tools/seo-auditor" size="lg" variant="primary" withArrow>
                 Run Free SEO/AEO Audit
               </Button>
-              <Button href="/tools/project-estimator" size="lg" variant="outline">
-                Instant Project Estimator
+              <Button href="https://calendly.com/vishal-invokeiq/30min" size="lg" variant="outline">
+                Book 30-Min Strategy Call
               </Button>
             </div>
           </div>
@@ -376,11 +376,11 @@ export default function AboutPage() {
             Schedule a direct discovery call with Vishal Raghuwanshi and our senior studio team. We will review your current growth funnels and provide a tailored execution roadmap within 24 hours.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
-            <Button href="/contact" size="lg" variant="primary" withArrow>
-              Schedule Discovery Call
+            <Button href="https://calendly.com/vishal-invokeiq/30min" size="lg" variant="primary" withArrow>
+              Book 30-Min Strategy Call
             </Button>
-            <Button href="/services" size="lg" variant="outline">
-              View All Services
+            <Button href="/contact" size="lg" variant="outline">
+              Send Project Brief
             </Button>
           </div>
         </div>

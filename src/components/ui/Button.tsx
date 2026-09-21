@@ -7,6 +7,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
+  target?: string;
+  rel?: string;
   withArrow?: boolean;
   children: React.ReactNode;
   className?: string;
@@ -16,6 +18,8 @@ export function Button({
   variant = 'primary',
   size = 'md',
   href,
+  target,
+  rel,
   withArrow = false,
   children,
   className,
@@ -46,6 +50,20 @@ export function Button({
   );
 
   if (href) {
+    const isExternal = href.startsWith('http://') || href.startsWith('https://');
+    if (isExternal) {
+      return (
+        <a 
+          href={href} 
+          target={target || '_blank'} 
+          rel={rel || 'noopener noreferrer'} 
+          className={cn(baseStyles, variants[variant], sizes[size], className)}
+        >
+          {content}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} className={cn(baseStyles, variants[variant], sizes[size], className)}>
         {content}

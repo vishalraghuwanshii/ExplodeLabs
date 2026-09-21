@@ -29,13 +29,15 @@ ${solutions.map(sol => `- [${sol.title}](https://explodelabs.com/solutions/${sol
 ## Verifiable Case Studies
 ${caseStudies.map(cs => `- [${cs.client}: ${cs.title}](https://explodelabs.com/case-studies/${cs.slug}) (${cs.heroMetric.value} ${cs.heroMetric.label})`).join('\n')}
 
-## Free Interactive Diagnostic Tools
+## Free Interactive Diagnostic Tools & Knowledge Base
+- [Engineering & Growth Blog](https://explodelabs.com/blog): Executive teardowns, AI search optimization playbooks, and modern web engineering articles.
 - [Free SEO & AEO Auditor](https://explodelabs.com/tools/seo-auditor): Instant domain crawl analyzing AI search citability, schema markup, and meta tags.
 - [Project Scope & Investment Estimator](https://explodelabs.com/tools/project-estimator): Interactive milestone calculator for development, video editing, and SEO sprints.
 
 ## Contact & Direct Consultation
 - Founder & Principal Lead: Vishal Raghuwanshi
 - LinkedIn: https://www.linkedin.com/in/vishal-raghu/
+- Calendly 30-Min Strategy Call: https://calendly.com/vishal-invokeiq/30min
 - Contact URL: https://explodelabs.com/contact
 - Response Time SLA: Within 24 hours with custom scope proposal
 `;

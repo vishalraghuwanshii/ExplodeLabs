@@ -78,7 +78,7 @@ export default function TermsPage() {
           <section className="space-y-3">
             <h2 className="text-lg font-bold text-[#f5f5f0]">3. Confidentiality & Non-Disclosure Agreements (NDAs)</h2>
             <p>
-              Both parties agree to hold all proprietary trade secrets, unreleased software features, customer datasets, and marketing campaign telemetry in strict confidence. We routinely execute mutual NDAs prior to accessing client codebases or ad accounts.
+              Both parties agree to hold all proprietary trade secrets, unreleased software features, customer datasets, and marketing campaign analytics in strict confidence. We routinely execute mutual NDAs prior to accessing client codebases or ad accounts.
             </p>
           </section>
 
@@ -97,7 +97,7 @@ export default function TermsPage() {
           <section className="space-y-3">
             <h2 className="text-lg font-bold text-[#f5f5f0]">5. 30-Day Post-Launch Technical & Growth Warranty</h2>
             <p>
-              Explode Labs provides a built-in 30-day post-launch warranty on all custom web engineering, video delivery, and campaign setups. During this period, any technical bugs, redirect discrepancies, or telemetry tracking errors will be resolved immediately at zero additional cost via private Slack support.
+              Explode Labs provides a built-in 30-day post-launch warranty on all custom web engineering, video delivery, and campaign setups. During this period, any technical bugs, redirect discrepancies, or analytics tracking errors will be resolved immediately at zero additional cost via private Slack support.
             </p>
           </section>
 

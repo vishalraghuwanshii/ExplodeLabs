@@ -91,11 +91,11 @@ export function ZeroRiskGuarantees() {
             </div>
           </div>
           <div className="flex items-center gap-3 shrink-0">
-            <Button href="/contact" variant="primary" size="md" withArrow>
-              Request Custom Proposal
+            <Button href="https://calendly.com/vishal-invokeiq/30min" variant="primary" size="md" withArrow>
+              Book 30-Min Strategy Call
             </Button>
-            <Button href="/tools/project-estimator" variant="outline" size="md">
-              Calculate Cost
+            <Button href="/contact" variant="outline" size="md">
+              Request Proposal
             </Button>
           </div>
         </div>

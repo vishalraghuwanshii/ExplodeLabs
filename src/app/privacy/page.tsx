@@ -71,7 +71,7 @@ export default function PrivacyPage() {
             <ul className="list-disc pl-5 space-y-1.5 text-xs text-[#8e8e93]">
               <li><strong className="text-[#f5f5f0]">Contact & Inquiry Data:</strong> Name, professional email address, company name, website URL, and project requirements submitted via contact forms or estimation tools.</li>
               <li><strong className="text-[#f5f5f0]">Technical Domain Data:</strong> Publicly available domain metadata, sitemap structure, and performance metrics when you run the Free SEO & AI Citability Auditor.</li>
-              <li><strong className="text-[#f5f5f0]">Usage & Telemetry Data:</strong> Anonymized browser type, operating system, referring URL, and page engagement data via privacy-respecting analytics.</li>
+              <li><strong className="text-[#f5f5f0]">Usage & Analytics Data:</strong> Anonymized browser type, operating system, referring URL, and page engagement data via privacy-respecting analytics.</li>
             </ul>
           </section>
 

@@ -70,13 +70,14 @@ export function Footer() {
 
   const aiAutomationLinks = [
     { label: 'Custom AI Agents & LangGraph', href: '/services/custom-ai-agents-and-llm-pipelines' },
-    { label: 'Vector Search & Enterprise RAG', href: '/services/vector-search-and-rag-architecture' },
+    { label: 'AI Knowledge Search & Enterprise RAG', href: '/services/vector-search-and-rag-architecture' },
     { label: 'Enterprise Workflow Automation (n8n)', href: '/services/enterprise-workflow-automation' },
     { label: 'Modern Data Stack (Snowflake/dbt)', href: '/services/modern-data-stack-and-warehousing' },
     { label: 'Web Scraping & Data Extraction', href: '/services/web-scraping-and-data-pipelines' },
   ];
 
   const solutionsAndToolsLinks = [
+    { label: 'Engineering Blog & Insights', href: '/blog' },
     { label: 'Scale B2B SaaS Lead Engine', href: '/solutions/scale-b2b-lead-engine' },
     { label: 'Launch E-Commerce Brand', href: '/solutions/launch-an-ecommerce-brand' },
     { label: 'Build an AI Product MVP', href: '/solutions/build-an-ai-product' },
@@ -295,11 +296,13 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Explode Labs Inc. All rights reserved. Built for sub-second performance.</p>
           
           <div className="flex flex-wrap items-center gap-4 sm:gap-6 font-mono text-[11px]">
+            <Link href="/blog" className="hover:text-[#ff5500] transition-colors">Blog</Link>
+            <Link href="/case-studies" className="hover:text-[#a1a1aa] transition-colors">Work</Link>
+            <Link href="/about" className="hover:text-[#a1a1aa] transition-colors">About</Link>
+            <Link href="/process" className="hover:text-[#a1a1aa] transition-colors">Process</Link>
             <Link href="/privacy" className="hover:text-[#a1a1aa] transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-[#a1a1aa] transition-colors">Terms of Service</Link>
             <Link href="/security" className="hover:text-[#a1a1aa] transition-colors">Security Standards</Link>
-            <Link href="/about" className="hover:text-[#a1a1aa] transition-colors">About</Link>
-            <Link href="/process" className="hover:text-[#a1a1aa] transition-colors">Process</Link>
             <Link href="/contact" className="hover:text-[#a1a1aa] transition-colors">Contact</Link>
             <Link href="/llms.txt" className="hover:text-[#ff5500] transition-colors">llms.txt</Link>
             <Link href="/sitemap.xml" className="hover:text-[#ff5500] transition-colors">Sitemap XML</Link>

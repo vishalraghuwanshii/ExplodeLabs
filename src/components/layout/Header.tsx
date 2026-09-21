@@ -206,7 +206,7 @@ export function Header() {
           items: [
             { label: 'Branding & Identity Design', href: '/services/branding', desc: 'Logos, color palettes, brand guidelines & voice', icon: Palette, tag: 'CORE' },
             { label: 'UI/UX Design', href: '/services/ui-ux-design', desc: 'User journey maps, Figma design systems & prototypes', icon: Layout, tag: 'CORE' },
-            { label: 'Logo Design', href: '/services/logo-design', desc: 'Distinctive brand marks and vector asset packages', icon: PenTool, tag: 'STANDARD' },
+            { label: 'Logo Design', href: '/services/logo-design', desc: 'Distinctive brand marks and scalable SVG asset packages', icon: PenTool, tag: 'STANDARD' },
             { label: 'Graphic Design', href: '/services/graphic-design', desc: 'Marketing collateral, pitch decks & digital graphics', icon: Layers, tag: 'STANDARD' },
           ]
         },
@@ -259,7 +259,7 @@ export function Header() {
       featured: {
         badge: 'TECHNICAL GUIDE',
         title: 'Enterprise RAG Blueprint',
-        desc: 'Read our engineering guide on deploying vector search, citation verification, and data governance.',
+        desc: 'Read our engineering guide on deploying enterprise AI search, citation verification, and data governance.',
         href: '/guides/enterprise-rag-architecture-blueprint',
         buttonText: 'Read RAG Blueprint',
         statNumber: '24/7',
@@ -293,13 +293,13 @@ export function Header() {
         }
       ],
       featured: {
-        badge: 'SCOPE ESTIMATOR',
-        title: 'Project Scope & Cost Estimator',
-        desc: 'Calculate estimated milestones, timelines, and requirements with transparent scoping.',
-        href: '/tools/project-estimator',
-        buttonText: 'Estimate Project',
-        statNumber: '100%',
-        statLabel: 'Transparent Scoping',
+        badge: 'STRATEGY SESSION',
+        title: 'Book a 30-Min Strategy Call',
+        desc: 'Discuss your growth roadmap, architecture, or creative sprints directly with our senior team.',
+        href: 'https://calendly.com/vishal-invokeiq/30min',
+        buttonText: 'Book 30-Min Call',
+        statNumber: '30 Min',
+        statLabel: 'Direct Consultation',
       }
     },
 
@@ -336,6 +336,43 @@ export function Header() {
         statNumber: `${canonicalServices.length}+`,
         statLabel: 'Full Agency Offerings',
       }
+    },
+
+    'company': {
+      id: 'company',
+      title: 'About Explode Labs & Resources',
+      tagline: 'An anti-agency digital studio delivering transparent milestone sprints, commercial video, and high-performance web engineering.',
+      badge: 'STUDIO & RESOURCES',
+      columns: [
+        {
+          title: 'Company & Culture',
+          items: [
+            { label: 'About Explode Labs', href: '/about', desc: 'Our anti-agency mission, leadership team & story', icon: Users, tag: 'FOUNDATION' },
+            { label: 'Our Delivery Process', href: '/process', desc: 'Agile 2-week milestone sprints with zero agency bloat', icon: Workflow, tag: 'CORE' },
+            { label: 'Case Studies & Results', href: '/case-studies', desc: 'In-depth revenue growth & engineering outcomes', icon: Rocket, tag: 'VERIFIED' },
+            { label: 'Client Work & Portfolio', href: '/portfolio', desc: 'Visual gallery of live websites, apps & video cuts', icon: Layout, tag: 'PORTFOLIO' },
+            { label: 'Security & IP Standards', href: '/security', desc: '100% code ownership, mutual NDAs & compliance', icon: ShieldCheck, tag: 'ASSURED' },
+          ]
+        },
+        {
+          title: 'Resources & Insights',
+          items: [
+            { label: 'Engineering & Growth Blog', href: '/blog', desc: 'Actionable teardowns, playbooks & studio insights', icon: BookOpen, tag: 'NEW' },
+            { label: 'Strategic Guides & Playbooks', href: '/guides', desc: 'In-depth architectural blueprints and cost guides', icon: FileText, tag: 'GUIDE' },
+            { label: 'Instant SEO/AEO Scanner', href: '/tools/seo-auditor', desc: 'Free 60-second domain entity diagnostic scan', icon: SearchCheck, tag: 'FREE' },
+            { label: 'AI Project Architect', href: '/architect', desc: 'Interactive scope & stack diagnosis in natural language', icon: Bot, tag: 'AI' },
+          ]
+        }
+      ],
+      featured: {
+        badge: 'STRATEGY SESSION',
+        title: 'Book a 30-Min Strategy Call',
+        desc: 'Schedule a direct 1-on-1 discovery call with Vishal Raghuwanshi and our senior studio team.',
+        href: 'https://calendly.com/vishal-invokeiq/30min',
+        buttonText: 'Book 30-Min Call',
+        statNumber: '30 Min',
+        statLabel: 'Direct Consultation',
+      }
     }
   };
 
@@ -346,6 +383,7 @@ export function Header() {
     { key: 'ai-automation', label: 'AI & Automation' },
     { key: 'content-sales', label: 'Content & Sales' },
     { key: 'more-services', label: 'More' },
+    { key: 'company', label: 'Company' },
   ];
 
   const currentMenu = activeDropdown ? megaMenus[activeDropdown] : null;
@@ -379,7 +417,7 @@ export function Header() {
                   onClick={() => setActiveDropdown(activeDropdown === key ? null : key)}
                   className={`flex items-center gap-1 px-3 py-1.5 text-[13px] font-medium tracking-tight transition-all rounded-lg cursor-pointer ${
                     isOpen 
-                      ? 'text-[#ff5500] bg-[#141414] shadow-[0_0_15px_rgba(255,85,0,0.15)] border border-[#ff5500]/20' 
+                       ? 'text-[#ff5500] bg-[#141414] shadow-[0_0_15px_rgba(255,85,0,0.15)] border border-[#ff5500]/20' 
                       : 'text-[#8e8e93] hover:text-[#f5f5f0] hover:bg-[#111111] border border-transparent'
                   }`}
                 >
@@ -388,38 +426,10 @@ export function Header() {
                 </button>
               );
             })}
-
-            {/* Direct Work Link */}
-            <Link 
-              href="/case-studies" 
-              onMouseEnter={() => setActiveDropdown(null)}
-              className="px-3 py-1.5 text-[13px] font-medium tracking-tight text-[#8e8e93] hover:text-[#f5f5f0] hover:bg-[#111111] rounded-lg transition-colors"
-            >
-              Work
-            </Link>
-            {/* Direct About Link */}
-            <Link 
-              href="/about" 
-              onMouseEnter={() => setActiveDropdown(null)}
-              className="px-3 py-1.5 text-[13px] font-medium tracking-tight text-[#8e8e93] hover:text-[#f5f5f0] hover:bg-[#111111] rounded-lg transition-colors"
-            >
-              About
-            </Link>
           </nav>
 
-          {/* Action Area: Minimalist Search Icon & Get a Proposal Button */}
+          {/* Action Area: Get a Proposal & Mobile Toggle */}
           <div className="flex items-center gap-2.5 sm:gap-3">
-            
-            {/* Minimalist Search Icon Button */}
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className="w-9 h-9 flex items-center justify-center text-[#8e8e93] hover:text-[#f5f5f0] bg-[#121212] hover:bg-[#181818] border border-[#222222] hover:border-[#333333] rounded-lg transition-all cursor-pointer group"
-              title="Search services & knowledge graph (Cmd+K)"
-              aria-label="Search services & knowledge graph"
-            >
-              <Search className="w-4 h-4 text-[#8e8e93] group-hover:text-[#ff5500] transition-colors" />
-            </button>
-
             {/* Primary Action CTA */}
             <Button href="/contact" size="sm" variant="primary" withArrow>
               Get a Proposal
@@ -659,16 +669,23 @@ export function Header() {
             </div>
 
             <div className="pt-2 border-t border-[#181818] flex flex-col gap-1 text-sm">
-              <Link href="/services" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">All Services Directory</Link>
+              <Link href="/blog" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5 flex items-center justify-between">
+                <span>Blog & Insights</span>
+                <span className="text-[10px] font-mono text-[#ff5500] bg-[#ff5500]/10 px-2 py-0.5 rounded">NEW</span>
+              </Link>
               <Link href="/case-studies" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">Work & Case Studies</Link>
-              <Link href="/tools/seo-auditor" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">Free SEO Scanner</Link>
-              <Link href="/tools/project-estimator" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">Cost Estimator</Link>
               <Link href="/about" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">About Explode Labs</Link>
+              <Link href="/process" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">Delivery Process & Sprints</Link>
+              <Link href="/guides" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">Strategic Guides & Playbooks</Link>
+              <Link href="/tools/seo-auditor" className="text-[#f5f5f0] hover:text-[#ff5500] py-1.5">Free SEO Scanner</Link>
             </div>
 
-            <div className="pt-3 border-t border-[#181818]">
-              <Button href="/contact" variant="primary" size="md" className="w-full text-center">
-                Get Free Custom Proposal
+            <div className="pt-3 border-t border-[#181818] space-y-2">
+              <Button href="https://calendly.com/vishal-invokeiq/30min" variant="primary" size="md" className="w-full text-center" withArrow>
+                Book 30-Min Strategy Call
+              </Button>
+              <Button href="/contact" variant="outline" size="sm" className="w-full text-center">
+                Send Project Inquiry
               </Button>
             </div>
           </div>

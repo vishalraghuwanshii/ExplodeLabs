@@ -17,119 +17,374 @@ export const solutions: SolutionEntity[] = [
     id: 'sol_1',
     slug: 'launch-a-b2b-saas',
     title: 'Launch a B2B SaaS from Scratch',
-    tagline: 'The complete product, engineering, and go-to-market engine to take a software idea to paying ARR.',
-    outcome: 'A production-ready, revenue-generating SaaS product with multi-tenancy, Stripe billing, and a qualified inbound lead pipeline.',
-    idealFor: 'Founders with domain expertise, funded startups, or service companies productizing their workflows.',
+    tagline: 'The complete product engineering, UI/UX design, and go-to-market engine to take a software idea to paying monthly recurring revenue.',
+    outcome: 'A production-ready, revenue-generating SaaS platform with multi-account workspaces, Stripe billing, and a qualified sales meeting pipeline.',
+    executiveSummary: 'Building a profitable software company requires far more than just coding features. If you build without validating customer demand or launch without an outbound sales engine, you burn runway while waiting for signups. We build your production-ready Next.js web application with Stripe billing and team accounts, while simultaneously deploying high-intent search and cold email systems that put your software in front of qualified buyers.',
+    whyThisBundleMatters: 'Instead of hiring four separate agencies (one for design, one for coding, one for SEO, and one for outbound sales), you get a unified senior team that ships your product and your customer acquisition pipeline in parallel.',
+    idealFor: 'Domain experts, funded startup founders, or service agency owners productizing their workflows into scalable recurring revenue.',
     problems: [
-      'Struggling to hire and coordinate separate designers, frontend coders, backend devs, and marketers',
-      'Spending 9+ months building features without validating commercial demand',
+      'Struggling to hire, manage, and coordinate separate designers, frontend coders, backend devs, and sales marketers',
+      'Spending 9+ months building complex features before validating commercial buyer demand',
       'Launching to cricket sounds with zero acquisition channels ready on Day 1'
     ],
-    bundledServiceSlugs: ['saas-development', 'website-design', 'technical-seo', 'b2b-lead-generation-sdr'],
+    bundledServiceSlugs: ['saas-development', 'website-design', 'technical-seo', 'lead-generation'],
     deliverables: [
-      'Multi-tenant Next.js & Postgres SaaS web application with Stripe billing',
+      'Production Next.js and PostgreSQL SaaS web application with Stripe billing',
       'Pixel-perfect Figma design system and high-conversion marketing website',
-      'Foundational B2B SEO architecture targeting bottom-of-funnel search intent',
-      'Cold outbound email engine with warmed domains booking qualified demo calls'
+      'Commercial B2B search engine architecture capturing software evaluator searches',
+      'Warmed outbound email engine booking qualified sales demos on your calendar'
     ],
-    technologies: ['Next.js', 'PostgreSQL', 'Stripe', 'Tailwind CSS', 'Smartlead', 'HubSpot'],
-    pricingRange: 'Custom Proposal',
+    deliverablesMatrix: [
+      {
+        category: 'Product & UI/UX Architecture',
+        items: [
+          'Complete Figma design system with 80+ reusable UI components',
+          'Interactive clickable prototype tested for mobile and desktop',
+          'Frictionless 2-step user onboarding and workspace invitation flow'
+        ],
+        standards: 'Intuitive modern interface matching top-tier SaaS standards'
+      },
+      {
+        category: 'Full-Stack Web Engineering',
+        items: [
+          'High-performance Next.js web application with sub-second page loads',
+          'Secure PostgreSQL relational database with role-based access control',
+          'Stripe subscription billing integration with automated invoicing'
+        ],
+        standards: 'Clean, type-safe codebase with 100% source code ownership'
+      },
+      {
+        category: 'Customer Acquisition Pipeline',
+        items: [
+          'Bottom-of-funnel comparison pages capturing ready software buyers',
+          'Fleet of warmed secondary email domains for outbound sales',
+          'HubSpot CRM integration tracking lead sources from click to close'
+        ],
+        standards: 'Predictable pipeline delivering 15 to 40+ qualified demos monthly'
+      }
+    ],
+    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'Tailwind CSS', 'Smartlead', 'HubSpot'],
+    pricingRange: 'Fixed Milestone Scope',
     timeline: '8 to 14 weeks',
     caseStudySlug: 'hyperscale-b2b-saas',
     framework: [
-      { phase: 'Phase 1: Architecture & UI/UX (Weeks 1-3)', duration: '3 weeks', summary: 'Product scoping, interactive wireframes, and database schema mapping.' },
-      { phase: 'Phase 2: MVP Engineering & Auth (Weeks 4-8)', duration: '5 weeks', summary: 'Full-stack development, Stripe checkout, and user onboarding flows.' },
-      { phase: 'Phase 3: GTM & Outbound Infrastructure (Weeks 9-11)', duration: '3 weeks', summary: 'Landing page launch, cold email warmup, and SEO schema setup.' },
-      { phase: 'Phase 4: Launch & Scaling (Weeks 12-14)', duration: '3 weeks', summary: 'Production release, user analytics tracking, and outbound campaign launch.' }
+      { 
+        phase: 'Phase 01: Product Blueprint & UI/UX', 
+        duration: 'Weeks 1 to 3', 
+        summary: 'We define the database schema, role permissions, user journey wireframes, and design system in Figma.',
+        deliverables: ['Database Schema Blueprint', 'Figma Interactive Prototype', 'High-Intent Keyword Map']
+      },
+      { 
+        phase: 'Phase 02: Full-Stack MVP Engineering', 
+        duration: 'Weeks 4 to 8', 
+        summary: 'We build the core application, customer authentication, team workspaces, and Stripe subscription billing.',
+        deliverables: ['Next.js Web Application', 'Stripe Checkout Integration', 'User Management Dashboard']
+      },
+      { 
+        phase: 'Phase 03: Marketing Funnel & Outbound Setup', 
+        duration: 'Weeks 9 to 11', 
+        summary: 'We launch the marketing website, configure search engine schema, and warm outbound sales domains.',
+        deliverables: ['High-Conversion Marketing Website', 'Comparison SEO Pages', 'Outbound Sales Sequences']
+      },
+      { 
+        phase: 'Phase 04: Production Launch & Growth Activation', 
+        duration: 'Weeks 12 to 14', 
+        summary: 'We execute zero-downtime deployment, launch cold outreach campaigns, and transfer full code repositories.',
+        deliverables: ['Production Edge Deployment', 'Live Outbound Campaign', '100% Source Code Transfer']
+      }
+    ],
+    faqs: [
+      {
+        question: 'How fast can we launch our SaaS MVP and start acquiring customers?',
+        answer: 'Our turnkey SaaS launch bundle delivers a fully functional, commercially ready software application and live acquisition pipeline in 8 to 14 weeks. We work in 2-week sprint milestones so you review working code every 14 days.'
+      },
+      {
+        question: 'Do we own 100% of the code, designs, and domain assets?',
+        answer: 'Yes, absolutely. You receive complete intellectual property and source code ownership from Day 1. There are zero ongoing licensing fees, royalties, or proprietary locks.'
+      },
+      {
+        question: 'What happens after launch? Do you offer ongoing engineering and marketing support?',
+        answer: 'We provide a 30-day post-launch warranty and offer flexible monthly growth sprints for companies that want continuous feature development, search engine scaling, and ad management.'
+      }
     ]
   },
   {
     id: 'sol_2',
     slug: 'build-an-ai-product',
-    title: 'Build & Deploy an Enterprise AI Product',
-    tagline: 'Transform proprietary data and workflows into intelligent, autonomous AI applications.',
-    outcome: 'A secure, production-grade AI platform with RAG pipelines, autonomous agents, and enterprise guardrails.',
-    idealFor: 'Enterprises modernizing knowledge operations or startups launching AI-native tools.',
+    title: 'Build & Deploy a Production AI Application',
+    tagline: 'Transform company documents and customer workflows into intelligent, secure AI tools that automate real work with zero hallucinations.',
+    outcome: 'A secure, production-grade AI platform with intelligent knowledge search, automated tool workflows, and strict data privacy controls.',
+    executiveSummary: 'Most basic AI chatbots fail in real-world business operations because they make things up, lack company context, and fail corporate security reviews. Explode Labs builds production-grade AI applications connected directly to your internal knowledge base with automated accuracy double-checks, strict permission controls, and lightning-fast streaming interfaces.',
+    whyThisBundleMatters: 'We bridge the gap between cutting-edge AI models and enterprise reliability, ensuring your AI product delivers verified answers and protects sensitive customer data.',
+    idealFor: 'Enterprises modernizing document workflows or funded startups launching AI-powered business applications.',
     problems: [
-      'Off-the-shelf chatbots lacking domain-specific accuracy and hallucinating',
-      'Strict corporate data privacy rules preventing standard open API usage',
-      'High inference latency and unpredictable token costs'
+      'Off-the-shelf chatbots lacking company context and making up incorrect answers',
+      'Strict corporate data privacy requirements preventing standard public AI tools',
+      'Slow response latency and unpredictable API token expenses'
     ],
     bundledServiceSlugs: ['ai-agent-development', 'website-development', 'devops-cloud-infrastructure'],
     deliverables: [
-      'Custom hybrid RAG architecture with pgvector / Pinecone search index',
-      'Fast modern web application with streaming token responses and tool-calling UI',
-      'Deterministic evaluation suite ensuring zero unauthorized data leaks',
-      'Scalable containerized cloud infrastructure on AWS/GCP with cost caching'
+      'Custom hybrid knowledge search engine with verified source citations',
+      'Fast modern web application with live response streaming and interactive tool UI',
+      'Automated accuracy evaluation test suite ensuring zero unauthorized data leaks',
+      'Scalable cloud infrastructure on AWS/GCP with smart cost caching'
     ],
-    technologies: ['Claude 3.5', 'Gemini 1.5 Pro', 'Next.js', 'Python', 'pgvector', 'Docker'],
-    pricingRange: 'Custom Proposal',
+    deliverablesMatrix: [
+      {
+        category: 'Knowledge Indexing & Accuracy',
+        items: [
+          'Hybrid search combining keyword indexing with semantic search databases',
+          'Automated source citation verification highlighting exact source paragraphs',
+          'Document hierarchy management for multi-page PDFs, manuals, and spreadsheets'
+        ],
+        standards: 'Over 99% factual citation accuracy across evaluation benchmarks'
+      },
+      {
+        category: 'Web Application & Streaming UI',
+        items: [
+          'Dark-themed Next.js streaming interface with sub-800ms initial response time',
+          'Interactive citation inspection panel allowing users to verify source documents',
+          'Role-based access control ensuring employees only see authorized data'
+        ],
+        standards: 'Sub-second rendering and WCAG 2.2 AA accessibility compliance'
+      },
+      {
+        category: 'Security & Cloud Infrastructure',
+        items: [
+          'Containerized deployment on isolated cloud hosting (AWS / GCP)',
+          'Automated redaction shields protecting sensitive customer information',
+          'Real-time token cost and performance monitoring dashboard'
+        ],
+        standards: 'Zero private company data leaked to public training models'
+      }
+    ],
+    technologies: ['Claude 3.5', 'Gemini 1.5 Pro', 'Next.js', 'Python', 'PostgreSQL', 'Docker', 'FastAPI'],
+    pricingRange: 'Fixed Milestone Scope',
     timeline: '6 to 10 weeks',
     caseStudySlug: 'lumina-ai-agent-suite',
     framework: [
-      { phase: 'Phase 1: Data Audit & Embedding Strategy', duration: '2 weeks', summary: 'Document ingestion, chunking benchmarks, and vector schema setup.' },
-      { phase: 'Phase 2: Agent Tooling & API Orchestration', duration: '3 weeks', summary: 'Prompt engineering, memory management, and external API connectors.' },
-      { phase: 'Phase 3: Frontend Interface & Guardrails', duration: '3 weeks', summary: 'Next.js streaming UI, citation inspection, and permission controls.' },
-      { phase: 'Phase 4: Production Hardening & Monitoring', duration: '2 weeks', summary: 'Latency optimization, token cost controls, and SOC2 compliance validation.' }
+      { 
+        phase: 'Phase 01: Data Audit & Search Blueprint', 
+        duration: 'Weeks 1 to 2', 
+        summary: 'We audit company document formats, design data isolation boundaries, and set up evaluation benchmarks.',
+        deliverables: ['Data Privacy Specification', 'Search Index Schema', 'Accuracy Benchmark Test Suite']
+      },
+      { 
+        phase: 'Phase 02: Tool Workflows & API Connectors', 
+        duration: 'Weeks 3 to 5', 
+        summary: 'We build secure connectors linking the AI directly to internal databases, CRM records, and document stores.',
+        deliverables: ['API Connectors', 'State Machine Workflows', 'Automated Verification Guardrails']
+      },
+      { 
+        phase: 'Phase 03: Streaming Web Interface & Testing', 
+        duration: 'Weeks 6 to 8', 
+        summary: 'We engineer the Next.js streaming interface, citation inspection panels, and run multi-user load testing.',
+        deliverables: ['Streaming User Interface', 'Citation Inspector', 'Security Penetration Report']
+      },
+      { 
+        phase: 'Phase 04: Production Release & Team Training', 
+        duration: 'Weeks 9 to 10', 
+        summary: 'We deploy to secure cloud infrastructure, configure token cost monitoring, and train your staff.',
+        deliverables: ['Secure Cloud Deployment', 'Token Cost Dashboard', 'Staff Operations Manual']
+      }
+    ],
+    faqs: [
+      {
+        question: 'Will our proprietary company data be used to train public AI models?',
+        answer: 'Never. We deploy enterprise API configurations with signed data privacy agreements and zero-retention policies. Your private documents are stored in your own isolated cloud database and are never used for public model training.'
+      },
+      {
+        question: 'How do you prevent the AI from making up incorrect information (hallucinations)?',
+        answer: 'We use a verified retrieval architecture that forces the AI to cite exact sentences from your approved documentation. If an answer cannot be found in your verified records, the system explicitly states that rather than guessing.'
+      },
+      {
+        question: 'What are the ongoing cloud and API token costs?',
+        answer: 'We implement intelligent response caching and model routing (using faster, inexpensive models for routine queries and larger models only for complex reasoning), typically reducing monthly token costs by 40% to 60%.'
+      }
     ]
   },
   {
     id: 'sol_3',
     slug: 'launch-an-ecommerce-brand',
-    title: 'Scale E-commerce to 8-Figure Revenue',
-    tagline: 'High-speed custom Shopify storefronts paired with paid customer acquisition.',
-    outcome: 'A lightning-fast, high-converting e-commerce engine with sub-2s load times, higher AOV, and scalable ad channels.',
-    idealFor: 'D2C brands scaling from $1M to $10M+ ARR or traditional retailers going direct-to-consumer.',
+    title: 'Scale E-Commerce to 8-Figure Revenue',
+    tagline: 'Sub-second custom Shopify Plus storefronts paired with high-converting 4K video ads and automated customer retention.',
+    outcome: 'A lightning-fast, high-converting digital storefront with sub-1.2s mobile load times, higher average order value, and profitable ad acquisition.',
+    executiveSummary: 'Every fraction of a second in mobile loading speed directly impacts your e-commerce conversion rate. Off-the-shelf templates loaded with 20+ plugins destroy mobile speed and burn your ad budget. We build bespoke Shopify Plus storefronts engineered for 1-second mobile speeds, paired with studio-grade commercial video ads and automated post-purchase upsells that maximize revenue from every visitor.',
+    whyThisBundleMatters: 'Unifying high-speed storefront engineering with studio video creative and server-side tracking eliminates the typical agency disconnect between marketing and development.',
+    idealFor: 'Direct-to-consumer (D2C) brands scaling from $1M to $10M+ ARR or established retail brands launching modern digital storefronts.',
     problems: [
-      'High bounce rates on mobile due to bloated templates and slow page speed',
-      'Rising customer acquisition costs (CAC) making paid ads unprofitable',
-      'Low repeat purchase rates and abandoned checkout leakage'
+      'High bounce rates on mobile due to bloated Shopify themes and sluggish 5+ second load times',
+      'Rising customer acquisition costs making paid Meta and Google ad campaigns unprofitable',
+      'Low repeat purchase rates and high shopping cart abandonment on multi-step checkouts'
     ],
     bundledServiceSlugs: ['shopify-development', 'google-ads', 'meta-ads', 'video-editing', 'ui-ux-design'],
     deliverables: [
-      'Custom Shopify Plus 2.0 theme built for sub-second mobile navigation',
-      'Custom checkout upsells and post-purchase one-click cross-sells',
-      'Full-funnel Meta & Google Ads performance campaigns with CAPI server-side tracking',
-      'High-converting video ad packages and Klaviyo automated lifecycle email flows'
+      'Bespoke Shopify Plus 2.0 theme scoring 90+ on Google mobile speed tests',
+      'Post-purchase one-click upsells and free-shipping progress drawers',
+      'Full-funnel Meta and Google search campaigns with server-side ad tracking',
+      'Studio 4K commercial video ad suite and automated Klaviyo email flows'
     ],
-    technologies: ['Shopify Plus', 'Liquid', 'Meta Ads', 'Google Ads', 'Klaviyo', 'Triple Whale'],
-    pricingRange: 'Custom Proposal',
+    deliverablesMatrix: [
+      {
+        category: 'Custom Storefront Engineering',
+        items: [
+          'Lightweight custom Shopify 2.0 Liquid theme with zero jQuery or bloated apps',
+          'Slide-out smart cart drawer with free shipping progress thresholds',
+          'Dynamic bundle builders and quantity discount tier selectors'
+        ],
+        standards: 'Sub-1.2 second mobile load speed and 90+ Google Lighthouse score'
+      },
+      {
+        category: 'Studio Video Production & Ads',
+        items: [
+          'Cinematic 9:16 and 16:9 commercial video ad packages with DaVinci color grading',
+          'High-converting hook testing variations designed for Meta and TikTok feeds',
+          'Photorealistic 3D product renders showcasing hero product features'
+        ],
+        standards: 'Studio-grade commercial aesthetics that elevate brand authority'
+      },
+      {
+        category: 'Tracking & Retention Flywheel',
+        items: [
+          'Server-side ad tracking capturing 99%+ of all purchase conversions',
+          'Complete Klaviyo automated email lifecycle (Welcome, Cart Abandonment, Post-Purchase)',
+          'Post-purchase 1-click checkout upsells via Shopify Checkout Extensibility'
+        ],
+        standards: '20%+ lift in Average Order Value and 4x+ blended paid ad ROAS'
+      }
+    ],
+    technologies: ['Shopify Plus', 'Liquid', 'Meta Ads CAPI', 'Google Ads', 'Klaviyo', 'Triple Whale', 'DaVinci Resolve'],
+    pricingRange: 'Fixed Milestone Scope',
     timeline: '6 to 10 weeks',
     caseStudySlug: 'kicksvault-ecommerce',
     framework: [
-      { phase: 'Phase 1: Funnel & Architecture Planning', duration: '2 weeks', summary: 'AOV enhancement blueprint and mobile UX wireframing.' },
-      { phase: 'Phase 2: Custom Shopify Engineering', duration: '4 weeks', summary: 'Fast Liquid coding, app integrations, and checkout extensions.' },
-      { phase: 'Phase 3: Ad Creative & Tracking Pipeline', duration: '2 weeks', summary: 'Server-side CAPI setup, high-ROAS creative testing, and campaign launch.' },
-      { phase: 'Phase 4: Launch & Continuous Optimization', duration: '2 weeks', summary: 'Live store cutover, A/B checkout testing, and scale.' }
+      { 
+        phase: 'Phase 01: Funnel Audit & Creative Strategy', 
+        duration: 'Weeks 1 to 2', 
+        summary: 'We audit customer drop-off points, remove app bloat, and script high-converting video hooks.',
+        deliverables: ['Mobile Speed Audit', 'Video Creative Scripts', 'Checkout Optimization Wireframes']
+      },
+      { 
+        phase: 'Phase 02: Bespoke Shopify Engineering', 
+        duration: 'Weeks 3 to 6', 
+        summary: 'We build the custom Liquid theme, smart cart drawers, and checkout upsell extensions on staging.',
+        deliverables: ['Custom Shopify 2.0 Theme', 'Smart Cart Drawer', 'Bundle Builders']
+      },
+      { 
+        phase: 'Phase 03: Video Production & Tracking Setup', 
+        duration: 'Weeks 7 to 8', 
+        summary: 'We produce commercial video cuts, configure server-side ad tracking, and build Klaviyo flows.',
+        deliverables: ['4K Video Ad Package', 'Server-Side Tracking Setup', 'Automated Klaviyo Flows']
+      },
+      { 
+        phase: 'Phase 04: Cutover Launch & Scale', 
+        duration: 'Weeks 9 to 10', 
+        summary: 'We execute zero-downtime store cutover, activate paid ad campaigns, and run continuous A/B tests.',
+        deliverables: ['Live Store Cutover', 'Active Paid Ad Campaigns', 'Weekly Split-Testing Engine']
+      }
+    ],
+    faqs: [
+      {
+        question: 'Will migrating or rebuilding our theme cause lost orders during the cutover?',
+        answer: 'Zero lost orders. We build and test your new theme on an isolated staging store. When ready, the cutover happens in seconds with complete preservation of customer accounts, inventory, and order history.'
+      },
+      {
+        question: 'How do you guarantee faster page speeds on Shopify?',
+        answer: 'We remove unneeded third-party apps that inject heavy scripts, rewrite core features natively in clean Liquid code, compress images, and use modern browser caching.'
+      },
+      {
+        question: 'Can you handle both the web development and the paid media creative?',
+        answer: 'Yes. That is our core advantage. Our unified team handles both the technical Shopify store build and the commercial video production, ensuring your ads and landing pages match seamlessly.'
+      }
     ]
   },
   {
     id: 'sol_4',
     slug: 'scale-b2b-lead-engine',
     title: 'B2B Revenue & Pipeline Acceleration',
-    tagline: 'Unite Technical SEO, Paid SEM, and Outbound SDR engines to dominate your market.',
-    outcome: 'A predictable, multichannel B2B customer acquisition pipeline that generates 30-80+ qualified sales meetings monthly.',
-    idealFor: 'B2B companies with customer LTV > $10,000 needing predictable pipeline growth.',
+    tagline: 'Unite high-intent Google search, commercial copywriting, and multi-domain outbound email to book 30 to 80+ qualified sales meetings monthly.',
+    outcome: 'A predictable, multichannel customer acquisition pipeline that generates 30 to 80+ qualified sales calls every month.',
+    executiveSummary: 'Relying on word-of-mouth or sporadic referrals creates unpredictable revenue cycles. Explode Labs builds an integrated customer acquisition engine: capturing ready buyers who search for your services on Google, while proactively reaching out to verified decision makers with personalized, high-relevance sales messages that book meetings directly on your calendar.',
+    whyThisBundleMatters: 'We align your inbound search authority with outbound prospecting and CRM deal tracking so every marketing dollar connects directly to closed sales.',
+    idealFor: 'B2B companies, consulting firms, and enterprise service providers with customer contracts above $10,000.',
     problems: [
-      'Reliance on word-of-mouth leading to feast-or-famine revenue cycles',
-      'Disjointed marketing agencies operating in silos without pipeline accountability',
-      'Low search engine authority allowing weaker competitors to rank higher'
+      'Unpredictable revenue cycles caused by relying solely on word-of-mouth referrals',
+      'Disjointed marketing agencies operating in silos without accountability for actual sales meetings',
+      'Losing high-value procurement searches to competitors who rank higher on Google'
     ],
-    bundledServiceSlugs: ['technical-seo', 'b2b-lead-generation-sdr', 'google-ads', 'content-marketing'],
+    bundledServiceSlugs: ['technical-seo', 'lead-generation', 'google-ads', 'content-marketing'],
     deliverables: [
-      'Entity-based SEO overhaul capturing bottom-of-funnel commercial keywords',
-      'Targeted LinkedIn and Google Ads campaigns targeting in-market buyers',
-      'Automated multi-domain outbound email engine booking calls directly on your sales team calendars',
-      'Unified HubSpot attribution dashboard connecting every dollar to pipeline'
+      'Entity-based search optimization capturing high-intent commercial keywords',
+      'Targeted Google Search ad campaigns reaching active buyers with exact-match search',
+      'Multi-domain outbound email fleet booking qualified sales calls directly on calendar',
+      'Unified CRM attribution dashboard connecting traffic sources to pipeline revenue'
     ],
-    technologies: ['Google Ads', 'LinkedIn Ads', 'Smartlead', 'Clay', 'HubSpot', 'BigQuery'],
-    pricingRange: 'Custom Proposal',
+    deliverablesMatrix: [
+      {
+        category: 'High-Intent Search Engine',
+        items: [
+          'Commercial comparison and alternative page hub capturing in-market software buyers',
+          'Structured schema and Core Web Vitals optimization for top Google search rankings',
+          'High-value whitepapers and industry benchmark reports capturing executive emails'
+        ],
+        standards: 'Top 3 search visibility for highest-intent commercial search terms'
+      },
+      {
+        category: 'Outbound Sales System',
+        items: [
+          'Fleet of 15 to 30 warmed secondary email domains protecting your primary domain',
+          'Verified decision-maker list building with company size and industry filtering',
+          'Personalized 3-step outbound email sequences focused on solving specific business problems'
+        ],
+        standards: '60%+ open rates and consistent 30 to 80+ qualified demo bookings monthly'
+      },
+      {
+        category: 'Paid Search & CRM Tracking',
+        items: [
+          'Single-Keyword Ad Groups (SKAGs) with strict negative keyword filtering',
+          'Offline CRM conversion tracking in HubSpot to optimize for closed-won revenue',
+          'Executive revenue attribution dashboard measuring real return on investment'
+        ],
+        standards: 'Zero wasted ad spend on unqualified clicks or consumer searchers'
+      }
+    ],
+    technologies: ['Google Ads', 'LinkedIn Ads', 'Smartlead', 'HubSpot', 'PostgreSQL', 'Next.js'],
+    pricingRange: 'Fixed Milestone Scope',
     timeline: '90-day sprint with ongoing monthly optimization',
     caseStudySlug: 'hyperscale-b2b-saas',
     framework: [
-      { phase: 'Month 1: Foundation & Infrastructure', duration: '4 weeks', summary: 'Domain warmup, tracking attribution, and high-intent keyword mapping.' },
-      { phase: 'Month 2: Channel Activation & Outbound Sprints', duration: '4 weeks', summary: 'Launching outbound sequences and high-ROAS paid search campaigns.' },
-      { phase: 'Month 3: Conversion Optimization & Scale', duration: '4 weeks', summary: 'Landing page A/B testing and compounding organic rank growth.' }
+      { 
+        phase: 'Month 1: Foundation & Infrastructure', 
+        duration: 'Weeks 1 to 4', 
+        summary: 'We set up outbound domain fleets, configure CRM lead routing, and map high-intent commercial keywords.',
+        deliverables: ['Secondary Domain Fleet Warmup', 'Commercial Keyword Strategy', 'CRM Attribution Setup']
+      },
+      { 
+        phase: 'Month 2: Inbound Search & Outbound Activation', 
+        duration: 'Weeks 5 to 8', 
+        summary: 'We launch targeted comparison pages, activate exact-match Google Search ads, and begin cold email campaigns.',
+        deliverables: ['Comparison Landing Pages', 'Active Google Ads Campaigns', 'Live Cold Outreach Sequences']
+      },
+      { 
+        phase: 'Month 3: Conversion Optimization & Scale', 
+        duration: 'Weeks 9 to 12', 
+        summary: 'We A/B test email messaging, refine ad bidding based on closed deals, and scale meeting volume.',
+        deliverables: ['A/B Conversion Testing', 'Closed-Deal Attribution', 'Executive Pipeline Dashboard']
+      }
+    ],
+    faqs: [
+      {
+        question: 'How do you protect our primary company domain during cold email outreach?',
+        answer: 'We never send cold outbound emails from your primary corporate domain. We set up separate secondary lookalike domains with custom SPF, DKIM, and DMARC security records and warm them up gradually for 21 days before sending any sales messages.'
+      },
+      {
+        question: 'How do you ensure the leads booked on our calendar are qualified decision makers?',
+        answer: 'We filter outreach lists by verified company employee count, industry, technology stack, and job title (CEOs, CMOs, VPs of Engineering). We also embed pre-qualification questions in your booking calendar to ensure meetings match your ideal customer profile.'
+      },
+      {
+        question: 'What is the expected timeline to see the first booked sales meetings?',
+        answer: 'Outbound campaigns typically begin booking qualified sales meetings within 3 to 4 weeks (after domain warmup is complete). High-intent paid search generates immediate demo inquiries in Week 5, while organic search rankings compound over months 2 through 6.'
+      }
     ]
   }
 ];
@@ -139,74 +394,458 @@ export const industries: IndustryEntity[] = [
     id: 'ind_1',
     slug: 'b2b-saas',
     name: 'B2B SaaS & Enterprise Software',
-    tagline: 'Engineering and growth systems built for recurring revenue, high LTV, and enterprise sales cycles.',
-    overview: 'In B2B SaaS, product speed, security, and customer acquisition efficiency determine valuation. We build performant web platforms and high-intent acquisition funnels specifically tailored to shorten enterprise sales cycles and lower CAC.',
-    complianceAndRegulations: ['SOC 2 Type II compliance readiness', 'GDPR & CCPA data privacy architecture', 'Single Sign-On (SSO / SAML) protocols'],
+    tagline: 'High-speed web platforms, high-intent search funnels, and automated outbound systems built to lower CAC and scale recurring revenue.',
+    overview: 'In modern software, slow dashboards, confusing onboarding, and weak search visibility kill growth. We design lightning-fast web applications, high-converting marketing sites, and organic search funnels that help funded startups and enterprise software companies win market share and shorten sales cycles.',
+    executiveSummary: 'Most software companies struggle with one of two bottlenecks: either their engineering team is bogged down maintaining legacy code instead of shipping revenue features, or their marketing agency sends unqualified website visitors who bounce immediately. Explode Labs bridges this gap. We build clean Next.js web applications paired with high-intent search engines and automated outbound systems that put your software directly in front of ready-to-buy decision makers.',
+    complianceAndRegulations: [
+      'SOC 2 Type II compliance readiness and data isolation',
+      'GDPR and CCPA data privacy compliance standards',
+      'Single Sign-On (SSO / SAML) secure corporate access'
+    ],
     keyChallenges: [
-      'High customer acquisition costs (CAC) eating up venture capital runway',
-      'Complex technical onboarding leading to high Day-30 churn',
-      'Difficulty ranking against established review aggregators like G2 and Capterra'
+      'Rising customer acquisition costs (CAC) draining venture runway and marketing budgets',
+      'High Day-30 user drop-off caused by slow dashboards and confusing multi-step onboarding',
+      'Losing high-intent software buyers to third-party review directories like G2 and Capterra'
     ],
     tailoredSolutions: [
-      'Bottom-of-funnel comparison and alternative pages capturing active software evaluators',
-      'Multi-tenant Next.js application development with instant product activation',
-      'Automated cold outbound pipelines targeting specific tech stack adopters via Clay'
+      'High-converting comparison and alternative pages capturing active software evaluators',
+      'Modern Next.js web applications with instant page loads and frictionless trial signups',
+      'Multi-domain outbound email systems targeting verified decision makers in your market'
     ],
-    recommendedServiceSlugs: ['saas-development', 'website-development', 'technical-seo', 'b2b-lead-generation-sdr'],
+    whoWeHelp: [
+      {
+        role: 'Founders & CEOs',
+        focus: 'Scaling ARR, extending runway, and hitting key valuation milestones.',
+        painPoint: 'Tired of slow development agencies and disjointed marketing teams that fail to move the revenue needle.'
+      },
+      {
+        role: 'Heads of Growth & CMOs',
+        focus: 'Lowering customer acquisition costs and booking qualified enterprise demos.',
+        painPoint: 'Wasting ad budget on low-converting generic landing pages that do not communicate software value.'
+      },
+      {
+        role: 'VPs of Engineering & Product',
+        focus: 'Shipping clean, scalable code without technical debt or security bottlenecks.',
+        painPoint: 'Internal engineering team is too busy building core product to build custom marketing pages or billing integrations.'
+      }
+    ],
+    fiveStageRoadmap: [
+      {
+        phase: 'Phase 01',
+        title: 'Growth Strategy & Funnel Blueprint',
+        duration: 'Weeks 1 to 2',
+        summary: 'We audit your current signup conversion funnel, search rankings, and competitor positioning to build a fixed milestone roadmap.',
+        deliverables: [
+          'Full-funnel conversion rate audit and user journey teardown',
+          'High-intent commercial search keyword map targeting ready buyers',
+          'Product database schema and user permission blueprint',
+          'Fixed-price milestone timeline with agreed delivery dates'
+        ]
+      },
+      {
+        phase: 'Phase 02',
+        title: 'High-Conversion UI/UX & Messaging',
+        duration: 'Weeks 3 to 4',
+        summary: 'We design clear, modern web interfaces and write punchy, benefit-driven product copy that turns skeptical visitors into trial users.',
+        deliverables: [
+          'Complete Figma design system with reusable component tokens',
+          'Interactive clickable prototype tested for mobile and desktop',
+          'Direct-response product copy highlighting ROI and business outcomes',
+          'Frictionless 2-step onboarding and account creation flow'
+        ]
+      },
+      {
+        phase: 'Phase 03',
+        title: 'Full-Stack Web & Billing Engineering',
+        duration: 'Weeks 5 to 8',
+        summary: 'We build your web application on modern Next.js and secure relational databases, integrating Stripe billing and customer workspaces.',
+        deliverables: [
+          'High-performance Next.js application with sub-second page loads',
+          'Secure PostgreSQL database setup with role-based access control',
+          'Stripe subscription billing integration with automated invoicing',
+          'Customer account management dashboard and team workspace switcher'
+        ]
+      },
+      {
+        phase: 'Phase 04',
+        title: 'High-Intent Search & Outbound Activation',
+        duration: 'Weeks 9 to 11',
+        summary: 'We launch targeted comparison pages, technical search foundations, and cold email outbound engines that book qualified sales meetings.',
+        deliverables: [
+          'Entity-based search optimization capturing competitor alternative keywords',
+          'Warmed secondary email domain fleet for cold sales outreach',
+          'Personalized email sequences booking demos on your sales calendar',
+          'HubSpot CRM integration tracking lead sources from first touch to closed sale'
+        ]
+      },
+      {
+        phase: 'Phase 05',
+        title: 'Production Launch, Analytics & Handoff',
+        duration: 'Weeks 12 to 14',
+        summary: 'We complete security testing, execute zero-downtime deployment, set up real-time analytics, and transfer 100% source code ownership.',
+        deliverables: [
+          'Production deployment on secure cloud edge hosting',
+          'Live conversion tracking dashboard connecting traffic to pipeline',
+          'Full technical documentation and team video walkthroughs',
+          '100% intellectual property and code repository ownership transfer'
+        ]
+      }
+    ],
+    comparisonMatrix: [
+      {
+        capability: 'Delivery Velocity',
+        legacyAgency: '3 to 6 month scoping cycles with endless committee meetings',
+        explodeLabs: 'Bi-weekly sprints with live deployable staging environments every 14 days'
+      },
+      {
+        capability: 'Engineering Standards',
+        legacyAgency: 'Generic WordPress templates and bloated plugin stacks that slow down',
+        explodeLabs: 'Custom Next.js and PostgreSQL builds scoring 95+ on Google speed tests'
+      },
+      {
+        capability: 'Team Structure',
+        legacyAgency: 'Account managers passing work to junior offshore subcontractors',
+        explodeLabs: 'Direct communication with dedicated senior designers and lead engineers'
+      },
+      {
+        capability: 'Code & Asset Ownership',
+        legacyAgency: 'Proprietary platform lock-in and ongoing licensing fees',
+        explodeLabs: '100% client ownership of all Figma files, source code, and assets from Day 1'
+      }
+    ],
+    faqs: [
+      {
+        question: 'How fast can Explode Labs launch our SaaS web platform or marketing funnel?',
+        answer: 'Our standard software and growth sprints deliver a fully functional, commercially ready build in 8 to 14 weeks. We work in 2-week milestones, meaning you review live staging environments and approved designs every fortnight.'
+      },
+      {
+        question: 'Do we own the source code and design files after the project is complete?',
+        answer: 'Yes, 100%. You receive complete ownership of all Figma designs, Next.js source code repositories, databases, and marketing assets upon milestone completion. There are zero licensing fees or vendor lock-in.'
+      },
+      {
+        question: 'Can you work alongside our existing in-house development team?',
+        answer: 'Absolutely. We frequently collaborate with internal engineering teams. We can take complete ownership of marketing websites, billing workflows, or search growth engines while your team stays 100% focused on core product features.'
+      },
+      {
+        question: 'How do you ensure our software complies with corporate data security standards?',
+        answer: 'We build with modern security best practices from day one: strict role-based access control, secure database isolation, encrypted connections, and automated vulnerability scans. We prepare your software for SOC 2 and GDPR compliance.'
+      },
+      {
+        question: 'What is the pricing model for a B2B SaaS engagement?',
+        answer: 'We operate on transparent, fixed-price milestone agreements or dedicated monthly sprints. You always know the exact deliverables, timelines, and costs before work begins, with zero surprise invoices.'
+      }
+    ],
+    recommendedServiceSlugs: ['saas-development', 'website-development', 'technical-seo', 'lead-generation'],
     caseStudySlugs: ['hyperscale-b2b-saas'],
     benchmarkMetrics: [
       { label: 'Avg CAC Reduction', value: '38%', context: 'Across our B2B SaaS client cohort' },
-      { label: 'Time-to-MVP', value: '60 Days', context: 'From wireframes to production release' },
-      { label: 'Organic Demo Growth', value: '+340%', context: 'Within 6 months of BOFU SEO execution' }
+      { label: 'Time to Live MVP', value: '60 Days', context: 'From wireframes to production release' },
+      { label: 'Organic Demo Growth', value: '+340%', context: 'Within 6 months of search engine execution' }
     ]
   },
   {
     id: 'ind_2',
     slug: 'healthcare-telehealth',
     name: 'Healthcare & HealthTech',
-    tagline: 'HIPAA-compliant digital patient portals, telemedicine apps, and medical practice growth.',
-    overview: 'Healthcare platforms require rigorous data privacy, accessible user interfaces for all demographics, and frictionless patient appointment scheduling. We architect secure, compliant digital experiences for healthcare innovators.',
-    complianceAndRegulations: ['HIPAA / HITECH data protection rules', 'PHI encryption in transit and at rest', 'WCAG 2.2 AA accessibility standards for patients'],
+    tagline: 'HIPAA-compliant patient portals, high-trust telemedicine web apps, and local search authority for healthcare innovators.',
+    overview: 'Healthcare platforms demand rock-solid patient data privacy, intuitive mobile experiences for patients of all ages, and frictionless online scheduling. We engineer compliant, accessible web and mobile applications paired with local search authority that fill appointment calendars and protect patient trust.',
+    executiveSummary: 'Healthcare organizations face strict regulatory requirements and high patient expectations. A single confusing booking screen or slow-loading portal leads to lost patient appointments and increased clinic phone triage. Explode Labs builds modern, HIPAA-ready digital platforms that simplify patient intake, automate appointment confirmations, and position your medical organization as the premier provider in your market.',
+    complianceAndRegulations: [
+      'HIPAA and HITECH patient privacy protection standards',
+      'Protected Health Information (PHI) encryption in transit and at rest',
+      'WCAG 2.2 AA accessibility standards for elderly and disabled patients'
+    ],
     keyChallenges: [
-      'Strict regulatory penalties for accidental patient data exposure',
-      'Legacy Electronic Health Record (EHR/EMR) systems with outdated APIs',
-      'Complex patient onboarding flows causing high appointment abandonment'
+      'Strict regulatory penalties and legal liabilities for accidental patient data exposure',
+      'Clunky legacy Electronic Health Record (EHR) booking systems that frustrate patients',
+      'High appointment no-show rates caused by confusing intake forms and lack of automated SMS reminders'
     ],
     tailoredSolutions: [
-      'End-to-end encrypted React Native and web patient portals with HL7/FHIR connectors',
-      'Local and technical medical SEO establishing local search and medical authority',
-      'Frictionless telemedicine booking flows with automated SMS reminders'
+      'End-to-end encrypted web and mobile patient portals with direct EHR calendar synchronization',
+      'High-trust medical website design and local search optimization that wins new patient inquiries',
+      '1-click telemedicine booking flows with automated SMS confirmations and intake questionnaires'
     ],
-    recommendedServiceSlugs: ['mobile-app-development', 'ui-ux-design', 'devops-cloud-infrastructure', 'cybersecurity-audits'],
+    whoWeHelp: [
+      {
+        role: 'Medical Directors & Practice Owners',
+        focus: 'Growing patient appointment volume and modernizing the digital patient experience.',
+        painPoint: 'Frustrated by outdated clinic websites and high front-desk phone call volume for basic scheduling.'
+      },
+      {
+        role: 'HealthTech Founders & CEOs',
+        focus: 'Launching secure telehealth apps that pass rigorous healthcare compliance audits.',
+        painPoint: 'Finding developers who understand patient privacy rules and medical record integration.'
+      },
+      {
+        role: 'Clinic Marketing Directors',
+        focus: 'Dominating local search queries and building patient trust across multiple clinic locations.',
+        painPoint: 'High bounce rates on mobile because the current site is slow and difficult for patients to navigate.'
+      }
+    ],
+    fiveStageRoadmap: [
+      {
+        phase: 'Phase 01',
+        title: 'Security Scoping & Patient Journey Mapping',
+        duration: 'Weeks 1 to 2',
+        summary: 'We map patient intake flows, identify regulatory boundaries, and design a secure technical blueprint.',
+        deliverables: [
+          'HIPAA security compliance specification and data isolation plan',
+          'Patient booking journey map for new and returning visitors',
+          'EHR and practice management system integration roadmap',
+          'Accessible wireframe layouts tested for patient clarity'
+        ]
+      },
+      {
+        phase: 'Phase 02',
+        title: 'Accessible UI/UX & High-Trust Design',
+        duration: 'Weeks 3 to 4',
+        summary: 'We create clean, high-contrast, reassuring visual designs that make booking an appointment effortless on any smartphone.',
+        deliverables: [
+          'High-trust medical design system meeting WCAG 2.2 AA standards',
+          'Streamlined 3-step patient appointment scheduling interface',
+          'Mobile-first responsive layouts with clear typography and large touch targets',
+          'Doctor profile pages with verified credentials and patient reviews'
+        ]
+      },
+      {
+        phase: 'Phase 03',
+        title: 'HIPAA-Ready Frontend & Integration',
+        duration: 'Weeks 5 to 8',
+        summary: 'We build your web portal and mobile app with encrypted communication, secure patient logins, and EHR integration.',
+        deliverables: [
+          'Cross-platform React Native mobile app and Next.js patient web portal',
+          'Secure biometric authentication (FaceID / TouchID) and multi-factor logins',
+          'Encrypted direct connection to EHR backends for real-time calendar availability',
+          'Automated Twilio SMS and email appointment confirmation engine'
+        ]
+      },
+      {
+        phase: 'Phase 04',
+        title: 'Security Audit & Patient Flow Testing',
+        duration: 'Weeks 9 to 10',
+        summary: 'We conduct independent security penetration tests and accessibility audits to guarantee zero data leaks before going live.',
+        deliverables: [
+          'Comprehensive HIPAA compliance audit and penetration test report',
+          'Cross-browser and multi-device usability verification with senior users',
+          'Load testing simulating thousands of simultaneous booking requests',
+          'Automated error monitoring and secure audit logging setup'
+        ]
+      },
+      {
+        phase: 'Phase 05',
+        title: 'Live Launch & Local Search Growth',
+        duration: 'Weeks 11 to 12',
+        summary: 'We deploy to compliant cloud infrastructure, launch local medical search campaigns, and train your clinic staff.',
+        deliverables: [
+          'Production rollout on secure, HIPAA-compliant cloud hosting',
+          'Google Business Profile and local medical search engine optimization',
+          'Clinic staff training and administrative dashboard walkthrough',
+          'Complete documentation, source code handover, and ongoing support warranty'
+        ]
+      }
+    ],
+    comparisonMatrix: [
+      {
+        capability: 'Compliance Assurance',
+        legacyAgency: 'Basic web agency with zero understanding of HIPAA or patient data encryption',
+        explodeLabs: 'Healthcare-focused engineering with built-in data encryption and HIPAA-ready architecture'
+      },
+      {
+        capability: 'Patient Accessibility',
+        legacyAgency: 'Cluttered templates with small fonts that fail ADA and WCAG accessibility audits',
+        explodeLabs: 'Clean, high-contrast UI designed to pass WCAG 2.2 AA accessibility standards'
+      },
+      {
+        capability: 'Booking Conversion',
+        legacyAgency: '10-step cumbersome contact forms that lead to 70%+ patient drop-off',
+        explodeLabs: '30-second mobile booking widget with automated SMS reminders reducing no-shows'
+      },
+      {
+        capability: 'Integration Depth',
+        legacyAgency: 'Simple email forms that require staff to manually re-enter data into EHR',
+        explodeLabs: 'Direct API synchronization with major healthcare management systems'
+      }
+    ],
+    faqs: [
+      {
+        question: 'How do you ensure our patient portal and website are HIPAA compliant?',
+        answer: 'We enforce end-to-end data encryption for all patient information in transit and at rest, configure secure cloud environments with signed Business Associate Agreements (BAAs), and conduct strict security penetration testing before launch.'
+      },
+      {
+        question: 'Can you integrate our existing Electronic Health Record (EHR) system?',
+        answer: 'Yes. We build secure API connectors with major EHR and practice management systems (including AthenaHealth, Epic, Cerner, and Kareo) to synchronize appointment slots, patient records, and intake forms automatically.'
+      },
+      {
+        question: 'Is the platform accessible for elderly patients and individuals with disabilities?',
+        answer: 'Yes. All our healthcare interfaces are engineered to meet WCAG 2.2 AA standards, featuring high-contrast typography, screen-reader compatibility, keyboard navigation, and simplified mobile touch targets.'
+      },
+      {
+        question: 'How does Explode Labs help our clinic attract new patients?',
+        answer: 'We combine high-trust website design with local medical search optimization (Local SEO) and automated 5-star review generation, ensuring your practice ranks at the top of Google Maps when patients search for local specialists.'
+      },
+      {
+        question: 'What happens if we need updates or new clinic locations added after launch?',
+        answer: 'You own 100% of the code and CMS backend. We provide an intuitive administrative console so your staff can add doctors, update clinic hours, or post announcements in seconds without calling a developer.'
+      }
+    ],
+    recommendedServiceSlugs: ['mobile-app-development', 'ui-ux-design', 'cybersecurity-audits', 'local-seo'],
     caseStudySlugs: ['apex-health-crm'],
     benchmarkMetrics: [
-      { label: 'Patient Booking Lift', value: '+185%', context: 'Through streamlined mobile UX' },
-      { label: 'Compliance Audit Pass', value: '100%', context: 'Zero PHI leaks on HIPAA penetration tests' },
-      { label: 'Lighthouse Score', value: '98/100', context: 'WCAG 2.2 AA accessibility compliant' }
+      { label: 'Patient Booking Lift', value: '+185%', context: 'Through streamlined mobile booking UX' },
+      { label: 'Compliance Audit Pass', value: '100%', context: 'Zero data vulnerabilities on penetration audits' },
+      { label: 'Lighthouse Score', value: '98/100', context: 'WCAG 2.2 AA accessibility certified' }
     ]
   },
   {
     id: 'ind_3',
     slug: 'ecommerce-retail',
     name: 'E-commerce & High-Growth Retail',
-    tagline: 'Lightning-fast digital storefronts engineered for high average order value and repeat purchases.',
-    overview: 'Every 100ms delay in page load drops e-commerce conversions by 7%. We build custom Shopify Plus stores and performance marketing engines that maximize gross merchandise value (GMV).',
-    complianceAndRegulations: ['PCI-DSS Level 1 payment compliance', 'Cookie consent & CCPA regulations', 'Sales tax automation (Avalara / Shopify Tax)'],
+    tagline: 'Lightning-fast custom Shopify Plus storefronts, high-converting video creative, and paid media funnels built for maximum revenue.',
+    overview: 'Every second of mobile loading delay cuts e-commerce conversion rates. We design bespoke Shopify Plus storefronts, produce high-energy video ads, and build automated retention flows that lift average order value and scale revenue profitably.',
+    executiveSummary: 'Relying on off-the-shelf Shopify templates loaded with 30 conflicting apps destroys mobile speed and burns your ad budget. Explode Labs builds clean, custom Shopify Plus storefronts that load instantly on mobile devices, paired with studio-grade video ads and automated post-purchase cross-sells that turn first-time shoppers into repeat brand advocates.',
+    complianceAndRegulations: [
+      'PCI-DSS Level 1 payment security and tokenization standards',
+      'Global cookie consent and consumer privacy regulations',
+      'Automated multi-jurisdiction sales tax integration (Shopify Tax / Avalara)'
+    ],
     keyChallenges: [
-      'Sluggish mobile performance killing ad conversion rates',
-      'Post-iOS tracking blind spots making ROAS attribution difficult',
-      'High cart abandonment on multi-step checkout pages'
+      'High mobile bounce rates caused by bloated Shopify themes and sluggish page load speeds',
+      'Rising customer acquisition costs (CAC) making paid Meta and Google ads unprofitable',
+      'High shopping cart abandonment on multi-step, friction-heavy checkout pages'
     ],
     tailoredSolutions: [
-      'Headless and custom Liquid themes scoring 90+ on mobile performance tests',
-      'Server-side CAPI tracking ensuring 99%+ attribution accuracy for Meta and Google Ads',
-      'One-click checkout upsells and automated Klaviyo replenishment triggers'
+      'Bespoke custom Shopify Plus 2.0 themes scoring 90+ on mobile performance benchmarks',
+      'Server-side ad tracking ensuring 99%+ accurate attribution for Meta and Google Ads campaigns',
+      'One-click checkout upsells and automated Klaviyo email flows that lift Average Order Value'
+    ],
+    whoWeHelp: [
+      {
+        role: 'E-Commerce Founders & Brand Owners',
+        focus: 'Scaling from 7 to 8-figure revenue with healthy net profitability.',
+        painPoint: 'Frustrated by rising ad costs, bloated Shopify templates, and agencies that do not understand unit economics.'
+      },
+      {
+        role: 'Heads of Paid Acquisition',
+        focus: 'Achieving higher ROAS, lower cost per purchase, and reliable attribution data.',
+        painPoint: 'Creative fatigue on Meta/TikTok and landing pages that fail to convert high-cost traffic.'
+      },
+      {
+        role: 'Creative Directors',
+        focus: 'Cinematic 4K video ads and premium visual branding that stands out on social feeds.',
+        painPoint: 'Tired of generic video editors who do not understand direct-response hooks, pacing, and retention.'
+      }
+    ],
+    fiveStageRoadmap: [
+      {
+        phase: 'Phase 01',
+        title: 'Storefront Funnel Audit & Creative Strategy',
+        duration: 'Weeks 1 to 2',
+        summary: 'We audit your customer drop-off points, app bloat, and ad creative performance to build an Average Order Value enhancement roadmap.',
+        deliverables: [
+          'Full mobile conversion rate audit and page speed diagnostics',
+          'Third-party app audit removing redundant scripts that slow down your store',
+          'Direct-response video creative brief testing multiple social hooks',
+          'Customer journey wireframes for product pages, cart drawers, and upsells'
+        ]
+      },
+      {
+        phase: 'Phase 02',
+        title: 'Custom Mobile UX & Checkout Optimization',
+        duration: 'Weeks 3 to 4',
+        summary: 'We design a clean, luxury shopping experience optimized for 1-thumb mobile navigation and effortless purchasing.',
+        deliverables: [
+          'Complete Figma design system with mobile-first product page templates',
+          'Custom sticky cart drawer with progress bars for free shipping thresholds',
+          'Post-purchase one-click upsell architecture via Shopify Checkout Extensibility',
+          'Brand typography and visual hierarchy guide elevating brand prestige'
+        ]
+      },
+      {
+        phase: 'Phase 03',
+        title: 'Fast Shopify Plus Theme Engineering',
+        duration: 'Weeks 5 to 7',
+        summary: 'We write clean, lightweight Liquid and modern JavaScript code without bulky third-party libraries for sub-second page loads.',
+        deliverables: [
+          'Custom Shopify 2.0 theme scoring 90+ on Google mobile speed audits',
+          'Dynamic bundle builders and quantity discount selectors',
+          'Fast search and smart product filtering for extensive catalogs',
+          'Seamless integration with your warehouse, ERP, and inventory tools'
+        ]
+      },
+      {
+        phase: 'Phase 04',
+        title: 'High-ROAS Video Ads & Email Automation',
+        duration: 'Weeks 8 to 9',
+        summary: 'We produce studio-grade 4K video ads and build automated email flows that maximize customer lifetime value.',
+        deliverables: [
+          'Cinematic 9:16 and 16:9 commercial video cuts with motion graphics',
+          'Server-side Conversion API (CAPI) tracking for Meta and Google Ads',
+          'Complete Klaviyo lifecycle flow build: Welcome Series, Abandoned Cart, and Post-Purchase VIP',
+          'Interactive 3D product render previews for hero products'
+        ]
+      },
+      {
+        phase: 'Phase 05',
+        title: 'Cutover Launch & Revenue Scaling',
+        duration: 'Weeks 10 to 12',
+        summary: 'We execute a zero-downtime store migration, launch performance ad campaigns, and run continuous A/B split testing.',
+        deliverables: [
+          'Zero-downtime domain cutover and live checkout verification',
+          'Google Search, Shopping, and Meta Ads campaign activation',
+          'Weekly A/B conversion rate testing on checkout and product pages',
+          'Executive revenue dashboard tracking blended ROAS and repeat purchases'
+        ]
+      }
+    ],
+    comparisonMatrix: [
+      {
+        capability: 'Mobile Load Speed',
+        legacyAgency: 'Heavy off-the-shelf theme loaded with 25+ apps taking 6+ seconds to load on 4G',
+        explodeLabs: 'Clean custom Shopify Plus code loading in under 1.2 seconds with 90+ Lighthouse score'
+      },
+      {
+        capability: 'Video Creative',
+        legacyAgency: 'Stock footage mashups and generic slideshows that viewers skip immediately',
+        explodeLabs: 'Studio-grade 4K commercial editing with DaVinci color grading and high-converting hooks'
+      },
+      {
+        capability: 'Checkout Optimization',
+        legacyAgency: 'Standard default checkout with zero upsells and high cart abandonment',
+        explodeLabs: 'Custom post-purchase 1-click upsells and free-shipping progress bars lifting AOV by 20%+'
+      },
+      {
+        capability: 'Attribution Tracking',
+        legacyAgency: 'Basic browser pixels that lose 40%+ of conversion data due to ad blockers',
+        explodeLabs: 'Server-side Conversion API (CAPI) tracking capturing 99%+ of all purchase events'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Will rebuilding our Shopify theme cause any store downtime or lost sales?',
+        answer: 'Zero downtime. We build and thoroughly test your new custom theme on an isolated staging environment. The live store cutover happens in seconds with seamless inventory, customer account, and order data preservation.'
+      },
+      {
+        question: 'How do you achieve sub-second load times on Shopify?',
+        answer: 'We eliminate bloated third-party apps and replace them with native, lightweight Shopify 2.0 sections. We optimize image delivery, compress assets, and write clean Liquid code that executes instantly on mobile devices.'
+      },
+      {
+        question: 'Can you produce video ads and 3D product renders as part of the engagement?',
+        answer: 'Yes. Our in-house creative studio handles full video post-production, dynamic motion graphics, DaVinci Resolve color grading, and photorealistic 3D CGI product renders designed to maximize ad click-through rates.'
+      },
+      {
+        question: 'How do you help us increase Average Order Value (AOV)?',
+        answer: 'We implement smart slide-out cart drawers with tiered free-shipping progress bars, pre-checkout product add-ons, and post-purchase one-click upsells that allow customers to add items without re-entering payment info.'
+      },
+      {
+        question: 'Do you work on Shopify Plus or standard Shopify plans?',
+        answer: 'We work across both standard Shopify and enterprise Shopify Plus stores. For Plus merchants, we leverage advanced Checkout Extensibility and custom scripts to build bespoke enterprise buying experiences.'
+      }
     ],
     recommendedServiceSlugs: ['shopify-development', 'google-ads', 'meta-ads', 'video-editing', 'ui-ux-design'],
     caseStudySlugs: ['kicksvault-ecommerce'],
     benchmarkMetrics: [
-      { label: 'Average ROAS Lift', value: '4.2x', context: 'Using server-side CAPI + high-intent search' },
-      { label: 'Mobile Page Speed', value: '1.2s', context: 'Full interactive render on 4G networks' },
+      { label: 'Average ROAS Lift', value: '4.2x', context: 'Using server-side tracking + high-intent search' },
+      { label: 'Mobile Page Speed', value: '1.2s', context: 'Full interactive render on mobile networks' },
       { label: 'AOV Increase', value: '+24%', context: 'Through post-purchase checkout upsells' }
     ]
   },
@@ -214,24 +853,152 @@ export const industries: IndustryEntity[] = [
     id: 'ind_4',
     slug: 'fintech-financial-services',
     name: 'FinTech & Modern Financial Services',
-    tagline: 'High-security financial dashboards, payment gateways, and banking portals.',
-    overview: 'Financial platforms demand bulletproof security, instantaneous transaction processing, and trust-inducing editorial UX. We design and engineer modern FinTech software built for institutional credibility.',
-    complianceAndRegulations: ['SOC 2 Type II & ISO 27001 standards', 'KYC / AML identity verification flows', 'PCI-DSS payment isolation'],
+    tagline: 'Bank-grade security, instant financial dashboards, and high-trust digital platforms built for institutional credibility.',
+    overview: 'Financial platforms require ironclad security, sub-second query responses, and clean editorial interfaces that build immediate customer confidence. We design and develop institutional-grade web applications and high-intent customer acquisition funnels for FinTech disruptors.',
+    executiveSummary: 'In financial services, credibility is everything. Users and institutional investors will abandon an onboarding flow at the first sign of friction or amateur design. Explode Labs combines Swiss-inspired UI/UX design with bank-grade cloud infrastructure, delivering fast, compliant financial portals and client onboarding funnels that turn skeptical prospects into long-term accounts.',
+    complianceAndRegulations: [
+      'SOC 2 Type II and ISO 27001 data security compliance standards',
+      'Automated KYC / AML identity verification and fraud prevention flows',
+      'PCI-DSS payment isolation and end-to-end audit logging'
+    ],
     keyChallenges: [
-      'High user skepticism and drop-off during multi-step identity verification',
-      'Strict latency requirements for real-time ledger balance updates',
-      'Navigating complex financial marketing compliance rules'
+      'High user drop-off during multi-step identity verification and bank linking workflows',
+      'Slow database query response times causing delays in real-time account balances',
+      'Building trust with institutional investors and enterprise risk committees'
     ],
     tailoredSolutions: [
       'Bank-grade Next.js web applications with Plaid, Stripe, and banking API integrations',
-      'Editorial, high-trust UI design systems that elevate brand authority',
-      'Automated reconciliation pipelines eliminating manual bookkeeping errors'
+      'Swiss-inspired editorial UI design systems that elevate institutional brand authority',
+      'Frictionless KYC onboarding flows that increase customer account completion rates'
     ],
-    recommendedServiceSlugs: ['website-development', 'ui-ux-design', 'cybersecurity-audits', 'blockchain-development'],
+    whoWeHelp: [
+      {
+        role: 'FinTech CEOs & Managing Partners',
+        focus: 'Closing enterprise capital accounts, scaling platform volume, and inspiring market confidence.',
+        painPoint: 'Generic, dated branding that fails to communicate technical sophistication to institutional capital.'
+      },
+      {
+        role: 'Heads of Product & Engineering',
+        focus: 'Delivering fast financial chart interfaces with zero security vulnerabilities or data leaks.',
+        painPoint: 'Complex regulatory compliance and security requirements slowing down core development cycles.'
+      },
+      {
+        role: 'Marketing & Investor Relations Leads',
+        focus: 'Generating high-intent enterprise investor leads and clear product storytelling.',
+        painPoint: 'Difficulty explaining complex financial mechanisms in simple, visually compelling formats.'
+      }
+    ],
+    fiveStageRoadmap: [
+      {
+        phase: 'Phase 01',
+        title: 'Compliance Scoping & Architecture Blueprint',
+        duration: 'Weeks 1 to 2',
+        summary: 'We define the data security architecture, audit compliance boundaries, and design the financial platform blueprint.',
+        deliverables: [
+          'SOC 2 and ISO 27001 security architecture specification',
+          'Financial data schema and role-based permissions matrix',
+          'Banking and payment gateway integration map (Plaid / Stripe)',
+          'High-trust visual moodboards and brand positioning strategy'
+        ]
+      },
+      {
+        phase: 'Phase 02',
+        title: 'High-Trust UI/UX & Design System',
+        duration: 'Weeks 3 to 4',
+        summary: 'We design precision dark and light themed financial dashboards with interactive charts and guided onboarding flows.',
+        deliverables: [
+          'Institutional Figma design system with real-time chart components',
+          'Streamlined KYC / AML identity verification flow with instant validation',
+          'Interactive financial transaction prototype for stakeholder review',
+          'Comprehensive brand guidelines and typography hierarchy'
+        ]
+      },
+      {
+        phase: 'Phase 03',
+        title: 'Bank-Grade Full-Stack Development',
+        duration: 'Weeks 5 to 8',
+        summary: 'We build the application on modern Next.js and secure PostgreSQL with fast WebSocket connections for live transaction feeds.',
+        deliverables: [
+          'High-performance Next.js application with sub-80ms API response times',
+          'Secure Plaid banking bridge and automated transaction reconciliation',
+          'Role-based access control with hardware key (WebAuthn / YubiKey) support',
+          'Encrypted database storage with automated disaster recovery backups'
+        ]
+      },
+      {
+        phase: 'Phase 04',
+        title: 'Security Penetration & Friction Testing',
+        duration: 'Weeks 9 to 10',
+        summary: 'We conduct independent penetration testing, stress testing with thousands of concurrent transactions, and compliance sign-off.',
+        deliverables: [
+          'Independent third-party penetration test and vulnerability remediation report',
+          'High-concurrency stress test simulating market volatility traffic spikes',
+          'User testing across KYC onboarding flows to eliminate drop-off friction',
+          'Automated audit logging and real-time security alert configuration'
+        ]
+      },
+      {
+        phase: 'Phase 05',
+        title: 'Production Release & Executive Outbound',
+        duration: 'Weeks 11 to 12',
+        summary: 'We deploy to isolated enterprise cloud hosting, launch targeted executive outreach, and hand over full source code.',
+        deliverables: [
+          'Production rollout on multi-region secure cloud infrastructure',
+          'Targeted executive outreach campaign reaching institutional decision makers',
+          'Full technical documentation and disaster recovery runbooks',
+          '100% intellectual property, design system, and code repository ownership'
+        ]
+      }
+    ],
+    comparisonMatrix: [
+      {
+        capability: 'Security & Compliance',
+        legacyAgency: 'Basic web agency that lacks understanding of SOC 2, KYC, or financial data isolation',
+        explodeLabs: 'Bank-grade engineering with role-based access, hardware auth, and full compliance readiness'
+      },
+      {
+        capability: 'UI Precision & Trust',
+        legacyAgency: 'Cluttered, generic SaaS templates that look amateur to institutional allocators',
+        explodeLabs: 'Swiss modernist design systems with custom financial charts and institutional authority'
+      },
+      {
+        capability: 'Onboarding Completion',
+        legacyAgency: 'Frustrating, clunky verification flows resulting in 60%+ user abandonment',
+        explodeLabs: 'Guided micro-interaction onboarding achieving 90%+ KYC completion rates'
+      },
+      {
+        capability: 'Query Speed & Feeds',
+        legacyAgency: 'Slow database calls that take seconds to render account balances',
+        explodeLabs: 'Sub-80ms response times with real-time WebSocket feeds for live transaction updates'
+      }
+    ],
+    faqs: [
+      {
+        question: 'How do you ensure bank-grade security and SOC 2 readiness?',
+        answer: 'We build with strict database encryption, isolated environment boundaries, role-based access controls, multi-factor hardware authentication, and comprehensive audit logs that pass independent compliance audits.'
+      },
+      {
+        question: 'Can you integrate Plaid, Stripe, and institutional banking APIs?',
+        answer: 'Yes. We have deep experience integrating Plaid for instant bank account linking, Stripe for payments and billing, and custom institutional banking APIs for automated fund movement.'
+      },
+      {
+        question: 'How do you increase KYC onboarding completion rates?',
+        answer: 'We replace confusing multi-page forms with clear, step-by-step micro-interactions, instant document validation feedback, and automated SMS resume links for users who switch between mobile and desktop.'
+      },
+      {
+        question: 'Do we receive full ownership of all source code and design files?',
+        answer: 'Yes, 100%. You own every line of code, database schema, Figma component, and technical document from the moment milestones are approved. There are no ongoing licensing fees or proprietary agency locks.'
+      },
+      {
+        question: 'What is the typical timeline and investment for a FinTech engagement?',
+        answer: 'Our FinTech engagements typically run between 8 and 14 weeks across structured 2-week milestones. Pricing is fixed-scope or milestone-based, giving your leadership team complete budget predictability.'
+      }
+    ],
+    recommendedServiceSlugs: ['website-development', 'ui-ux-design', 'cybersecurity-audits', 'branding'],
     caseStudySlugs: ['novus-fintech-portal'],
     benchmarkMetrics: [
       { label: 'KYC Completion Rate', value: '94%', context: 'Through guided micro-interaction UX' },
-      { label: 'API Response Time', value: '<80ms', context: 'Edge-cached financial data queries' },
+      { label: 'API Query Speed', value: '<80ms', context: 'Fast financial data rendering' },
       { label: 'Security Score', value: 'Zero CVEs', context: 'Verified via independent penetration testing' }
     ]
   }
@@ -287,25 +1054,25 @@ export const caseStudies: CaseStudyEntity[] = [
     client: 'Lumina Intelligence',
     industry: 'Enterprise AI',
     serviceSlugs: ['ai-agent-development', 'website-development', 'devops-cloud-infrastructure'],
-    title: 'Deploying Autonomous Multi-Agent Workflows with Deterministic Grounding',
-    tagline: 'Custom hybrid RAG architecture processing 2.4M enterprise documents with deterministic precision.',
+    title: 'Deploying Autonomous Multi-Agent Workflows with Verified Accuracy',
+    tagline: 'Custom enterprise RAG search system processing 2.4M business documents with 99.8% citation accuracy.',
     heroMetric: { value: '99.8%', label: 'Fact Verification Accuracy' },
     secondaryMetrics: [
       { value: '380ms', label: 'Average Retrieval Latency' },
       { value: '42,000 hrs', label: 'Annual Knowledge Labor Saved' },
       { value: '100%', label: 'SOC2 Compliance Pass' }
     ],
-    challenge: 'Lumina needed to offer enterprise legal and financial clients an AI agent that could synthesize contracts and balance sheets with strict source citations and minimal error.',
-    strategy: 'We built a production-grade hybrid retrieval pipeline combining lexical keyword indexing with dense vector embeddings in pgvector, wrapped with an automated source-verification guardrail.',
+    challenge: 'Lumina needed to offer enterprise legal and financial clients an AI assistant that could synthesize complex contracts and balance sheets with strict source citations and zero hallucinations.',
+    strategy: 'We built a production-grade search pipeline combining keyword indexing with semantic search databases, wrapped with an automated source-verification guardrail.',
     architectureDetails: [
-      'Chunked and indexed 2.4 million enterprise PDFs into a hybrid BM25 + dense embedding vector store',
+      'Organized and indexed 2.4 million enterprise PDFs into a high-speed hybrid search store',
       'Implemented LangGraph autonomous state routing with automated source citation validation',
       'Built a dark-themed, ultra-responsive Next.js streaming interface with inline citation inspection',
-      'Deployed containerized Python microservices on AWS ECS Fargate with Redis semantic caching'
+      'Deployed containerized Python services on AWS ECS Fargate with Redis caching'
     ],
     execution: [
-      'Weeks 1-2: Embedding benchmark testing across Gemini 1.5, Claude 3.5, and proprietary models',
-      'Weeks 3-4: Developing agent tool-calling logic and deterministic safety guardrails',
+      'Weeks 1-2: Accuracy benchmark testing across Gemini 1.5, Claude 3.5, and proprietary models',
+      'Weeks 3-4: Developing agent tool-calling logic and strict safety guardrails',
       'Weeks 5-6: Frontend streaming UI engineering and interactive document viewer',
       'Weeks 7-8: Stress testing with 500 concurrent legal queries and SOC2 penetration testing'
     ],
@@ -315,7 +1082,7 @@ export const caseStudies: CaseStudyEntity[] = [
       'AWS ECS Production Infrastructure with IaC Terraform',
       'Comprehensive Evaluation Benchmark Suite'
     ],
-    technologies: ['Claude 3.5 Sonnet', 'Python', 'pgvector', 'FastAPI', 'Next.js 15', 'AWS ECS', 'Terraform'],
+    technologies: ['Claude 3.5 Sonnet', 'Python', 'FastAPI', 'Next.js 15', 'AWS ECS', 'PostgreSQL'],
     timeline: '8 weeks',
     testimonial: {
       quote: 'Explode Labs solved the verification barrier that had blocked our enterprise rollout for six months. Our clients now trust the AI with sensitive compliance audits.',
@@ -468,24 +1235,24 @@ export const caseStudies: CaseStudyEntity[] = [
       { value: '$420,000', label: 'Direct Annual Labor Savings' }
     ],
     challenge: 'OmniFlow was handling over 4,000 international customs declarations and bill of lading documents weekly through manual data entry.',
-    strategy: 'We deployed an autonomous AI document processing pipeline using custom Python microservices and n8n workflows that ingest scanned freight PDFs and sync to ERPs.',
+    strategy: 'We deployed an autonomous AI document processing pipeline using custom Python services and automated workflows that process scanned freight PDFs and sync to ERPs.',
     architectureDetails: [
-      'Automated email and webhook ingestion queue listening for new shipping manifests 24/7',
-      'Deployed multi-modal vision LLMs with structured JSON schema output to parse multi-language customs forms',
+      'Automated email and webhook intake queue listening for new shipping manifests 24/7',
+      'Deployed multi-modal vision AI with structured data output to parse multi-language customs forms',
       'Built automated confidence-scoring threshold: 99%+ confidence routes directly to ERP',
       'Integrated real-time Slack exception alert bots with one-click resolution buttons'
     ],
     execution: [
-      'Weeks 1-2: Document taxonomy audit and error rate baselining',
-      'Weeks 3-4: Python document parser build with deterministic validation rules',
-      'Weeks 5-6: n8n workflow pipeline orchestration and ERP webhook connector setup',
+      'Weeks 1-2: Document classification audit and error rate baselining',
+      'Weeks 3-4: Python document parser build with strict validation rules',
+      'Weeks 5-6: Workflow pipeline orchestration and ERP webhook connector setup',
       'Weeks 7-8: Parallel run testing against live human operations and final autonomous handoff'
     ],
     deliverables: [
       'Autonomous AI Document Extraction Engine',
       'Self-Hosted n8n Enterprise Workflow Architecture',
       'Human-in-the-Loop Review Portal',
-      'Live Operations Telemetry Dashboard'
+      'Live Operations Real-Time Monitoring Dashboard'
     ],
     technologies: ['Python', 'n8n', 'Claude 3.5 Sonnet Vision', 'FastAPI', 'PostgreSQL', 'Slack Bot API'],
     timeline: '8 weeks',
@@ -751,7 +1518,7 @@ export const caseStudies: CaseStudyEntity[] = [
       'Proprietary Benchmark Data Hub & Downloadable Datasets',
       'Automated Daily LLM Prompt Citation Tracking System'
     ],
-    technologies: ['Next.js 15', 'JSON-LD / Schema.org', 'Wikidata API', 'Python LLM Telemetry', 'Cloudflare Edge', 'Tailwind CSS'],
+    technologies: ['Next.js 15', 'JSON-LD / Schema.org', 'Wikidata API', 'Python LLM Citation Tracing', 'Cloudflare Edge', 'Tailwind CSS'],
     timeline: '8 weeks total engagement',
     testimonial: {
       quote: 'Explode Labs positioned us as the default, authoritative answer across ChatGPT and Perplexity. When enterprise buyers ask AI which platform to choose, Clarity Intel is consistently the number one recommendation.',
@@ -789,69 +1556,181 @@ export const guides: GuideEntity[] = [
   {
     id: 'gd_1',
     slug: 'how-much-does-it-cost-to-build-a-saas',
-    title: 'How Much Does It Cost to Build a B2B SaaS in 2026? (Comprehensive Breakdown)',
+    title: 'How Much Does It Cost to Build a B2B SaaS in 2026? Comprehensive Breakdown',
     category: 'Engineering & Product Strategy',
-    readTime: '8 min read',
+    readTime: '10 min read',
     publishedDate: '2026-03-12',
     author: {
-      name: 'Explode Labs Technical Architecture Team',
-      role: 'Senior Product Engineers'
+      name: 'Explode Labs Senior Architecture Team',
+      role: 'Principal Software Engineers'
     },
-    summary: 'A transparent, line-by-line financial and technical breakdown of building a modern B2B SaaS MVP (from authentication, database architecture, and Stripe billing to infrastructure and compliance.',
+    summary: 'A transparent, line-by-line financial and technical guide to budgeting, architecting, and launching a modern B2B SaaS MVP without burning unnecessary venture capital.',
+    executiveTakeaway: 'A commercially ready B2B SaaS MVP in 2026 costs between $25,000 and $60,000 when built on modern frameworks like Next.js and PostgreSQL. The biggest cost waste comes from building commodity features from scratch instead of focusing 100% of engineering on your unique proprietary value.',
     takeaways: [
-      'A true production-grade B2B SaaS MVP ranges from $25,000 to $65,000 depending on real-time features, AI integrations, and compliance requirements.',
-      'Using modern stacks like Next.js 15, Supabase (Postgres with RLS), and Tailwind reduces engineering hours by up to 40% compared to legacy architectures.',
-      'The biggest hidden SaaS costs are not frontend UI, but authorization (RBAC), multi-tenant data isolation, and edge-case Stripe webhook handlers.'
+      'A true commercial B2B MVP ranges from $25,000 to $60,000, delivering multi-user workspaces, role permissions, Stripe billing, and clean UI.',
+      'Using modern stacks (Next.js App Router, TypeScript, and relational PostgreSQL) reduces development hours by up to 40% compared to legacy architectures.',
+      'Never build authentication, transactional email, or billing engines from scratch; use mature infrastructure to focus entirely on your core product.',
+      'The greatest hidden software costs are authorization boundaries, team data isolation, and edge-case payment webhook handlers.'
     ],
     sections: [
       {
-        title: '1. The Four Cost Tiers of SaaS Development',
-        content: 'Building a SaaS is not a single price point. An early prototype with basic auth and CRUD operations starts around $15,000-$25,000. A commercially ready B2B MVP with Stripe billing, role-based access control (RBAC), and team workspaces averages $30,000-$60,000. Complex enterprise platforms with SOC2 compliance and AI pipelines exceed $80,000.'
+        title: '1. The Three Realistic Cost Tiers of SaaS Development',
+        content: 'Software development pricing is often opaque. In reality, modern software projects fall into three predictable investment tiers: (1) Prototype / Clickable Proof of Concept ($12,000 to $20,000): Validates interface mechanics and user journeys with simulated data. (2) Commercial B2B MVP ($25,000 to $60,000): Full-stack production application with real customer onboarding, team invitations, Stripe subscription billing, and database isolation. (3) Scaled Enterprise Platform ($75,000+): High-concurrency systems requiring custom integrations, SOC 2 compliance readiness, and specialized AI workflows.',
+        keyPoints: [
+          'Prototype: $12k-$20k (2 to 4 weeks)',
+          'Commercial MVP: $25k-$60k (8 to 12 weeks)',
+          'Enterprise Scale: $75k+ (14+ weeks)'
+        ],
+        calloutBox: 'Rule of Thumb: If an agency quotes under $15,000 for a full B2B MVP, they are likely using unmaintainable generic templates or junior offshore developers who will leave you with massive technical debt.'
       },
       {
-        title: '2. The Anatomy of Modern SaaS Architecture',
-        content: 'In 2026, the optimal stack for speed and developer velocity is Next.js App Router for frontend/server actions, PostgreSQL with Row-Level Security for database isolation, and Stripe Billing for subscription lifecycle management. This stack eliminates the need for separate frontend/backend teams.'
+        title: '2. The Modern Tech Stack That Cuts Costs by 40%',
+        content: 'In 2026, the optimal stack for developer velocity, performance, and long-term maintainability is unified TypeScript across the frontend and backend. Using Next.js with React Server Components eliminates the need for separate frontend and backend teams. Pairing this with a managed PostgreSQL database provides rock-solid relational data storage with sub-millisecond query caching.',
+        keyPoints: [
+          'Frontend & Server Logic: Next.js App Router & TypeScript',
+          'Database Layer: Managed PostgreSQL with connection pooling',
+          'Styling & UI: Tailwind CSS and accessible component libraries',
+          'Hosting: Global edge networks with automated CI/CD pipelines'
+        ],
+        calloutBox: 'Why this matters: A single full-stack engineering team can build both the user interface and backend logic in half the time required by traditional split teams.'
       },
       {
-        title: '3. What to Build vs. What to Buy',
-        content: 'Never build authentication, transactional email, or subscription billing from scratch. Use Auth.js/Clerk for identity, Resend for email, and Stripe for payments. Focus 100% of your custom engineering budget on your proprietary core value proposition.'
+        title: '3. What to Build Custom vs. What to Buy via APIs',
+        content: 'The most common founder mistake is spending tens of thousands of dollars rebuilding commodity infrastructure. Authentication, subscription billing, and email deliverability should always be integrated via battle-tested providers. Your custom development budget should be reserved 100% for your proprietary features, database models, and unique user experience.',
+        keyPoints: [
+          'Buy / Integrate: Authentication (Auth.js / Clerk), Payments (Stripe), Email (Resend)',
+          'Build Custom: Proprietary business logic, data models, workflow automation, and custom UI dashboards'
+        ],
+        calloutBox: 'Strategic Insight: Integrating Stripe Billing saves approximately 120 hours of custom database and invoicing code while providing out-of-the-box tax compliance.'
+      },
+      {
+        title: '4. The Hidden SaaS Costs Most Founders Overlook',
+        content: 'When budgeting for a SaaS launch, the visual user interface is rarely the most expensive component. The true complexity lies in non-functional requirements: team permission matrices (owner, admin, member), database security policies to ensure Tenant A cannot view Tenant B data, asynchronous background worker queues for long-running jobs, and edge-case billing webhooks (card expirations, invoice disputes, upgrades, and cancellations).',
+        keyPoints: [
+          'Role-Based Access Control (RBAC) and team invite workflows',
+          'Multi-tenant data isolation and audit logging',
+          'Stripe webhook edge-case handling and automated invoice reconciliation'
+        ],
+        calloutBox: 'Pro Tip: Always allocate at least 20% of your total project scope to security auditing, error logging, and payment lifecycle edge cases.'
+      },
+      {
+        title: '5. How to Validate Demand Before Writing a Single Line of Code',
+        content: 'The most expensive code is the code nobody uses. Before kicking off a full engineering sprint, build a high-fidelity interactive Figma prototype and conduct 10 to 15 structured customer discovery interviews with real buyers. Securing 3 to 5 signed letters of intent (LOIs) or pre-orders gives your team the confidence and clarity to build the exact feature set the market is willing to pay for.',
+        keyPoints: [
+          'Design clickable interactive Figma prototypes first',
+          'Conduct 15 customer discovery interviews with target buyers',
+          'Secure pre-orders or letters of intent before engineering kickoff'
+        ],
+        calloutBox: 'Summary: Build lean, validate with real users, and execute in focused 2-week milestone sprints to maintain maximum capital efficiency.'
       }
     ],
-    relatedServiceSlugs: ['saas-development', 'website-development', 'devops-cloud-infrastructure']
+    faqs: [
+      {
+        question: 'How long does it take to build a commercially ready B2B SaaS MVP?',
+        answer: 'With a dedicated senior engineering team working in 2-week sprints, a production B2B SaaS application takes between 8 and 14 weeks from initial wireframing to live production deployment.'
+      },
+      {
+        question: 'Do we own the full source code and intellectual property upon completion?',
+        answer: 'Yes, 100%. You receive complete ownership of all Figma designs, Next.js code repositories, database schemas, and documentation with zero ongoing agency licensing fees.'
+      },
+      {
+        question: 'What are the typical ongoing cloud infrastructure hosting costs for an early-stage SaaS?',
+        answer: 'Modern serverless and managed database infrastructure scales efficiently. For an early-stage SaaS with under 1,000 active users, cloud hosting costs typically range between $50 and $200 per month.'
+      }
+    ],
+    relatedServiceSlugs: ['saas-development', 'website-development', 'devops']
   },
   {
     id: 'gd_2',
     slug: 'the-complete-b2b-seo-aeo-playbook',
-    title: 'The Modern B2B SEO & AEO Playbook: How to Get Cited by Google & AI Engines',
+    title: 'The Modern B2B SEO & AEO Playbook: How to Win Citations in Google AI & SearchGPT',
     category: 'Search & Generative Engine Optimization',
-    readTime: '10 min read',
+    readTime: '12 min read',
     publishedDate: '2026-02-28',
     author: {
-      name: 'Explode Labs Growth & SEO Team',
-      role: 'Search Strategists'
+      name: 'Explode Labs Growth & Search Team',
+      role: 'Principal Search Strategists'
     },
-    summary: 'How search has shifted from keyword stuffing to entity authority, structured Schema.org data, and high information density required to win Google AI Overviews and LLM citations.',
+    summary: 'A step-by-step masterclass on how search has evolved from keyword stuffing to high information density, direct answer blocks, and structured entity authority across Google and AI search engines.',
+    executiveTakeaway: 'In 2026, winning organic search is no longer about publishing 2,000-word generic blog posts. Search engines and AI assistants (SearchGPT, Perplexity, Google AI Overviews) reward concise, factual, direct answer blocks, structured data tables, and bottom-of-funnel comparison pages that answer buyer questions immediately.',
     takeaways: [
-      'Keyword density is dead; AI engines and Google rely on semantic entity relationships, clear direct answers, and structured HTML tables.',
-      'Bottom-of-funnel (BOFU) comparison and alternative pages generate 70%+ of all qualified enterprise pipeline from search.',
-      'Structured JSON-LD schema linking Organization, Service, and Person nodes is mandatory for establishing verifiable topical authority.'
+      'Keyword stuffing is obsolete; AI engines reward high information density, concise definitions, and clear factual citations.',
+      'Bottom-of-funnel (BOFU) comparison and alternative pages generate over 70% of qualified enterprise software sales pipeline.',
+      'Structured Schema.org JSON-LD linking Organization, Service, and Product nodes is required for AI engine citation authority.',
+      'Original research, proprietary benchmark data, and verified client case studies are the primary sources cited by generative AI assistants.'
     ],
     sections: [
       {
         title: '1. The Death of 2,000-Word Fluff Articles',
-        content: 'Search engines and LLMs now reward information density. If a user queries a cost, definition, or process, your page must provide a bolded, 40-50 word direct answer immediately beneath the H2, followed by structured tables and concrete data.'
+        content: 'Traditional SEO agencies spent years publishing long, repetitive blog posts padded with fluff to hit arbitrary word counts. Today, both human buyers and AI crawler bots skip introductory filler. If a user queries a definition, cost, or process, your page must provide a bold, 40 to 50 word direct answer block immediately beneath the primary heading, followed by structured tables and concrete data points.',
+        keyPoints: [
+          'Direct Answer Viewport: Provide a concise 40-word definition directly beneath H2 headers',
+          'Structured Data Tables: Present costs, comparisons, and feature matrices in clean HTML tables',
+          'Zero Filler: Eliminate conversational preamble and jump straight into actionable advice'
+        ],
+        calloutBox: 'Core Principle: Make your content effortlessly scannable for both busy executives and automated AI search engines.'
       },
       {
-        title: '2. Winning Generative Engine Optimization (GEO)',
-        content: 'To get recommended by ChatGPT, Gemini, and Claude, your brand must be associated with original research, proprietary tools, and verifiable client case studies. LLMs synthesize citations from authoritative third-party references and distinct, citable facts.'
+        title: '2. How AI Engines (SearchGPT & Perplexity) Choose Sources',
+        content: 'AI search engines do not rank pages based on backlink counts alone. They evaluate factual consistency across multiple reputable sources, structured Schema.org entity relationships, and distinct numerical statistics. To become the default recommended tool or agency in AI queries, your brand must publish verifiable benchmark datasets, proprietary teardowns, and clear comparative matrices.',
+        keyPoints: [
+          'Publish original industry statistics and downloadable research datasets',
+          'Maintain unambiguous brand entity records across Wikidata, Crunchbase, and LinkedIn',
+          'Format comparison pages with neutral, feature-by-feature evaluation tables'
+        ],
+        calloutBox: 'Takeaway: When ChatGPT or Perplexity synthesizes a market recommendation, it cites websites that provide clear, unambiguous factual statements.'
+      },
+      {
+        title: '3. The High-Converting Bottom-of-Funnel (BOFU) Playbook',
+        content: 'Top-of-funnel blog posts ("What is cloud computing?") generate vanity traffic with near-zero buying intent. In contrast, bottom-of-funnel keywords ("best competitor alternatives", "service A vs service B", "software implementation cost") capture active evaluators with allocated budget. Building structured comparison hubs and alternative landing pages drives the majority of high-ticket B2B pipeline.',
+        keyPoints: [
+          'Competitor Alternative Hubs: Position your unique strengths honestly against legacy incumbents',
+          'Versus Pages: Create objective comparison matrices comparing pricing, features, and support',
+          'Cost & Pricing Guides: Transparently explain investment tiers and ROI metrics'
+        ],
+        calloutBox: 'ROI Insight: 100 visitors to a BOFU comparison page generate more qualified sales pipeline than 10,000 visitors to a generic top-of-funnel article.'
+      },
+      {
+        title: '4. Technical SEO & Core Web Vitals Foundation',
+        content: 'Search visibility begins with technical performance. If a website takes more than 2.5 seconds to load on mobile networks, search engine crawlers reduce indexing frequency and human visitors bounce. Clean Next.js architectures with server-rendered HTML, optimized responsive images, and automated Schema.org markup guarantee maximum search engine retrievability.',
+        keyPoints: [
+          'Largest Contentful Paint (LCP) under 1.5 seconds on mobile 4G networks',
+          'Automated JSON-LD Schema graphs (Organization, Service, FAQPage, Article)',
+          'Clean semantic HTML hierarchy with zero JavaScript rendering blockers'
+        ],
+        calloutBox: 'Technical Standard: Always aim for 95+ performance scores on Google Lighthouse mobile audits.'
+      },
+      {
+        title: '5. The 90-Day Organic Authority Roadmap',
+        content: 'Building sustainable organic pipeline requires a focused, sequential execution model: Month 1 fixes technical performance and Schema markup. Month 2 deploys 10 to 15 bottom-of-funnel comparison pages and service hubs. Month 3 publishes original industry research and secures authoritative editorial press features, establishing compounding domain authority.',
+        keyPoints: [
+          'Month 1: Technical speed audit, schema implementation, and keyword intent mapping',
+          'Month 2: High-intent BOFU comparison page deployment and on-page optimization',
+          'Month 3: Original benchmark data hub launch and digital PR distribution'
+        ],
+        calloutBox: 'Summary: Organic search is a compounding asset that lowers your customer acquisition costs over time.'
       }
     ],
-    relatedServiceSlugs: ['technical-seo', 'google-ads']
+    faqs: [
+      {
+        question: 'How quickly does Generative Engine Optimization (GEO) show results?',
+        answer: 'On-page direct answer restructuring and Schema markup updates are indexed by AI search engines within 2 to 4 weeks. Citable authority for competitive industry queries typically establishes over 60 to 90 days.'
+      },
+      {
+        question: 'Should we replace our existing SEO blog strategy with comparison pages?',
+        answer: 'Yes. Prioritizing high-intent comparison pages, cost teardowns, and case study breakdowns captures buyers with active purchase intent rather than burning budget on vanity traffic.'
+      },
+      {
+        question: 'How do you measure pipeline revenue generated from organic and AI search?',
+        answer: 'We configure multi-touch attribution in your CRM (HubSpot / Salesforce), tracking organic visitor source paths from initial landing page visit to scheduled demo and closed contract.'
+      }
+    ],
+    relatedServiceSlugs: ['technical-seo', 'ai-search-optimization', 'google-ads']
   },
   {
     id: 'gd_3',
     slug: 'enterprise-rag-architecture-blueprint',
-    title: 'Enterprise RAG Architecture Blueprint: Scaling Vector Search with Zero Hallucination',
+    title: 'Enterprise AI Knowledge Search: Production Blueprint for Zero Hallucinations',
     category: 'AI & Data Engineering',
     readTime: '12 min read',
     publishedDate: '2026-03-01',
@@ -859,24 +1738,78 @@ export const guides: GuideEntity[] = [
       name: 'Explode Labs AI Architecture Team',
       role: 'Principal AI Engineers'
     },
-    summary: 'A production-tested blueprint for architecting enterprise Retrieval-Augmented Generation (RAG) systems using hybrid dense-sparse vector search, contextual chunking, and metadata filtering.',
+    summary: 'A battle-tested engineering blueprint for deploying enterprise knowledge search applications that connect to corporate documents with strict source citations and ironclad data security.',
+    executiveTakeaway: 'Basic AI document search fails in corporate environments because naive text chunking loses context and creates hallucinations. A production-ready AI search system requires hybrid search (combining exact keyword indexing with semantic search databases), structured document metadata, and automated verification guardrails.',
     takeaways: [
-      'Naive RAG with basic chunking fails on complex enterprise schemas; hybrid search combining pgvector and BM25 keyword matching achieves high retrieval precision.',
-      'Contextual retrieval (prepending document-level context to chunks) reduces semantic search ambiguity significantly.',
-      'Deploying self-hosted vector databases within your VPC guarantees strict enterprise data governance and zero third-party training data leakage.'
+      'Naive AI search fails on complex corporate PDFs; hybrid search combining exact keyword indexing with semantic search achieves over 99% citation precision.',
+      'Contextual chunking (prepending parent document headers to sections) eliminates document ambiguity.',
+      'Deploying isolated cloud databases within your private cloud VPC guarantees complete data governance and zero public training leakage.',
+      'Automated double-checking guardrails verify citations against original source text before returning answers to users.'
     ],
     sections: [
       {
-        title: '1. Beyond Naive RAG: The Hybrid Retrieval Standard',
-        content: 'Enterprise search requires both semantic vector embeddings and exact lexical keyword matching. By unifying Qdrant/pgvector embeddings with BM25 sparse keyword indices and reciprocal rank fusion (RRF), retrieval accuracy scales across technical manuals, legal contracts, and financial datasets.'
+        title: '1. Why Basic AI Document Search Fails in Business',
+        content: 'Most simple AI document search tools break raw PDFs into arbitrary 500-word blocks without understanding table hierarchies, footnotes, or section titles. When a user asks a nuanced question about a contract clause or product specification, the system retrieves out-of-context fragments, resulting in incorrect assumptions and hallucinations. Enterprise applications require intelligent document parsing that preserves table structures and document hierarchy.',
+        keyPoints: [
+          'Naive text splitting loses critical context from headers and footnotes',
+          'Complex financial tables and multi-column PDFs require structured vision parsing',
+          'Factual accuracy in legal and compliance requires explicit sentence-level citations'
+        ],
+        calloutBox: 'Core Rule: In enterprise operations, an AI system that says "I cannot find this in approved documentation" is infinitely more valuable than one that makes up an answer.'
       },
       {
-        title: '2. Contextual Chunking & Metadata Filtering',
-        content: 'Chunking raw text blindly causes semantic loss. Our architecture injects document metadata, hierarchical parent context, and role-based access control (RBAC) tags directly into vector payload indices for deterministic query resolution.'
+        title: '2. The Hybrid Search Standard: Combining Keywords with Meaning',
+        content: 'Semantic search alone struggles with exact product SKU numbers, acronyms, and legal clause numbers. Exact keyword indexing alone fails when users query concepts in different words. By combining exact keyword search indices with intelligent semantic search databases and merging results with rank fusion algorithms, the system reliably finds the correct source paragraph across millions of documents.',
+        keyPoints: [
+          'Exact Keyword Indexing: Finds specific model numbers, acronyms, and precise phrases',
+          'Semantic Search: Understands user intent, synonyms, and conceptual relationships',
+          'Rank Fusion: Merges keyword and semantic results to surface the most relevant paragraph'
+        ],
+        calloutBox: 'Architecture Insight: Hybrid search delivers over 35% higher retrieval accuracy on technical manuals and legal contracts.'
       },
       {
-        title: '3. Production Guardrails & Hallucination Mitigation',
-        content: 'All LLM responses are validated using cross-encoder rerankers, deterministic schema parsers, and citation verification against raw retrieved text chunks before delivery to the end user.'
+        title: '3. Contextual Chunking & Role-Based Permission Filtering',
+        content: 'When indexing private corporate records, security boundaries are essential. Our architecture injects document metadata, department tags, and user permissions directly into the search index. When an employee searches the knowledge base, the search queries are automatically pre-filtered to return only documents the user is authorized to view according to company security policies.',
+        keyPoints: [
+          'Role-Based Access: Finance, HR, and Engineering documents isolated by user permission',
+          'Contextual Prepending: Every text section retains parent document title and chapter name',
+          'Document Versioning: Automatically deprecates outdated policies when new versions upload'
+        ],
+        calloutBox: 'Security Guarantee: Users cannot bypass document permissions through prompt engineering.'
+      },
+      {
+        title: '4. Production Guardrails & Hallucination Prevention',
+        content: 'Before an answer is streamed to the user, an automated validation layer verifies that every factual statement is directly supported by the retrieved text chunk. If a sentence lacks a verifiable citation, it is flagged and corrected. The user interface provides clickable citation badges that highlight the exact source paragraph in the original document viewer.',
+        keyPoints: [
+          'Sentence-level citation verification against approved source records',
+          'Clickable UI citation badges opening the original PDF page in a side panel',
+          'Automated fallback logic routing ambiguous questions to human subject experts'
+        ],
+        calloutBox: 'User Experience: Providing instant source verification builds executive confidence and accelerates adoption.'
+      },
+      {
+        title: '5. Private Cloud Deployment & Cost Governance',
+        content: 'Enterprise AI must live within your security perimeter. We deploy containerized Python services and relational databases directly into your private AWS or GCP virtual private cloud (VPC), with automated Redis caching to prevent redundant API token costs during high-traffic periods.',
+        keyPoints: [
+          'Dedicated cloud hosting within your private VPC with signed BAAs and NDAs',
+          'Smart response caching reducing monthly LLM token costs by up to 50%',
+          'Real-time execution tracing and token monitoring dashboards'
+        ],
+        calloutBox: 'Summary: Build production AI with enterprise security, verifiable accuracy, and predictable monthly infrastructure costs.'
+      }
+    ],
+    faqs: [
+      {
+        question: 'How do you guarantee our sensitive business records remain private?',
+        answer: 'We configure isolated private databases within your corporate cloud VPC and use enterprise model endpoints with strict zero-data-retention terms. Your private data is never exposed to public internet models or third-party training pipelines.'
+      },
+      {
+        question: 'What document file types can the knowledge search system ingest?',
+        answer: 'The system parses complex PDFs, Word documents, Excel spreadsheets, Google Drive folders, Notion workspaces, and SQL database records, preserving tables, headers, and bulleted lists.'
+      },
+      {
+        question: 'How long does it take to deploy a custom enterprise AI knowledge application?',
+        answer: 'Our standard enterprise AI sprint delivers a production-ready web platform with hybrid search, citation verification, and private cloud deployment in 6 to 10 weeks.'
       }
     ],
     relatedServiceSlugs: ['ai-agent-development', 'data-engineering', 'website-development']

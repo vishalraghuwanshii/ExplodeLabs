@@ -109,7 +109,7 @@ export const portfolioItems: PortfolioItem[] = [
     },
     deliverables: [
       'Mobile-First Responsive Booking Flow with 1-Click Payment Integrations',
-      'Vector SVG Interactive Campground Site Selection Tool',
+      'Scalable Interactive SVG Campground Site Selection Tool',
       'Real-Time Weather, Amenity, and Pet-Friendly Dynamic Filtering',
       'KOA Rewards VIP Portal Integration'
     ],
@@ -179,7 +179,7 @@ export const portfolioItems: PortfolioItem[] = [
     },
     deliverables: [
       'High-Empathy, Calming Healthcare UI/UX Design',
-      'HIPAA-Compliant Encrypted Patient Ingestion Form',
+      'HIPAA-Compliant Encrypted Patient Intake Portal',
       'Real-Time Private Insurance Benefit Verification Engine',
       'Virtual 360° Patient Room & Amenities Visual Tour'
     ],
@@ -194,7 +194,7 @@ export const portfolioItems: PortfolioItem[] = [
     categoryLabel: 'Web Design & Development',
     serviceSlug: 'full-stack-web-applications',
     serviceName: 'Industrial RFQ & Spec Sheet Application',
-    projectTitle: 'Turnkey PCB Assembly & Manufacturing RFQ Ingestion Portal',
+    projectTitle: 'Turnkey PCB Assembly & Manufacturing RFQ Intake Portal',
     tagline: 'B2B engineering portal driving $6.8M in contract manufacturing pipeline with automated Gerber CAD file parsing.',
     overview: 'EMSG is a contract electronics manufacturer specializing in surface mount (SMT), through-hole, and turnkey PCB assembly for defense, medical, and industrial clients.',
     challenge: 'Procurement engineers had to email bulky CAD/Gerber files back and forth with sales engineers, delaying quote turnarounds by up to 10 business days.',
@@ -292,7 +292,7 @@ export const portfolioItems: PortfolioItem[] = [
       'Construction Job-Site Perimeter Mesh Banners & Hardhat Decals',
       'Commercial RFP & Bid Proposal Presentation Template'
     ],
-    technologies: ['Vector CAD Specs', 'Pantone Metallic & Safety Inks', 'Adobe Creative Cloud']
+    technologies: ['Scalable CAD Specs', 'Pantone Metallic & Safety Inks', 'Adobe Creative Cloud']
   },
   {
     id: 'port_logo_3',
@@ -327,7 +327,7 @@ export const portfolioItems: PortfolioItem[] = [
       'Luxury Welcome Box & Post-Procedure Care Packaging',
       'Staff Uniform Embroidery Specs & Digital Patient App Theme'
     ],
-    technologies: ['Adobe Illustrator', 'Figma', 'Architectural Signage Vector CAD']
+    technologies: ['Adobe Illustrator', 'Figma', 'Architectural Signage CAD Specs']
   },
   {
     id: 'port_logo_4',
@@ -589,7 +589,7 @@ export const portfolioItems: PortfolioItem[] = [
     deliverables: [
       'Google Local Services Ads (Google Guaranteed) Verification & Setup',
       'Call-Only Emergency PPC Campaigns with Exact-Match Negative Keyword Lists',
-      'Dynamic Number Insertion (DNI) & Call Recording Telemetry via CallRail',
+      'Dynamic Number Insertion (DNI) & Call Recording Analytics via CallRail',
       'ServiceTitan Field Management Software CRM Webhook Integration'
     ],
     technologies: ['Google LSA', 'Google Ads', 'CallRail', 'ServiceTitan API', 'Looker Studio']
@@ -951,7 +951,6 @@ const serviceToPortfolioMap: Record<string, string> = {
   'meta-ads': 'port_smm_1',
   'google-ads': 'port_seo_2',
   'high-performance-paid-advertising': 'port_seo_2',
-  'local-seo': 'port_seo_2',
   'amazon-marketing': 'port_amazon_1',
   'amazon-and-marketplace-marketing': 'port_amazon_1',
   'programmatic-advertising': 'port_ctv_1',
@@ -966,8 +965,30 @@ const serviceToPortfolioMap: Record<string, string> = {
   'seo': 'port_seo_1',
   'technical-seo': 'port_seo_1',
   'technical-and-programmatic-seo': 'port_seo_1',
+  'local-seo': 'port_seo_2',
+  'local-and-franchise-seo': 'port_seo_2',
   'ai-search-optimization': 'port_seo_3',
   'chatgpt-and-perplexity-ai-seo': 'port_seo_3',
+  'ecommerce-seo': 'port_web_3',
+  'ecommerce-and-shopify-seo': 'port_web_3',
+  'digital-pr': 'port_seo_3',
+  'digital-pr-and-authority-link-building': 'port_seo_3',
+  'conversion-rate-optimization': 'port_web_2',
+  'conversion-rate-optimization-cro': 'port_web_2',
+  'cro': 'port_web_2',
+  'copywriting': 'port_seo_3',
+  'technical-copywriting-and-editorial': 'port_seo_3',
+  'content-marketing': 'port_seo_3',
+  'reputation-management': 'port_seo_3',
+  'online-reputation-management-and-reviews': 'port_seo_3',
+
+  // B2B Outbound & Email Marketing
+  'lead-generation': 'port_abm_1',
+  'b2b-outbound-sdr-and-lead-generation': 'port_abm_1',
+  'b2b-lead-generation-sdr': 'port_abm_1',
+  'email-marketing': 'port_web_3',
+  'lifecycle-and-cold-email-infrastructure': 'port_web_3',
+  'crm-setup-management': 'port_seo_1',
 
   // E-commerce
   'shopify-development': 'port_web_3',
@@ -978,10 +999,40 @@ const serviceToPortfolioMap: Record<string, string> = {
   // Web & App Dev
   'website-development': 'port_web_1',
   'custom-web-application-development': 'port_web_1',
+  'full-stack-web-applications': 'port_web_1',
+  'custom-software-development': 'port_web_1',
+  'api-development-integration': 'port_web_1',
+  'website-maintenance': 'port_web_1',
+  'website-redesign': 'port_web_1',
+  'legacy-system-migration-and-refactoring': 'port_web_1',
+  'ada-web-accessibility-and-compliance': 'port_web_1',
   'saas-development': 'port_web_5',
   'enterprise-saas-architecture': 'port_web_5',
   'mobile-app-development': 'port_web_2',
   'ios-and-android-mobile-apps': 'port_web_2',
+  'devops-cloud-and-cicd-infrastructure': 'port_web_5',
+  'cloud-services-aws-gcp': 'port_web_5',
+  'devops-ci-cd': 'port_web_5',
+  'cybersecurity-compliance-audits': 'port_web_5',
+
+  // AI & Automation (Pillar 6)
+  'custom-ai-agents-and-llm-pipelines': 'port_web_5',
+  'ai-agent-development': 'port_web_5',
+  'ai-agents': 'port_web_5',
+  'custom-ai-agents': 'port_web_5',
+  'autonomous-ai-agents': 'port_web_5',
+  'ai-chatbot-development': 'port_web_5',
+  'vector-search-and-rag-architecture': 'port_seo_3',
+  'rag-development': 'port_seo_3',
+  'enterprise-workflow-automation': 'port_web_1',
+  'workflow-automation': 'port_web_1',
+  'modern-data-stack-and-warehousing': 'port_seo_1',
+  'data-engineering': 'port_seo_1',
+  'web-scraping-and-data-pipelines': 'port_seo_1',
+  'web-scraping-automation': 'port_seo_1',
+  'ai-model-fine-tuning-and-quantization': 'port_web_5',
+  'business-intelligence-and-dashboards': 'port_seo_1',
+  'data-analytics': 'port_seo_1',
 };
 
 export function getPortfolioItemByServiceSlug(slug: string): PortfolioItem | undefined {

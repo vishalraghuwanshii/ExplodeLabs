@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { services, caseStudies, industries, solutions, guides } from '@/data/knowledge-graph';
 import { serviceDeepDives } from '@/data/service-deep-dives';
+import { blogPosts } from '@/data/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://explodelabs.com';
@@ -13,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/llms.txt`,
@@ -129,6 +136,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  // Blog Posts
+  const blogPostPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.85,
+  }));
+
   // Industries
   const industryPages: MetadataRoute.Sitemap = industries.map((ind) => ({
     url: `${baseUrl}/industries/${ind.slug}`,
@@ -156,6 +171,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages,
     ...servicePages,
+    ...blogPostPages,
     ...caseStudyPages,
     ...industryPages,
     ...solutionPages,

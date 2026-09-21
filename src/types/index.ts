@@ -72,10 +72,17 @@ export interface SolutionEntity {
   title: string;
   tagline: string;
   outcome: string;
+  executiveSummary?: string;
+  whyThisBundleMatters?: string;
   idealFor: string;
   problems: string[];
   bundledServiceSlugs: string[];
   deliverables: string[];
+  deliverablesMatrix?: {
+    category: string;
+    items: string[];
+    standards: string;
+  }[];
   technologies: string[];
   pricingRange: string;
   timeline: string;
@@ -84,6 +91,11 @@ export interface SolutionEntity {
     phase: string;
     duration: string;
     summary: string;
+    deliverables?: string[];
+  }[];
+  faqs?: {
+    question: string;
+    answer: string;
   }[];
 }
 
@@ -93,9 +105,31 @@ export interface IndustryEntity {
   name: string;
   tagline: string;
   overview: string;
+  executiveSummary?: string;
   complianceAndRegulations: string[];
   keyChallenges: string[];
   tailoredSolutions: string[];
+  whoWeHelp?: {
+    role: string;
+    focus: string;
+    painPoint: string;
+  }[];
+  fiveStageRoadmap?: {
+    phase: string;
+    title: string;
+    duration: string;
+    summary: string;
+    deliverables: string[];
+  }[];
+  comparisonMatrix?: {
+    capability: string;
+    legacyAgency: string;
+    explodeLabs: string;
+  }[];
+  faqs?: {
+    question: string;
+    answer: string;
+  }[];
   recommendedServiceSlugs: string[];
   caseStudySlugs: string[];
   benchmarkMetrics: {
@@ -159,10 +193,17 @@ export interface GuideEntity {
     role: string;
   };
   summary: string;
+  executiveTakeaway?: string;
   takeaways: string[];
   sections: {
     title: string;
     content: string;
+    keyPoints?: string[];
+    calloutBox?: string;
+  }[];
+  faqs?: {
+    question: string;
+    answer: string;
   }[];
   relatedServiceSlugs: string[];
 }

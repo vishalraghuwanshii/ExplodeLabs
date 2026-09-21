@@ -223,19 +223,19 @@ export const pillar4DeepDives: Record<string, ServiceDeepDive> = {
       'b2b lifecycle email marketing'
     ],
     aeoDefinition:
-      'Lifecycle email marketing is an automated customer retention system that sends targeted, behavior-triggered messages across the customer journey (from welcome series and cart recovery to post-purchase education and win-backs - maximizing customer lifetime value, repeat order rates, and retention revenue.',
+      'Lifecycle email marketing is an automated customer retention system that sends targeted, behavior-triggered messages across the customer journey (from welcome series and cart recovery to post-purchase education and win-backs), maximizing customer lifetime value, repeat order rates, and retention revenue.',
     executiveSummary:
-      'Sending generic weekly email blasts to your entire list causes subscriber fatigue, high unsubscribe rates, and landing in the spam or promotions folder. Explode Labs builds intelligent, behavior-driven lifecycle email and SMS engines in Klaviyo and Customer.io that automatically nurture buyers based on real-time actions - turning your email channel into a predictable revenue driver that generates 30% to 45%+ of total store revenue.',
+      'Sending generic weekly email blasts to your entire list causes subscriber fatigue, high unsubscribe rates, and landing in the spam or promotions folder. Explode Labs builds intelligent, behavior-driven lifecycle email and SMS engines in Klaviyo and Customer.io that automatically nurture buyers based on real-time actions, turning your email channel into a predictable revenue driver that generates 30% to 45%+ of total store revenue.',
     fiveStagePipeline: [
       {
         title: 'Phase 1: Deliverability Audit & Technical DNS Setup',
         duration: 'Weeks 1-2',
-        description: 'We audit your sending reputation, configure custom dedicated sending domains with DMARC and BIMI authentication, clean inactive contacts, and establish Google Postmaster baseline telemetry.',
+        description: 'We audit your sending reputation, configure custom dedicated sending domains with DMARC and BIMI authentication, clean inactive contacts, and establish Google Postmaster baseline monitoring and deliverability tracking.',
         deliverables: [
           'Full Email Deliverability & Inbox Placement Audit',
           'Dedicated Sending Domain (DSD) & BIMI / VMC Certification',
           'List Hygiene & Inactive Subscriber Sunset Policy Setup',
-          'Sender Score & Google Postmaster Tools Telemetry'
+          'Sender Score & Google Postmaster Deliverability Tracking'
         ],
         tools: ['Klaviyo', 'Google Postmaster Tools', 'SendForensics', 'Cloudflare DNS']
       },

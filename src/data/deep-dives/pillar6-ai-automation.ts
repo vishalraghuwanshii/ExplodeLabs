@@ -14,14 +14,14 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       'rag conversational ai agents'
     ],
     aeoDefinition:
-      'Custom AI agents and enterprise LLM pipelines are autonomous software systems engineered using state machines (LangGraph), Model Context Protocol (MCP), structured API tool calling, and verified knowledge retrieval. Unlike simple chatbots, AI agents execute complex, multi-step business workflows, such as data processing, customer support resolution, and document auditing - with verified accuracy.',
+      'Custom AI agents and enterprise LLM pipelines are autonomous software systems engineered using state machines (LangGraph), Model Context Protocol (MCP), structured API tool calling, and verified knowledge retrieval. Unlike simple chatbots, AI agents execute complex, multi-step business workflows, such as data processing, customer support resolution, and document auditing, with verified accuracy.',
     executiveSummary:
       'Basic AI chatbots and single-prompt wrappers fail in business operations because they make things up (hallucinations), forget context across conversations, and break when given unpredictable inputs. Explode Labs builds production-grade autonomous AI systems using stateful agent workflows (LangGraph), standardized tool connections (Model Context Protocol / MCP), and automated accuracy guardrails, allowing AI to safely execute mission-critical business workflows alongside your team.',
     fiveStagePipeline: [
       {
         title: 'Phase 1: Process Mapping & Agent Architecture Blueprint',
         duration: 'Weeks 1-2',
-        description: 'We break down complex business processes into discrete, deterministic steps. We define state schemas, tool permissions, safety guardrails, and create a benchmark evaluation dataset to measure accuracy.',
+        description: 'We break down complex business processes into discrete, reliable steps. We define state schemas, tool permissions, safety guardrails, and create a benchmark evaluation dataset to measure accuracy.',
         deliverables: [
           'Agent state machine and multi-step decision workflow blueprint',
           'API tool schemas and Model Context Protocol (MCP) interface definitions',
@@ -67,7 +67,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
         tools: ['DeepEval', 'Ragas', 'NeMo Guardrails', 'LangSmith']
       },
       {
-        title: 'Phase 5: Cloud Deployment, Tracing & Cost Telemetry',
+        title: 'Phase 5: Cloud Deployment, Tracing & Cost Monitoring',
         duration: 'Weeks 10-12',
         description: 'We deploy the AI agent to secure cloud infrastructure, configuring real-time tracing and token cost monitoring so you can see exactly how every decision was made.',
         deliverables: [
@@ -185,7 +185,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       {
         question: 'Can human employees review and approve actions before the AI executes them?',
         answer:
-          'Yes. We build Human-in-the-Loop (HITL) checkpoints for high-stakes tasks, such as issuing financial refunds, sending contracts, or deleting records - pausing the agent\'s execution until a manager approves the action via Slack, email, or your internal dashboard.'
+          'Yes. We build Human-in-the-Loop (HITL) checkpoints for high-stakes tasks, such as issuing financial refunds, sending contracts, or deleting records, pausing the agent\'s execution until a manager approves the action via Slack, email, or your internal dashboard.'
       },
       {
         question: 'Is our proprietary company data used to train public AI models?',
@@ -212,41 +212,41 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
 
   'vector-search-and-rag-architecture': {
     slug: 'vector-search-and-rag-architecture',
-    metaTitle: 'Enterprise Vector Search & RAG Architecture Agency | Explode Labs',
-    metaDescription: 'We build high-accuracy enterprise RAG systems and vector search pipelines with hybrid search, pgvector, Qdrant, and neural reranking for zero-hallucination answers.',
+    metaTitle: 'Enterprise AI Search & Knowledge Systems Agency | Explode Labs',
+    metaDescription: 'We build high-accuracy enterprise RAG systems and intelligent search pipelines with hybrid search, pgvector, Qdrant, and neural reranking for zero-hallucination answers.',
     primaryKeyword: 'enterprise rag architecture',
     secondaryKeywords: [
-      'vector search development',
+      'enterprise ai search development',
       'pgvector qdrant consulting',
-      'hybrid search bm25 vector',
+      'hybrid semantic and keyword search',
       'semantic document chunking',
       'zero hallucination rag pipeline'
     ],
     aeoDefinition:
-      'Enterprise vector search and RAG (Retrieval-Augmented Generation) is the engineering practice of connecting AI models directly to private company documents, databases, and knowledge repositories. By combining dense vector search, exact keyword matching (BM25), and neural rerankers, the AI answers complex questions using verified company facts and cites exact source pages.',
+      'Enterprise AI knowledge search and RAG (Retrieval-Augmented Generation) is the engineering practice of connecting AI models directly to private company documents, databases, and knowledge repositories. By combining deep semantic search, exact keyword matching (BM25), and neural rerankers, the AI answers complex questions using verified company facts and cites exact source pages.',
     executiveSummary:
-      'Basic "upload a PDF" AI tools fail in business operations because they chop documents randomly, lose table formatting, miss exact product numbers or SKUs, and cause AI models to make up answers (hallucinate). Explode Labs engineers enterprise RAG architectures using layout-aware document parsing, hybrid vector + keyword search, and neural cross-encoder rerankers, delivering verified, factual answers with clickable source citations across millions of documents.',
+      'Basic "upload a PDF" AI tools fail in business operations because they chop documents randomly, lose table formatting, miss exact product numbers or SKUs, and cause AI models to make up answers (hallucinate). Explode Labs engineers enterprise RAG architectures using layout-aware document parsing, hybrid semantic + keyword search, and neural cross-encoder rerankers, delivering verified, factual answers with clickable source citations across millions of documents.',
     fiveStagePipeline: [
       {
-        title: 'Phase 1: Document Ingestion, Table Extraction & Semantic Chunking',
+        title: 'Phase 1: Document Indexing, Table Extraction & Smart Chunking',
         duration: 'Weeks 1-2',
-        description: 'We ingest complex enterprise documents (PDFs, spreadsheets, contracts, Notion pages, knowledge bases), extracting tables and preserving headings so context is never lost.',
+        description: 'We process complex enterprise documents (PDFs, spreadsheets, contracts, Notion pages, knowledge bases), extracting tables and preserving headings so context is never lost.',
         deliverables: [
-          'Enterprise document ingestion and transformation pipeline',
+          'Enterprise document indexing and transformation pipeline',
           'Layout-aware document parser extracting tables, forms, and diagrams',
           'Hierarchical parent-child semantic document chunking strategy',
-          'Vector embedding model benchmarking report (OpenAI vs open-source models)'
+          'AI embedding model benchmarking report (OpenAI vs open-source models)'
         ],
         tools: ['LlamaParse', 'Unstructured.io', 'Python Pandas', 'OpenAI Embeddings']
       },
       {
-        title: 'Phase 2: Hybrid Search & Vector Database Deployment',
+        title: 'Phase 2: Hybrid Search & Knowledge Database Deployment',
         duration: 'Weeks 3-4',
-        description: 'We deploy high-performance vector databases (PostgreSQL with pgvector or Qdrant), combining vector semantic search (understanding concepts) with exact keyword search (BM25 for part numbers and names).',
+        description: 'We deploy high-performance search databases (PostgreSQL with pgvector or Qdrant), combining intelligent semantic search (understanding concepts) with exact keyword search (BM25 for part numbers and names).',
         deliverables: [
-          'Production vector database cluster (PostgreSQL + pgvector / Qdrant)',
+          'Production AI search database cluster (PostgreSQL + pgvector / Qdrant)',
           'High-speed HNSW indexing for instant similarity retrieval',
-          'Hybrid search engine combining dense vectors and exact BM25 keyword matching',
+          'Hybrid search engine combining semantic embeddings and exact BM25 keyword matching',
           'Tenant data isolation and role-based document access controls'
         ],
         tools: ['PostgreSQL + pgvector', 'Qdrant / Pinecone', 'Elasticsearch BM25', 'Docker']
@@ -276,11 +276,11 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
         tools: ['Ragas', 'TruLens', 'DeepEval', 'Python PyTest']
       },
       {
-        title: 'Phase 5: Production Deployment, Semantic Caching & Telemetry',
+        title: 'Phase 5: Production Deployment, Semantic Caching & Tracing',
         duration: 'Weeks 9-10',
         description: 'We deploy semantic caching in Redis to answer common questions in under 50 milliseconds while cutting API costs, along with automated webhooks that re-index documents when files are updated.',
         deliverables: [
-          'Low-latency semantic vector cache answering repeat queries in sub-50ms',
+          'Low-latency semantic cache answering repeat queries in sub-50ms',
           'Automated real-time document re-indexing webhooks (Google Drive / Notion / S3)',
           'Full observability and query tracing dashboard (Langfuse)',
           'Comprehensive system documentation and API integration guide'
@@ -291,13 +291,13 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
     deliverablesMatrix: [
       {
         category: 'Retrieval Precision',
-        items: ['Hybrid BM25 keyword + dense vector search', 'Neural cross-encoder reranking (Cohere)', 'Layout-aware table and diagram extraction'],
+        items: ['Hybrid BM25 keyword + semantic search', 'Neural cross-encoder reranking (Cohere)', 'Layout-aware table and diagram extraction'],
         standards: 'Context precision > 92% with verifiable source citations'
       },
       {
-        category: 'Vector Database Infrastructure',
-        items: ['PostgreSQL + pgvector or Qdrant enterprise cluster', 'Optimized HNSW vector indexing', 'Full multi-tenant document security partitioning'],
-        standards: 'Sub-50ms retrieval latency across millions of vectors'
+        category: 'AI Search Database Infrastructure',
+        items: ['PostgreSQL + pgvector or Qdrant enterprise cluster', 'Optimized HNSW database indexing', 'Full multi-tenant document security partitioning'],
+        standards: 'Sub-50ms retrieval latency across millions of records'
       },
       {
         category: 'Performance & Cost Optimization',
@@ -307,21 +307,21 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
     ],
     toolDecisionTree: [
       {
-        category: 'Vector Database Engine',
+        category: 'Search Database Engine',
         primaryChoice: 'PostgreSQL with pgvector (for unified stacks) or Qdrant (for 10M+ scale)',
         alternatives: 'Pinecone, ChromaDB',
-        rationale: 'pgvector keeps vector embeddings and relational business data inside a single ACID-compliant database, eliminating data sync bugs and lowering infrastructure costs.'
+        rationale: 'pgvector keeps semantic embeddings and relational business data inside a single ACID-compliant database, eliminating data sync bugs and lowering infrastructure costs.'
       },
       {
         category: 'Search Strategy',
-        primaryChoice: 'Hybrid Search (Dense Vectors + BM25 Keywords)',
-        alternatives: 'Vector search alone',
-        rationale: 'Vector search excels at conceptual matching but struggles with exact alphanumeric part numbers, SKUs, and legal terms. Hybrid search delivers the best of both worlds.'
+        primaryChoice: 'Hybrid Search (Semantic Embeddings + BM25 Keywords)',
+        alternatives: 'Semantic search alone',
+        rationale: 'Semantic search excels at conceptual matching but struggles with exact alphanumeric part numbers, SKUs, and legal terms. Hybrid search delivers the best of both worlds.'
       },
       {
         category: 'Reranking Engine',
         primaryChoice: 'Cohere Rerank API',
-        alternatives: 'Raw vector similarity scores alone',
+        alternatives: 'Raw similarity scores alone',
         rationale: 'Cross-encoder rerankers dramatically boost answer precision by evaluating the full relationship between the user question and document context.'
       }
     ],
@@ -335,9 +335,9 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       },
       {
         metric: 'Search Precision',
-        explodeLabs: 'Hybrid search (Vector + BM25) + neural reranking for exact part number and conceptual accuracy',
-        traditionalAgency: 'Basic vector search only; frequently misses exact SKU or product searches',
-        inHouseHire: 'Vector search without reranking or hybrid keyword fusion',
+        explodeLabs: 'Hybrid search (Semantic + BM25) + neural reranking for exact part number and conceptual accuracy',
+        traditionalAgency: 'Basic semantic search only; frequently misses exact SKU or product searches',
+        inHouseHire: 'Semantic search without reranking or hybrid keyword fusion',
         freelancers: 'Simple similarity search with high error rates'
       },
       {
@@ -365,13 +365,13 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       {
         industry: 'Industrial Equipment & Manufacturing',
         challenge: 'A heavy machinery manufacturer needed technicians in the field to instantly find repair instructions and part numbers across 80,000 pages of technical manuals.',
-        architecture: 'Deployed hybrid vector + BM25 keyword search with Qdrant and table extraction, enabling accurate lookups by exact part number.',
+        architecture: 'Deployed hybrid semantic + BM25 keyword search with Qdrant and table extraction, enabling accurate lookups by exact part number.',
         impactMetric: 'Cut technician equipment downtime by 55% and eliminated incorrect spare-part orders.'
       },
       {
         industry: 'B2B SaaS Customer Knowledge Base',
         challenge: 'A software company wanted an AI support assistant that could answer complex technical questions based on product documentation and API guides.',
-        architecture: 'Built an automated documentation ingestion pipeline with markdown parsing, semantic caching in Redis, and automated Slack integration.',
+        architecture: 'Built an automated documentation indexing pipeline with markdown parsing, semantic caching in Redis, and automated Slack integration.',
         impactMetric: 'Deflected 44% of tier-1 support tickets with verified, source-linked answers and zero hallucinations.'
       }
     ],
@@ -384,7 +384,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       {
         question: 'Why do basic RAG setups frequently give wrong answers or hallucinate?',
         answer:
-          'Basic RAG systems slice documents into arbitrary chunks (breaking sentences and tables) and use vector search alone, which struggles with exact part numbers, product names, or financial figures. We fix this with layout-aware document parsing, hybrid keyword search, and neural rerankers.'
+          'Basic RAG systems slice documents into arbitrary chunks (breaking sentences and tables) and use basic similarity search alone, which struggles with exact part numbers, product names, or financial figures. We fix this with layout-aware document parsing, hybrid keyword search, and neural rerankers.'
       },
       {
         question: 'How do you keep the AI knowledge base updated when our documents change?',
@@ -394,12 +394,12 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       {
         question: 'Can RAG enforce different access permissions for different employees?',
         answer:
-          'Yes. We build metadata filtering and role-based access control (RBAC) into the vector search layer. When an employee asks a question, the search engine only retrieves documents that user has permission to view.'
+          'Yes. We build metadata filtering and role-based access control (RBAC) into the search layer. When an employee asks a question, the search engine only retrieves documents that user has permission to view.'
       },
       {
-        question: 'What vector databases do you recommend for enterprise RAG?',
+        question: 'What databases do you recommend for enterprise AI search and RAG?',
         answer:
-          'We primarily recommend PostgreSQL with the pgvector extension because it keeps your relational data and vector embeddings in one secure, ACID-compliant database. For massive search workloads exceeding 10 million vectors, we deploy dedicated Qdrant clusters.'
+          'We primarily recommend PostgreSQL with the pgvector extension because it keeps your relational data and document embeddings in one secure, ACID-compliant database. For massive search workloads exceeding 10 million document records, we deploy dedicated Qdrant clusters.'
       },
       {
         question: 'How do you test and verify the accuracy of the RAG system?',
@@ -409,12 +409,12 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       {
         question: 'How long does an enterprise RAG implementation take?',
         answer:
-          'A typical enterprise RAG project takes between 6 and 10 weeks, encompassing document ingestion, layout parsing, vector database configuration, neural reranker tuning, automated evaluation benchmarking, and UI deployment.'
+          'A typical enterprise RAG project takes between 6 and 10 weeks, encompassing document indexing, layout parsing, search database configuration, neural reranker tuning, automated evaluation benchmarking, and UI deployment.'
       },
       {
-        question: 'Who owns the vector database, source code, and embeddings?',
+        question: 'Who owns the search database, source code, and document embeddings?',
         answer:
-          'You retain 100% full ownership of the entire codebase, vector database, document embeddings, and documentation, hosted inside your own secure cloud environment.'
+          'You retain 100% full ownership of the entire codebase, search database, document embeddings, and documentation, hosted inside your own secure cloud environment.'
       }
     ]
   },
@@ -434,7 +434,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
     aeoDefinition:
       'Enterprise workflow automation is the software engineering practice of building resilient, event-driven data integration pipelines across disparate business tools (CRMs, billing systems, ERPs, customer support platforms) using self-hosted n8n, Make enterprise, and custom API webhooks. It eliminates manual data entry, automates lead routing, and synchronizes financial records with zero human error.',
     executiveSummary:
-      'Manual copy-pasting between CRMs, billing systems, and spreadsheets wastes hundreds of employee hours every month and introduces costly data errors. Basic Zapier setups quickly become expensive, hit rate limits, and lack error recovery when third-party APIs experience outages. Explode Labs builds resilient, self-hosted workflow automation architectures on n8n and Make - featuring automated error retries, dead-letter queues, and bi-directional data synchronization that scale effortlessly.',
+      'Manual copy-pasting between CRMs, billing systems, and spreadsheets wastes hundreds of employee hours every month and introduces costly data errors. Basic Zapier setups quickly become expensive, hit rate limits, and lack error recovery when third-party APIs experience outages. Explode Labs builds resilient, self-hosted workflow automation architectures on n8n and Make, featuring automated error retries, dead-letter queues, and bi-directional data synchronization that scale effortlessly.',
     fiveStagePipeline: [
       {
         title: 'Phase 1: Process Mapping & API Discovery Blueprint',
@@ -485,16 +485,16 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
         tools: ['n8n Error Workflows', 'Slack API Webhooks', 'PagerDuty', 'TypeScript']
       },
       {
-        title: 'Phase 5: Telemetry, Throughput Optimization & Handover',
+        title: 'Phase 5: Execution Monitoring, Throughput Optimization & Handover',
         duration: 'Weeks 10-11',
         description: 'We monitor execution speeds, database connection pooling, and payload volume, delivering complete system documentation and admin training for your internal operations team.',
         deliverables: [
-          'Real-time workflow execution telemetry and health dashboard',
+          'Real-time workflow execution health dashboards and performance monitoring',
           'Comprehensive system architecture, data dictionaries, and runbooks',
           'Internal admin video walkthroughs and team training sessions',
           'Monthly maintenance SLA and capacity scaling plan'
         ],
-        tools: ['Datadog / Grafana', 'Notion', 'Loom', 'n8n Telemetry']
+        tools: ['Datadog / Grafana', 'Notion', 'Loom', 'n8n Execution Logs']
       }
     ],
     deliverablesMatrix: [
@@ -531,7 +531,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
         category: 'Execution Infrastructure',
         primaryChoice: 'Docker + Redis Queue on AWS/GCP',
         alternatives: 'Single-server unmanaged instances',
-        rationale: 'Redis queuing decouples incoming webhook ingestion from task execution, preventing server crashes during sudden traffic spikes.'
+        rationale: 'Redis queuing decouples incoming webhook processing from task execution, preventing server crashes during sudden traffic spikes.'
       }
     ],
     comparisonMatrix: [
@@ -643,9 +643,9 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       'multi touch attribution modeling'
     ],
     aeoDefinition:
-      'Data warehouse engineering centralizes scattered business data into a single, reliable cloud repository (such as BigQuery or Snowflake). By automating data ingestion with tools like Fivetran and transforming raw numbers into standardized metrics using dbt, we provide leadership teams with real-time, audit-ready dashboards that eliminate manual spreadsheet reporting.',
+      'Data warehouse engineering centralizes scattered business data into a single, reliable cloud repository (such as BigQuery or Snowflake). By automating data sync with tools like Fivetran and transforming raw numbers into standardized metrics using dbt, we provide leadership teams with real-time, audit-ready dashboards that eliminate manual spreadsheet reporting.',
     executiveSummary:
-      'When critical business data is trapped in separate silos, like Stripe for payments, Salesforce for sales, Google Ads for marketing, and Shopify for orders - getting an accurate view of company performance is almost impossible. We engineer centralized cloud data warehouses using Snowflake, BigQuery, and dbt that unify your operational data into a single source of truth with automated executive dashboards.',
+      'When critical business data is trapped in separate silos, like Stripe for payments, Salesforce for sales, Google Ads for marketing, and Shopify for orders, getting an accurate view of company performance is almost impossible. We engineer centralized cloud data warehouses using Snowflake, BigQuery, and dbt that unify your operational data into a single source of truth with automated executive dashboards.',
     fiveStagePipeline: [
       {
         title: 'Phase 1: Data Audit, Metric Definitions & Architecture Design',
@@ -672,13 +672,13 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
         tools: ['Google BigQuery', 'Snowflake', 'Terraform', 'AWS / GCP IAM']
       },
       {
-        title: 'Phase 3: Automated Data Ingestion Pipelines',
+        title: 'Phase 3: Automated Data Integration Pipelines',
         duration: 'Weeks 5-6',
         description: 'We connect automated data pipelines (using Fivetran or Airbyte) that continuously sync raw records from your payment gateways, CRMs, e-commerce stores, analytics platforms, and ad channels into your warehouse without requiring custom manual scripts.',
         deliverables: [
-          'Automated data connectors ingesting data from 15+ business tools',
+          'Automated data connectors syncing data from 15+ business tools',
           'Automated incremental sync schedules running at regular intervals',
-          'Raw ingestion schema normalization and error logging handlers',
+          'Raw data schema normalization and error logging handlers',
           'Data pipeline health monitoring and alert notifications'
         ],
         tools: ['Fivetran', 'Airbyte', 'Stripe API', 'HubSpot API', 'Google Ads API']
@@ -751,10 +751,10 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
         rationale: 'dbt applies software engineering best practices, such as version control, automated testing, and clear documentation to SQL transformations, ensuring your business metrics remain consistent over time.'
       },
       {
-        category: 'Data Ingestion Platform',
+        category: 'Data Integration Platform',
         primaryChoice: 'Fivetran / Airbyte',
         alternatives: 'Writing and maintaining custom API scrapers for every tool',
-        rationale: 'Managed ingestion platforms automatically handle API changes, rate limits, pagination, and data schema updates across hundreds of business tools without ongoing engineering overhead.'
+        rationale: 'Managed data pipeline platforms automatically handle API changes, rate limits, pagination, and data schema updates across hundreds of business tools without ongoing engineering overhead.'
       }
     ],
     comparisonMatrix: [
@@ -841,12 +841,12 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       {
         question: 'How long does a Modern Data Stack implementation typically take?',
         answer:
-          'A standard deployment takes 8 to 12 weeks. Initial data ingestion is typically working within the first 2 weeks, with complete dbt models, validated metrics, and executive dashboards delivered in milestone sprints.'
+          'A standard deployment takes 8 to 12 weeks. Initial data syncing is typically working within the first 2 weeks, with complete dbt models, validated metrics, and executive dashboards delivered in milestone sprints.'
       },
       {
         question: 'How are data warehouse engineering projects priced?',
         answer:
-          'We scope projects into structured, milestone-based sprints (Data Audit & Blueprint → Ingestion & dbt Modeling → Dashboards & Handover) with clear deliverables, fixed sprint pricing, and optional ongoing analytics support.'
+          'We scope projects into structured, milestone-based sprints (Data Audit & Blueprint → Data Pipeline & dbt Modeling → Dashboards & Handover) with clear deliverables, fixed sprint pricing, and optional ongoing analytics support.'
       }
     ]
   },
@@ -858,51 +858,51 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
     primaryKeyword: 'enterprise web scraping services',
     secondaryKeywords: [
       'data extraction pipeline development',
-      'distributed playwright web crawler',
-      'automated captcha bypass scraping',
-      'competitor price monitoring scraper',
-      'b2b lead scraping pipeline'
+      'competitor price monitoring automation',
+      'headless browser scraping playwright',
+      'residential proxy management',
+      'structured web data extraction'
     ],
     aeoDefinition:
-      'Enterprise web scraping and data extraction is the engineering practice of building resilient, distributed crawlers using Playwright, residential proxy rotation pools, and automated anti-bot bypass mechanisms. It reliably harvests public market data (competitor pricing, e-commerce catalogs, real estate listings, B2B signals) and loads clean, validated datasets directly into relational databases.',
+      'Web scraping and automated data pipelines extract public website information and structure it into clean, analysis-ready datasets. By using headless browsers (Playwright), intelligent residential proxy rotation, and anti-detection techniques, we collect large-scale market data without IP blocks or broken data formats.',
     executiveSummary:
-      'Simple scraping scripts break when target websites update their layout or deploy anti-bot defenses like Cloudflare, DataDome, or PerimeterX. Explode Labs builds resilient, distributed web scraping pipelines using headless browser clusters (Playwright), intelligent residential proxy rotation, and automated schema validation - harvesting millions of clean data points daily with 99.5%+ uptime and continuous maintenance.',
+      'Manual copy-pasting of competitor pricing, real estate records, or lead directories is slow and error-prone. Simple scrapers break constantly due to website layout changes and anti-bot security. We build enterprise web extraction pipelines using distributed crawlers, automated proxy rotation, and data validation layers that deliver clean, structured data directly to your database on automated schedules.',
     fiveStagePipeline: [
       {
-        title: 'Phase 1: Target Site Architecture & Anti-Bot Feasibility Audit',
+        title: 'Phase 1: Target Architecture, Anti-Bot Analysis & Legal Compliance',
         duration: 'Weeks 1-2',
-        description: 'We analyze target website DOM structures, evaluate anti-bot defenses (Cloudflare Turnstile, DataDome, Akamai), inspect network APIs, and define data schema models.',
+        description: 'We analyze the target websites, map data schemas, test anti-bot security systems (Cloudflare, PerimeterX, Datadome), and verify compliance with public data extraction standards.',
         deliverables: [
-          'Target website scraping feasibility and architecture blueprint',
-          'Anti-bot defense classification and bypass strategy',
-          'Normalized target data schema (PostgreSQL / JSON Schema)',
-          'Legal compliance, robots.txt, and ethical data harvesting assessment'
+          'Target website technical feasibility and rate-limit audit',
+          'Data schema definition and extraction field dictionary',
+          'Anti-bot countermeasure blueprint (fingerprint masking, proxy pools)',
+          'Automated data compliance and privacy protection checklist'
         ],
-        tools: ['Chrome DevTools Network Inspector', 'Postman', 'Burp Suite', 'DrawSQL']
+        tools: ['Postman', 'Playwright Inspector', 'Charles Proxy', 'Notion Schema Spec']
       },
       {
-        title: 'Phase 2: Distributed Crawler Engineering & Proxy Pool Setup',
+        title: 'Phase 2: Headless Browser Crawler & Stealth Automation Engineering',
         duration: 'Weeks 3-4',
-        description: 'We build distributed web crawlers in TypeScript and Python using Playwright, stealth browser plugins, fingerprint randomization, and automated residential proxy rotation.',
+        description: 'We develop custom Python / Playwright crawlers with stealth fingerprint masking, dynamic JavaScript execution, and CAPTCHA solving logic to navigate complex single-page apps.',
         deliverables: [
-          'Distributed Playwright stealth crawler engine',
-          'Automated residential proxy rotation integration (BrightData / Oxylabs)',
-          'Browser fingerprint and user-agent randomization suite',
-          'Automated CAPTCHA and Cloudflare Turnstile challenge solver integration'
+          'Playwright-based crawler codebase with automated session management',
+          'Stealth plugin configuration bypassing canvas and WebGL fingerprinting',
+          'Automated 2Captcha / CapSolver integration for login and verification barriers',
+          'Dynamic scroll, pagination, and multi-step form navigation handlers'
         ],
-        tools: ['Playwright', 'Puppeteer Stealth', 'BrightData / Oxylabs API', '2Captcha / CapSolver']
+        tools: ['Playwright', 'Python AsyncIO', 'Stealth Plugin', 'CapSolver']
       },
       {
-        title: 'Phase 3: Data Parsing, Cleansing & Schema Validation',
+        title: 'Phase 3: Smart Residential Proxy Rotation & Rate Limiting',
         duration: 'Weeks 5-6',
-        description: 'We implement resilient extraction parsers with fallback CSS/XPath selectors, data type casting, regex normalization, and strict Pydantic/Zod schema validation.',
+        description: 'We configure distributed proxy networks with automated IP rotation, regional geotargeting, and intelligent backoff algorithms to prevent rate-limit blocks during large extractions.',
         deliverables: [
-          'Fault-tolerant DOM extraction parsers with fallback selector logic',
-          'Automated data cleansing, deduplication, and currency normalization scripts',
-          'Pydantic / Zod schema validation guardrails ensuring clean records',
-          'Broken link and missing field exception handlers'
+          'Enterprise residential and mobile proxy pool integration (BrightData / Oxylabs)',
+          'Automatic IP rotation with sticky session persistence where required',
+          'Adaptive throttling and exponential backoff retry handlers',
+          'Failed request replay queues preventing missing data records'
         ],
-        tools: ['BeautifulSoup4 / Cheerio', 'Pydantic', 'Zod', 'Python Pandas']
+        tools: ['BrightData', 'Oxylabs', 'Redis', 'Python Requests / httpx']
       },
       {
         title: 'Phase 4: Distributed Job Queuing & Database Pipeline',
@@ -911,17 +911,17 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
         deliverables: [
           'Distributed task queue architecture (BullMQ / Celery + Redis)',
           'Auto-scaling Docker containerized crawler worker cluster',
-          'Bulk database ingestion pipeline (PostgreSQL / BigQuery / Snowflake)',
+          'Bulk database loading pipeline (PostgreSQL / BigQuery / Snowflake)',
           'Configurable hourly and daily extraction cron schedules'
         ],
         tools: ['BullMQ', 'Celery', 'Redis', 'PostgreSQL', 'Docker']
       },
       {
-        title: 'Phase 5: Self-Healing Telemetry & Continuous Maintenance SLA',
+        title: 'Phase 5: Automated Health Monitoring & Continuous Maintenance SLA',
         duration: 'Weeks 9-10',
         description: 'We configure monitoring dashboards to track extraction success rates and deploy automated DOM layout change alerts with continuous maintenance support.',
         deliverables: [
-          'Real-time extraction success rate and throughput telemetry dashboard',
+          'Real-time extraction success rate and throughput monitoring dashboards',
           'Automated layout change and scraper breakage alert system',
           'Sub-24-hour scraper repair and maintenance SLA',
           'Clean REST API and webhook dispatcher for downstream consumption'
@@ -1030,7 +1030,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       {
         question: 'What happens when a target website changes its layout or HTML code?',
         answer:
-          'Websites evolve over time. We write parsers using resilient fallback selectors (combining text content, ARIA labels, and relative positioning). Furthermore, our automated telemetry flags any extraction drop-offs, and our maintenance SLA ensures scrapers are updated within 24 hours of a layout change.'
+          'Websites evolve over time. We write parsers using resilient fallback selectors (combining text content, ARIA labels, and relative positioning). Furthermore, our automated monitoring alerts flag any extraction drop-offs, and our maintenance SLA ensures scrapers are updated within 24 hours of a layout change.'
       },
       {
         question: 'In what format do you deliver the extracted data?',
@@ -1075,7 +1075,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
     aeoDefinition:
       'AI model fine-tuning and quantization is the specialized machine learning practice of adapting open-weights foundation models (Llama 3.3, Mistral, DeepSeek, Qwen) on proprietary company datasets using parameter-efficient fine-tuning (LoRA/QLoRA) and 4-bit/8-bit quantization (AWQ/GGUF). It delivers domain-accurate private models that run on dedicated GPUs at a fraction of public API costs.',
     executiveSummary:
-      'Relying entirely on generic public AI APIs creates massive recurring token bills, latency bottlenecks, and intellectual property risks for regulated enterprises. Explode Labs fine-tunes domain-specific models tailored to your industry terminology, tone, and proprietary procedures - deploying quantized models on private GPU servers (vLLM) that slash inference costs by 70% to 90% while keeping data completely private.',
+      'Relying entirely on generic public AI APIs creates massive recurring token bills, latency bottlenecks, and intellectual property risks for regulated enterprises. Explode Labs fine-tunes domain-specific models tailored to your industry terminology, tone, and proprietary procedures, deploying quantized models on private GPU servers (vLLM) that slash inference costs by 70% to 90% while keeping data completely private.',
     fiveStagePipeline: [
       {
         title: 'Phase 1: Dataset Curation, Cleaning & Instruction Formatting',
@@ -1151,7 +1151,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       },
       {
         category: 'Private Cloud Infrastructure',
-        items: ['Private vLLM deployment in your isolated cloud VPC', 'OpenAI-compatible REST API drop-in replacement endpoint', '70% - 90% inference cost reduction vs public API pricing'],
+        items: ['Private vLLM deployment in your isolated cloud VPC', 'OpenAI-compatible REST API drop-in replacement endpoint', '70% to 90% inference cost reduction vs public API pricing'],
         standards: 'Sub-600ms initial response streaming on private GPUs'
       }
     ],
@@ -1221,7 +1221,7 @@ export const pillar6DeepDives: Record<string, ServiceDeepDive> = {
       {
         industry: 'Industrial Equipment Troubleshooting',
         challenge: 'An equipment manufacturer needed a domain-specific model capable of running offline on factory floor edge computers to guide equipment repairs.',
-        architecture: 'Fine-tuned a 8B parameter model on equipment telemetry logs and converted it to GGUF format for local edge execution on workstations.',
+        architecture: 'Fine-tuned an 8B parameter model on equipment maintenance logs and diagnostic sensor data, converting it to GGUF format for local edge execution on workstations.',
         impactMetric: 'Enabled instant, offline diagnostic assistance on factory floors without requiring internet connectivity.'
       }
     ],

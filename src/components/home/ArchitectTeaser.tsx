@@ -43,8 +43,8 @@ export function ArchitectTeaser() {
               <Button href="/architect" size="lg" variant="primary" withArrow>
                 Launch AI Project Architect
               </Button>
-              <Button href="/tools/project-estimator" size="lg" variant="outline">
-                Manual Scope Estimator
+              <Button href="https://calendly.com/vishal-invokeiq/30min" size="lg" variant="outline">
+                Book 30-Min Strategy Call
               </Button>
             </div>
           </div>

@@ -108,7 +108,9 @@ ${cs.testimonial ? `- **Testimonial**: "${cs.testimonial.quote}" - ${cs.testimon
 
 ## 6. Contact & Consultation
 - **Founder**: Vishal Raghuwanshi (https://www.linkedin.com/in/vishal-raghu/)
+- **Calendly Strategy Call**: https://calendly.com/vishal-invokeiq/30min
 - **Contact Page**: https://explodelabs.com/contact
+- **Blog & Insights**: https://explodelabs.com/blog
 - **Interactive Tools**:
   - Free SEO/AEO Auditor: https://explodelabs.com/tools/seo-auditor
   - Project Estimator: https://explodelabs.com/tools/project-estimator

@@ -90,7 +90,7 @@ export function InteractiveDiscovery() {
         {
           name: '3D Product Modeling & CGI',
           slug: '3d-product-modeling-and-rendering',
-          desc: 'Photorealistic 3D product renders, CAD ingestion, and interactive WebGL 3D configurators.',
+          desc: 'Photorealistic 3D product renders, CAD import, and interactive WebGL 3D configurators.',
           timeline: '2 to 4 Weeks Delivery',
           tags: ['Blender', 'Unreal Engine 5', 'Three.js', 'PBR Textures']
         },
@@ -194,16 +194,16 @@ export function InteractiveDiscovery() {
         {
           name: 'Custom AI Agents & Multi-Agent Workflows',
           slug: 'custom-ai-agents-and-llm-pipelines',
-          desc: 'Autonomous multi-agent orchestration with LangGraph, Model Context Protocol (MCP), and hallucination guardrails.',
+          desc: 'Autonomous multi-agent workflows with LangGraph, Model Context Protocol (MCP), and hallucination guardrails.',
           timeline: '4 to 8 Weeks Sprints',
           tags: ['LangGraph', 'MCP Servers', 'Claude 3.5', 'Pydantic AI']
         },
         {
-          name: 'Vector Search & Enterprise RAG',
+          name: 'Intelligent AI Search & Enterprise RAG',
           slug: 'vector-search-and-rag-architecture',
-          desc: 'Hybrid vector search (Qdrant/pgvector) and Cohere Rerank models powering zero-hallucination knowledge bases.',
+          desc: 'Hybrid semantic search (Qdrant/pgvector) and Cohere Rerank models powering zero-hallucination knowledge bases.',
           timeline: '3 to 6 Weeks Setup',
-          tags: ['pgvector', 'Qdrant', 'Cohere Rerank', 'Hybrid Search']
+          tags: ['PostgreSQL pgvector', 'Qdrant', 'Cohere Rerank', 'Hybrid Search']
         },
         {
           name: 'Enterprise Workflow Automation',

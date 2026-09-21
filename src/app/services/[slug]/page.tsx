@@ -669,11 +669,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
               <div className="p-5 bg-[#121212] border border-[#242424] rounded-xl flex items-center justify-between gap-4">
                 <div>
-                  <div className="text-sm font-bold text-[#f5f5f0] mb-1">Calculate Milestone Scope</div>
-                  <div className="text-xs text-[#71717a]">Estimate timelines & budget tier for your requirements</div>
+                  <div className="text-sm font-bold text-[#f5f5f0] mb-1">Book a Strategy Session</div>
+                  <div className="text-xs text-[#71717a]">30-minute direct consultation with senior leadership</div>
                 </div>
-                <Button href="/tools/project-estimator" size="sm" variant="primary" className="shrink-0 text-xs" withArrow>
-                  Estimate Scope
+                <Button href="https://calendly.com/vishal-invokeiq/30min" size="sm" variant="primary" className="shrink-0 text-xs" withArrow>
+                  Book 30-Min Call
                 </Button>
               </div>
             </div>
@@ -795,11 +795,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               Get a custom milestone proposal with transparent sprint deliverables, clear timelines, and full source code ownership.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button href="/contact" size="lg" variant="primary" withArrow>
-                {ctaText}
+              <Button href="https://calendly.com/vishal-invokeiq/30min" size="lg" variant="primary" withArrow>
+                Book 30-Min Strategy Call
               </Button>
-              <Button href="/tools/project-estimator" size="lg" variant="outline">
-                Calculate Milestone Scope
+              <Button href="/contact" size="lg" variant="outline">
+                {ctaText}
               </Button>
             </div>
           </div>

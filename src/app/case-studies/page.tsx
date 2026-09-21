@@ -63,7 +63,7 @@ export default function CaseStudiesPage() {
             Proven Execution.
           </h1>
           <p className="text-base sm:text-lg text-[#8e8e93] leading-relaxed">
-            Detailed engineering breakdowns, telemetry benchmarks, and verifiable revenue outcomes achieved across our 35 flagship services.
+            Detailed engineering breakdowns, performance benchmarks, and verifiable revenue outcomes achieved across our 35 flagship services.
           </p>
 
           {/* Switcher to Visual Portfolio */}

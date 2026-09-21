@@ -70,7 +70,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
       {
         title: 'Phase 5: Production Deployment, Monitoring & Handover',
         duration: 'Weeks 11-12',
-        description: 'We deploy your application to reliable cloud infrastructure with automated release pipelines so updates roll out smoothly without downtime. We configure real-time telemetry and hand over full source code ownership.',
+        description: 'We deploy your application to reliable cloud infrastructure with automated release pipelines so updates roll out smoothly without downtime. We configure real-time monitoring, error tracking, and hand over full source code ownership.',
         deliverables: [
           'Automated CI/CD deployment pipeline with GitHub Actions',
           'Multi-region global edge hosting deployment (Vercel / AWS ECS)',
@@ -198,7 +198,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
       {
         question: 'What does your quality assurance and code review process look like?',
         answer:
-          'Every code update goes through automated checks, including code linting, type validation, unit tests, and automated browser runs - followed by a mandatory peer review from senior engineers before merging into production.'
+          'Every code update goes through automated checks, including code linting, type validation, unit tests, and automated browser runs, followed by a mandatory peer review from senior engineers before merging into production.'
       },
       {
         question: 'Do we own the full source code and intellectual property for our web application?',
@@ -278,7 +278,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
       {
         title: 'Phase 4: Core SaaS Workflows & Background Worker Queues',
         duration: 'Weeks 8-10',
-        description: 'We build your application\'s core workflows and user dashboards. Heavy background tasks, like exporting reports, generating PDFs, or sending batch notifications - run on dedicated worker queues so the user interface stays fast and responsive.',
+        description: 'We build your application\'s core workflows and user dashboards. Heavy background tasks, like exporting reports, generating PDFs, or sending batch notifications, run on dedicated worker queues so the user interface stays fast and responsive.',
         deliverables: [
           'High-performance React SaaS dashboard and responsive web app',
           'Background worker queues for asynchronous jobs (Inngest / BullMQ)',
@@ -910,7 +910,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
           'Automated end-to-end mobile test suite using Maestro',
           'Physical device compatibility testing across multiple iOS and Android generations',
           'Battery consumption and memory profiling diagnostics',
-          'Real-time crash reporting and performance telemetry setup (Firebase Crashlytics)'
+          'Real-time crash reporting and performance monitoring setup (Firebase Crashlytics)'
         ],
         tools: ['Maestro', 'Flipper', 'Xcode Instruments', 'Firebase Crashlytics']
       },
@@ -939,7 +939,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
         standards: '100% receipt reconciliation with zero lost transactions'
       },
       {
-        category: 'Deployment & Telemetry',
+        category: 'Deployment & Crash Monitoring',
         items: ['Automated EAS and Fastlane app store deployment pipelines', 'Instant Over-The-Air (OTA) bug fixes without app store delays', 'Real-time crash diagnostics with Firebase Crashlytics'],
         standards: 'Target crash-free user session rate > 99.8%'
       }
@@ -987,7 +987,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
         freelancers: 'No automated deployment or OTA setup'
       },
       {
-        metric: 'Crash Telemetry & QA',
+        metric: 'Crash Monitoring & QA',
         explodeLabs: 'Real-time crash tracking via Firebase Crashlytics and automated Maestro device testing',
         traditionalAgency: 'Testing on only 1 or 2 developer phones before releasing',
         inHouseHire: 'Ad-hoc manual testing on employee devices',
@@ -1282,7 +1282,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
     aeoDefinition:
       'Legacy software modernization is the engineering practice of systematically upgrading outdated, slow, or monolithic codebases (PHP, ASP.NET, Java Spring, Ruby on Rails) into modern type-safe architectures (Next.js 15, TypeScript, PostgreSQL). Using the Strangler Fig Pattern, features are migrated incrementally with zero business disruption or downtime.',
     executiveSummary:
-      'Outdated software monoliths slow down business growth, make adding new features painfully expensive, and create dangerous security vulnerabilities. But attempting a "big bang" complete rewrite from scratch is risky and often fails. Explode Labs uses the proven Strangler Fig Pattern - placing a smart proxy in front of your legacy system and incrementally replacing features slice-by-slice with modern Next.js and PostgreSQL, delivering immediate performance gains with zero business downtime.',
+      'Outdated software monoliths slow down business growth, make adding new features painfully expensive, and create dangerous security vulnerabilities. But attempting a "big bang" complete rewrite from scratch is risky and often fails. Explode Labs uses the proven Strangler Fig Pattern, placing a smart proxy in front of your legacy system and incrementally replacing features slice-by-slice with modern Next.js and PostgreSQL, delivering immediate performance gains with zero business downtime.',
     fiveStagePipeline: [
       {
         title: 'Phase 1: Legacy Code Audit & Dependency Mapping',
@@ -1323,7 +1323,7 @@ export const pillar5DeepDives: Record<string, ServiceDeepDive> = {
       {
         title: 'Phase 4: Incremental Feature Rebuild in Next.js',
         duration: 'Weeks 8-10',
-        description: 'We rebuild core business features, such as customer dashboards, checkout funnels, and reporting tools - into fast, responsive Next.js components, migrating users feature-by-feature.',
+        description: 'We rebuild core business features, such as customer dashboards, checkout funnels, and reporting tools, into fast, responsive Next.js components, migrating users feature-by-feature.',
         deliverables: [
           'High-speed Next.js modernized feature modules and responsive user interfaces',
           'Strict TypeScript API contracts ensuring backend reliability',

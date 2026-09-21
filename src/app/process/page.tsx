@@ -190,8 +190,8 @@ export default function ProcessPage() {
             <Button href="/contact" size="lg" variant="primary" withArrow>
               Start a Project Sprint
             </Button>
-            <Button href="/tools/project-estimator" size="lg" variant="outline">
-              Calculate Investment & Timeline
+            <Button href="https://calendly.com/vishal-invokeiq/30min" size="lg" variant="outline">
+              Book 30-Min Strategy Call
             </Button>
           </div>
         </div>
@@ -303,12 +303,12 @@ export default function ProcessPage() {
                 Ready to scope your project with architectural clarity?
               </h2>
               <p className="text-xs sm:text-sm text-[#8e8e93] leading-relaxed">
-                Use our instant project estimator to calculate clear milestone timelines and investment estimates, or audit your site for AI search citability.
+                Schedule a direct 30-minute discovery call with our leadership team to map your milestones, or audit your site for AI search citability.
               </p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4 shrink-0">
-              <Button href="/tools/project-estimator" size="lg" variant="primary" withArrow>
-                Launch Project Estimator
+              <Button href="https://calendly.com/vishal-invokeiq/30min" size="lg" variant="primary" withArrow>
+                Book 30-Min Strategy Call
               </Button>
               <Button href="/tools/seo-auditor" size="lg" variant="outline">
                 Run Free SEO Audit
@@ -324,14 +324,14 @@ export default function ProcessPage() {
             Let&apos;s build and scale your next revenue engine.
           </h2>
           <p className="text-sm text-[#8e8e93] leading-relaxed">
-            Schedule a 20-minute discovery call with our principal team. We will review your goals and deliver a fixed-scope milestone proposal within 24 hours.
+            Schedule a 30-minute discovery call with our principal team. We will review your goals and deliver a fixed-scope milestone proposal within 24 hours.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
-            <Button href="/contact" size="lg" variant="primary" withArrow>
-              Schedule Discovery Call
+            <Button href="https://calendly.com/vishal-invokeiq/30min" size="lg" variant="primary" withArrow>
+              Book 30-Min Strategy Call
             </Button>
-            <Button href="/portfolio" size="lg" variant="outline">
-              View Production Portfolio
+            <Button href="/contact" size="lg" variant="outline">
+              Send Project Brief
             </Button>
           </div>
         </div>

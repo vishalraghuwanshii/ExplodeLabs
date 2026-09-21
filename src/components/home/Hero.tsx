@@ -155,7 +155,7 @@ export function Hero() {
               </span>
               <span className="flex items-center gap-1.5">
                 <Zap className="w-3.5 h-3.5 text-amber-400" />
-                <span>Instant SEO & AEO Telemetry</span>
+                <span>Instant SEO & AEO Analytics</span>
               </span>
             </div>
 
@@ -176,7 +176,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* INTERACTIVE LIVE TELEMETRY BENTO SHOWCASE (Luxury Visual Showstopper) */}
+        {/* INTERACTIVE LIVE ANALYTICS BENTO SHOWCASE (Luxury Visual Showstopper) */}
         <div className="mt-10 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             

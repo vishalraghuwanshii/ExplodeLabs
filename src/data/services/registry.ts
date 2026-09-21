@@ -158,7 +158,7 @@ export const canonicalServices: ServiceEntity[] = [
       'Content migration and mobile-first responsive optimization'
     ],
     subServices: ['Brand Modernization', 'CMS Migration', 'SEO-Preserved Redesign'],
-    capabilities: ['URL Mapping & 301 Redirects', 'Design Audit & Heuristic Review', 'Content Reorganization'],
+    capabilities: ['URL Mapping & 301 Redirects', 'Design Audit & UX Review', 'Content Reorganization'],
     technologies: ['Next.js', 'React', 'Tailwind CSS', 'WordPress', 'Webflow'],
     platforms: ['Vercel', 'WP Engine', 'Cloudflare'],
     industries: ['B2B SaaS', 'Professional Services', 'E-commerce', 'Industrial'],
@@ -749,12 +749,12 @@ export const canonicalServices: ServiceEntity[] = [
     shortDescription: 'We engineer secure APIs and custom integrations so your CRM, databases, and third-party tools work together seamlessly.',
     longDescription: 'When your business relies on disjointed software, your team wastes hours manually transferring data. We design and build custom APIs that allow your different applications to communicate securely and automatically, reducing errors and speeding up your operations.',
     directAnswer: 'An API is a bridge that lets two pieces of software share information. Whether you need to connect your website to your CRM, or build a public API for your own customers to use, we engineer the secure infrastructure to make it happen reliably.',
-    definition: 'Backend software engineering focusing on API contract design, microservices, webhook ingestion queues, rate limiting, and secure data synchronization.',
+    definition: 'Backend software engineering focusing on API contract design, microservices, webhook processing queues, rate limiting, and secure data synchronization.',
     targetAudience: ['SaaS Companies Building Public Integrations', 'Enterprises Connecting CRM and ERP Systems', 'Product Teams Scaling Data Feeds'],
     problemsSolved: ['Disconnected software tools requiring manual data entry', 'API rate limiting and payload timeouts during high traffic', 'Lack of real-time event updates across operational systems'],
     deliverables: [
       'High-throughput REST / GraphQL API endpoints with OpenAPI documentation',
-      'Webhook ingestion pipeline with automatic retry queues',
+      'Webhook processing pipeline with automatic retry queues',
       'Bi-directional synchronization connectors (Stripe, HubSpot, Salesforce, etc.)',
       'Token-based OAuth / API Key security with rate limiting'
     ],
@@ -874,7 +874,7 @@ export const canonicalServices: ServiceEntity[] = [
       'Crawl Budget & Core Web Vitals Optimization',
       'JSON-LD Structured Schema Architecture',
       'Internal PageRank Flow Rebalancing',
-      'Google Search Console Telemetry'
+      'Google Search Console Analytics & Monitoring'
     ],
     technologies: ['Google Search Console', 'Ahrefs', 'Semrush', 'Screaming Frog', 'Next.js'],
     platforms: ['Google Search', 'Bing'],
@@ -1056,7 +1056,7 @@ export const canonicalServices: ServiceEntity[] = [
       { step: 1, title: 'AI Citation Baseline', description: 'Testing 100+ target buyer prompts to benchmark current AI citation rates.' },
       { step: 2, title: 'Entity & Direct-Answer Refactor', description: 'Adding concise, factual direct-answer blocks and JSON-LD schemas.' },
       { step: 3, title: 'Information Density Optimization', description: 'Publishing structured comparison tables and proprietary data points.' },
-      { step: 4, title: 'Citation Telemetry', description: 'Tracking weekly citation improvements across ChatGPT and Perplexity.' }
+      { step: 4, title: 'Citation Tracking & Monitoring', description: 'Tracking weekly citation improvements across ChatGPT and Perplexity.' }
     ],
     caseStudySlugs: ['clarity-intel-geo-aeo', 'hyperscale-b2b-saas'],
     faqs: [
@@ -1521,13 +1521,13 @@ export const canonicalServices: ServiceEntity[] = [
     indexability: 'INDEX',
     tagline: 'We turn more of your existing website visitors into paying customers through scientific A/B testing and UX optimization.',
     shortDescription: 'Data-driven conversion rate optimization: user session recordings, friction audits, checkout optimization and statistical A/B split-testing.',
-    longDescription: 'Explode Labs maximizes the revenue potential of your existing web traffic. Through quantitative analytics, qualitative session recordings, heuristic evaluations, and continuous A/B split-testing, we eliminate friction points across your landing pages and checkout funnels.',
+    longDescription: 'Explode Labs maximizes the revenue potential of your existing web traffic. Through quantitative analytics, qualitative session recordings, expert UX evaluations, and continuous A/B split-testing, we eliminate friction points across your landing pages and checkout funnels.',
     directAnswer: 'Conversion Rate Optimization (CRO) is the systematic process of increasing the percentage of website visitors who take a desired action, such as submitting a lead form or purchasing a product. Explode Labs deploys heatmaps, user research, and statistical A/B split-testing to compound revenue without increasing ad spend.',
     definition: 'Scientific testing and user experience optimization applied to landing pages, product pages, and checkout flows to improve visitor-to-customer conversion efficiency.',
     targetAudience: ['Websites with 20,000+ Monthly Unique Visitors', 'E-commerce Brands Scaling Paid Traffic', 'SaaS Funnels with High Drop-Off Rates'],
     problemsSolved: ['High visitor traffic that fails to convert into leads or sales', 'Unclear value propositions causing visitors to bounce quickly', 'Checkout funnel friction leading to high cart abandonment'],
     deliverables: [
-      'Comprehensive heuristic UX & analytics funnel drop-off audit',
+      'Comprehensive expert UX & analytics funnel drop-off audit',
       'Prioritized A/B testing roadmap scored with the ICE framework',
       'Custom-coded A/B test variants deployed via testing software',
       'Statistical reporting on test outcomes and production implementation of winning variants'
@@ -1555,7 +1555,7 @@ export const canonicalServices: ServiceEntity[] = [
     pricingRange: { min: 'Custom', avg: 'Monthly Retainer', model: 'Monthly Retainer' },
     typicalTimeline: 'Ongoing Sprints (90-day cycles)',
     process: [
-      { step: 1, title: 'Data & Heuristic Audit', description: 'Analyzing analytics drop-offs, user heatmaps, and session replays.' },
+      { step: 1, title: 'Data & UX Audit', description: 'Analyzing analytics drop-offs, user heatmaps, and session replays.' },
       { step: 2, title: 'Hypothesis Formulation', description: 'Drafting data-backed test hypotheses and prioritizing with ICE.' },
       { step: 3, title: 'Variant Coding & QA', description: 'Developing lightweight JavaScript variants and running live split-tests.' },
       { step: 4, title: 'Statistical Analysis', description: 'Validating 95%+ confidence winners and hardcoding them to production.' }
@@ -2257,7 +2257,7 @@ export const canonicalServices: ServiceEntity[] = [
     slug: 'ai-agent-development',
     name: 'AI Agent Development',
     metaTitle: 'Ai Agent Development Services | Explode Labs',
-    metaDescription: 'Custom autonomous AI agent engineering: LangGraph multi-agent workflows, deterministic tool-calling, API execution and human-in-the-loop controls.',
+    metaDescription: 'Custom autonomous AI agent engineering: LangGraph multi-agent workflows, reliable tool-calling, API execution and human-in-the-loop controls.',
     category: 'AI & Automation',
     subCategory: 'Autonomous Systems & LLMs',
     pillar: 'automate',
@@ -2268,25 +2268,25 @@ export const canonicalServices: ServiceEntity[] = [
     shortDescription: 'We build secure AI agents that can answer customer questions, process requests, and automate workflows using your proprietary data.',
     longDescription: 'Your team should not spend hours answering the same routine questions or manually moving data between systems. We build autonomous AI agents that integrate directly into your workflows, securely accessing your internal knowledge bases to resolve queries instantly and accurately.',
     directAnswer: 'An AI agent is a software system that can understand questions and take action. We securely connect Large Language Models (LLMs) to your company’s data so the agent can provide accurate support to your customers or automate repetitive tasks for your team.',
-    definition: 'Autonomous AI software engineering utilizing stateful multi-agent frameworks (LangGraph), deterministic tool-calling schemas, evaluation benchmarks, and human-in-the-loop escalation paths.',
+    definition: 'Autonomous AI software engineering utilizing stateful multi-agent frameworks (LangGraph), reliable tool-calling schemas, evaluation benchmarks, and human-in-the-loop escalation paths.',
     targetAudience: ['Operations Executives Automating Manual Labor', 'SaaS Founders Adding AI Features', 'Enterprises Processing Complex Document Pipelines'],
     problemsSolved: ['Repetitive multi-step data manipulation consuming hundreds of human team hours', 'AI chatbots that hallucinate and lack reliable API tool execution', 'Slow response times for customer inquiry qualification and routing'],
     deliverables: [
       'Production multi-agent orchestration architecture built with LangGraph',
-      'Deterministic tool-calling connectors integrated with your CRM and databases',
+      'Reliable tool-calling connectors integrated with your CRM and databases',
       'Comprehensive LLM evaluation suite and prompt regression testing framework',
       'Admin monitoring console with human-in-the-loop review and escalation triggers'
     ],
     subServices: [
       'Autonomous Multi-Agent Workflows',
-      'Deterministic Tool-Calling Systems',
+      'Type-Safe Tool-Calling Systems',
       'AI Lead Qualification Agents',
       'Human-in-the-Loop Review Dashboards'
     ],
     capabilities: [
       'LangGraph State Graph Routing',
       'Pydantic / Structured JSON Schema Output',
-      'LangSmith Telemetry & Token Tracking',
+      'LangSmith Tracing & Token Cost Tracking',
       'Private VPC & Zero Data Retention Compliance'
     ],
     technologies: ['LangChain', 'LangGraph', 'Python', 'FastAPI', 'OpenAI GPT-4o', 'Claude 3.5 Sonnet', 'PostgreSQL'],
@@ -2295,21 +2295,21 @@ export const canonicalServices: ServiceEntity[] = [
     primaryKeyword: 'ai agent development',
     primaryIntent: 'hire ai agent developers',
     secondaryIntents: ['custom ai agents', 'langgraph development agency', 'autonomous ai agent services'],
-    aliases: ['ai agents', 'custom ai agents', 'autonomous ai agents', 'generative-ai-agents', 'custom-ai-agents-and-llm-pipelines'],
+    aliases: ['ai agents', 'custom ai agents', 'autonomous ai agents', 'generative-ai-agents', 'custom-ai-agents-and-llm-pipelines', 'ai-model-fine-tuning-and-quantization'],
     childServiceSlugs: ['ai-chatbot-development', 'rag-development', 'workflow-automation'],
     relatedServiceSlugs: ['ai-chatbot-development', 'workflow-automation', 'rag-development', 'saas-development'],
     complementaryServiceSlugs: ['workflow-automation', 'rag-development'],
     pricingRange: { min: 'Custom', avg: 'Milestone / Sprint', model: 'Milestone / Sprint' },
     typicalTimeline: '4 to 10 weeks',
     process: [
-      { step: 1, title: 'Workflow Decomposition', description: 'Breaking complex operational tasks into deterministic sub-agent steps.' },
+      { step: 1, title: 'Workflow Decomposition', description: 'Breaking complex operational tasks into predictable sub-agent steps.' },
       { step: 2, title: 'Tool Integration & Schema', description: 'Connecting internal APIs, databases, and structured JSON output schemas.' },
       { step: 3, title: 'Eval Suite & Guardrails', description: 'Testing hundreds of edge cases to enforce compliance and minimize error.' },
-      { step: 4, title: 'Deployment & Telemetry', description: 'Setting up monitoring, latency caching, and human escalation workflows.' }
+      { step: 4, title: 'Deployment & Monitoring', description: 'Setting up monitoring, latency caching, and human escalation workflows.' }
     ],
     caseStudySlugs: ['lumina-ai-agent-suite', 'omniflow-logistics'],
     faqs: [
-      { question: 'How do you prevent AI hallucinations in production agents?', answer: 'We use structured JSON schemas, strict tool-grounding, RAG citation verification, deterministic state machines, and human-in-the-loop review triggers for sensitive actions.' },
+      { question: 'How do you prevent AI hallucinations in production agents?', answer: 'We use structured JSON schemas, strict tool-grounding, RAG citation verification, stateful logic graphs, and human-in-the-loop review triggers for sensitive actions.' },
       { question: 'Is our company data used to train public AI models?', answer: 'No. We deploy through enterprise API agreements with zero data retention policies or deploy private models inside your own VPC.' }
     ],
     indexable: true,
@@ -2336,7 +2336,7 @@ export const canonicalServices: ServiceEntity[] = [
     problemsSolved: ['Delayed customer support responses causing user frustration', 'Support teams overwhelmed answering the same repetitive questions', 'Visitors bouncing from website without initiating contact'],
     deliverables: [
       'Custom website AI chat widget branded to your color palette and typography',
-      'Knowledge base ingestion pipeline syncing with your help center and docs',
+      'Knowledge base syncing pipeline connecting your help center and docs',
       'CRM lead capture and automated meeting booking integration',
       'Live human agent handover workflow when complex assistance is requested'
     ],
@@ -2448,7 +2448,7 @@ export const canonicalServices: ServiceEntity[] = [
     problemsSolved: ['Employees spending hours hunting through shared drives and PDFs', 'Generic AI answers lacking specific proprietary company context', 'Compliance bans on sharing private enterprise data with public models'],
     deliverables: [
       'Vector database architecture (pgvector, Qdrant, Pinecone) with hybrid search',
-      'Automated document ingestion and OCR pipeline for PDFs, Word docs, and Notion',
+      'Automated document indexing and OCR pipeline for PDFs, Word docs, and Notion',
       'Cohere reranking layer for sub-second precise search results',
       'Role-based access control (RBAC) ensuring users only search authorized documents'
     ],
@@ -2494,7 +2494,7 @@ export const canonicalServices: ServiceEntity[] = [
     shortDescription: 'Custom web scraping, automated data extraction, competitor price monitoring, proxy rotation and structured database pipelines.',
     longDescription: 'Explode Labs builds resilient automated web scraping pipelines that extract, clean, and structure public web data at scale. Using Playwright, Python, and smart residential proxy rotation, our crawlers bypass anti-bot challenges and deliver structured data directly to your database.',
     directAnswer: 'Web scraping and data extraction is the automated collection and structuring of information from public websites into usable database formats. Explode Labs builds scalable web scrapers with proxy management, CAPTCHA handling, and automated data cleaning.',
-    definition: 'Automated data harvesting engineering utilizing headless browser automation (Playwright), distributed proxy pools, HTML parsing, and structured ETL ingestion.',
+    definition: 'Automated data harvesting engineering utilizing headless browser automation (Playwright), distributed proxy pools, HTML parsing, and structured data processing.',
     targetAudience: ['Market Intelligence Companies', 'E-commerce Brands Monitoring Competitor Prices', 'B2B Sales Teams Enriching Lead Databases'],
     problemsSolved: ['Manual copy-pasting of product prices and catalog data', 'Web scrapers failing due to IP blocks and CAPTCHAs', 'Unstructured and messy raw HTML requiring hours of manual cleaning'],
     deliverables: [
@@ -2504,7 +2504,7 @@ export const canonicalServices: ServiceEntity[] = [
       'Slack failure alert notifications and scraper maintenance support'
     ],
     subServices: ['Competitor Price Monitoring', 'Catalog & Inventory Scraping', 'Lead Enrichment Crawlers', 'Real Estate & Public Record Scrapers'],
-    capabilities: ['Residential Proxy Rotation', 'Headless Browser Fingerprint Masking', 'Automated Deduplication & Validation', 'Cloud SQS Ingestion Queues'],
+    capabilities: ['Residential Proxy Rotation', 'Headless Browser Fingerprint Masking', 'Automated Deduplication & Validation', 'Cloud SQS Processing Queues'],
     technologies: ['Python', 'Playwright', 'BeautifulSoup', 'PostgreSQL', 'Docker', 'AWS Lambda'],
     platforms: ['AWS', 'Docker', 'Cloud Server'],
     industries: ['E-commerce', 'Real Estate', 'Financial Research', 'Recruitment', 'Travel'],
@@ -2926,7 +2926,7 @@ export const canonicalServices: ServiceEntity[] = [
     problemsSolved: ['Queries taking minutes to execute across unoptimized relational databases', 'Fragmented customer data scattered across dozens of third-party platforms', 'Broken data pipelines causing inaccurate analytics and reporting delays'],
     deliverables: [
       'Cloud data warehouse architecture on BigQuery or Snowflake',
-      'Automated ETL/ELT ingestion pipelines syncing third-party APIs and databases',
+      'Automated ETL/ELT data pipelines syncing third-party APIs and databases',
       'Modular dbt data transformation models with automated testing',
       'Data governance, security encryption, and role-based access controls'
     ],
@@ -2940,7 +2940,7 @@ export const canonicalServices: ServiceEntity[] = [
       'Reverse ETL Sync to Operational CRMs',
       'Schema Migration & Column Encryption',
       'Automated Data Quality & Null Checks',
-      'Real-Time Streaming Event Ingestion'
+      'Real-Time Streaming Event Processing'
     ],
     technologies: ['Snowflake', 'BigQuery', 'dbt', 'PostgreSQL', 'Python', 'Airflow', 'Fivetran'],
     platforms: ['Google Cloud Platform', 'AWS', 'Snowflake'],
@@ -2955,7 +2955,7 @@ export const canonicalServices: ServiceEntity[] = [
     typicalTimeline: '6 to 12 weeks',
     process: [
       { step: 1, title: 'Data Architecture Blueprint', description: 'Mapping raw data sources, volume velocity, and reporting requirements.' },
-      { step: 2, title: 'Warehouse & Ingestion Setup', description: 'Provisioning BigQuery/Snowflake and configuring automated API connectors.' },
+      { step: 2, title: 'Warehouse & Pipeline Setup', description: 'Provisioning BigQuery/Snowflake and configuring automated API connectors.' },
       { step: 3, title: 'dbt Transformation Modeling', description: 'Writing modular SQL models, staging views, and automated data tests.' },
       { step: 4, title: 'BI Connection & Governance', description: 'Connecting visualization tools and enforcing column-level security.' }
     ],
@@ -3440,11 +3440,11 @@ export const canonicalServices: ServiceEntity[] = [
     shortDescription: 'B2B LinkedIn advertising, account-based marketing (ABM), lead generation forms, and targeted executive outreach.',
     longDescription: 'Explode Labs runs precision B2B ad campaigns on LinkedIn. We bypass gatekeepers by targeting specific job titles, company sizes, and industries, delivering high-value whitepapers, webinars, and direct meeting requests to C-level executives.',
     directAnswer: 'LinkedIn Ads is a B2B advertising platform used to target professionals. Explode Labs manages LinkedIn ad campaigns, focusing on Account-Based Marketing (ABM) to generate qualified leads from specific target companies and decision-makers.',
-    definition: 'Strategic execution of paid B2B acquisition campaigns on the LinkedIn network, utilizing firmographic targeting, Lead Gen Forms, and sponsored InMail.',
+    definition: 'Strategic execution of paid B2B acquisition campaigns on the LinkedIn network, utilizing precise company size, job title, and industry targeting with native Lead Gen Forms and sponsored InMail.',
     targetAudience: ['B2B SaaS Companies', 'Enterprise Service Providers', 'Consulting Firms'],
     problemsSolved: ['Wasting ad spend on unqualified B2C leads', 'Inability to reach specific C-suite decision makers', 'Low conversion rates on complex B2B sales cycles'],
     deliverables: [
-      'Account-Based Marketing (ABM) audience lists and firmographic targeting',
+      'Account-Based Marketing (ABM) audience lists with company size and title targeting',
       'Sponsored content and InMail ad creative production',
       'Native LinkedIn Lead Gen Form setup and CRM routing',
       'Continuous A/B testing of job title targeting and ad copy'
@@ -3456,7 +3456,7 @@ export const canonicalServices: ServiceEntity[] = [
       'LinkedIn Retargeting'
     ],
     capabilities: [
-      'Firmographic Audience Building',
+      'Target Company & Decision-Maker Audience Building',
       'CRM Audience Matching (HubSpot/Salesforce)',
       'Document Ad / Whitepaper Funnels',
       'Conversion API Tracking'
@@ -3533,7 +3533,7 @@ export const canonicalServices: ServiceEntity[] = [
     pricingRange: { min: 'Custom', avg: 'Monthly Retainer', model: 'Retainer (Batch Delivery)' },
     typicalTimeline: 'Ongoing',
     process: [
-      { step: 1, title: 'Footage Ingestion & Hook Selection', description: 'Reviewing raw video to find the most engaging 3-second hooks.' },
+      { step: 1, title: 'Footage Review & Hook Selection', description: 'Reviewing raw video to find the most engaging 3-second hooks.' },
       { step: 2, title: 'A-Cut & Pacing', description: 'Removing dead air, stumbles, and tightening the narrative pacing.' },
       { step: 3, title: 'Visuals & Captions', description: 'Adding dynamic text, emojis, b-roll, and visual zoom effects.' },
       { step: 4, title: 'Sound Design & Export', description: 'Adding whooshes, pop sounds, and mixing music for final export.' }

@@ -24,28 +24,28 @@ export function EstimatorCalculator() {
   };
 
   const featureList = [
-    { id: 'auth_rbac', label: 'OAuth & Multi-Tenant RBAC', baseCost: 3500 },
-    { id: 'stripe_billing', label: 'Stripe Subscriptions & Webhooks', baseCost: 4500 },
-    { id: 'design_system', label: 'Bespoke Figma Design Tokens & UI Kit', baseCost: 5000 },
-    { id: 'ai_rag', label: 'Hybrid Vector RAG & LLM Integration', baseCost: 7500 },
-    { id: 'seo_engine', label: 'Entity SEO & Programmatic Pages', baseCost: 4000 },
-    { id: 'soc2_hipaa', label: 'SOC2 / HIPAA Compliance Hardening', baseCost: 6500 },
+    { id: 'auth_rbac', label: 'OAuth & Multi-Tenant RBAC', baseCost: 1200 },
+    { id: 'stripe_billing', label: 'Stripe Subscriptions & Webhooks', baseCost: 1500 },
+    { id: 'design_system', label: 'Bespoke Figma Design Tokens & UI Kit', baseCost: 1800 },
+    { id: 'ai_rag', label: 'Intelligent AI Search & RAG Integration', baseCost: 2500 },
+    { id: 'seo_engine', label: 'Entity SEO & Programmatic Pages', baseCost: 1500 },
+    { id: 'soc2_hipaa', label: 'SOC2 / HIPAA Compliance Hardening', baseCost: 2200 },
   ];
 
   // Calculation logic
   const baseRates = {
-    web: 15000,
-    saas: 28000,
-    mobile: 24000,
-    ai: 26000,
-    ecommerce: 20000,
-    growth: 12000,
+    web: 3500,
+    saas: 6500,
+    mobile: 7500,
+    ai: 5500,
+    ecommerce: 4500,
+    growth: 2500,
   };
 
   const complexityMultipliers = {
     1: 0.85,
     2: 1.15,
-    3: 1.65,
+    3: 1.5,
   };
 
   const featureCosts = features.reduce((acc, featId) => {
@@ -54,10 +54,10 @@ export function EstimatorCalculator() {
   }, 0);
 
   const calculatedBase = (baseRates[projectType] + featureCosts) * complexityMultipliers[complexity as 1 | 2 | 3];
-  const finalMin = Math.round((calculatedBase * 0.9) / 1000) * 1000;
-  const finalMax = Math.round((calculatedBase * 1.25) / 1000) * 1000;
+  const finalMin = Math.round((calculatedBase * 0.9) / 500) * 500;
+  const finalMax = Math.round((calculatedBase * 1.25) / 500) * 500;
 
-  const estimatedWeeks = complexity === 1 ? '4 - 6 weeks' : complexity === 2 ? '7 - 10 weeks' : '11 - 16 weeks';
+  const estimatedWeeks = complexity === 1 ? '2 - 4 weeks' : complexity === 2 ? '4 - 7 weeks' : '8 - 12 weeks';
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -210,17 +210,17 @@ export function EstimatorCalculator() {
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-3.5 h-3.5 text-[#ff5500]" />
-                <span>30 days post-launch warranty & telemetry setup</span>
+                <span>30 days post-launch warranty & analytics setup</span>
               </div>
             </div>
           </div>
 
           <div className="space-y-3 pt-6 border-t border-[#1c1c1c]">
-            <Button href="/contact" variant="primary" size="md" className="w-full" withArrow>
-              Lock in Estimate & Book Call
+            <Button href="https://calendly.com/vishal-invokeiq/30min" variant="primary" size="md" className="w-full" withArrow>
+              Book 30-Min Strategy Call
             </Button>
-            <Button href="/architect" variant="outline" size="md" className="w-full">
-              Refine in AI Project Architect
+            <Button href="/contact" variant="outline" size="md" className="w-full">
+              Request Custom Proposal
             </Button>
           </div>
         </div>
