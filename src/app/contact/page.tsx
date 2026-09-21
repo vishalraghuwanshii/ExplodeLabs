@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Check, Sparkles, ShieldCheck, Clock, Mail, Phone, MessageSquare, ArrowUpRight } from 'lucide-react';
-import { topCountryCodes, allCountryCodes } from '@/lib/countryCodes';
+import { CountrySelect } from '@/components/ui/CountrySelect';
 
 export default function ContactPage() {
   const [activeTab, setActiveTab] = useState<'form' | 'calendar'>('form');
@@ -243,23 +243,10 @@ export default function ContactPage() {
                       Phone Number (Optional)
                     </label>
                     <div className="flex gap-2">
-                      <select 
-                        value={formData.countryCode} 
-                        onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
-                        className="w-[105px] shrink-0 bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-2 py-2.5 text-sm text-[#f5f5f0] outline-none cursor-pointer"
-                      >
-                        {topCountryCodes.map((country, idx) => (
-                          <option key={`top-${idx}`} value={country.code}>
-                            {country.flag} {country.code}
-                          </option>
-                        ))}
-                        <option disabled>──────────</option>
-                        {allCountryCodes.map((country, idx) => (
-                          <option key={`all-${idx}`} value={country.code}>
-                            {country.flag} {country.code}
-                          </option>
-                        ))}
-                      </select>
+                      <CountrySelect 
+                        value={formData.countryCode}
+                        onChange={(val) => setFormData({ ...formData, countryCode: val })}
+                      />
                       <input
                         type="tel"
                         value={formData.phone}
