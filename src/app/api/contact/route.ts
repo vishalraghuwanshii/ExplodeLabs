@@ -1,7 +1,5 @@
 import { NextResponse } from 'next/server';
 
-export const runtime = 'edge';
-
 export async function POST(request: Request) {
   try {
     const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;

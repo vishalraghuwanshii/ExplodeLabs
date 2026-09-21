@@ -1,6 +1,4 @@
 import { NextResponse } from 'next/server';
-
-export const runtime = 'edge';
 import { services, caseStudies, industries, solutions } from '@/data/knowledge-graph';
 import { serviceDeepDives } from '@/data/service-deep-dives';
 
