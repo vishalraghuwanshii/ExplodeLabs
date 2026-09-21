@@ -146,7 +146,7 @@ export function Hero() {
             {/* Instant Trust & SLA Guarantees */}
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-3 text-xs text-[#71717a]">
               <span className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-emerald-400" />
                 <span className="text-emerald-400 font-medium">3 strategy slots open this week</span>
               </span>
               <span className="flex items-center gap-1.5">

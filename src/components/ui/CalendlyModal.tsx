@@ -76,8 +76,8 @@ export function CalendlyModal() {
             <div>
               <div className="text-sm font-semibold text-[#f5f5f0] flex items-center gap-2">
                 <span>Book a 30-Minute Architecture & Strategy Call</span>
-                <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                   Live Slots Available
                 </span>
               </div>
