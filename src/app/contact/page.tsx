@@ -7,6 +7,7 @@ import { Card } from '@/components/ui/Card';
 import { Check, Sparkles, ShieldCheck, Clock, Mail, Phone, MessageSquare } from 'lucide-react';
 
 export default function ContactPage() {
+  const [activeTab, setActiveTab] = useState<'form' | 'calendar'>('form');
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -85,11 +86,76 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right Column Form */}
+          {/* Right Column Form or Calendar */}
           <div className="lg:col-span-7">
             <div className="p-8 sm:p-10 bg-[#0d0d0d] border border-[#242424] rounded-2xl shadow-2xl">
-              {!submitted ? (
-                <form onSubmit={handleSubmit} className="space-y-5">
+              
+              {!submitted && (
+                <div className="flex p-1 bg-[#141414] border border-[#1e1e1e] rounded-xl mb-8">
+                  <button 
+                    onClick={() => setActiveTab('form')}
+                    className={`flex-1 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all flex items-center justify-center gap-2 ${activeTab === 'form' ? 'bg-[#242424] text-[#f5f5f0] shadow-md border border-[#333]' : 'text-[#71717a] hover:text-[#f5f5f0] border border-transparent'}`}
+                  >
+                    <MessageSquare className="w-4 h-4" />
+                    <span>Submit Project Brief</span>
+                  </button>
+                  <button 
+                    onClick={() => setActiveTab('calendar')}
+                    className={`flex-1 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all flex items-center justify-center gap-2 ${activeTab === 'calendar' ? 'bg-[#ff5500] text-white shadow-md border border-[#ff6600]' : 'text-[#71717a] hover:text-[#f5f5f0] border border-transparent'}`}
+                  >
+                    <Clock className="w-4 h-4" />
+                    <span>Book Discovery Call</span>
+                  </button>
+                </div>
+              )}
+
+              {submitted ? (
+                <div className="text-center space-y-6">
+                  <div className="w-16 h-16 rounded-full bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto mb-2">
+                    <Check className="w-8 h-8 stroke-[3]" />
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[#f5f5f0]">Project Inquiry Received</h3>
+                  <p className="text-sm text-[#8e8e93] max-w-md mx-auto">
+                    Thank you, <span className="text-[#f5f5f0] font-semibold">{formData.name}</span>. A senior engineering architect will review your brief and respond within 24 hours.
+                  </p>
+                  
+                  <div className="pt-8 border-t border-[#181818]">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff5500]/10 text-[#ff5500] text-xs font-mono font-semibold mb-4 border border-[#ff5500]/20">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      <span>Want to skip the wait?</span>
+                    </div>
+                    <h4 className="text-lg font-bold text-[#f5f5f0] mb-6">Book your kickoff call right now:</h4>
+                    <div className="rounded-xl overflow-hidden border border-[#242424] bg-[#141414]">
+                      <iframe 
+                        src="https://calendly.com/vishal-invokeiq/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0d0d0d&text_color=f5f5f0&primary_color=ff5500"
+                        width="100%" 
+                        height="650" 
+                        frameBorder="0" 
+                        title="Book a Discovery Call"
+                        className="w-full"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              ) : activeTab === 'calendar' ? (
+                <div className="animate-in fade-in duration-300">
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-[#f5f5f0] mb-2">Schedule your Discovery Call</h3>
+                    <p className="text-sm text-[#8e8e93]">Pick a time that works for you. We'll discuss your goals, scope out technical requirements, and build a custom milestone plan.</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden border border-[#242424] bg-[#141414] shadow-2xl">
+                    <iframe 
+                      src="https://calendly.com/vishal-invokeiq/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0d0d0d&text_color=f5f5f0&primary_color=ff5500"
+                      width="100%" 
+                      height="650" 
+                      frameBorder="0" 
+                      title="Book a Discovery Call"
+                      className="w-full"
+                    ></iframe>
+                  </div>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-5 animate-in fade-in duration-300">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-mono uppercase text-[#71717a] mb-1.5 font-semibold">
@@ -205,37 +271,17 @@ export default function ContactPage() {
                     </div>
                   )}
 
-                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      variant="primary" 
-                      className="flex-1" 
-                      withArrow={!isSubmitting}
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? 'Submitting...' : 'Submit Project Inquiry'}
-                    </Button>
-                    <a 
-                      href="https://calendly.com/explodelabs" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold tracking-wide text-[#f5f5f0] bg-transparent hover:bg-[#1a1a1a] border border-[#333] hover:border-[#555] rounded-xl transition-all"
-                    >
-                      Book Calendly Meeting
-                    </a>
-                  </div>
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    variant="primary" 
+                    className="w-full" 
+                    withArrow={!isSubmitting}
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Submitting...' : 'Submit Project Inquiry'}
+                  </Button>
                 </form>
-              ) : (
-                <div className="py-12 text-center space-y-4">
-                  <div className="w-12 h-12 rounded-full bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto">
-                    <Check className="w-6 h-6 stroke-[3]" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-[#f5f5f0]">Project Inquiry Received</h3>
-                  <p className="text-sm text-[#8e8e93] max-w-md mx-auto">
-                    Thank you, <span className="text-[#f5f5f0]">{formData.name}</span>. A senior engineering architect has received your brief and will respond to <span className="text-[#f5f5f0]">{formData.email}</span> within 24 hours.
-                  </p>
-                </div>
               )}
             </div>
           </div>
