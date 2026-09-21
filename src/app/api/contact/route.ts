@@ -69,7 +69,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Error sending to Slack:", error);
     return NextResponse.json(
-      { success: false, message: "Submission failed. Please manually email your requirements to support@explodelabs.com" },
+      { success: false, message: `Submission failed. Please manually email your requirements to support@explodelabs.com (Debug: ${error instanceof Error ? error.message : String(error)})` },
       { status: 500 }
     );
   }
