@@ -3,6 +3,8 @@ import '@/styles/globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { JsonLd } from '@/components/seo/JsonLd';
+import { CalendlyModal } from '@/components/ui/CalendlyModal';
+import { FloatingBookingPill } from '@/components/ui/FloatingBookingPill';
 
 export const metadata: Metadata = {
   title: 'Explode Labs | B2B SaaS Digital Agency | AI, Web & SEO',
@@ -78,6 +80,8 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <CalendlyModal />
+        <FloatingBookingPill />
       </body>
     </html>
   );

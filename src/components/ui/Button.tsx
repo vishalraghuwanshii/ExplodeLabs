@@ -1,7 +1,10 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
+import { openCalendly } from './CalendlyModal';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
@@ -23,6 +26,7 @@ export function Button({
   withArrow = false,
   children,
   className,
+  onClick,
   ...props
 }: ButtonProps) {
   const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-md select-none group cursor-pointer disabled:opacity-50 disabled:pointer-events-none';
@@ -50,13 +54,26 @@ export function Button({
   );
 
   if (href) {
+    const isCalendly = href.includes('calendly.com');
     const isExternal = href.startsWith('http://') || href.startsWith('https://');
+
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      if (isCalendly && !e.metaKey && !e.ctrlKey && !e.shiftKey) {
+        e.preventDefault();
+        openCalendly();
+      }
+      if (onClick) {
+        (onClick as any)(e);
+      }
+    };
+
     if (isExternal) {
       return (
         <a 
           href={href} 
           target={target || '_blank'} 
           rel={rel || 'noopener noreferrer'} 
+          onClick={handleLinkClick}
           className={cn(baseStyles, variants[variant], sizes[size], className)}
         >
           {content}
@@ -65,14 +82,22 @@ export function Button({
     }
 
     return (
-      <Link href={href} className={cn(baseStyles, variants[variant], sizes[size], className)}>
+      <Link 
+        href={href} 
+        onClick={handleLinkClick}
+        className={cn(baseStyles, variants[variant], sizes[size], className)}
+      >
         {content}
       </Link>
     );
   }
 
   return (
-    <button className={cn(baseStyles, variants[variant], sizes[size], className)} {...props}>
+    <button 
+      onClick={onClick}
+      className={cn(baseStyles, variants[variant], sizes[size], className)} 
+      {...props}
+    >
       {content}
     </button>
   );

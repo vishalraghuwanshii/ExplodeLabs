@@ -146,6 +146,10 @@ export function Hero() {
             {/* Instant Trust & SLA Guarantees */}
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-3 text-xs text-[#71717a]">
               <span className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-emerald-400 font-medium">3 strategy slots open this week</span>
+              </span>
+              <span className="flex items-center gap-1.5">
                 <Clock className="w-3.5 h-3.5 text-[#ff5500]" />
                 <span>24h Proposal SLA</span>
               </span>
@@ -157,6 +161,23 @@ export function Hero() {
                 <Zap className="w-3.5 h-3.5 text-amber-400" />
                 <span>Instant SEO & AEO Analytics</span>
               </span>
+            </div>
+
+            {/* Direct Strategy Call Option */}
+            <div className="mt-4 pt-4 border-t border-[#181818] flex flex-wrap items-center justify-center gap-2 text-xs">
+              <span className="text-[#8e8e93]">Prefer an immediate 1-on-1 discussion?</span>
+              <button
+                type="button"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).openCalendlyModal) {
+                    (window as any).openCalendlyModal();
+                  }
+                }}
+                className="text-[#ff5500] hover:text-[#ff7733] font-semibold flex items-center gap-1 transition-colors cursor-pointer"
+              >
+                <span>Book a 30-Min Strategy Call with Senior Leads</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
             </div>
 
             {/* Fast Discipline Exploration Chips */}
