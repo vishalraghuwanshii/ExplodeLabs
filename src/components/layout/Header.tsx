@@ -432,7 +432,7 @@ export function Header() {
           <div className="flex items-center gap-2.5 sm:gap-3">
             {/* Primary Action CTA */}
             <Button href="/contact" size="sm" variant="primary" withArrow>
-              Get a Proposal
+              Start a Project
             </Button>
 
             {/* Mobile Menu Button */}
