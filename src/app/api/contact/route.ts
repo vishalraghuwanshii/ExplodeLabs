@@ -31,6 +31,10 @@ export async function POST(request: Request) {
             },
             {
               type: "mrkdwn",
+              text: `*Phone:*\n${data.phone ? `${data.countryCode || ''} ${data.phone}` : "N/A"}`
+            },
+            {
+              type: "mrkdwn",
               text: `*Company:*\n${data.company || "N/A"}`
             },
             {

@@ -13,6 +13,8 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    countryCode: '+1',
+    phone: '',
     company: '',
     service: 'SEO & Organic Growth',
     message: ''
@@ -151,6 +153,37 @@ export default function ContactPage() {
                       </select>
                     </div>
                   </div>
+                  
+                  <div>
+                    <label className="block text-xs font-mono uppercase text-[#71717a] mb-1.5 font-semibold">
+                      Phone Number (Optional)
+                    </label>
+                    <div className="flex gap-2">
+                      <select 
+                        value={formData.countryCode} 
+                        onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
+                        className="w-[100px] shrink-0 bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-2 py-2.5 text-sm text-[#f5f5f0] outline-none cursor-pointer"
+                      >
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+61">🇦🇺 +61</option>
+                        <option value="+49">🇩🇪 +49</option>
+                        <option value="+33">🇫🇷 +33</option>
+                        <option value="+81">🇯🇵 +81</option>
+                        <option value="+86">🇨🇳 +86</option>
+                        <option value="+55">🇧🇷 +55</option>
+                        <option value="+27">🇿🇦 +27</option>
+                      </select>
+                      <input
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        placeholder="(555) 000-0000"
+                        className="flex-1 bg-[#141414] border border-[#282828] focus:border-[#ff5500] rounded-lg px-3.5 py-2.5 text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none"
+                      />
+                    </div>
+                  </div>
 
                   <div>
                     <label className="block text-xs font-mono uppercase text-[#71717a] mb-1.5 font-semibold">
@@ -172,16 +205,26 @@ export default function ContactPage() {
                     </div>
                   )}
 
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    variant="primary" 
-                    className="w-full" 
-                    withArrow={!isSubmitting}
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? 'Submitting...' : 'Submit Project Inquiry'}
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      variant="primary" 
+                      className="flex-1" 
+                      withArrow={!isSubmitting}
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Submitting...' : 'Submit Project Inquiry'}
+                    </Button>
+                    <a 
+                      href="https://calendly.com/explodelabs" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold tracking-wide text-[#f5f5f0] bg-transparent hover:bg-[#1a1a1a] border border-[#333] hover:border-[#555] rounded-xl transition-all"
+                    >
+                      Book Calendly Meeting
+                    </a>
+                  </div>
                 </form>
               ) : (
                 <div className="py-12 text-center space-y-4">
