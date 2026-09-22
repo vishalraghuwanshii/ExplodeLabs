@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import '@/styles/globals.css';
 import { Header } from '@/components/layout/Header';
@@ -6,6 +7,7 @@ import { Footer } from '@/components/layout/Footer';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { CalendlyModal } from '@/components/ui/CalendlyModal';
 import { FloatingBookingPill } from '@/components/ui/FloatingBookingPill';
+import { GA_TRACKING_ID } from '@/lib/analytics';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -161,6 +163,25 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark ${inter.variable} ${spaceGrotesk.variable}`}>
       <body className={`${inter.className} bg-[#080808] text-[#f5f5f0] min-h-screen flex flex-col font-sans selection:bg-[#ff5500] selection:text-white antialiased overflow-x-hidden`}>
+        {/* Google tag (gtag.js) */}
+        {GA_TRACKING_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_TRACKING_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
         <JsonLd schema={organizationSchema} />
         <Header />
         <main className="flex-1">{children}</main>
