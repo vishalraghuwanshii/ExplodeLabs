@@ -8,7 +8,9 @@ import {
   Sparkles, 
   ArrowRight, 
   Film,
-  Code2
+  Code2,
+  Target,
+  Palette
 } from 'lucide-react';
 
 export function Hero() {
@@ -36,16 +38,17 @@ export function Hero() {
     'url': 'https://explodelabs.com',
     'logo': 'https://explodelabs.com/logo.png',
     'image': 'https://explodelabs.com/og-image.png',
-    'description': 'Explode Labs is a full-service digital agency specializing in search engine optimization (SEO/AEO), commercial video post-production, custom web engineering, and performance marketing.',
+    'description': 'Explode Labs is your end-to-end growth partner. From enterprise web and mobile applications, to cinematic video production and global SEO campaigns.',
     'priceRange': '$$$$',
     'knowsAbout': [
-      'Search Engine Optimization (SEO)',
-      'Generative Engine Optimization (GEO)',
-      'Answer Engine Optimization (AEO)',
-      'DaVinci Resolve Video Post-Production',
-      'Next.js Web Application Development',
-      'Performance Paid Advertising (PPC)',
-      'B2B Outbound Lead Generation'
+      'Custom Web Applications',
+      'Enterprise SaaS Platforms',
+      'iOS & Android Mobile Apps',
+      'Custom AI Agents & RAG',
+      'Technical & Organic SEO',
+      'AI Search Optimization (GEO)',
+      'Video Post-Production',
+      'UI/UX Design Systems'
     ],
     'aggregateRating': {
       '@type': 'AggregateRating',
@@ -84,27 +87,27 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-950/80 border border-zinc-800/80 mb-8 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-zinc-400" />
             <span className="text-xs font-mono font-medium text-zinc-300 tracking-tight">
-              B2B Growth & Engineering Studio
+              Full-Service B2B Digital Agency
             </span>
           </div>
 
           {/* Primary High-Intent Commercial H1 Typography */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tighter text-zinc-100 leading-[1.08] mb-6">
-            B2B Web Engineering & <br className="hidden sm:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 via-zinc-400 to-zinc-600">AI Search Optimization.</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter text-zinc-100 leading-[1.1] mb-6">
+            The complete custom software, <br className="hidden sm:block"/>
+            creative, and <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 to-zinc-500">search growth agency.</span>
           </h1>
 
           {/* AEO / GEO Declarative Entity Statement (Authoritative ground truth) */}
           <p className="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto font-normal leading-relaxed mb-10">
-            <strong className="text-zinc-200 font-medium">Explode Labs</strong> eliminates technical bottlenecks. We scale enterprise pipeline through high-performance Next.js web development, cinematic video creative, and data-driven generative search (GEO/AEO) campaigns.
+            <strong className="text-zinc-200 font-medium">Explode Labs</strong> is your end-to-end growth partner. From enterprise web and mobile applications, to cinematic video production and global SEO campaigns, we provide the entire spectrum of digital services to scale your brand.
           </p>
 
-          {/* Primary Action Buttons (Monochromatic Overrides) */}
+          {/* Primary Action Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
             <Button 
               href="/contact" 
               size="lg" 
-              className="bg-zinc-100 text-zinc-950 hover:bg-white shadow-none border border-transparent font-medium rounded-lg"
+              className="bg-[#ff5500] text-white hover:bg-[#e04a00] shadow-[0_0_20px_rgba(255,85,0,0.15)] border-transparent font-medium rounded-lg"
               withArrow
             >
               Start a Project
@@ -139,49 +142,64 @@ export function Hero() {
         </div>
 
         {/* INTERACTIVE CAPABILITY BENTO SHOWCASE (Linear.app Style Grid) */}
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-zinc-800/50 rounded-2xl overflow-hidden border border-zinc-800/50 shadow-2xl shadow-black/50">
             
-            {/* Card 1: AI Search & AEO Citation Engine */}
-            <Link href="/services/ai-search-optimization" className="block bg-[#09090b] p-8 hover:bg-[#121214] transition-colors group">
-              <div className="w-8 h-8 rounded-lg mb-6 flex items-center justify-center text-zinc-400 group-hover:text-zinc-200 transition-colors border border-zinc-800 bg-zinc-900/50">
-                <Sparkles className="w-4 h-4" />
-              </div>
-              <h3 className="text-base font-semibold text-zinc-100 mb-2">AI Search & SEO</h3>
-              <p className="text-sm text-zinc-400 leading-relaxed mb-8">
-                Entity-grounded Schema architectures designed to rank #1 across Google, ChatGPT, and Perplexity.
-              </p>
-              <div className="flex items-center text-xs font-mono text-zinc-500 group-hover:text-zinc-300 transition-colors">
-                <span>Explore capability</span>
-                <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            {/* Card 2: Studio Video & DaVinci ACES Pipeline */}
-            <Link href="/services/video-editing" className="block bg-[#09090b] p-8 hover:bg-[#121214] transition-colors group">
-              <div className="w-8 h-8 rounded-lg mb-6 flex items-center justify-center text-zinc-400 group-hover:text-zinc-200 transition-colors border border-zinc-800 bg-zinc-900/50">
-                <Film className="w-4 h-4" />
-              </div>
-              <h3 className="text-base font-semibold text-zinc-100 mb-2">Commercial Video</h3>
-              <p className="text-sm text-zinc-400 leading-relaxed mb-8">
-                Cinematic post-production, ACES color grading, and high-retention ad creative for tech brands.
-              </p>
-              <div className="flex items-center text-xs font-mono text-zinc-500 group-hover:text-zinc-300 transition-colors">
-                <span>Explore capability</span>
-                <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            {/* Card 3: Next.js 15 Web & Revenue Engine */}
-            <Link href="/services/website-development" className="block bg-[#09090b] p-8 hover:bg-[#121214] transition-colors group">
+            {/* Card 1: Software & AI Engineering */}
+            <Link href="/services/website-development" className="block bg-[#09090b] p-8 hover:bg-[#121214] transition-colors group flex flex-col h-full">
               <div className="w-8 h-8 rounded-lg mb-6 flex items-center justify-center text-zinc-400 group-hover:text-zinc-200 transition-colors border border-zinc-800 bg-zinc-900/50">
                 <Code2 className="w-4 h-4" />
               </div>
-              <h3 className="text-base font-semibold text-zinc-100 mb-2">Web Engineering</h3>
-              <p className="text-sm text-zinc-400 leading-relaxed mb-8">
-                Next.js 15 architectures engineered for sub-30ms latency and maximum B2B conversion rates.
-              </p>
-              <div className="flex items-center text-xs font-mono text-zinc-500 group-hover:text-zinc-300 transition-colors">
+              <h3 className="text-base font-semibold text-zinc-100 mb-5">Software & AI Engineering</h3>
+              <ul className="space-y-3.5 mb-8">
+                {['Custom Web Applications', 'Enterprise SaaS Platforms', 'iOS & Android Mobile Apps', 'Custom AI Agents & RAG', 'Cloud DevOps & Infrastructure'].map((item, idx) => (
+                  <li key={idx} className="flex items-center text-[13px] text-zinc-400 group-hover:text-zinc-300 transition-colors">
+                    <span className="w-1 h-1 rounded-full bg-zinc-700 group-hover:bg-[#ff5500] mr-3 shrink-0 transition-colors" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex items-center text-xs font-mono text-zinc-500 group-hover:text-zinc-300 transition-colors mt-auto pt-4 border-t border-zinc-800/50">
+                <span>Explore capability</span>
+                <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            {/* Card 2: Search & Acquisition */}
+            <Link href="/services/seo" className="block bg-[#09090b] p-8 hover:bg-[#121214] transition-colors group flex flex-col h-full">
+              <div className="w-8 h-8 rounded-lg mb-6 flex items-center justify-center text-zinc-400 group-hover:text-zinc-200 transition-colors border border-zinc-800 bg-zinc-900/50">
+                <Target className="w-4 h-4" />
+              </div>
+              <h3 className="text-base font-semibold text-zinc-100 mb-5">Search & Acquisition</h3>
+              <ul className="space-y-3.5 mb-8">
+                {['Technical & Organic SEO', 'AI Search Optimization (GEO)', 'Google & Meta Paid Ads', 'B2B Outbound & Lead Gen', 'Conversion Rate Optimization'].map((item, idx) => (
+                  <li key={idx} className="flex items-center text-[13px] text-zinc-400 group-hover:text-zinc-300 transition-colors">
+                    <span className="w-1 h-1 rounded-full bg-zinc-700 group-hover:bg-[#ff5500] mr-3 shrink-0 transition-colors" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex items-center text-xs font-mono text-zinc-500 group-hover:text-zinc-300 transition-colors mt-auto pt-4 border-t border-zinc-800/50">
+                <span>Explore capability</span>
+                <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            {/* Card 3: Creative & Design */}
+            <Link href="/services/video-editing" className="block bg-[#09090b] p-8 hover:bg-[#121214] transition-colors group flex flex-col h-full">
+              <div className="w-8 h-8 rounded-lg mb-6 flex items-center justify-center text-zinc-400 group-hover:text-zinc-200 transition-colors border border-zinc-800 bg-zinc-900/50">
+                <Palette className="w-4 h-4" />
+              </div>
+              <h3 className="text-base font-semibold text-zinc-100 mb-5">Creative & Design</h3>
+              <ul className="space-y-3.5 mb-8">
+                {['Video Post-Production', 'UI/UX Design Systems', '3D Product Rendering', 'Motion Graphics & Animation', 'Brand Identity Architecture'].map((item, idx) => (
+                  <li key={idx} className="flex items-center text-[13px] text-zinc-400 group-hover:text-zinc-300 transition-colors">
+                    <span className="w-1 h-1 rounded-full bg-zinc-700 group-hover:bg-[#ff5500] mr-3 shrink-0 transition-colors" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex items-center text-xs font-mono text-zinc-500 group-hover:text-zinc-300 transition-colors mt-auto pt-4 border-t border-zinc-800/50">
                 <span>Explore capability</span>
                 <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
