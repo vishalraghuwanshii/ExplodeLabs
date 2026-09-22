@@ -162,7 +162,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`dark ${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className={`${inter.className} bg-[#080808] text-[#f5f5f0] min-h-screen flex flex-col font-sans selection:bg-[#ff5500] selection:text-white antialiased overflow-x-hidden`}>
+      <body className={`${inter.className} bg-[#080808] text-[#f5f5f0] min-h-screen flex flex-col font-sans selection:bg-[#ff5500] selection:text-white antialiased overflow-x-clip`}>
         {/* Google tag (gtag.js) */}
         {GA_TRACKING_ID && (
           <>
