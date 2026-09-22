@@ -93,8 +93,8 @@ export function Hero() {
 
           {/* Primary High-Intent Commercial H1 Typography */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter text-zinc-100 leading-[1.1] mb-6">
-            The complete custom software, <br className="hidden sm:block"/>
-            creative, and <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 to-zinc-500">search growth agency.</span>
+            The Complete Custom Software, <br className="hidden sm:block"/>
+            Creative, and <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 to-zinc-500">Growth Agency.</span>
           </h1>
 
           {/* AEO / GEO Declarative Entity Statement (Authoritative ground truth) */}
