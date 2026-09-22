@@ -391,7 +391,7 @@ export function Header() {
   return (
     <>
       <header 
-        className="sticky top-0 z-40 w-full border-b border-[#181818] bg-[#080808]/95 backdrop-blur-xl transition-all"
+        className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur-xl saturate-150 transition-all"
         onMouseLeave={handleMouseLeave}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
