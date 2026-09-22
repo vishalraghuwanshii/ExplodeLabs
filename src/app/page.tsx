@@ -2,7 +2,6 @@ import React from 'react';
 import { Hero } from '@/components/home/Hero';
 import { ClientLogoMarquee } from '@/components/home/ClientLogoMarquee';
 import { TrustBadges } from '@/components/home/TrustBadges';
-import { HomeLiveScanner } from '@/components/home/HomeLiveScanner';
 import { HomePainPointSolver } from '@/components/home/HomePainPointSolver';
 import { InteractiveDiscovery } from '@/components/home/InteractiveDiscovery';
 import { SelectedWork } from '@/components/home/SelectedWork';
@@ -17,7 +16,7 @@ import { HomeProposalForm } from '@/components/home/HomeProposalForm';
 export default function HomePage() {
   return (
     <div>
-      {/* 1. Flagship Growth Hero with Direct URL Proposal Input & Proof Counters */}
+      {/* 1. Flagship Growth Hero with Dual CTAs & Proof Counters */}
       <Hero />
 
       {/* 2. Client Logo Reel / Brand Marquee (Immediate Peer Proof) */}
@@ -26,10 +25,7 @@ export default function HomePage() {
       {/* 3. Official Platform Partnerships & Accreditations (Institutional Trust) */}
       <TrustBadges />
 
-      {/* 4. Interactive Live Domain & AI Citability Scanner (Instant Value Lead Magnet) */}
-      <HomeLiveScanner />
-
-      {/* 5. Problem-to-Solution Diagnostic Engine ("What is holding your growth back?") */}
+      {/* 4. Problem-to-Solution Diagnostic Engine ("What is holding your growth back?") */}
       <HomePainPointSolver />
 
       {/* 6. Complete Growth, Creative & Web Capability Switcher */}
