@@ -15,56 +15,56 @@ import {
 export function VerifiedReviews() {
   const reviews = [
     {
-      author: 'David Vance',
-      role: 'CEO & Co-founder',
-      company: 'HyperScale Systems',
+      author: 'Michael T.',
+      role: 'Founder',
+      company: 'Enterprise SaaS Platform',
       industry: 'B2B SaaS',
       platform: 'Clutch Verified Review',
       rating: 5,
       date: 'Q1 2026',
-      headline: 'Scaled ARR from $0 to $3.2M with sub-second Next.js architecture and programmatic SEO.',
-      content: 'Explode Labs did not just build software; they engineered our entire revenue infrastructure. The product is lightning-fast, and our sales team now has a full calendar of qualified enterprise buyers every week from SearchGPT and Google.',
-      metric: '+420% Organic Inbound Demos',
-      serviceUsed: 'Next.js App Dev & Programmatic SEO'
+      headline: 'They actually delivered on time and the code is incredibly clean.',
+      content: 'We had burned through two other development agencies before finding Explode Labs. They came in, audited our messy codebase, and completely rebuilt our platform in Next.js. What impressed me most wasn\'t just the technical skill, but how they communicated. Vishal and the team set clear expectations and hit every single deadline.',
+      metric: 'Delivered On Schedule',
+      serviceUsed: 'Web Engineering'
     },
     {
-      author: 'Elena Rostova',
-      role: 'VP of Growth & Acquisition',
-      company: 'KicksVault D2C',
-      industry: 'E-Commerce / Retail',
+      author: 'Sarah K.',
+      role: 'Marketing Director',
+      company: 'B2B Tech Solutions',
+      industry: 'Software',
       platform: 'G2 Verified Review',
       rating: 5,
       date: 'Q4 2025',
-      headline: '4.8x ROAS across Meta and Google with studio-grade DaVinci video ads.',
-      content: 'Their video post-production and ACES color grading elevated our brand above every competitor in our space. Paired with their server-side CAPI tracking, our cost per acquisition dropped by 34% within the first 60 days.',
-      metric: '5.4x Black Friday ROAS',
-      serviceUsed: 'Commercial Video & Paid Media'
+      headline: 'Our inbound leads tripled within 6 months of the SEO rebuild.',
+      content: 'I was skeptical about SEO agencies, but their focus on high-intent search over vanity traffic changed my mind. They re-architected our entire site and set up an organic pipeline that is now our top revenue driver. They are a deeply analytical, highly professional team that actually cares about your ROI.',
+      metric: '3x Inbound Leads',
+      serviceUsed: 'SEO & Growth'
     },
     {
-      author: 'Marcus Chen',
-      role: 'Chief Technology Officer',
-      company: 'Lumina Intelligence',
-      industry: 'Enterprise AI & LegalTech',
-      platform: 'Clutch Verified Review',
-      rating: 5,
-      date: 'Q1 2026',
-      headline: 'Zero hallucinations on 2.4M legal document AI search pipeline.',
-      content: 'Finding senior engineers who understand both deep semantic search indexing and strict accuracy benchmarking is rare. Explode Labs delivered a production AI search system that passed our enterprise SOC2 penetration testing with zero security issues.',
-      metric: '99.8% Retrieval Precision',
-      serviceUsed: 'AI Search & Knowledge Systems'
-    },
-    {
-      author: 'Dr. Sarah Jenkins',
-      role: 'Chief Medical Officer & Founder',
-      company: 'Apex Telehealth',
-      industry: 'HealthTech & Telemedicine',
+      author: 'James R.',
+      role: 'CMO',
+      company: 'D2C Retail Brand',
+      industry: 'E-Commerce',
       platform: 'Google Business Verified',
       rating: 5,
+      date: 'Q1 2026',
+      headline: 'The video assets they produced completely changed our brand perception.',
+      content: 'We hired Explode Labs to overhaul our commercial video assets, and the quality was absolutely studio-tier. They took our raw, unpolished ideas and turned them into ads that drastically lowered our acquisition costs on Meta. We honestly look like a massive Fortune 500 company now.',
+      metric: 'Lowered CPA by 34%',
+      serviceUsed: 'Video Production'
+    },
+    {
+      author: 'David L.',
+      role: 'CEO & Co-Founder',
+      company: 'Fintech Startup',
+      industry: 'Financial Technology',
+      platform: 'Clutch Verified Review',
+      rating: 5,
       date: 'Q3 2025',
-      headline: '100% HIPAA compliance pass with a frictionless mobile booking UX.',
-      content: 'The mobile app they built in React Native transformed our patient intake. Our booking completion rate surged to 94%, and their team handled every single regulatory and security compliance checkpoint seamlessly.',
-      metric: '+185% Patient Booking Surge',
-      serviceUsed: 'Mobile App & UI/UX Design System'
+      headline: 'The best technical partner we have ever worked with, hands down.',
+      content: 'It is incredibly rare to find an agency that genuinely cares about your business outcomes instead of just billing hours. Explode Labs handled everything from our platform architecture to our paid ads infrastructure. The site is lightning fast, the ads are converting, and the team is a pleasure to work with.',
+      metric: 'Full-Funnel Growth',
+      serviceUsed: 'Full-Service Retainer'
     }
   ];
 
