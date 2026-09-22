@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
@@ -10,11 +10,7 @@ import {
   Search, 
   TrendingUp, 
   ShieldCheck, 
-  Zap, 
-  Globe,
   CheckCircle2,
-  Lock,
-  Clock,
   Film,
   Code2,
   Bot,
@@ -26,18 +22,7 @@ import {
 } from 'lucide-react';
 
 export function Hero() {
-  const [websiteUrl, setWebsiteUrl] = useState('');
   const router = useRouter();
-
-  const handleAuditSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!websiteUrl.trim()) {
-      router.push('/contact');
-      return;
-    }
-    const clean = websiteUrl.replace(/^https?:\/\//i, '').replace(/\/.*$/, '').trim();
-    router.push(`/tools/seo-auditor?domain=${encodeURIComponent(clean)}`);
-  };
 
   const quickGoals = [
     { label: 'AI Search & SEO (GEO/AEO)', path: '/services/ai-search-optimization' },
@@ -118,82 +103,37 @@ export function Hero() {
             <strong className="text-[#f5f5f0] font-semibold">Explode Labs</strong> helps high-growth brands break through revenue plateaus. We fix your technical bottlenecks and scale your pipeline with high-performance web engineering, studio-grade video creative, and data-driven search campaigns.
           </p>
 
-          {/* Frictionless High-Converting Lead Intake */}
-          <div className="max-w-2xl mx-auto mb-6">
-            <form
-              onSubmit={handleAuditSubmit}
-              className="relative flex flex-col sm:flex-row items-center p-2 bg-[#0e0e0e] border border-[#242424] focus-within:border-[#ff5500] focus-within:shadow-[0_0_25px_rgba(255,85,0,0.18)] rounded-2xl shadow-2xl transition-all gap-2 sm:gap-0"
+          {/* Primary Action Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
+            <Button href="/contact" size="lg" variant="primary" withArrow>
+              Start a Project
+            </Button>
+            <Button
+              onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).openCalendlyModal) {
+                  (window as any).openCalendlyModal();
+                }
+              }}
+              size="lg"
+              variant="outline"
             >
-              <div className="hidden sm:flex pl-3.5 pr-2 text-[#ff5500]">
-                <Globe className="w-4 h-4" />
-              </div>
-              <input
-                type="text"
-                value={websiteUrl}
-                onChange={(e) => setWebsiteUrl(e.target.value)}
-                placeholder="Enter your website domain (e.g. yourbrand.com)"
-                className="w-full bg-transparent text-base sm:text-sm text-[#f5f5f0] placeholder-[#5c5c60] outline-none px-3 py-2 sm:py-1.5 text-center sm:text-left"
-              />
-              <button
-                type="submit"
-                className="w-full sm:w-auto shrink-0 flex items-center justify-center gap-1.5 px-5 py-2.5 bg-[#ff5500] hover:bg-[#e04a00] text-white font-semibold text-xs sm:text-[13px] rounded-xl transition-all shadow-lg shadow-[#ff5500]/25 cursor-pointer"
-              >
-                <span>Get Free Proposal & Audit</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
-            </form>
+              Book 30-Min Strategy Call
+            </Button>
+          </div>
 
-            {/* Instant Trust & SLA Guarantees */}
-            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-3 text-xs text-[#71717a]">
-              <span className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                <span className="text-emerald-400 font-medium">3 strategy slots open this week</span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Clock className="w-3.5 h-3.5 text-[#ff5500]" />
-                <span>24h Proposal SLA</span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Lock className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Zero Lock-in Contracts</span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Zap className="w-3.5 h-3.5 text-amber-400" />
-                <span>Instant SEO & AEO Analytics</span>
-              </span>
-            </div>
-
-            {/* Direct Strategy Call Option */}
-            <div className="mt-4 pt-4 border-t border-[#181818] flex flex-wrap items-center justify-center gap-2 text-xs">
-              <span className="text-[#8e8e93]">Prefer an immediate 1-on-1 discussion?</span>
+          {/* Fast Discipline Exploration Chips */}
+          <div className="flex flex-wrap items-center justify-center gap-1.5 mb-6">
+            <span className="text-[11px] text-[#5c5c60] mr-1 hidden sm:inline">Explore directly:</span>
+            {quickGoals.map((g, i) => (
               <button
+                key={i}
                 type="button"
-                onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).openCalendlyModal) {
-                    (window as any).openCalendlyModal();
-                  }
-                }}
-                className="text-[#ff5500] hover:text-[#ff7733] font-semibold flex items-center gap-1 transition-colors cursor-pointer"
+                onClick={() => router.push(g.path)}
+                className="text-[11px] font-mono text-[#8e8e93] hover:text-[#f5f5f0] bg-[#121212] hover:bg-[#181818] border border-[#202020] hover:border-[#333333] px-2.5 py-1 rounded-md transition-colors cursor-pointer"
               >
-                <span>Book a 30-Min Strategy Call with Senior Leads</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                {g.label}
               </button>
-            </div>
-
-            {/* Fast Discipline Exploration Chips */}
-            <div className="flex flex-wrap items-center justify-center gap-1.5 mt-4">
-              <span className="text-[11px] text-[#5c5c60] mr-1 hidden sm:inline">Explore directly:</span>
-              {quickGoals.map((g, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => router.push(g.path)}
-                  className="text-[11px] font-mono text-[#8e8e93] hover:text-[#f5f5f0] bg-[#121212] hover:bg-[#181818] border border-[#202020] hover:border-[#333333] px-2.5 py-1 rounded-md transition-colors cursor-pointer"
-                >
-                  {g.label}
-                </button>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
 
