@@ -72,30 +72,32 @@ export function Hero() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* Refined Subtle Studio Lighting (Crisp & High-Contrast) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[750px] h-[300px] bg-[#ff5500]/[0.035] blur-[120px] rounded-full pointer-events-none -z-10" />
+      {/* Atmospheric Background Lighting */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-[#ff5500]/12 via-[#ff3300]/6 to-transparent blur-[130px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-[#ff5500]/5 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute bottom-0 left-10 w-[350px] h-[350px] bg-white/[0.02] blur-[100px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* TOP HERO HEADER */}
         <div className="max-w-4xl mx-auto text-center">
           
-          {/* Prestige Studio Eyebrow Badge (Zero pulsing, clean architectural design) */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111111] border border-[#242424] mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ff5500]" />
-            <span className="text-xs font-mono font-medium text-[#8e8e93] tracking-wide">
-              Full-Service Digital Growth & Creative Engineering Studio
+          {/* Sleek Glassmorphic Eyebrow Badge (No pulsing animation, luxury glow) */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#121212]/90 border border-[#282828] shadow-[0_0_25px_rgba(255,85,0,0.12)] mb-6">
+            <span className="w-2 h-2 rounded-full bg-[#ff5500] shadow-[0_0_8px_#ff5500]" />
+            <span className="text-[11px] sm:text-xs font-mono font-medium text-[#f5f5f0] tracking-tight">
+              SEO & AI Search <span className="text-[#555]">•</span> Video Production <span className="text-[#555]">•</span> Paid Advertising <span className="text-[#555]">•</span> Web Development
             </span>
           </div>
 
-          {/* Primary High-Intent Commercial H1 Typography (Solid high-contrast authority) */}
+          {/* Primary High-Intent Commercial H1 Typography with Luxury Gradients */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#f5f5f0] leading-[1.08] mb-6">
-            We scale search revenue, produce studio video & engineer high-converting web platforms.
+            We scale <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5500] via-[#ff7733] to-[#ff4400]">search traffic</span>, produce <span className="text-[#ffffff]">studio video</span> & build <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6600] via-[#ffa366] to-[#f5f5f0]">high-converting websites</span>.
           </h1>
 
           {/* AEO / GEO Declarative Entity Statement (Authoritative ground truth for AI & Human visitors) */}
           <p className="text-base sm:text-lg text-[#9e9ea3] max-w-3xl mx-auto font-normal leading-relaxed mb-8">
-            <strong className="text-[#f5f5f0] font-semibold">Explode Labs</strong> is a full-service digital agency for high-growth brands. We combine technical SEO, AI search optimization (GEO), commercial DaVinci video post-production, and custom Next.js engineering to drive measurable pipeline growth.
+            <strong className="text-[#f5f5f0] font-semibold">Explode Labs</strong> helps high-growth brands break through revenue plateaus. We fix your technical bottlenecks and scale your pipeline with high-performance web engineering, studio-grade video creative, and data-driven search campaigns.
           </p>
 
           {/* Primary Action Buttons */}
@@ -118,13 +120,13 @@ export function Hero() {
 
           {/* Fast Discipline Exploration Chips */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-            <span className="text-xs font-mono text-[#5c5c60] mr-1 hidden sm:inline">Explore capabilities:</span>
+            <span className="text-xs font-mono text-[#5c5c60] mr-1 hidden sm:inline">Explore directly:</span>
             {quickGoals.map((g, i) => (
               <button
                 key={i}
                 type="button"
                 onClick={() => router.push(g.path)}
-                className="text-xs font-mono text-[#8e8e93] hover:text-[#f5f5f0] bg-[#0e0e0e] hover:bg-[#161616] border border-[#1e1e1e] hover:border-[#333333] px-3 py-1.5 rounded-lg transition-all cursor-pointer"
+                className="text-xs font-mono text-[#8e8e93] hover:text-[#f5f5f0] bg-[#121212] hover:bg-[#181818] border border-[#202020] hover:border-[#333333] px-3 py-1.5 rounded-lg transition-all cursor-pointer"
               >
                 {g.label}
               </button>
