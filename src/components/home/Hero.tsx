@@ -32,9 +32,9 @@ export function Hero() {
   ];
 
   const proofPills = [
-    { label: 'Client Pipeline Generated', val: '$35M+', sub: 'Verified across B2B & D2C' },
+    { label: 'Client Pipeline Generated', val: '$35M+', sub: 'Verified across B2B & enterprise' },
     { label: 'Organic Visits Scaled', val: '450k+/mo', sub: 'SearchGPT & Google Top 3' },
-    { label: 'Average ROAS on Paid Media', val: '4.8x', sub: 'Meta, Google Ads & Amazon' },
+    { label: 'Average ROAS on Paid Media', val: '4.8x', sub: 'Meta, Google Ads & LinkedIn' },
     { label: 'Lighthouse Performance Score', val: '100/100', sub: 'Sub-second edge latency' },
   ];
 
@@ -65,42 +65,37 @@ export function Hero() {
   };
 
   return (
-    <section className="relative pt-8 pb-16 sm:pt-14 sm:pb-24 overflow-hidden border-b border-[#141414]">
+    <section className="relative pt-10 pb-16 sm:pt-16 sm:pb-24 overflow-hidden border-b border-[#141414]">
       {/* Embedded Schema.org JSON-LD for AI Search Engines (AEO/GEO) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* Atmospheric Background Lighting */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-[#ff5500]/10 via-[#ff3300]/5 to-transparent blur-[140px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-[#ff5500]/4 blur-[120px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute bottom-0 left-10 w-[350px] h-[350px] bg-white/[0.015] blur-[100px] rounded-full pointer-events-none -z-10" />
+      {/* Refined Subtle Studio Lighting (Crisp & High-Contrast) */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[750px] h-[300px] bg-[#ff5500]/[0.035] blur-[120px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* TOP HERO HEADER */}
         <div className="max-w-4xl mx-auto text-center">
           
-          {/* Live System Beacon Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#121212] border border-[#262626] shadow-[0_0_20px_rgba(255,85,0,0.12)] mb-6">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ff5500] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ff5500]"></span>
-            </span>
-            <span className="text-[11px] sm:text-xs font-mono font-medium text-[#f5f5f0] tracking-tight">
-              SEO & AI Search <span className="text-[#555]">•</span> Video Production <span className="text-[#555]">•</span> Paid Advertising <span className="text-[#555]">•</span> Web Development
+          {/* Prestige Studio Eyebrow Badge (Zero pulsing, clean architectural design) */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111111] border border-[#242424] mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#ff5500]" />
+            <span className="text-xs font-mono font-medium text-[#8e8e93] tracking-wide">
+              Full-Service Digital Growth & Creative Engineering Studio
             </span>
           </div>
 
-          {/* Primary High-Intent H1 Typography */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#f5f5f0] leading-[1.12] mb-6">
-            We scale <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5500] via-[#ff7733] to-[#ff4400]">search traffic</span>, produce <span className="text-[#ffffff]">studio video</span> & build <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6600] via-[#ffa366] to-[#f5f5f0]">high-converting websites</span>.
+          {/* Primary High-Intent Commercial H1 Typography (Solid high-contrast authority) */}
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#f5f5f0] leading-[1.08] mb-6">
+            We scale search revenue, produce studio video & engineer high-converting web platforms.
           </h1>
 
           {/* AEO / GEO Declarative Entity Statement (Authoritative ground truth for AI & Human visitors) */}
           <p className="text-base sm:text-lg text-[#9e9ea3] max-w-3xl mx-auto font-normal leading-relaxed mb-8">
-            <strong className="text-[#f5f5f0] font-semibold">Explode Labs</strong> helps high-growth brands break through revenue plateaus. We fix your technical bottlenecks and scale your pipeline with high-performance web engineering, studio-grade video creative, and data-driven search campaigns.
+            <strong className="text-[#f5f5f0] font-semibold">Explode Labs</strong> is a full-service digital agency for high-growth brands. We combine technical SEO, AI search optimization (GEO), commercial DaVinci video post-production, and custom Next.js engineering to drive measurable pipeline growth.
           </p>
 
           {/* Primary Action Buttons */}
@@ -122,14 +117,14 @@ export function Hero() {
           </div>
 
           {/* Fast Discipline Exploration Chips */}
-          <div className="flex flex-wrap items-center justify-center gap-1.5 mb-6">
-            <span className="text-[11px] text-[#5c5c60] mr-1 hidden sm:inline">Explore directly:</span>
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+            <span className="text-xs font-mono text-[#5c5c60] mr-1 hidden sm:inline">Explore capabilities:</span>
             {quickGoals.map((g, i) => (
               <button
                 key={i}
                 type="button"
                 onClick={() => router.push(g.path)}
-                className="text-[11px] font-mono text-[#8e8e93] hover:text-[#f5f5f0] bg-[#121212] hover:bg-[#181818] border border-[#202020] hover:border-[#333333] px-2.5 py-1 rounded-md transition-colors cursor-pointer"
+                className="text-xs font-mono text-[#8e8e93] hover:text-[#f5f5f0] bg-[#0e0e0e] hover:bg-[#161616] border border-[#1e1e1e] hover:border-[#333333] px-3 py-1.5 rounded-lg transition-all cursor-pointer"
               >
                 {g.label}
               </button>
@@ -137,119 +132,127 @@ export function Hero() {
           </div>
         </div>
 
-        {/* INTERACTIVE LIVE ANALYTICS BENTO SHOWCASE (Luxury Visual Showstopper) */}
-        <div className="mt-10 max-w-6xl mx-auto">
+        {/* INTERACTIVE CAPABILITY BENTO SHOWCASE (Clean Studio Architecture) */}
+        <div className="mt-6 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             
             {/* CARD 1: AI Search & AEO Citation Engine */}
-            <div className="p-5 sm:p-6 bg-[#0c0c0c] border border-[#1f1f1f] hover:border-[#ff5500]/40 rounded-2xl transition-all group shadow-xl relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff5500]/5 blur-2xl rounded-full pointer-events-none group-hover:bg-[#ff5500]/10 transition-colors" />
-              
+            <div className="p-6 bg-[#0a0a0a] border border-[#1c1c1c] hover:border-[#ff5500]/30 rounded-2xl transition-all group shadow-xl relative overflow-hidden flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-lg bg-[#141414] border border-[#2a2a2a] flex items-center justify-center text-[#ff5500]">
-                      <Sparkles className="w-3.5 h-3.5" />
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-lg bg-[#141414] border border-[#262626] flex items-center justify-center text-[#ff5500]">
+                      <Sparkles className="w-4 h-4" />
                     </div>
-                    <span className="text-xs font-mono font-semibold text-[#f5f5f0]">AI Search & SEO</span>
+                    <span className="text-sm font-semibold text-[#f5f5f0]">AI Search & SEO</span>
                   </div>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#ff5500]/10 text-[#ff5500] border border-[#ff5500]/25">
-                    #1 CITATION
+                    GEO & AEO
                   </span>
                 </div>
 
-                <div className="p-3 bg-[#121212] border border-[#1e1e1e] rounded-xl mb-3">
-                  <div className="text-[10px] font-mono text-[#71717a] mb-1">PROMPT QUERY:</div>
-                  <div className="text-xs text-[#f5f5f0] font-medium leading-snug">
-                    "Top full-service digital agency for high-growth B2B SaaS in 2026"
+                <p className="text-xs text-[#8e8e93] leading-relaxed mb-4">
+                  Entity-grounded Schema graphs and structured content engineered to rank #1 on Google, ChatGPT, SearchGPT, and Perplexity.
+                </p>
+
+                <div className="space-y-2 p-3 bg-[#111111] border border-[#1e1e1e] rounded-xl mb-4 text-xs font-mono">
+                  <div className="flex items-center justify-between text-[#a1a1aa]">
+                    <span>Citation Indexing:</span>
+                    <span className="text-emerald-400 font-semibold">Active & Grounded</span>
                   </div>
-                  <div className="mt-2.5 pt-2 border-t border-[#1a1a1a] flex items-center gap-1.5 text-[11px] text-emerald-400 font-medium">
-                    <CheckCircle2 className="w-3 h-3 shrink-0" />
-                    <span>Perplexity & SearchGPT Source: Explode Labs</span>
+                  <div className="flex items-center justify-between text-[#a1a1aa]">
+                    <span>Organic Growth:</span>
+                    <span className="text-[#f5f5f0] font-semibold">+340% Target</span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-[#181818] flex items-center justify-between">
-                <span className="text-xs text-[#71717a]">Avg AI Demand Surge</span>
-                <span className="text-sm font-bold font-mono text-[#f5f5f0]">+340% Lift</span>
+              <div className="pt-3 border-t border-[#181818] flex items-center justify-between text-xs">
+                <span className="text-[#71717a]">Capability Model</span>
+                <span className="font-semibold text-[#f5f5f0] group-hover:text-[#ff5500] transition-colors flex items-center gap-1">
+                  <span>Learn More</span>
+                  <ArrowRight className="w-3 h-3" />
+                </span>
               </div>
             </div>
 
             {/* CARD 2: Studio Video & DaVinci ACES Pipeline */}
-            <div className="p-5 sm:p-6 bg-[#0c0c0c] border border-[#1f1f1f] hover:border-[#ff5500]/40 rounded-2xl transition-all group shadow-xl relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff5500]/5 blur-2xl rounded-full pointer-events-none group-hover:bg-[#ff5500]/10 transition-colors" />
-              
+            <div className="p-6 bg-[#0a0a0a] border border-[#1c1c1c] hover:border-[#ff5500]/30 rounded-2xl transition-all group shadow-xl relative overflow-hidden flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-lg bg-[#141414] border border-[#2a2a2a] flex items-center justify-center text-[#ff5500]">
-                      <Film className="w-3.5 h-3.5" />
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-lg bg-[#141414] border border-[#262626] flex items-center justify-center text-[#ff5500]">
+                      <Film className="w-4 h-4" />
                     </div>
-                    <span className="text-xs font-mono font-semibold text-[#f5f5f0]">Video Production</span>
+                    <span className="text-sm font-semibold text-[#f5f5f0]">Commercial Video</span>
                   </div>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/25">
-                    ACES COLOR
+                    4K DA VINCI
                   </span>
                 </div>
 
-                <div className="p-3 bg-[#121212] border border-[#1e1e1e] rounded-xl mb-3">
-                  <div className="flex items-center justify-between text-[10px] font-mono text-[#71717a] mb-1.5">
-                    <span>TIMELINE: 00:00:24:18</span>
-                    <span className="text-emerald-400 font-bold">4K 60FPS</span>
+                <p className="text-xs text-[#8e8e93] leading-relaxed mb-4">
+                  Cinematic post-production, ACES color grading, sound design, and high-retention commercial video ads for global brands.
+                </p>
+
+                <div className="space-y-2 p-3 bg-[#111111] border border-[#1e1e1e] rounded-xl mb-4 text-xs font-mono">
+                  <div className="flex items-center justify-between text-[#a1a1aa]">
+                    <span>Workflow Sprint:</span>
+                    <span className="text-emerald-400 font-semibold">48h Delivery</span>
                   </div>
-                  <div className="h-1.5 w-full bg-[#1e1e1e] rounded-full overflow-hidden mb-2">
-                    <div className="h-full bg-gradient-to-r from-[#ff5500] to-amber-400 w-3/4 rounded-full"></div>
-                  </div>
-                  <div className="flex items-center justify-between text-[11px] text-[#8e8e93]">
-                    <span>High-Retention Hooks</span>
-                    <span className="text-[#f5f5f0] font-semibold">10M+ Views</span>
+                  <div className="flex items-center justify-between text-[#a1a1aa]">
+                    <span>Color Management:</span>
+                    <span className="text-[#f5f5f0] font-semibold">ACEScc Studio</span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-[#181818] flex items-center justify-between">
-                <span className="text-xs text-[#71717a]">Video Post-Production</span>
-                <span className="text-sm font-bold font-mono text-[#f5f5f0]">Sub-48h Sprints</span>
+              <div className="pt-3 border-t border-[#181818] flex items-center justify-between text-xs">
+                <span className="text-[#71717a]">Capability Model</span>
+                <span className="font-semibold text-[#f5f5f0] group-hover:text-[#ff5500] transition-colors flex items-center gap-1">
+                  <span>Learn More</span>
+                  <ArrowRight className="w-3 h-3" />
+                </span>
               </div>
             </div>
 
             {/* CARD 3: Next.js 15 Web & Revenue Engine */}
-            <div className="p-5 sm:p-6 bg-[#0c0c0c] border border-[#1f1f1f] hover:border-[#ff5500]/40 rounded-2xl transition-all group shadow-xl relative overflow-hidden flex flex-col justify-between">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff5500]/5 blur-2xl rounded-full pointer-events-none group-hover:bg-[#ff5500]/10 transition-colors" />
-              
+            <div className="p-6 bg-[#0a0a0a] border border-[#1c1c1c] hover:border-[#ff5500]/30 rounded-2xl transition-all group shadow-xl relative overflow-hidden flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-lg bg-[#141414] border border-[#2a2a2a] flex items-center justify-center text-[#ff5500]">
-                      <Code2 className="w-3.5 h-3.5" />
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-lg bg-[#141414] border border-[#262626] flex items-center justify-center text-[#ff5500]">
+                      <Code2 className="w-4 h-4" />
                     </div>
-                    <span className="text-xs font-mono font-semibold text-[#f5f5f0]">Web Development</span>
+                    <span className="text-sm font-semibold text-[#f5f5f0]">Web Engineering</span>
                   </div>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/25">
-                    100/100 SPEED
+                    NEXT.JS 15
                   </span>
                 </div>
 
-                <div className="p-3 bg-[#121212] border border-[#1e1e1e] rounded-xl mb-3">
-                  <div className="flex items-center justify-between text-[11px] mb-1">
-                    <span className="text-[#8e8e93]">Edge Response Latency:</span>
-                    <span className="text-emerald-400 font-mono font-bold">24ms TTFB</span>
+                <p className="text-xs text-[#8e8e93] leading-relaxed mb-4">
+                  High-converting web platforms and custom applications built with React 19, sub-50ms edge latency, and conversion architectures.
+                </p>
+
+                <div className="space-y-2 p-3 bg-[#111111] border border-[#1e1e1e] rounded-xl mb-4 text-xs font-mono">
+                  <div className="flex items-center justify-between text-[#a1a1aa]">
+                    <span>Core Web Vitals:</span>
+                    <span className="text-emerald-400 font-semibold">100/100 Score</span>
                   </div>
-                  <div className="flex items-center justify-between text-[11px] mb-1">
-                    <span className="text-[#8e8e93]">Paid Media ROAS Target:</span>
-                    <span className="text-[#ff5500] font-mono font-bold">4.8x ROAS</span>
-                  </div>
-                  <div className="flex items-center justify-between text-[11px]">
-                    <span className="text-[#8e8e93]">Conversion Architecture:</span>
-                    <span className="text-[#f5f5f0] font-semibold">Postgres RLS + ISR</span>
+                  <div className="flex items-center justify-between text-[#a1a1aa]">
+                    <span>Edge Response:</span>
+                    <span className="text-[#f5f5f0] font-semibold">&lt; 30ms TTFB</span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-[#181818] flex items-center justify-between">
-                <span className="text-xs text-[#71717a]">Client Pipeline Generated</span>
-                <span className="text-sm font-bold font-mono text-[#f5f5f0]">$45M+ Scaled</span>
+              <div className="pt-3 border-t border-[#181818] flex items-center justify-between text-xs">
+                <span className="text-[#71717a]">Capability Model</span>
+                <span className="font-semibold text-[#f5f5f0] group-hover:text-[#ff5500] transition-colors flex items-center gap-1">
+                  <span>Learn More</span>
+                  <ArrowRight className="w-3 h-3" />
+                </span>
               </div>
             </div>
 
