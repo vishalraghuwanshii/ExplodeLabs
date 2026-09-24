@@ -7,6 +7,7 @@ import { Footer } from '@/components/layout/Footer';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { CalendlyModal } from '@/components/ui/CalendlyModal';
 import { FloatingBookingPill } from '@/components/ui/FloatingBookingPill';
+import { TrafficSourceTracker } from '@/components/seo/TrafficSourceTracker';
 import { GA_TRACKING_ID } from '@/lib/analytics';
 
 const inter = Inter({
@@ -202,6 +203,7 @@ export default function RootLayout({
         <Footer />
         <CalendlyModal />
         <FloatingBookingPill />
+        <TrafficSourceTracker />
       </body>
     </html>
   );
