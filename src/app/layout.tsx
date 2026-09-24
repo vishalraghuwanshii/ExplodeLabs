@@ -182,6 +182,20 @@ export default function RootLayout({
             </Script>
           </>
         )}
+        {/* Crisp Live Chat */}
+        <Script id="crisp-chat-init" strategy="afterInteractive">
+          {`
+            window.$crisp=[];
+            window.CRISP_WEBSITE_ID="b35c413e-3064-4a87-9cdf-45c5e8654209";
+            (function(){
+              d=document;
+              s=d.createElement("script");
+              s.src="https://client.crisp.chat/l.js";
+              s.async=1;
+              d.getElementsByTagName("head")[0].appendChild(s);
+            })();
+          `}
+        </Script>
         <JsonLd schema={organizationSchema} />
         <Header />
         <main className="flex-1">{children}</main>
