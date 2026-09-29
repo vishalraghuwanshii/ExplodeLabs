@@ -885,21 +885,36 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div id="get-started" className="py-16">
           <div className="p-8 sm:p-12 bg-gradient-to-br from-[#141414] to-[#090909] border border-[#242424] rounded-2xl flex flex-col items-center text-center shadow-2xl">
             <Badge variant="orange" className="mb-4">
-              Ready to Build?
+              {service.slug === 'motion-graphics' ? 'Ready to Edit?' : 'Ready to Build?'}
             </Badge>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f5f0] mb-4">
-              Let’s Scope Your {service.name} Project.
+              {service.slug === 'motion-graphics' ? 'Let’s Scope Your Video Project.' : `Let’s Scope Your ${service.name} Project.`}
             </h2>
-            <p className="text-[#a1a1aa] mb-8 max-w-xl text-sm sm:text-base leading-relaxed">
-              Get a custom milestone proposal with transparent sprint deliverables, clear timelines, and full source code ownership.
+            <p className="text-[#a1a1aa] mb-8 max-w-xl text-sm sm:text-base leading-relaxed font-normal">
+              {service.slug === 'motion-graphics'
+                ? 'Choose a monthly short-form video editing retainer or scope a standalone motion graphics project. Transparent deliverables with full commercial asset ownership.'
+                : 'Get a custom milestone proposal with transparent sprint deliverables, clear timelines, and full source code ownership.'}
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button href="https://calendly.com/vishal-invokeiq/30min" size="lg" variant="primary" withArrow>
-                Book 30-Min Strategy Call
-              </Button>
-              <Button href="/contact" size="lg" variant="outline">
-                {ctaText}
-              </Button>
+              {service.slug === 'motion-graphics' ? (
+                <>
+                  <Button href="#project-intake" size="lg" variant="primary" withArrow>
+                    Start a Project
+                  </Button>
+                  <Button href="https://calendly.com/vishal-invokeiq/30min" size="lg" variant="outline">
+                    Book a Call
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button href="https://calendly.com/vishal-invokeiq/30min" size="lg" variant="primary" withArrow>
+                    Book 30-Min Strategy Call
+                  </Button>
+                  <Button href="/contact" size="lg" variant="outline">
+                    {ctaText}
+                  </Button>
+                </>
+              )}
             </div>
           </div>
         </div>

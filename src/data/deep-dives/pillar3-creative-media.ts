@@ -598,44 +598,54 @@ export const pillar3DeepDives: Record<string, ServiceDeepDive> = {
     ],
     detailedFaqs: [
       {
-        question: 'What does your short-form video editing service include?',
+        question: 'What does your short-form video editing and motion graphics service include?',
         answer:
-          'Our service includes narrative trimming, pacing adjustment, hand-timed kinetic typography, visual hook framing, multi-stem sound design, background audio balancing, color correction, and exporting in vertical 9:16 format (for Reels, Shorts, and TikTok).'
+          'We handle the complete post-production workflow: cutting dead air and narrative pauses, designing custom kinetic typography with your brand fonts, mixing multi-track sound effects and music, adding 2D/3D motion graphics, and color grading your footage for vertical 9:16 platforms (Instagram Reels, TikTok, YouTube Shorts) as well as 16:9 widescreen formats.'
       },
       {
-        question: 'How much does short-form video editing cost?',
+        question: 'How much does short-form video editing and motion design cost?',
         answer:
-          'Pricing is structured around predictable monthly retainers (such as 8, 16, or 30 edited videos per month) or custom milestone scopes for standalone 2D/3D explainer projects. Request a project scope to get a detailed breakdown.'
+          'We work on transparent monthly retainers (such as 8, 16, or 30 edited videos per month) and custom milestone scopes for standalone 2D/3D explainer projects. Request a project scope to get a clear breakdown tailored to your publishing schedule.'
       },
       {
         question: 'How does the monthly editing retainer work?',
         answer:
-          'You drop your raw recordings into a shared folder. Our team edits your clips according to your established brand guidelines and delivers finished drafts on a predictable schedule with active revisions included.'
+          'You drop your raw recordings, podcast files, or screen walkthroughs into a shared Google Drive, Dropbox, or Frame.io folder. Our dedicated editors cut, polish, and deliver finished drafts on a predictable weekly cadence with active revision rounds included.'
       },
       {
         question: 'How quickly do you deliver finished edits?',
         answer:
-          'Standard short-form video edits are typically delivered on a 24 to 48-hour cycle once raw footage is uploaded. Larger bespoke 2D/3D explainer animations follow dedicated milestone timelines.'
+          'Standard short-form video edits are typically delivered within 24 to 48 hours once raw footage is uploaded. Bespoke 2D/3D explainer animations follow structured milestone sprint timelines (usually 2 to 4 weeks).'
       },
       {
         question: 'What footage or equipment do I need to provide?',
         answer:
-          'You can record on any modern smartphone or dedicated camera. While good lighting and clear audio improve the baseline quality, our post-production process includes audio noise reduction and color balancing on every clip.'
+          'You can record on any modern smartphone, webcam, or dedicated mirrorless camera. While good lighting and clean microphone audio help, our post-production process includes audio noise cleanup, volume balancing, and color correction on every clip.'
       },
       {
-        question: 'Can you turn long-form podcasts or webinars into short-form reels?',
+        question: 'Can you turn long-form podcasts, webinars, or keynotes into vertical Reels?',
         answer:
-          'Yes. You can provide full long-form recordings, and our team will identify strong standalone talking points, reframe them to vertical 9:16, add kinetic typography, and edit them into engaging short clips.'
+          'Yes. You can upload full-length 45–60 minute recordings, and our team will identify strong standalone talking points, reframe them to vertical 9:16, add kinetic typography, and turn them into a batch of ready-to-publish short-form videos.'
+      },
+      {
+        question: 'Can you follow our exact brand fonts, colors, and visual style?',
+        answer:
+          'Yes. During onboarding, you share your brand guidelines, fonts, color codes, logo assets, and sample reference videos you like. We build a custom visual style system for your account so every edit feels cohesive and on-brand.'
       },
       {
         question: 'How do revisions work?',
         answer:
-          'You receive a direct review link where you can pause at any exact second on the video frame and type your feedback. Our team applies adjustments promptly.'
+          'You receive a direct review link where you can pause at any exact second on the video and type your feedback or draw on the frame. Our editors make adjustments quickly.'
       },
       {
-        question: 'Who owns the finished videos?',
+        question: 'What social platforms do you edit and export for?',
         answer:
-          'You maintain 100% commercial ownership of all final rendered video assets upon milestone completion.'
+          'We format and export master files for Instagram Reels, YouTube Shorts, TikTok, LinkedIn Video, X (Twitter), Facebook, and website landing pages.'
+      },
+      {
+        question: 'Who owns the finished videos and master files?',
+        answer:
+          'You maintain 100% commercial ownership of all rendered master files and final video exports.'
       }
     ]
   },

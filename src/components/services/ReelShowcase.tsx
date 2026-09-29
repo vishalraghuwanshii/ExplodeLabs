@@ -191,14 +191,19 @@ export function ReelShowcase() {
                 </div>
 
                 {/* Clean, Human Card Details */}
-                <div className="p-5 flex flex-col justify-between flex-1 space-y-4">
+                <div className="p-5 flex flex-col justify-between flex-1 space-y-3">
                   <div>
                     <h3 className="text-base font-bold text-[#f5f5f0] group-hover:text-[#ff5500] transition-colors mb-2 leading-snug">
                       {reel.title}
                     </h3>
-                    <p className="text-xs text-[#a1a1aa] leading-relaxed font-normal">
+                    <p className="text-xs text-[#a1a1aa] leading-relaxed font-normal mb-2.5">
                       {reel.description}
                     </p>
+                    {reel.idealFor && (
+                      <div className="text-[11px] text-[#71717a] font-normal leading-relaxed">
+                        <span className="text-[#a1a1aa] font-medium">Best for:</span> {reel.idealFor}
+                      </div>
+                    )}
                   </div>
 
                   {/* Clean Style Tags */}
@@ -274,7 +279,12 @@ export function ReelShowcase() {
                 <p className="text-xs text-[#a1a1aa] leading-relaxed">
                   {activeModalReel.description}
                 </p>
-                <Button href="#project-intake" variant="primary" size="sm" className="w-full" withArrow onClick={() => setActiveModalReel(null)}>
+                {activeModalReel.idealFor && (
+                  <p className="text-[11px] text-[#71717a]">
+                    <strong className="text-[#a1a1aa]">Best for:</strong> {activeModalReel.idealFor}
+                  </p>
+                )}
+                <Button href="#project-intake" variant="primary" size="sm" className="w-full text-xs" withArrow onClick={() => setActiveModalReel(null)}>
                   Start a Similar Project
                 </Button>
               </div>
