@@ -426,209 +426,216 @@ export const pillar3DeepDives: Record<string, ServiceDeepDive> = {
 
   'motion-graphics-and-visual-effects': {
     slug: 'motion-graphics-and-visual-effects',
-    metaTitle: '2D & 3D Motion Graphics, VFX & UI Animation Agency | Explode Labs',
-    metaDescription: 'Elevate digital products with custom 2D/3D motion graphics, kinetic typography, lightweight web animations (Lottie/Rive), and product explainer videos.',
+    metaTitle: 'Motion Graphics & Short-Form Video Editing Services | Explode Labs',
+    metaDescription: 'Professional motion graphics, kinetic typography, and short-form video post-production for founders, creators, coaches, and brands. 24–48h delivery.',
     primaryKeyword: 'motion graphics services',
     secondaryKeywords: [
-      '3d motion graphics services',
-      'lottie web animation agency',
-      'saas product explainer animation',
-      'kinetic typography animation',
-      'ui micro interaction animation'
+      'short form video editing agency',
+      'reel editing services',
+      'kinetic typography video editing',
+      'motion graphics design agency',
+      'social media video post production'
     ],
     aeoDefinition:
-      'Motion graphics and visual effects (VFX) is the design discipline of creating dynamic 2D/3D animations, kinetic typography, lightweight web micro-interactions (Lottie/Rive), and 3D product visuals to explain complex concepts, demonstrate software interfaces, and engage commercial audiences.',
+      'A motion graphics and reel editing service is a specialized post-production workflow combining narrative trimming, hand-timed kinetic typography, 2D/3D visual overlays, custom multi-stem sound design, and color balancing to turn raw video footage into finished, high-retention content.',
     executiveSummary:
-      'Static interfaces and basic screen recordings fail to communicate the quality of modern software and hardware products. We create high-impact 2D/3D motion graphics, product explainer videos, and lightweight interactive web animations (Lottie and Rive) that clarify complex ideas, elevate brand perception, and increase website conversions.',
+      'Recording video is fast; editing it consistently with professional pacing, typography, and sound design is what slows down content publishing. We act as your dedicated post-production partner, transforming raw footage into polished, publication-ready video on a dependable schedule.',
     fiveStagePipeline: [
       {
-        title: 'Phase 1: Concept, Scriptwriting & Visual Styleframes',
-        duration: 'Weeks 1-2',
-        description: 'We write clear scripts, establish brand aesthetic directions, and design high-resolution styleframes in Figma and Illustrator that define typography, color palette, and lighting before animation begins.',
+        title: 'Step 1: Ingest, Narrative Trimming & Hook Setup',
+        duration: 'Day 1',
+        description: 'We review your raw recordings, eliminate pauses, stutters, and filler words, and structure an intentional opening frame to establish immediate clarity.',
         deliverables: [
-          'Direct-response animation script and voiceover guide',
-          '3 distinct visual styleframe concept boards',
-          'Complete visual storyboard covering every key scene',
-          'Audio mood board and sound design blueprint'
+          'Dead-space and filler-word removal',
+          'Opening focal zoom and hook framing',
+          'Clean narrative structure'
         ],
-        tools: ['Figma', 'Adobe Illustrator', 'Notion', 'Frame.io']
+        tools: ['Adobe Premiere Pro', 'DaVinci Resolve Studio']
       },
       {
-        title: 'Phase 2: 2D/3D Graphic Design & Visual Assets',
-        duration: 'Weeks 3-4',
-        description: 'We build vector UI components, model 3D geometric product assets, and prepare elements in Cinema 4D and After Effects for smooth, natural motion.',
+        title: 'Step 2: Custom Kinetic Typography & Visual Cues',
+        duration: 'Day 1–2',
+        description: 'We build hand-timed kinetic typography matched to your brand fonts and colors, with dynamic word-level highlighting on emphasized points.',
         deliverables: [
-          'High-fidelity 3D product and device hardware models',
-          'Vector UI component library prepared for animation',
-          'Custom kinetic typography design presets',
-          '3D camera paths and lighting stage setup'
+          'Brand-aligned kinetic typography',
+          'Dynamic word highlighting',
+          'Contextual icon and graphic overlays'
         ],
-        tools: ['Cinema 4D', 'Blender', 'Adobe After Effects', 'Redshift / Octane Render']
+        tools: ['Adobe After Effects', 'Adobe Illustrator']
       },
       {
-        title: 'Phase 3: Motion Animation, Easing & Pacing',
-        duration: 'Weeks 5-7',
-        description: 'We animate natural speed curves, smooth camera transitions, visual effects, and kinetic typography synchronized perfectly to the voiceover narrative.',
+        title: 'Step 3: Multi-Stem Sound Design & Audio Balancing',
+        duration: 'Day 2',
+        description: 'We layer subtle foley effects (clicks, swooshes, ambient risers) and mix background music so spoken dialogue remains clean and intelligible.',
         deliverables: [
-          'Full-length rough animation preview for timing and story review',
-          'Smooth physics-based easing curves and transitions',
-          'Dynamic UI cursor and screen interaction simulations',
-          'Frame.io timecoded review pass for client feedback'
+          'Dialogue isolation and noise reduction',
+          'Layered foley sound effects',
+          'Loudness-balanced background music'
         ],
-        tools: ['Adobe After Effects', 'Cinema 4D', 'Flow / EaseCopy Plugins', 'Frame.io']
+        tools: ['Fairlight', 'iZotope RX', 'Adobe Audition']
       },
       {
-        title: 'Phase 4: Lighting, Color Styling, Visual Effects & Custom Audio',
-        duration: 'Weeks 8-9',
-        description: 'We render photorealistic 3D passes, polish optical glows and reflections, and layer in custom sound design (whooshes, UI clicks, ambient score) for maximum engagement.',
+        title: 'Step 4: Color Balancing & Visual Polish',
+        duration: 'Day 2',
+        description: 'We balance exposure, adjust contrast, and tune skin tones so footage shot on smartphones or cameras looks cohesive and professional.',
         deliverables: [
-          'High-fidelity 3D render passes with realistic lighting and materials',
-          'Color grading and visual effects polish',
-          'Custom sound design, interface clicks, and musical scoring',
-          'Final 4K master animation render'
+          'Skin-tone separation and exposure correction',
+          'Contrast and saturation balancing',
+          'Platform safe-zone alignment'
         ],
-        tools: ['Redshift', 'iZotope RX', 'Logic Pro', 'DaVinci Resolve Studio']
+        tools: ['DaVinci Resolve Studio', 'After Effects']
       },
       {
-        title: 'Phase 5: Multi-Format Web Export, Lottie/Rive & 4K Video Delivery',
-        duration: 'Weeks 10-11',
-        description: 'We convert animations into ultra-lightweight Lottie (JSON) and Rive web files for fast interactive browser embeds alongside full 4K video exports.',
+        title: 'Step 5: Review & Final Master Export',
+        duration: 'Day 2–3',
+        description: 'You review the draft in your browser and leave timestamped notes. Once approved, you receive high-bitrate master exports ready to publish.',
         deliverables: [
-          'Sub-100KB interactive Lottie JSON and Rive web animations',
-          '4K UHD ProRes and high-bitrate MP4 master commercial videos',
-          'Social video cutdowns (9:16 vertical, 1:1 square, 16:9 widescreen)',
-          'Transparent background video exports (WebM / ProRes 4444)'
+          'In-browser timecoded review access',
+          'Prompt revision turnaround',
+          'High-bitrate 1080p/4K master video files'
         ],
-        tools: ['Bodymovin / LottieFiles', 'Rive App', 'Next.js', 'ffmpeg']
+        tools: ['Frame.io / Cloud Drive', 'ffmpeg']
       }
     ],
     deliverablesMatrix: [
       {
-        category: 'Animation Fidelity',
-        items: ['4K UHD 60FPS master videos', 'Custom 3D/2D visual styleframes', 'Dynamic kinetic typography design'],
-        standards: 'Smooth easing curves with zero linear or choppy framerates'
+        category: 'Pacing & Typography',
+        items: [
+          'Narrative trimming and dead-space removal',
+          'Hand-timed kinetic typography and subtitles',
+          'Dynamic word-level color emphasis'
+        ],
+        standards: 'Clean, legible text timed precisely to natural speech cadence'
       },
       {
-        category: 'Interactive Web Formats',
-        items: ['Lightweight Lottie JSON files (< 100KB)', 'Interactive stateful Rive animations', 'Transparent WebM / ProRes video'],
-        standards: 'Zero degradation of website speed or mobile page performance'
+        category: 'Motion & Visual Overlays',
+        items: [
+          '2D graphic badges, arrows, and callouts',
+          '3D screen-space tracked interface mockups',
+          'Color grading and lighting adjustments'
+        ],
+        standards: 'Cohesive visual styling aligned with your brand identity'
       },
       {
         category: 'Audio & Sound Design',
-        items: ['Professional voiceover casting and audio mastering', 'Custom sound design and interface click effects', 'Stereo and surround audio mixes'],
-        standards: '-14 LUFS loudness-normalized master audio'
+        items: [
+          'Dialogue noise reduction and EQ leveling',
+          'Custom foley sound effects and whooshes',
+          'Loudness-normalized background music'
+        ],
+        standards: 'Balanced audio mastered for mobile phone speakers and headphones'
       }
     ],
     toolDecisionTree: [
       {
-        category: '3D Motion Design Engine',
-        primaryChoice: 'Cinema 4D + Redshift Render',
-        alternatives: 'Blender, 3ds Max',
-        rationale: 'Cinema 4D tools allow rapid procedural animation iteration, while Redshift produces photorealistic rendering with fast turnaround times.'
+        category: 'Motion Graphics & Compositing',
+        primaryChoice: 'Adobe After Effects',
+        alternatives: 'Automated caption generator apps',
+        rationale: 'After Effects allows custom keyframing, typography rigging, and vector overlay tracking rather than generic auto-generated template styles.'
       },
       {
-        category: 'Web Interface Animation',
-        primaryChoice: 'Rive App & Lottie (Bodymovin)',
-        alternatives: 'Heavy GIF files or auto-playing MP4 videos',
-        rationale: 'Rive and Lottie render sharp vector graphics on the browser canvas at 60fps with file sizes under 80kb, preserving fast page load speeds.'
+        category: 'Color Balancing & Finishing',
+        primaryChoice: 'DaVinci Resolve Studio',
+        alternatives: 'Default camera color profiles',
+        rationale: 'DaVinci Resolve provides dedicated color grading tools to balance skin tones, lift contrast, and clean up smartphone footage.'
       },
       {
-        category: 'Compositing & 2D Motion',
-        primaryChoice: 'Adobe After Effects + Overlord + Flow',
-        alternatives: 'Apple Motion',
-        rationale: 'Overlord enables direct vector layer transfer between Figma, Illustrator, and After Effects, streamlining UI animation workflows.'
+        category: 'Audio Cleanup & Mixing',
+        primaryChoice: 'Fairlight & iZotope RX',
+        alternatives: 'Single unmixed audio track',
+        rationale: 'Dedicated audio tools remove room reverb and background hiss so dialogue remains clear even in noisy environments.'
       }
     ],
     comparisonMatrix: [
       {
-        metric: 'Animation Fluidity',
-        explodeLabs: 'Custom hand-tuned speed graph curves and natural physics easing',
-        traditionalAgency: 'Linear default keyframes with robotic, unpolished motion',
-        inHouseHire: 'Basic PowerPoint or template animations',
-        freelancers: 'Generic pre-made After Effects marketplace templates'
+        metric: 'Workflow Consistency',
+        explodeLabs: 'Dedicated editing team with established brand guidelines and predictable delivery',
+        traditionalAgency: 'Slow turnaround with multiple layers of account management',
+        inHouseHire: 'Requires recruiting, full-time salary, software licenses, and management overhead',
+        freelancers: 'Inconsistent quality and frequent delays from project to project'
       },
       {
-        metric: 'Web Performance',
-        explodeLabs: 'Vector Lottie and Rive web runtimes (< 100kb)',
-        traditionalAgency: 'Heavy 15MB GIF files that slow down mobile page loads',
-        inHouseHire: 'Standard video embeds that block page rendering',
-        freelancers: 'Uncompressed video files'
+        metric: 'Editing Standards',
+        explodeLabs: 'Custom typography, layered sound design, and intentional narrative pacing',
+        traditionalAgency: 'High quality, but often charges high minimum retainers',
+        inHouseHire: 'Depends entirely on individual skillset and bandwidth',
+        freelancers: 'Heavy reliance on automated subtitle presets and stock templates'
       },
       {
-        metric: '3D Capabilities',
-        explodeLabs: 'Custom 3D modeling, photoreal lighting & Redshift GPU rendering',
-        traditionalAgency: 'Flat 2D stock illustrations only',
-        inHouseHire: 'No 3D modeling skills',
-        freelancers: 'Low-detail generic 3D assets'
+        metric: 'Turnaround',
+        explodeLabs: 'Short-form video edits delivered on a predictable recurring schedule',
+        traditionalAgency: 'Typically 3 to 6 weeks for simple deliverables',
+        inHouseHire: 'Can create bottlenecks when editing volume spikes',
+        freelancers: 'Unpredictable availability and communication gaps'
       },
       {
-        metric: 'Sound Design Quality',
-        explodeLabs: 'Custom sound effects, UI clicks, and broadcast-grade audio mastering',
-        traditionalAgency: 'Generic upbeat stock music tracks',
-        inHouseHire: 'No audio production capability',
-        freelancers: 'Unbalanced, unmixed audio'
+        metric: 'Asset Ownership',
+        explodeLabs: '100% commercial ownership of all rendered master files',
+        traditionalAgency: 'May restrict licensing or charge buyout fees',
+        inHouseHire: 'Company owns all assets',
+        freelancers: 'Licensing terms vary by platform'
       }
     ],
     industryScenarios: [
       {
-        industry: 'B2B Enterprise Cyber Defense',
-        challenge: 'A cloud security platform needed a 90-second product explainer to clearly visualize complex threat detection for enterprise security leaders.',
-        architecture: 'Created a 3D isometric network visualization in Cinema 4D with glowing node trajectories, kinetic text, and custom sound design.',
-        impactMetric: 'Explainer video increased homepage demo booking conversions by 135% and closed $3.2M in new enterprise ARR.'
+        industry: 'Founders & Executive Coaches',
+        challenge: 'A founder recording raw talking-head insights on their phone needed consistent social video without spending hours editing.',
+        architecture: 'Trimmed narrative pauses, built brand-aligned kinetic typography, and layered subtle sound foley on key takeaways.',
+        impactMetric: 'Established a consistent weekly publishing rhythm with zero internal editing bottleneck.'
       },
       {
-        industry: 'FinTech Mobile Banking App',
-        challenge: 'A mobile banking app needed interactive micro-animations for credit score improvements and money transfers without bloating app file size.',
-        architecture: 'Created 18 interactive Rive vector animations running at 60fps with an average file size of only 24kb.',
-        impactMetric: 'App Store rating increased from 4.1 to 4.8 stars; daily user app session length grew by 28%.'
+        industry: 'B2B SaaS & Technology Startups',
+        challenge: 'A software company needed to showcase new product features without relying on static screenshots or boring slides.',
+        architecture: 'Rebuilt interface recordings into floating perspective cards with animated cursor interactions and metric callouts.',
+        impactMetric: 'Delivered clean, dynamic product feature walkthroughs for LinkedIn and sales follow-ups.'
       },
       {
-        industry: 'High-Growth AI Hardware Startup',
-        challenge: 'A microchip startup needed a dramatic 3D reveal video showcasing internal silicon architecture for a major tech keynote.',
-        architecture: 'Modeled photorealistic silicon microchips in Cinema 4D, rendered via Redshift with cinematic lighting and custom sound effects.',
-        impactMetric: 'Generated 1.8M organic views across social channels and secured 14 tier-1 tech media features.'
+        industry: 'Podcasts & Long-Form Content Creators',
+        challenge: 'A podcast host needed to extract and reframe standalone short-form clips from 60-minute interview recordings.',
+        architecture: 'Identified the strongest standalone conversation moments, cropped to vertical 9:16, and added dynamic captions.',
+        impactMetric: 'Turned single long-form episodes into multiple ready-to-post vertical assets every week.'
       }
     ],
     detailedFaqs: [
       {
-        question: 'What is the difference between Lottie and Rive for web animations?',
+        question: 'What does your short-form video editing service include?',
         answer:
-          'Lottie exports vector animations from After Effects into JSON format for lightweight playback on websites. Rive is an interactive system that allows animations to maintain multiple interactive states and respond directly to user mouse movements or button clicks in real-time with tiny file sizes.'
+          'Our service includes narrative trimming, pacing adjustment, hand-timed kinetic typography, visual hook framing, multi-stem sound design, background audio balancing, color correction, and exporting in vertical 9:16 format (for Reels, Shorts, and TikTok).'
       },
       {
-        question: 'How long does it take to produce a 60-to-90 second 3D animated explainer video?',
+        question: 'How much does short-form video editing cost?',
         answer:
-          'A custom 3D animated explainer video typically takes 6 to 8 weeks, encompassing scriptwriting, styleframe design, 3D modeling, camera blocking, animation, sound design, and multi-format exports.'
+          'Pricing is structured around predictable monthly retainers (such as 8, 16, or 30 edited videos per month) or custom milestone scopes for standalone 2D/3D explainer projects. Request a project scope to get a detailed breakdown.'
       },
       {
-        question: 'Do you use pre-made After Effects templates or build custom animations from scratch?',
+        question: 'How does the monthly editing retainer work?',
         answer:
-          'We build 100% custom animations from scratch tailored to your exact brand guidelines, product UI, typography, and color palette. We never use generic marketplace templates.'
+          'You drop your raw recordings into a shared folder. Our team edits your clips according to your established brand guidelines and delivers finished drafts on a predictable schedule with active revisions included.'
       },
       {
-        question: 'How do you animate actual software product interfaces accurately?',
+        question: 'How quickly do you deliver finished edits?',
         answer:
-          'We import your raw Figma designs directly into After Effects using Overlord, converting UI layers into vector shapes that can be zoomed, tilted in 3D isometric perspectives, and animated with custom cursor interactions.'
+          'Standard short-form video edits are typically delivered on a 24 to 48-hour cycle once raw footage is uploaded. Larger bespoke 2D/3D explainer animations follow dedicated milestone timelines.'
       },
       {
-        question: 'Can you provide transparent background animations for web integration?',
+        question: 'What footage or equipment do I need to provide?',
         answer:
-          'Yes. We deliver transparent animations formatted as WebM with alpha for modern browsers, ProRes 4444 with alpha for video editors, and interactive Lottie/Rive files for native web and mobile canvas rendering.'
+          'You can record on any modern smartphone or dedicated camera. While good lighting and clear audio improve the baseline quality, our post-production process includes audio noise reduction and color balancing on every clip.'
       },
       {
-        question: 'Who provides the voiceover and audio for animated videos?',
+        question: 'Can you turn long-form podcasts or webinars into short-form reels?',
         answer:
-          'We manage professional voiceover casting across global talent, provide professional audio direction, and master the voiceover alongside custom sound effects and licensed cinematic music.'
+          'Yes. You can provide full long-form recordings, and our team will identify strong standalone talking points, reframe them to vertical 9:16, add kinetic typography, and edit them into engaging short clips.'
       },
       {
-        question: 'What source files are delivered at the conclusion of a motion graphics project?',
+        question: 'How do revisions work?',
         answer:
-          'We deliver all master 4K video files, Lottie/Rive JSON packages, After Effects project files (.aep), Cinema 4D source files, and isolated audio stems.'
+          'You receive a direct review link where you can pause at any exact second on the video frame and type your feedback. Our team applies adjustments promptly.'
       },
       {
-        question: 'What is your pricing model for Motion Graphics & VFX services?',
+        question: 'Who owns the finished videos?',
         answer:
-          'We scope animation projects on milestone-based sprint tiers (Concept & Styleframes → Animation & 3D Render → Sound & Web Delivery) or provide dedicated monthly motion design sprint capacity.'
+          'You maintain 100% commercial ownership of all final rendered video assets upon milestone completion.'
       }
     ]
   },

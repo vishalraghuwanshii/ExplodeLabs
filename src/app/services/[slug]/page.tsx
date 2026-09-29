@@ -17,6 +17,7 @@ import { SectionHeader } from '@/components/ui/SectionHeader';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { ReelShowcase } from '@/components/services/ReelShowcase';
 import { MotionProjectIntake } from '@/components/services/MotionProjectIntake';
+import { MotionGraphicsExperience } from '@/components/services/MotionGraphicsExperience';
 import { 
   CheckCircle2, 
   ArrowRight, 
@@ -366,12 +367,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
 
-        {/* Dedicated Motion Reel Showcase for Motion Graphics */}
+        {/* Dedicated Motion Graphics Experience for Motion Graphics */}
         {service.slug === 'motion-graphics' && (
-          <ReelShowcase />
+          <>
+            <ReelShowcase />
+            <MotionGraphicsExperience />
+          </>
         )}
 
-        {/* 2. PROBLEMS WE SOLVE */}
+        {/* Standard Deep Dive Sections (2 to 11) for all other services */}
+        {service.slug !== 'motion-graphics' && (
+          <>
+            {/* 2. PROBLEMS WE SOLVE */}
         {problemsSolved.length > 0 && (
           <div id="problems-solved" className="py-16 border-b border-[#1a1a1a]">
             <SectionHeader
@@ -805,6 +812,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
           </div>
         )}
+        </>
+      )}
 
         {/* 12. TECHNOLOGIES & PLATFORMS */}
         {(technologies.length > 0 || platforms.length > 0) && (
