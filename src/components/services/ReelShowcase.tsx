@@ -9,16 +9,12 @@ import {
   VolumeX, 
   Maximize2, 
   X, 
-  Sparkles, 
   Film, 
-  Layers, 
-  CheckCircle2, 
-  ArrowRight,
   ChevronDown
 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
-type CategoryFilter = 'all' | 'talking-head' | 'kinetic-typography' | 'saas-tech' | 'commercial-ads' | 'vfx-sound';
+type CategoryFilter = 'all' | 'motion-graphics' | 'kinetic-typography' | '3d-vfx' | 'commercial-ads' | 'sound-cinematic';
 
 export function ReelShowcase() {
   const [activeFilter, setActiveFilter] = useState<CategoryFilter>('all');
@@ -73,31 +69,31 @@ export function ReelShowcase() {
     setActiveModalReel(reel);
   };
 
-  const categories = [
-    { key: 'all', label: `All Edits (${portfolioReels.length})` },
-    { key: 'talking-head', label: 'Founders & Personal Brands' },
+  const categories: { key: CategoryFilter; label: string }[] = [
+    { key: 'all', label: `All Work (${portfolioReels.length})` },
+    { key: 'motion-graphics', label: 'Motion Graphics' },
     { key: 'kinetic-typography', label: 'Kinetic Typography' },
-    { key: 'saas-tech', label: 'SaaS & Tech Demos' },
-    { key: 'commercial-ads', label: 'Commercial Ads' },
-    { key: 'vfx-sound', label: 'Sound Design & VFX' },
+    { key: '3d-vfx', label: '3D & Visual Effects' },
+    { key: 'commercial-ads', label: 'Commercial & Ads' },
+    { key: 'sound-cinematic', label: 'Cinematic & Sound' },
   ];
 
   return (
-    <section id="portfolio-reels" className="py-16 sm:py-24 border-b border-[#181818] bg-[#070707]">
+    <section id="portfolio-reels" className="py-16 sm:py-24 border-b border-[#181818] bg-[#070707] font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#ff5500]/10 border border-[#ff5500]/25 text-[#ff5500] text-xs font-mono mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff5500]/10 border border-[#ff5500]/25 text-[#ff5500] text-xs font-medium mb-3">
               <Film className="w-3.5 h-3.5" />
-              <span>Real Portfolio Proof ({portfolioReels.length} Master Edits)</span>
+              <span>Studio Portfolio ({portfolioReels.length} Master Edits)</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#f5f5f0]">
-              Watch What We Do With Raw Footage.
+              Featured Motion Graphics & Video Edits.
             </h2>
-            <p className="text-sm sm:text-base text-[#8e8e93] max-w-2xl mt-3 leading-relaxed">
-              Review actual short-form video edits across talking-head content, software walkthroughs, kinetic typography, and sound design. Tap any video to play directly.
+            <p className="text-sm sm:text-base text-[#8e8e93] max-w-2xl mt-3 leading-relaxed font-normal">
+              Explore real motion graphics, kinetic typography, 3D animations, and commercial post-production. Click any video to play directly with sound.
             </p>
           </div>
 
@@ -114,13 +110,13 @@ export function ReelShowcase() {
             <button
               key={cat.key}
               onClick={() => {
-                setActiveFilter(cat.key as CategoryFilter);
+                setActiveFilter(cat.key);
                 setShowAll(false);
               }}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-mono whitespace-nowrap transition-all cursor-pointer ${
+              className={`px-4 py-2 rounded-lg text-xs font-medium whitespace-nowrap transition-all cursor-pointer ${
                 activeFilter === cat.key
                   ? 'bg-[#ff5500] text-white font-semibold shadow-lg shadow-[#ff5500]/20'
-                  : 'bg-[#121212] hover:bg-[#1c1c1c] text-[#8e8e93] hover:text-[#f5f5f0] border border-[#202020]'
+                  : 'bg-[#121212] hover:bg-[#1c1c1c] text-[#a1a1aa] hover:text-[#f5f5f0] border border-[#202020]'
               }`}
             >
               {cat.label}
@@ -137,7 +133,7 @@ export function ReelShowcase() {
             return (
               <div 
                 key={reel.id}
-                className="bg-[#0b0b0b] border border-[#1e1e1e] hover:border-[#333333] rounded-2xl overflow-hidden transition-all duration-300 flex flex-col group shadow-xl"
+                className="bg-[#0c0c0c] border border-[#1e1e1e] hover:border-[#333333] rounded-2xl overflow-hidden transition-all duration-300 flex flex-col group shadow-xl"
               >
                 {/* 9:16 Video Player Container */}
                 <div 
@@ -156,15 +152,15 @@ export function ReelShowcase() {
                     className="w-full h-full object-cover"
                   />
 
-                  {/* Top Badge: Category & Enlarge */}
+                  {/* Top Category Badge & Enlarge Button */}
                   <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10 pointer-events-none">
-                    <span className="px-2.5 py-1 bg-black/70 backdrop-blur-md rounded-md text-[10px] font-mono font-semibold text-[#ff5500] border border-white/10 shadow-sm">
+                    <span className="px-2.5 py-1 bg-black/75 backdrop-blur-md rounded-md text-[11px] font-medium text-[#ff5500] border border-white/10 shadow-sm">
                       {reel.categoryLabel}
                     </span>
                     <button
                       type="button"
                       onClick={(e) => openModal(reel, e)}
-                      className="p-1.5 bg-black/70 backdrop-blur-md hover:bg-black text-[#a1a1aa] hover:text-white rounded-md border border-white/10 transition-colors pointer-events-auto"
+                      className="p-1.5 bg-black/75 backdrop-blur-md hover:bg-black text-[#a1a1aa] hover:text-white rounded-md border border-white/10 transition-colors pointer-events-auto cursor-pointer"
                       title="Enlarge Video"
                       aria-label="Enlarge Video"
                     >
@@ -172,62 +168,49 @@ export function ReelShowcase() {
                     </button>
                   </div>
 
-                  {/* Center Play/Pause Overlay */}
+                  {/* Center Play Overlay */}
                   {!isPlaying && (
-                    <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex items-center justify-center transition-opacity group-hover:bg-black/30">
+                    <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px] flex items-center justify-center transition-opacity group-hover:bg-black/30">
                       <div className="w-14 h-14 rounded-full bg-[#ff5500] text-white flex items-center justify-center shadow-2xl shadow-[#ff5500]/50 group-hover:scale-110 transition-transform">
                         <Play className="w-6 h-6 fill-white translate-x-0.5" />
                       </div>
                     </div>
                   )}
 
-                  {/* Bottom Controls Bar inside Video Frame */}
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between z-10 pointer-events-none">
-                    <div className="px-2.5 py-1 bg-black/70 backdrop-blur-md rounded-md text-[10px] font-mono text-zinc-300 border border-white/10">
-                      {reel.focus}
-                    </div>
+                  {/* Bottom Sound Control Button */}
+                  <div className="absolute bottom-3 right-3 z-10">
                     <button
                       type="button"
                       onClick={(e) => toggleMute(reel.id, e)}
-                      className="p-1.5 bg-black/70 backdrop-blur-md hover:bg-black text-[#a1a1aa] hover:text-white rounded-md border border-white/10 transition-colors pointer-events-auto"
+                      className="p-2 bg-black/75 backdrop-blur-md hover:bg-black text-[#a1a1aa] hover:text-white rounded-lg border border-white/10 transition-colors cursor-pointer"
                       aria-label={isMuted ? "Unmute" : "Mute"}
                     >
-                      {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5 text-[#ff5500]" />}
+                      {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4 text-[#ff5500]" />}
                     </button>
                   </div>
                 </div>
 
-                {/* Card Meta & Techniques Breakdown */}
+                {/* Clean, Human Card Details */}
                 <div className="p-5 flex flex-col justify-between flex-1 space-y-4">
                   <div>
-                    <h3 className="text-base font-bold text-[#f5f5f0] group-hover:text-[#ff5500] transition-colors mb-1.5 leading-snug">
+                    <h3 className="text-base font-bold text-[#f5f5f0] group-hover:text-[#ff5500] transition-colors mb-2 leading-snug">
                       {reel.title}
                     </h3>
-                    <p className="text-xs text-[#8e8e93] leading-relaxed mb-4">
+                    <p className="text-xs text-[#a1a1aa] leading-relaxed font-normal">
                       {reel.description}
                     </p>
-
-                    {/* Verified Editing Techniques */}
-                    <div className="space-y-1.5 pt-3 border-t border-[#181818]">
-                      <div className="text-[11px] font-mono uppercase tracking-wider text-[#71717a] font-semibold flex items-center gap-1.5">
-                        <Sparkles className="w-3 h-3 text-[#ff5500]" />
-                        <span>Techniques Demonstrated</span>
-                      </div>
-                      <div className="flex flex-wrap gap-1 pt-1">
-                        {reel.techniques.map((t, idx) => (
-                          <span 
-                            key={idx} 
-                            className="text-[10px] font-mono text-[#a1a1aa] bg-[#141414] border border-[#202020] px-2 py-0.5 rounded"
-                          >
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
                   </div>
 
-                  <div className="pt-3 border-t border-[#181818] flex items-center justify-between text-xs text-[#71717a]">
-                    <span className="font-mono text-[11px] text-[#5c5c60]">Best for: <strong className="text-[#a1a1aa] font-medium">{reel.idealFor}</strong></span>
+                  {/* Clean Style Tags */}
+                  <div className="pt-3 border-t border-[#181818] flex flex-wrap gap-1.5">
+                    {reel.tags.map((tag, idx) => (
+                      <span 
+                        key={idx} 
+                        className="text-[11px] text-[#8e8e93] bg-[#141414] border border-[#222222] px-2.5 py-1 rounded-md font-normal"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
 
@@ -242,7 +225,7 @@ export function ReelShowcase() {
             <button
               type="button"
               onClick={() => setShowAll(!showAll)}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#121212] hover:bg-[#1a1a1a] text-[#f5f5f0] border border-[#262626] font-mono text-xs font-semibold transition-all cursor-pointer shadow-lg"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#121212] hover:bg-[#1a1a1a] text-[#f5f5f0] border border-[#262626] text-xs font-semibold transition-all cursor-pointer shadow-lg"
             >
               <span>{showAll ? 'Show Less' : `View All ${filteredReels.length} Video Edits`}</span>
               <ChevronDown className={`w-4 h-4 text-[#ff5500] transition-transform ${showAll ? 'rotate-180' : ''}`} />
@@ -263,13 +246,13 @@ export function ReelShowcase() {
               {/* Modal Header */}
               <div className="p-4 border-b border-[#181818] flex items-center justify-between">
                 <div>
-                  <div className="text-xs font-bold text-[#f5f5f0]">{activeModalReel.title}</div>
-                  <div className="text-[10px] font-mono text-[#ff5500]">{activeModalReel.categoryLabel}</div>
+                  <div className="text-sm font-bold text-[#f5f5f0]">{activeModalReel.title}</div>
+                  <div className="text-xs text-[#ff5500] font-medium">{activeModalReel.categoryLabel}</div>
                 </div>
                 <button
                   type="button"
                   onClick={() => setActiveModalReel(null)}
-                  className="p-1.5 rounded-lg bg-[#141414] text-[#8e8e93] hover:text-white border border-[#222]"
+                  className="p-1.5 rounded-lg bg-[#141414] text-[#8e8e93] hover:text-white border border-[#222] cursor-pointer"
                 >
                   <X className="w-4 h-4" />
                 </button>

@@ -11,19 +11,13 @@ import {
   Volume2, 
   Palette, 
   Clock, 
-  ShieldCheck, 
   CheckCircle2, 
   ArrowRight, 
-  Film, 
   UserCheck, 
   Laptop, 
   Mic, 
   ShoppingBag,
-  Sliders,
-  Flame,
-  Star,
-  Check,
-  Cpu
+  Check
 } from 'lucide-react';
 
 export function MotionGraphicsExperience() {
@@ -33,112 +27,112 @@ export function MotionGraphicsExperience() {
     {
       id: 'hook',
       number: '01',
-      title: 'The 2-Second Hook Pattern Interrupt',
-      subtitle: 'Eliminating the scroll impulse in under 400 milliseconds',
+      title: 'Opening Hook & Visual Pacing',
+      subtitle: 'Capturing attention within the first two seconds',
       icon: Zap,
-      summary: 'Most viewers decide whether to stay or scroll within the first 2 seconds. We eliminate dead air before the first word, calibrate subtle camera snap-zooms, dynamic text punch-ins, and spatial sound whooshes that capture visual focus instantly.',
+      summary: 'Most viewers decide whether to keep watching in the first 2 seconds. We cut dead space before the opening sentence, add punchy visual zooms, dynamic text highlights, and subtle sound effects that pull the viewer in immediately.',
       details: [
-        'Instant focal zoom on speaker entrance to establish eye contact',
-        'Elimination of throat-clearing, filler words, and awkward pauses',
-        'High-contrast headline motion graphics anchored above center-frame',
-        'Subtle low-frequency audio impact timed to the opening statement'
+        'Immediate focal zoom on the opening statement to draw the eye',
+        'Removal of dead pauses, stutters, and filler words',
+        'High-contrast opening motion title positioned in the safe view area',
+        'Subtle sound impact aligned with the core message hook'
       ],
-      technique: 'Visual snap-zoom + low-pass audio punch-in'
+      technique: 'Visual snap-zoom & sound punch-in'
     },
     {
       id: 'typography',
       number: '02',
-      title: 'Hand-Timed Kinetic Typography',
-      subtitle: 'Brand-matched typography engineered for visual reading velocity',
+      title: 'Custom Kinetic Typography',
+      subtitle: 'Brand-matched typography timed naturally to speech',
       icon: Sparkles,
-      summary: 'Generic auto-captions with yellow presets create visual fatigue. We build custom kinetic typography tailored to your exact brand fonts, featuring dynamic word-level highlighting, clean background bounding boxes, and contextual graphic badges.',
+      summary: 'Auto-generated captions feel generic and easily skipped. We design custom animated captions using your brand fonts and colors, with word-level highlights and clean background boxes so text remains readable on any video.',
       details: [
-        'Word-by-word active color tracking synchronized to speech cadence',
-        'Custom bounding boxes and drop shadows ensuring 100% legibility on any footage',
-        'Contextual vector icons replacing spoken nouns for dual visual cognition',
-        'Carefully positioned within platform-safe zones (never hidden behind UI buttons)'
+        'Word-by-word active color tracking matched to natural speech cadence',
+        'Clean bounding boxes and contrast shadows ensuring readability on all screens',
+        'Contextual graphic icons and emojis that emphasize key takeaways',
+        'Positioned within platform safe zones so UI buttons never cover your text'
       ],
-      technique: 'Frame-accurate text rigging in Adobe After Effects'
+      technique: 'Hand-timed keyframe typography'
     },
     {
       id: 'sound',
       number: '03',
-      title: 'Multi-Stem Foley & Sound Design',
-      subtitle: 'Over 70% of video retention is driven by subconscious audio cues',
+      title: 'Layered Sound Design & Foley',
+      subtitle: 'Rich audio cues that bring visual animations to life',
       icon: Volume2,
-      summary: 'Raw footage with muffled audio or loud generic music loses viewer trust. We process audio across multiple stems: vocal isolation to eliminate background hiss, custom foley accents for on-screen animations, and loudness mastering calibrated for mobile speakers.',
+      summary: 'Sound design is what makes video animations feel satisfying and dynamic. We clean up vocal audio, remove background hum, layer custom foley sound effects for on-screen motion, and balance background music so the voice stays crisp.',
       details: [
-        'Dialogue restoration via spectral de-noising and vocal warmth EQ',
-        'Multi-layer foley: mechanical clicks, page swooshes, and digital chimes',
-        'Cinematic sub-bass drops on punchlines and risers before visual transitions',
-        'Audio mastered to industry standard -14 LUFS for Reels, TikTok, and Shorts'
+        'Vocal noise cleanup and room echo reduction for clear dialogue',
+        'Subtle foley sound effects: swooshes, subtle clicks, and digital chimes',
+        'Impact drops on key punchlines and riser swells before transitions',
+        'Loudness balanced for mobile phone speakers and headphones'
       ],
-      technique: 'Multi-track audio mastering in Fairlight & iZotope RX'
+      technique: 'Multi-track audio cleanup & mixing'
     },
     {
       id: 'overlays',
       number: '04',
       title: '2D/3D Graphic Overlays & Motion Tracking',
-      subtitle: 'Translating abstract speech into tangible visual understanding',
+      subtitle: 'Turning abstract concepts into clear visual demonstrations',
       icon: Layers,
-      summary: 'When you explain a software feature, metric, or framework, static text is not enough. We track 3D UI cards, floating data badges, animated progress bars, and custom diagrams directly into your video space.',
+      summary: 'When explaining software, data, or frameworks, static text falls flat. We track 3D interface cards, floating metric badges, glowing arrows, and custom diagrams directly into your video space.',
       details: [
-        'Screen-space 3D perspective tracking matched to camera movement',
-        'Custom animated UI mockups for software, metrics, and workflows',
-        'Clean vector callouts, glowing directional arrows, and highlight halos',
-        'Elimination of boring static screenshots in favor of dynamic 3D elements'
+        'Perspective tracking that aligns graphics to natural camera motion',
+        'Animated interface mockups for software, metrics, and workflows',
+        'Clean vector badges, directional arrows, and visual callouts',
+        'Replaces static screen captures with dynamic visual elements'
       ],
-      technique: 'Planar tracking & 3D camera compositing'
+      technique: 'Planar tracking & 3D compositing'
     },
     {
       id: 'color',
       number: '05',
-      title: 'DaVinci Resolve Color & Lighting Polish',
-      subtitle: 'Transforming smartphone recordings into cinematic brand assets',
+      title: 'Color Grading & Visual Polish',
+      subtitle: 'Giving smartphone and camera footage a clean, rich look',
       icon: Palette,
-      summary: 'Smartphone and webcam footage often suffers from muddy shadows, unnatural skin tones, or harsh fluorescent lighting. We color grade every clip in DaVinci Resolve Studio to achieve clean skin tones, deep blacks, and balanced visual warmth.',
+      summary: 'Phone and webcam recordings often suffer from flat lighting, muddy shadows, or uneven skin tones. We color balance every shot in DaVinci Resolve Studio to achieve clean skin tones, healthy contrast, and a cohesive brand aesthetic.',
       details: [
-        'Natural skin tone isolation and healthy color balancing',
-        'Shot-to-shot exposure matching across multi-take recordings',
-        'Contrast and saturation tuning optimized for OLED smartphone displays',
-        'Film emulation tone mapping that gives raw digital video a rich, premium feel'
+        'Natural skin tone balancing and exposure correction across all takes',
+        'Shot-to-shot lighting matching across different angles and scenes',
+        'Contrast and saturation tuning optimized for smartphone displays',
+        'Clean film-style color finish that gives video a premium look'
       ],
-      technique: 'DaVinci Resolve Studio color science'
+      technique: 'DaVinci Resolve color grading'
     }
   ];
 
   const personas = [
     {
-      role: 'Founders & Coaches',
+      role: 'Founders, Coaches & Consultants',
       icon: UserCheck,
-      tagline: 'Establish High Authority & Convert Followers into Clients',
-      input: 'Talking-head video recorded on an iPhone or mirrorless camera with basic lighting.',
-      output: 'High-authority vertical reels with tight narrative cuts, kinetic typography, brand colors, and subtle sound design.',
-      keyBenefit: 'Publishes 4x/week without spending a single minute inside video editing software.'
+      tagline: 'Build authority & convert followers into clients',
+      input: 'Talking-head video recorded on your phone or camera with basic lighting.',
+      output: 'High-authority vertical reels with clean pacing, custom typography, brand colors, and subtle sound design.',
+      keyBenefit: 'Publish consistently every week without spending time editing videos yourself.'
     },
     {
-      role: 'B2B SaaS & Startups',
+      role: 'B2B SaaS & Tech Startups',
       icon: Laptop,
-      tagline: 'Turn Complex Software into Visually Arresting Demos',
-      input: 'Loom screen recordings, Figma prototypes, or product walkthrough videos.',
-      output: 'Dynamic 3D floating perspective mockups, animated cursor clicks, feature highlights, and metric callouts.',
-      keyBenefit: 'Explains complex technical workflows in under 45 seconds on LinkedIn and sales pages.'
+      tagline: 'Turn software features into engaging product demos',
+      input: 'Loom screen recordings, Figma prototypes, or product feature walkthroughs.',
+      output: 'Dynamic 3D floating perspective mockups, animated cursor clicks, feature zooms, and metric callouts.',
+      keyBenefit: 'Clearly explain product workflows in under 45 seconds on social channels and landing pages.'
     },
     {
       role: 'Podcasters & Creators',
       icon: Mic,
-      tagline: 'Repurpose Long-Form Content into Viral Short-Form Assets',
-      input: '45–60 minute raw podcast interviews, YouTube videos, or keynote recordings.',
-      output: '6 to 10 standalone, high-retention vertical clips with hooks, captions, and zero loss of context.',
-      keyBenefit: 'Multiplies content reach across Instagram, TikTok, and YouTube Shorts from one recording session.'
+      tagline: 'Turn long-form content into viral short-form assets',
+      input: 'Raw podcast recordings, YouTube episodes, or keynote speaking files.',
+      output: '6 to 10 standalone vertical clips with strong visual hooks, animated captions, and full context.',
+      keyBenefit: 'Maximize reach across Instagram, TikTok, and YouTube Shorts from one recording session.'
     },
     {
       role: 'E-Commerce & DTC Brands',
       icon: ShoppingBag,
-      tagline: 'Scale High-ROAS Paid Social Video Creatives',
-      input: 'Raw unboxing clips, creator UGC, and product b-roll footage.',
-      output: 'Fast-paced, hook-heavy paid ad variations with visual pattern interrupts, price tags, and urgent CTA cards.',
-      keyBenefit: 'Rapidly tests creative variations across Meta and TikTok ad campaigns.'
+      tagline: 'Produce high-converting paid social video ads',
+      input: 'Raw product footage, unboxing clips, and creator UGC recordings.',
+      output: 'Fast-paced, hook-heavy paid ad variations with visual pattern interrupts and clear call-to-action cards.',
+      keyBenefit: 'Test multiple creative variations quickly across Meta and TikTok ad campaigns.'
     }
   ];
 
@@ -149,15 +143,15 @@ export function MotionGraphicsExperience() {
       badge: '2 Videos / Week',
       popular: false,
       volume: '8 Edited Reels / Month',
-      turnaround: '24–48h SLA per batch',
-      description: 'Ideal for founders, consultants, and coaches establishing a dependable weekly content cadence.',
+      turnaround: '24–48h Delivery',
+      description: 'Ideal for founders, consultants, and coaches looking for a dependable weekly content cadence.',
       features: [
-        '8 fully edited 9:16 vertical videos (Reels, TikTok, Shorts)',
-        'Narrative dead-air and filler-word trimming',
+        '8 fully edited vertical videos (Reels, Shorts, TikTok)',
+        'Dead-air trimming and pacing adjustments',
         'Hand-timed kinetic typography & subtitles',
-        'Clean background music ducking & audio leveling',
-        'Natural skin tone color correction',
-        '2 rounds of revisions per video',
+        'Audio cleanup & background music mixing',
+        'Natural color correction and lighting balance',
+        '2 revision rounds included per video',
         '100% commercial ownership of all rendered masters'
       ],
       ctaText: 'Start Starter Project',
@@ -169,16 +163,16 @@ export function MotionGraphicsExperience() {
       badge: 'Most Popular • 4 Videos / Week',
       popular: true,
       volume: '16 Edited Reels / Month',
-      turnaround: '24–48h SLA Priority Queue',
-      description: 'Engineered for fast-growing brands, SaaS companies, and creators scaling multi-channel short-form distribution.',
+      turnaround: '24–48h Priority Queue',
+      description: 'Built for fast-growing brands, SaaS companies, and creators scaling multi-platform video distribution.',
       features: [
-        '16 fully edited 9:16 vertical videos (Reels, TikTok, Shorts)',
-        'Priority editing queue & dedicated post-production team',
+        '16 fully edited vertical videos (Reels, Shorts, TikTok)',
+        'Priority editing queue and dedicated post-production team',
         'Custom 2D motion overlays, icon badges & graphic callouts',
-        'Multi-stem sound design (foley clicks, swooshes, sub-bass drops)',
-        'Advanced DaVinci Resolve color grading & skin tone balancing',
-        'Horizontal 16:9 to vertical 9:16 reframing & b-roll insertion',
-        '2 rounds of revisions per video with frame-accurate review link',
+        'Layered sound design (foley clicks, swooshes, sub-drops)',
+        'DaVinci Resolve skin tone grading & color polish',
+        'Horizontal 16:9 to vertical 9:16 reframing with b-roll',
+        '2 revision rounds per video with timestamped review link',
         '100% commercial ownership of all rendered masters'
       ],
       ctaText: 'Start Growth Project',
@@ -190,17 +184,17 @@ export function MotionGraphicsExperience() {
       badge: 'Daily Publishing • 7 Videos / Week',
       popular: false,
       volume: '30 Edited Reels / Month',
-      turnaround: '24h Expedited SLA',
-      description: 'A full-scale post-production engine for daily media brands, active podcasters, and high-frequency creators.',
+      turnaround: '24h Delivery SLA',
+      description: 'A dedicated post-production engine for daily media brands, active podcasters, and high-frequency creators.',
       features: [
-        '30 fully edited 9:16 vertical videos (Daily publishing schedule)',
-        'Dedicated primary video editor & motion graphics specialist',
-        'Custom brand motion graphics design system & reusable assets',
-        'Long-form podcast & webinar extraction into standalone reels',
+        '30 fully edited vertical videos (Daily publishing schedule)',
+        'Dedicated primary editor & motion graphics designer',
+        'Custom brand motion design system & reusable templates',
+        'Long-form podcast & webinar extraction into standalone clips',
         'Fast 24-hour turnaround SLA for timely content releases',
-        'Direct project management channel (Slack / WhatsApp / Frame.io)',
+        'Direct project communication channel (Slack / WhatsApp)',
         'Active revisions with fast turnarounds',
-        '100% commercial ownership of all master files & project packages'
+        '100% commercial ownership of all master files'
       ],
       ctaText: 'Start Scale Project',
       ctaHref: '#project-intake'
@@ -211,16 +205,16 @@ export function MotionGraphicsExperience() {
       badge: 'Custom Milestone Scope',
       popular: false,
       volume: '30s – 90s Standalone Video',
-      turnaround: '2 to 4 Weeks Milestone',
+      turnaround: '2 to 4 Weeks Delivery',
       description: 'High-impact animated product films, SaaS homepage explainers, and investor pitch videos built from scratch.',
       features: [
-        'Complete script review, narrative polish & visual storyboard',
+        'Script polish, narrative structure & visual storyboard',
         'Custom 2D vector animation or 3D UI interface modeling',
-        'Cinema-grade kinetic typography & kinetic data visualization',
-        'Professional voiceover sync & bespoke multi-track sound design',
-        'Full 4K UHD masters in 16:9 widescreen and 9:16 vertical formats',
-        'Milestone-based delivery with structured review checkpoints',
-        '100% commercial ownership of all visual assets and final renders'
+        'Cinema-grade kinetic typography & data visualization',
+        'Voiceover sync & bespoke multi-track sound design',
+        'Full 4K UHD master exports in 16:9 and 9:16 formats',
+        'Milestone-based delivery with structured review stages',
+        '100% commercial ownership of all visual assets'
       ],
       ctaText: 'Discuss Explainer Scope',
       ctaHref: '#project-intake'
@@ -231,44 +225,44 @@ export function MotionGraphicsExperience() {
     {
       number: '01',
       title: 'Drop Your Raw Footage',
-      desc: 'Upload your raw video files, screen recordings, or podcast clips to a shared Google Drive, Dropbox, or Frame.io folder. Include any specific talking points or let our team identify the strongest hooks.'
+      desc: 'Upload your raw video files, screen recordings, or podcast clips to a shared Google Drive, Dropbox, or Frame.io folder. Include any specific talking points or let our team pick the best moments.'
     },
     {
       number: '02',
-      title: 'Narrative Pacing & Hook Construction',
-      desc: 'Our editors cut out dead air, stutters, and redundant phrases. We frame the first 2 seconds with an intentional visual punch-in and high-contrast hook typography to capture instant attention.'
+      title: 'Pacing & Hook Construction',
+      desc: 'Our editors remove pauses, filler words, and redundant phrases. We frame the opening seconds with a clear visual hook and high-contrast title to grab attention immediately.'
     },
     {
       number: '03',
-      title: 'Motion Graphics, Sound Design & Color',
-      desc: 'We add brand-aligned kinetic captions, layer multi-stem sound effects (foley, swooshes, sub-drops), track 2D/3D visual elements, and balance exposure and skin tones in DaVinci Resolve.'
+      title: 'Motion Graphics, Sound & Color',
+      desc: 'We add brand-aligned kinetic captions, layer multi-track sound effects (foley, swooshes, sub-drops), track 2D/3D visual elements, and balance exposure and skin tones in DaVinci Resolve.'
     },
     {
       number: '04',
-      title: 'Frame-Accurate Review & Master Handover',
-      desc: 'You receive an interactive review link to pause and leave timestamped notes. Once approved, you download high-bitrate 1080p/4K master files formatted and ready for instant publishing.'
+      title: 'Review & Master Handover',
+      desc: 'You receive an easy review link to pause and leave timestamped notes. Once approved, you download high-bitrate 1080p/4K master files ready to publish.'
     }
   ];
 
   return (
-    <div className="space-y-24 py-16">
+    <div className="space-y-24 py-16 font-sans">
       
-      {/* SECTION: RETENTION SCIENCE / 5 PILLARS */}
+      {/* SECTION: RETENTION CRAFT / 5 PILLARS */}
       <div id="retention-science" className="border-t border-[#1a1a1a] pt-16">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge variant="orange" className="mb-3">
             Post-Production Craft
           </Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f5f0] mb-4">
-            The Anatomy of a High-Retention Motion Edit.
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f5f0] mb-4 tracking-tight">
+            The Craft Behind High-Retention Motion Edits.
           </h2>
-          <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed">
-            Amateur video editing relies on generic auto-caption templates. At Explode Labs, we treat motion graphics as an engineering discipline calibrated around human visual psychology and auditory pacing.
+          <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed font-normal">
+            Great video editing is more than just adding auto-captions. We treat motion graphics as a deliberate craft combining visual pacing, custom typography, and immersive audio design.
           </p>
         </div>
 
         {/* Pillar selector tabs */}
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 mb-8">
           {pillars.map((pillar, idx) => {
             const Icon = pillar.icon;
             const isSelected = activePillar === idx;
@@ -276,20 +270,20 @@ export function MotionGraphicsExperience() {
               <button
                 key={pillar.id}
                 onClick={() => setActivePillar(idx)}
-                className={`p-4 rounded-xl border text-left transition-all flex flex-col justify-between ${
+                className={`p-4 rounded-xl border text-left transition-all flex flex-col justify-between cursor-pointer ${
                   isSelected
                     ? 'bg-[#181818] border-[#ff5500] shadow-lg shadow-[#ff5500]/10 text-white'
                     : 'bg-[#0c0c0c] border-[#1e1e1e] text-[#8e8e93] hover:border-[#2e2e2e] hover:text-[#f5f5f0]'
                 }`}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <span className={`font-mono text-xs font-bold ${isSelected ? 'text-[#ff5500]' : 'text-[#71717a]'}`}>
+                  <span className={`text-xs font-semibold ${isSelected ? 'text-[#ff5500]' : 'text-[#71717a]'}`}>
                     {pillar.number}
                   </span>
                   <Icon className={`w-4 h-4 ${isSelected ? 'text-[#ff5500]' : 'text-[#71717a]'}`} />
                 </div>
                 <div className="text-xs sm:text-sm font-semibold line-clamp-1">
-                  {pillar.title.split(' ')[0]} {pillar.title.split(' ')[1]}
+                  {pillar.title}
                 </div>
               </button>
             );
@@ -300,8 +294,8 @@ export function MotionGraphicsExperience() {
         {pillars[activePillar] && (
           <div className="p-6 sm:p-8 rounded-2xl bg-[#0e0e0e] border border-[#222222] relative overflow-hidden shadow-2xl">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#1c1c1c] mb-6">
-              <div className="space-y-1">
-                <div className="text-xs font-mono uppercase text-[#ff5500] font-semibold flex items-center gap-2">
+              <div className="space-y-1.5">
+                <div className="text-xs text-[#ff5500] font-medium flex items-center gap-2">
                   <span>Pillar {pillars[activePillar].number}</span>
                   <span>•</span>
                   <span>{pillars[activePillar].technique}</span>
@@ -323,17 +317,17 @@ export function MotionGraphicsExperience() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-6 space-y-4">
-                <p className="text-sm sm:text-base text-[#c4c4c8] leading-relaxed">
+                <p className="text-sm sm:text-base text-[#c4c4c8] leading-relaxed font-normal">
                   {pillars[activePillar].summary}
                 </p>
-                <div className="p-4 bg-[#141414] rounded-xl border border-[#202020] text-xs font-mono text-[#a1a1aa] space-y-1">
-                  <div className="text-[#ff5500] font-bold">Standard Execution:</div>
-                  <div>Applied across all monthly retainers and standalone project milestones.</div>
+                <div className="p-4 bg-[#141414] rounded-xl border border-[#202020] text-xs text-[#a1a1aa] space-y-1">
+                  <div className="text-[#ff5500] font-semibold">Standard In All Projects:</div>
+                  <div>Included across all monthly retainers and custom milestone scopes.</div>
                 </div>
               </div>
 
-              <div className="lg:col-span-6 space-y-3">
-                <div className="text-xs font-mono uppercase text-[#71717a] font-semibold mb-2">
+              <div className="lg:col-span-6 space-y-2.5">
+                <div className="text-xs text-[#71717a] font-semibold mb-2">
                   Key Post-Production Techniques
                 </div>
                 {pillars[activePillar].details.map((detail, i) => (
@@ -354,11 +348,11 @@ export function MotionGraphicsExperience() {
           <Badge variant="orange" className="mb-3">
             Tailored Post-Production
           </Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f5f0] mb-4">
-            Who We Build For: Clear Input → Output Workflows.
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f5f0] mb-4 tracking-tight">
+            Who We Work With: Clear Input → Output Workflows.
           </h2>
-          <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed">
-            Whether you are an individual consultant recording on your phone or a software company showcasing enterprise product workflows, we tailor our post-production pipeline to your format.
+          <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed font-normal">
+            Whether you record on your phone, host a podcast, or create software demos, we adapt our editing workflow to match your raw files and goals.
           </p>
         </div>
 
@@ -368,33 +362,33 @@ export function MotionGraphicsExperience() {
             return (
               <div key={idx} className="p-6 sm:p-8 bg-[#0c0c0c] border border-[#1e1e1e] rounded-2xl flex flex-col justify-between hover:border-[#2e2e2e] transition-all space-y-6">
                 <div>
-                  <div className="flex items-center gap-3 mb-3">
+                  <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#141414] border border-[#222222] flex items-center justify-center text-[#ff5500]">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-[#f5f5f0]">{p.role}</h3>
-                      <div className="text-xs text-[#71717a] font-medium">{p.tagline}</div>
+                      <h3 className="text-base font-bold text-[#f5f5f0]">{p.role}</h3>
+                      <div className="text-xs text-[#71717a] font-normal">{p.tagline}</div>
                     </div>
                   </div>
 
                   <div className="space-y-3 pt-4 border-t border-[#181818] text-xs">
-                    <div className="p-3 bg-[#111111] rounded-xl border border-[#1a1a1a]">
-                      <div className="text-[#71717a] font-mono uppercase font-semibold mb-1">What You Provide (Input):</div>
+                    <div className="p-3.5 bg-[#111111] rounded-xl border border-[#1a1a1a]">
+                      <div className="text-[#71717a] font-semibold mb-1">What You Provide (Input):</div>
                       <div className="text-[#c4c4c8] leading-relaxed">{p.input}</div>
                     </div>
 
-                    <div className="p-3 bg-[#161616] rounded-xl border border-[#242424]">
-                      <div className="text-[#ff5500] font-mono uppercase font-semibold mb-1">What You Receive (Output):</div>
+                    <div className="p-3.5 bg-[#161616] rounded-xl border border-[#242424]">
+                      <div className="text-[#ff5500] font-semibold mb-1">What You Receive (Output):</div>
                       <div className="text-[#f5f5f0] font-medium leading-relaxed">{p.output}</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="pt-4 border-t border-[#181818] flex items-center justify-between text-xs">
-                  <span className="text-[#8e8e93] font-mono">{p.keyBenefit}</span>
+                  <span className="text-[#8e8e93]">{p.keyBenefit}</span>
                   <Link href="#project-intake" className="text-[#ff5500] font-semibold hover:underline flex items-center gap-1 shrink-0 ml-2">
-                    <span>Scope Now</span>
+                    <span>Scope Project</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
@@ -408,13 +402,13 @@ export function MotionGraphicsExperience() {
       <div id="how-it-works" className="border-t border-[#1a1a1a] pt-16">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge variant="orange" className="mb-3">
-            Frictionless Process
+            Simple Process
           </Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f5f0] mb-4">
-            How Explode Labs Delivers Finished Video.
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f5f0] mb-4 tracking-tight">
+            How Our Production Process Works.
           </h2>
-          <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed">
-            Zero endless meetings or micromanagement. A straightforward 4-step production cycle built for speed, transparency, and creative precision.
+          <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed font-normal">
+            No endless back-and-forth meetings. A straightforward 4-step cycle built for speed, transparency, and high quality.
           </p>
         </div>
 
@@ -422,17 +416,17 @@ export function MotionGraphicsExperience() {
           {steps.map((step, idx) => (
             <div key={idx} className="p-6 bg-[#0c0c0c] border border-[#1e1e1e] rounded-2xl relative flex flex-col justify-between hover:border-[#2a2a2a] transition-colors">
               <div>
-                <div className="w-8 h-8 rounded-lg bg-[#181818] border border-[#2a2a2a] text-[#ff5500] font-mono font-bold text-xs flex items-center justify-center mb-4">
+                <div className="w-8 h-8 rounded-lg bg-[#181818] border border-[#2a2a2a] text-[#ff5500] font-bold text-xs flex items-center justify-center mb-4">
                   {step.number}
                 </div>
                 <h3 className="text-base font-bold text-[#f5f5f0] mb-2">
                   {step.title}
                 </h3>
-                <p className="text-xs text-[#8e8e93] leading-relaxed">
+                <p className="text-xs text-[#8e8e93] leading-relaxed font-normal">
                   {step.desc}
                 </p>
               </div>
-              <div className="pt-4 mt-6 border-t border-[#161616] text-[11px] font-mono text-[#71717a]">
+              <div className="pt-4 mt-6 border-t border-[#161616] text-[11px] text-[#71717a]">
                 Step {idx + 1} of 4
               </div>
             </div>
@@ -444,13 +438,13 @@ export function MotionGraphicsExperience() {
       <div id="pricing-packages" className="border-t border-[#1a1a1a] pt-16">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge variant="orange" className="mb-3">
-            Transparent Retainers & Milestone Scopes
+            Transparent Retainers & Custom Scopes
           </Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f5f0] mb-4">
-            Predictable Video Production Retainers.
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f5f0] mb-4 tracking-tight">
+            Predictable Video Production Packages.
           </h2>
-          <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed">
-            No surprise invoices or hourly billing. Choose a monthly short-form publishing retainer or scope a bespoke standalone explainer project.
+          <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed font-normal">
+            No unexpected fees or confusing hourly billing. Choose a monthly short-form retainer or scope a standalone explainer animation.
           </p>
         </div>
 
@@ -465,35 +459,35 @@ export function MotionGraphicsExperience() {
               }`}
             >
               {pkg.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#ff5500] text-black text-[10px] font-mono font-bold uppercase px-3 py-1 rounded-full shadow-md">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#ff5500] text-black text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow-md tracking-wide">
                   Most Popular Choice
                 </div>
               )}
 
               <div>
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center justify-between mb-1.5">
                   <h3 className="text-lg font-bold text-[#f5f5f0]">{pkg.name}</h3>
                 </div>
 
-                <div className="text-xs font-mono text-[#ff5500] font-semibold mb-2">
+                <div className="text-xs text-[#ff5500] font-semibold mb-2">
                   {pkg.badge}
                 </div>
 
-                <div className="text-xl font-bold font-mono text-[#f5f5f0] mb-1">
+                <div className="text-lg font-bold text-[#f5f5f0] mb-1">
                   {pkg.volume}
                 </div>
-                <div className="text-xs font-mono text-[#71717a] mb-4 flex items-center gap-1">
+                <div className="text-xs text-[#71717a] mb-4 flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5 text-[#ff5500]" />
                   <span>{pkg.turnaround}</span>
                 </div>
 
-                <p className="text-xs text-[#8e8e93] leading-relaxed mb-6">
+                <p className="text-xs text-[#8e8e93] leading-relaxed mb-6 font-normal">
                   {pkg.description}
                 </p>
 
                 <div className="space-y-2.5 pt-4 border-t border-[#181818] mb-6">
-                  <div className="text-[11px] font-mono uppercase text-[#71717a] font-semibold mb-2">
-                    What Is Included:
+                  <div className="text-[11px] uppercase text-[#71717a] font-semibold mb-2">
+                    What is included:
                   </div>
                   {pkg.features.map((feat, i) => (
                     <div key={i} className="flex items-start gap-2 text-xs text-[#c4c4c8] leading-relaxed">
@@ -509,7 +503,7 @@ export function MotionGraphicsExperience() {
                   href={pkg.ctaHref}
                   variant={pkg.popular ? 'primary' : 'outline'}
                   size="sm"
-                  className="w-full"
+                  className="w-full text-xs"
                   withArrow
                 >
                   {pkg.ctaText}
@@ -524,63 +518,63 @@ export function MotionGraphicsExperience() {
       <div id="comparison-analysis" className="border-t border-[#1a1a1a] pt-16">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge variant="orange" className="mb-3">
-            Clear Evaluation
+            Comparison
           </Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f5f0] mb-4">
-            Explode Labs vs Alternative Editing Models.
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f5f0] mb-4 tracking-tight">
+            Explode Labs vs Alternative Options.
           </h2>
-          <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed">
-            An honest comparison of delivery speed, post-production craft, and management overhead across hiring models.
+          <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed font-normal">
+            A practical comparison of delivery speed, creative quality, and management overhead across hiring models.
           </p>
         </div>
 
         <div className="overflow-x-auto border border-[#1e1e1e] rounded-2xl shadow-xl">
           <table className="w-full min-w-[640px] text-left text-xs border-collapse">
             <thead>
-              <tr className="bg-[#111111] border-b border-[#1e1e1e] text-[#71717a] font-mono uppercase">
-                <th className="p-4 sm:p-5 w-1/4">Evaluation Metric</th>
+              <tr className="bg-[#111111] border-b border-[#1e1e1e] text-[#71717a] uppercase">
+                <th className="p-4 sm:p-5 w-1/4 font-semibold">Evaluation Factor</th>
                 <th className="p-4 sm:p-5 w-1/4 text-[#ff5500] font-bold bg-[#141414]">Explode Labs</th>
-                <th className="p-4 sm:p-5 w-1/4">Traditional Agency</th>
-                <th className="p-4 sm:p-5 w-1/4">In-House Hire</th>
-                <th className="p-4 sm:p-5 w-1/4">Marketplace Freelancer</th>
+                <th className="p-4 sm:p-5 w-1/4 font-semibold">Traditional Agency</th>
+                <th className="p-4 sm:p-5 w-1/4 font-semibold">In-House Editor Hire</th>
+                <th className="p-4 sm:p-5 w-1/4 font-semibold">Marketplace Freelancer</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#181818]">
               <tr className="hover:bg-[#0e0e0e] transition-colors">
-                <td className="p-4 sm:p-5 font-semibold text-[#f5f5f0]">Pacing & Hook Craft</td>
+                <td className="p-4 sm:p-5 font-semibold text-[#f5f5f0]">Visual Pacing & Motion</td>
                 <td className="p-4 sm:p-5 font-medium text-[#f5f5f0] bg-[#141414]/50 border-x border-[#1e1e1e]">
-                  Hand-calibrated hook zooms, dead-air trimming & dynamic typography
+                  Hand-crafted hook zooms, dead-air trimming & brand typography
                 </td>
                 <td className="p-4 sm:p-5 text-[#8e8e93]">High quality, but often slow corporate editing style</td>
-                <td className="p-4 sm:p-5 text-[#8e8e93]">Depends on single editor skillset and stamina</td>
-                <td className="p-4 sm:p-5 text-[#8e8e93]">Generic auto-caption presets and template cuts</td>
+                <td className="p-4 sm:p-5 text-[#8e8e93]">Depends entirely on individual editor skillset</td>
+                <td className="p-4 sm:p-5 text-[#8e8e93]">Heavy use of generic auto-caption templates</td>
               </tr>
               <tr className="hover:bg-[#0e0e0e] transition-colors">
                 <td className="p-4 sm:p-5 font-semibold text-[#f5f5f0]">Sound Design Quality</td>
                 <td className="p-4 sm:p-5 font-medium text-[#f5f5f0] bg-[#141414]/50 border-x border-[#1e1e1e]">
-                  Multi-stem vocal isolation, foley cues, and mastered to -14 LUFS
+                  Vocal noise cleanup, custom foley sound effects, balanced music
                 </td>
                 <td className="p-4 sm:p-5 text-[#8e8e93]">Good, but frequently incurs additional audio licensing fees</td>
-                <td className="p-4 sm:p-5 text-[#8e8e93]">Basic background track with simple volume ducking</td>
-                <td className="p-4 sm:p-5 text-[#8e8e93]">Muffled voice audio and generic unlicensed music</td>
+                <td className="p-4 sm:p-5 text-[#8e8e93]">Basic background track with simple volume adjustments</td>
+                <td className="p-4 sm:p-5 text-[#8e8e93]">Muffled voice audio and generic unlicensed tracks</td>
               </tr>
               <tr className="hover:bg-[#0e0e0e] transition-colors">
-                <td className="p-4 sm:p-5 font-semibold text-[#f5f5f0]">Turnaround Consistency</td>
+                <td className="p-4 sm:p-5 font-semibold text-[#f5f5f0]">Turnaround Reliability</td>
                 <td className="p-4 sm:p-5 font-medium text-[#f5f5f0] bg-[#141414]/50 border-x border-[#1e1e1e]">
-                  Dependable 24–48h SLA per batch with priority queue
+                  Dependable 24–48h delivery with priority queue
                 </td>
                 <td className="p-4 sm:p-5 text-[#8e8e93]">2 to 4 weeks through account managers</td>
-                <td className="p-4 sm:p-5 text-[#8e8e93]">Vulnerable to bottlenecks, PTO, and workload spikes</td>
-                <td className="p-4 sm:p-5 text-[#8e8e93]">Unpredictable deadlines and sudden project ghosting</td>
+                <td className="p-4 sm:p-5 text-[#8e8e93]">Vulnerable to bottlenecks, vacations, and overload</td>
+                <td className="p-4 sm:p-5 text-[#8e8e93]">Unpredictable deadlines and sudden communication gaps</td>
               </tr>
               <tr className="hover:bg-[#0e0e0e] transition-colors">
-                <td className="p-4 sm:p-5 font-semibold text-[#f5f5f0]">Cost & Overhead</td>
+                <td className="p-4 sm:p-5 font-semibold text-[#f5f5f0]">Cost & Management</td>
                 <td className="p-4 sm:p-5 font-medium text-[#f5f5f0] bg-[#141414]/50 border-x border-[#1e1e1e]">
-                  Predictable flat monthly retainer; scale up or pause anytime
+                  Predictable flat monthly retainer; adjust or pause anytime
                 </td>
-                <td className="p-4 sm:p-5 text-[#8e8e93]">High 5-figure minimum retainers and rigid contracts</td>
+                <td className="p-4 sm:p-5 text-[#8e8e93]">High minimum retainers and rigid long contracts</td>
                 <td className="p-4 sm:p-5 text-[#8e8e93]">$75k+ salary, benefits, workstation, and software suites</td>
-                <td className="p-4 sm:p-5 text-[#8e8e93]">Cheap per-clip, but high time spent managing revisions</td>
+                <td className="p-4 sm:p-5 text-[#8e8e93]">Cheap per clip, but high time spent managing revisions</td>
               </tr>
             </tbody>
           </table>
