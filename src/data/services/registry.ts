@@ -2078,60 +2078,75 @@ export const canonicalServices: ServiceEntity[] = [
   {
     id: 'srv_motion_graphics',
     slug: 'motion-graphics',
-    name: 'Motion Graphics & Animation',
-    metaTitle: 'Motion Graphics Services | Explode Labs',
-    metaDescription: 'Motion graphics design: animated explainer videos, logo animations, kinetic typography, UI micro-interactions and Lottie files.',
+    name: 'Motion Graphics & Short-Form Video Editing',
+    metaTitle: 'Motion Graphics & Short-Form Reel Editing Services | Explode Labs',
+    metaDescription: 'Professional motion graphics, kinetic typography, and short-form video post-production for founders, creators, coaches, and brands. 24–48h delivery.',
     category: 'Design & Creative',
     subCategory: 'Video & Motion',
     pillar: 'create',
     priority: 'HIGH',
     pageType: 'PRIMARY_SERVICE',
     indexability: 'INDEX',
-    tagline: 'We create 2D/3D motion graphics, kinetic typography, explainer animations, and Lottie assets that bring brands to life.',
-    shortDescription: 'Motion graphics design: animated explainer videos, logo animations, kinetic typography, UI micro-interactions and Lottie files.',
-    longDescription: 'Explode Labs produces engaging motion graphics and animated video assets. From 2D vector explainer videos and animated software walk-throughs to kinetic UI micro-interactions in Lottie format, we use motion to simplify complex ideas and hold viewer attention.',
-    directAnswer: 'Motion graphics is the combination of graphic design and animation to create engaging visual movement. Explode Labs creates animated explainer videos, kinetic typography, logo intros, and web-ready Lottie animations that enhance brand perception.',
-    definition: 'Visual animation engineering combining vector graphics, kinetic typography, sound effects, 2D/3D visual effects, and web Lottie exports.',
-    targetAudience: ['SaaS Companies Explaining Complex Software', 'Brands Needing Animated Logo Intros', 'Marketing Teams Creating High-Energy Video Ads'],
-    problemsSolved: ['Text-heavy websites that fail to explain complex products', 'Static video ads that fail to capture attention in the first 3 seconds', 'Heavy GIF files slowing down website load speed'],
+    tagline: 'You already have the content. We turn it into finished video worth publishing.',
+    shortDescription: 'Professional motion graphics, kinetic typography, sound design, and short-form video post-production delivered on a predictable schedule.',
+    longDescription: 'Explode Labs provides dedicated motion graphics, kinetic typography, and post-production for founders, creators, coaches, and growing businesses. From high-retention short-form reels to custom animated explainers, we handle the pacing, sound, and visual polish so you can publish consistently without managing editors internally.',
+    directAnswer: 'A motion graphics and reel editing service is a specialized post-production workflow combining frame-by-frame pacing, kinetic typography, 2D/3D visual effects, custom sound design, and color grading to convert raw footage into high-retention vertical assets (Reels, TikToks, Shorts) and commercial animated explainers.',
+    definition: 'Full-service video post-production combining narrative trimming, custom kinetic typography, multi-stem sound design, 2D/3D motion overlays, and color balancing.',
+    targetAudience: [
+      'Founders, Coaches & Consultants Building Personal Authority',
+      'Creators, YouTubers & Podcasters Needing Daily Short-Form Assets',
+      'B2B SaaS & Tech Startups Needing Product & UI Feature Walkthroughs',
+      'E-Commerce & DTC Brands Scaling Paid Social Video Ads'
+    ],
+    problemsSolved: [
+      'Spending 8+ hours editing raw footage instead of creating content and running your business',
+      'Inconsistent freelance editors missing deadlines and delivering generic auto-caption templates',
+      'High overhead and management burden of hiring and training in-house video editors'
+    ],
     deliverables: [
-      'Custom 2D/3D animated product explainer videos with professional voiceover',
-      'Animated vector logo stings and brand video intro/outros',
-      'Lightweight web Lottie animations for interactive UI elements',
-      'Kinetic typography title cards and social media animation packages'
+      'Publication-ready 9:16 vertical video edits with pacing and dead-air elimination',
+      'Custom hand-timed kinetic typography matched to your brand fonts and colors',
+      'Multi-stem audio sound design including foley, risers, and vocal noise isolation',
+      '2D/3D graphic callouts, screen-space tracked badges, and interface mockups',
+      'Color grading, contrast balancing, and lighting corrections for mobile feeds'
     ],
     subServices: [
-      '2D Animated Explainer Videos',
-      'Lottie Web & Mobile Animations',
-      'Logo Animation & Intros',
-      'UI Software Demo Animations'
+      'Short-Form Reel & TikTok Editing',
+      'Kinetic Typography & Subtitles',
+      '2D & 3D Animated Product Explainers',
+      'Podcast to Short-Form Repurposing'
     ],
     capabilities: [
-      'After Effects Rigging & Keyframing',
-      'JSON Lottie Export Optimization',
-      'Sound Effects Sync & Audio Mixing',
-      'Custom Vector Illustration Animation'
+      'Frame-by-Frame Pacing & Trimming',
+      'Hand-Timed Kinetic Typography',
+      'Multi-Stem Foley Sound Design',
+      'Screen-Space Motion Tracking',
+      'DaVinci Color Grading & Tone Mapping'
     ],
-    technologies: ['Adobe After Effects', 'Lottie / Bodymovin', 'Adobe Illustrator', 'Cinema 4D'],
-    platforms: ['Web', 'Mobile Apps', 'YouTube', 'Social Media'],
-    industries: ['B2B SaaS', 'Fintech', 'EdTech', 'Healthcare', 'Consumer Tech'],
-    primaryKeyword: 'motion graphics',
+    technologies: ['Adobe After Effects', 'Adobe Premiere Pro', 'DaVinci Resolve Studio', 'Cinema 4D', 'Lottie / Bodymovin'],
+    platforms: ['Instagram Reels', 'YouTube Shorts', 'TikTok', 'LinkedIn Video', 'Web'],
+    industries: ['Personal Brands', 'B2B SaaS', 'E-Commerce', 'Professional Services', 'Creator Media'],
+    primaryKeyword: 'motion graphics services',
     primaryIntent: 'hire motion graphics agency',
-    secondaryIntents: ['motion graphics services', 'animated explainer video company', 'lottie animation agency'],
-    aliases: ['motion graphics animation', 'explainer video production', 'motion design agency', 'motion-graphics-and-visual-effects', 'motion-graphics-animation'],
+    secondaryIntents: ['short form video editing agency', 'reel editing services', 'motion graphics reel editing service', 'kinetic typography video editing'],
+    aliases: ['motion-graphics-services', 'short-form-video-editing', 'reel-editing-agency', 'motion-design-studio'],
     parentServiceSlug: 'video-editing',
-    relatedServiceSlugs: ['video-editing', 'ui-ux-design', '3d-modeling', 'meta-ads'],
-    pricingRange: { min: 'Custom', avg: 'Per Video / Milestone', model: 'Milestone' },
-    typicalTimeline: '2 to 5 weeks',
+    relatedServiceSlugs: ['video-editing', 'youtube-video-editing', 'ui-ux-design', '3d-modeling'],
+    pricingRange: { min: 'Custom Scope', avg: 'Predictable Monthly Retainers (8, 16, or 30 Videos/Mo)', model: 'Retainer & Milestone' },
+    typicalTimeline: '24 to 48 hours for short-form | 1 to 2 weeks for 2D/3D explainers',
     process: [
-      { step: 1, title: 'Script & Storyboard', description: 'Writing the voiceover script and sketching visual storyboard frames.' },
-      { step: 2, title: 'Illustration & Style Frames', description: 'Designing custom vector illustrated scenes in brand colors.' },
-      { step: 3, title: 'Animation & Motion', description: 'Rigging and animating scenes in After Effects with kinetic transitions.' },
-      { step: 4, title: 'Sound Design & Render', description: 'Syncing professional voiceover, music, and sound effects to the visual motion.' }
+      { step: 1, title: 'Upload Raw Clips', description: 'Place raw video files into your shared Google Drive or Dropbox folder with brief creative notes.' },
+      { step: 2, title: 'Studio Post-Production', description: 'Our motion editors cut pacing, build kinetic typography, layer sound foley, and grade colors.' },
+      { step: 3, title: 'Review & Refine', description: 'Review your edit in-browser, click on any exact timestamp to leave notes, and receive revisions promptly.' },
+      { step: 4, title: 'Download & Publish', description: 'Access high-bitrate master exports organized and formatted for all target social platforms.' }
     ],
     caseStudySlugs: ['novus-fintech-portal'],
     faqs: [
-      { question: 'Can you export animations as lightweight Lottie files for our website?', answer: 'Yes, we specialize in exporting optimized JSON Lottie animations that render smoothly on web and mobile with tiny file sizes.' }
+      { question: 'What does a professional reel editing service include?', answer: 'A complete short-form video editing service includes narrative trimming, pacing adjustment, custom kinetic typography, visual hook framing, multi-layered sound design, background audio balancing, color correction, and exporting in platform-specific formats (9:16 for Reels/Shorts/TikTok).' },
+      { question: 'How much does short-form video editing cost?', answer: 'Pricing is structured around monthly production volume or single-project milestones. Monthly retainers provide predictable per-video rates across packages of 8, 16, or 30 videos per month, with custom scopes available for bespoke 2D/3D explainer animations.' },
+      { question: 'How quickly are finished edits delivered?', answer: 'Standard short-form video edits are delivered within 24 to 48 hours from when raw footage is uploaded. Bespoke standalone 2D/3D explainer animations typically require 1 to 2 weeks depending on illustration and animation complexity.' },
+      { question: 'What equipment or footage quality is required?', answer: 'You can record using any modern smartphone or dedicated camera. While clean lighting and clear audio improve the final result, our post-production process includes audio noise cleanup, volume leveling, and color balancing on every clip.' },
+      { question: 'Who owns the finished videos and source files?', answer: 'You maintain 100% commercial ownership of all final rendered video assets upon milestone completion.' }
     ],
     indexable: true,
     status: 'published'

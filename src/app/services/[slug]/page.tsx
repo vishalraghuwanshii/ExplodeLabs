@@ -15,6 +15,8 @@ import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { JsonLd } from '@/components/seo/JsonLd';
+import { ReelShowcase } from '@/components/services/ReelShowcase';
+import { MotionProjectIntake } from '@/components/services/MotionProjectIntake';
 import { 
   CheckCircle2, 
   ArrowRight, 
@@ -282,70 +284,92 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             )}
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Button href="/contact" size="lg" variant="primary" withArrow>
-                {ctaText}
-              </Button>
-              <Button href="/architect" size="lg" variant="outline">
-                Scope with AI Architect
-              </Button>
+              {service.slug === 'motion-graphics' ? (
+                <>
+                  <Button href="#project-intake" size="lg" variant="primary" withArrow>
+                    Start a Project
+                  </Button>
+                  <Button href="#portfolio-reels" size="lg" variant="outline">
+                    See Our Work ↓
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button href="/contact" size="lg" variant="primary" withArrow>
+                    {ctaText}
+                  </Button>
+                  <Button href="/architect" size="lg" variant="outline">
+                    Scope with AI Architect
+                  </Button>
+                </>
+              )}
             </div>
           </div>
 
-          {/* Right Column: Engagement Specs Card */}
+          {/* Right Column: Engagement Specs Card or Dedicated Intake */}
           <div className="lg:col-span-4">
-            <div className="p-6 bg-[#0e0e0e] border border-[#222222] rounded-xl space-y-6 sticky top-24 shadow-xl">
-              <h3 className="text-xs font-mono uppercase tracking-wider text-[#71717a] font-semibold flex items-center gap-2">
-                <Sliders className="w-3.5 h-3.5 text-[#ff5500]" />
-                <span>Project Details</span>
-              </h3>
+            {service.slug === 'motion-graphics' ? (
+              <MotionProjectIntake />
+            ) : (
+              <div className="p-6 bg-[#0e0e0e] border border-[#222222] rounded-xl space-y-6 sticky top-24 shadow-xl">
+                <h3 className="text-xs font-mono uppercase tracking-wider text-[#71717a] font-semibold flex items-center gap-2">
+                  <Sliders className="w-3.5 h-3.5 text-[#ff5500]" />
+                  <span>Project Details</span>
+                </h3>
 
-              <div className="space-y-4 text-xs">
-                <div>
-                  <div className="text-[#71717a] mb-1 flex items-center gap-1">
-                    <Target className="w-3.5 h-3.5 text-[#ff5500]" />
-                    <span>Pricing Model</span>
+                <div className="space-y-4 text-xs">
+                  <div>
+                    <div className="text-[#71717a] mb-1 flex items-center gap-1">
+                      <Target className="w-3.5 h-3.5 text-[#ff5500]" />
+                      <span>Pricing Model</span>
+                    </div>
+                    <div className="text-base font-bold font-mono text-[#ff5500]">
+                      {service.pricingRange?.avg || 'Custom Milestone'}
+                    </div>
+                    <div className="text-[11px] text-[#8e8e93] mt-0.5">
+                      Clear deliverables, fixed sprint scopes, no unexpected fees
+                    </div>
                   </div>
-                  <div className="text-base font-bold font-mono text-[#ff5500]">
-                    {service.pricingRange?.avg || 'Custom Milestone'}
-                  </div>
-                  <div className="text-[11px] text-[#8e8e93] mt-0.5">
-                    Clear deliverables, fixed sprint scopes, no unexpected fees
-                  </div>
-                </div>
 
-                <div className="pt-3 border-t border-[#181818]">
-                  <div className="text-[#71717a] mb-1 flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5 text-[#ff5500]" />
-                    <span>Delivery Timeline</span>
-                  </div>
-                  <div className="text-sm font-semibold font-mono text-[#f5f5f0]">
-                    {service.typicalTimeline || '2 to 6 weeks'}
-                  </div>
-                </div>
-
-                {technologies.length > 0 && (
                   <div className="pt-3 border-t border-[#181818]">
-                    <div className="text-[#71717a] mb-2 flex items-center gap-1">
-                      <Cpu className="w-3.5 h-3.5 text-[#ff5500]" />
-                      <span>Tools & Tech Stack</span>
+                    <div className="text-[#71717a] mb-1 flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5 text-[#ff5500]" />
+                      <span>Delivery Timeline</span>
                     </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {technologies.slice(0, 8).map((t) => (
-                        <span key={t} className="text-[11px] font-mono text-[#a1a1aa] bg-[#141414] border border-[#202020] px-2 py-0.5 rounded">
-                          {t}
-                        </span>
-                      ))}
+                    <div className="text-sm font-semibold font-mono text-[#f5f5f0]">
+                      {service.typicalTimeline || '2 to 6 weeks'}
                     </div>
                   </div>
-                )}
-              </div>
 
-              <Button href="/contact" variant="primary" size="sm" className="w-full" withArrow>
-                Request Custom Scope
-              </Button>
-            </div>
+                  {technologies.length > 0 && (
+                    <div className="pt-3 border-t border-[#181818]">
+                      <div className="text-[#71717a] mb-2 flex items-center gap-1">
+                        <Cpu className="w-3.5 h-3.5 text-[#ff5500]" />
+                        <span>Tools & Tech Stack</span>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {technologies.slice(0, 8).map((t) => (
+                          <span key={t} className="text-[11px] font-mono text-[#a1a1aa] bg-[#141414] border border-[#202020] px-2 py-0.5 rounded">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <Button href="/contact" variant="primary" size="sm" className="w-full" withArrow>
+                  Request Custom Scope
+                </Button>
+              </div>
+            )}
           </div>
         </div>
+
+        {/* Dedicated Motion Reel Showcase for Motion Graphics */}
+        {service.slug === 'motion-graphics' && (
+          <ReelShowcase />
+        )}
 
         {/* 2. PROBLEMS WE SOLVE */}
         {problemsSolved.length > 0 && (
