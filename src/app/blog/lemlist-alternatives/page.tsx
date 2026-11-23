@@ -335,7 +335,7 @@ export default function LemlistAlternativesPage() {
                       </td>
                       <td className="p-3.5 sm:p-4 text-[#d1d1d6]">Flat-price volume with inbox rotation</td>
                       <td className="p-3.5 sm:p-4 font-mono text-[#f5f5f0]">$0 Free / Pro $19/mo</td>
-                      <td className="p-3.5 sm:p-4">3 to Unlimited</td>
+                      <td className="p-3.5 sm:p-4">3 (Free), Unlimited on all paid plans</td>
                       <td className="p-3.5 sm:p-4 text-emerald-400">Included on all</td>
                       <td className="p-3.5 sm:p-4 text-[#8e8e93]">Email only; no built-in lead database</td>
                     </tr>
@@ -644,15 +644,15 @@ export default function LemlistAlternativesPage() {
                   </p>
                   <ul className="space-y-2 font-mono text-xs sm:text-sm bg-[#161616] p-4 rounded-xl border border-[#242424]">
                     <li><strong>Free:</strong> $0 a month, permanent (not a trial), no card required. Three rotating inboxes, automated warmup, 500 emails a month, 2,000 lifetime contacts.</li>
-                    <li><strong>Pro:</strong> $19 a month. Up to 20 connected inboxes, 20,000 monthly sends, unlimited contacts, BYOK AI, a custom tracking domain through CNAME, and a Unibox with AI sentiment analysis.</li>
-                    <li><strong>Growth:</strong> $39 a month. Up to 50 inboxes, 50,000 monthly sends, up to 10 team seats, 6,000 platform AI credits, and full BYOK access.</li>
-                    <li><strong>Scale:</strong> $99 a month. Unlimited inboxes, 200,000 monthly sends, priority support.</li>
+                    <li><strong>Pro:</strong> $19 a month. Unlimited connected inboxes, 20,000 monthly sends, unlimited contacts, BYOK AI, a custom tracking domain through CNAME, and a Unibox with AI sentiment analysis.</li>
+                    <li><strong>Growth:</strong> $39 a month. Unlimited connected inboxes, 50,000 monthly sends, up to 10 team seats, 6,000 platform AI credits, and full BYOK access.</li>
+                    <li><strong>Scale:</strong> $99 a month. Unlimited connected inboxes, 200,000 monthly sends, priority support.</li>
                   </ul>
                   <p>
                     The design bet is that mailbox count and send volume, not headcount, should set the price. Inbox rotation spreads every campaign across the connected mailboxes with randomized intervals between sends, so no single inbox sends on a visible beat. Email warmup runs on a native peer-to-peer network. Like the best email warmup tools in 2026, it simulates genuine human interactions and is included on every plan, Free included. Isolated CNAME tracking domains keep click and open tracking off shared infrastructure. The Unibox pulls replies from all secondary mailboxes into one view and tags each as Interested, Not Interested, or Out of Office.
                   </p>
                   <p>
-                    The cost argument is easiest to see at 20 mailboxes. Pro covers 20 inboxes and 20,000 sends for $19. Instantly's first plan above 5,000 sends is Hypergrowth at $107, Smartlead's first plan above 6,000 is Pro at $94, and Lemlist's Email plan, with unlimited senders, is $69 at its 50,000-email tier.
+                    The cost argument is easiest to see at scale. Pro allows unlimited connected inboxes and covers 20,000 sends for $19 flat. Instantly's first plan above 5,000 sends is Hypergrowth at $107, Smartlead's first plan above 6,000 is Pro at $94, and Lemlist's Email plan, with unlimited senders, is $69 at its 50,000-email tier.
                   </p>
                   <p>
                     The boundaries are real. InvokeIQ is email only, with no LinkedIn or social steps. It does not sell a lead database, so teams import verified CSVs or sync leads by webhook from Apollo, Clay, or ListKit, which makes Lemlist's bundled 650M+ database a genuine point against it. It lacks white-label agency client portals. And as a newer platform it has a shorter public track record than Smartlead, Instantly, or Lemlist, which means fewer long-run deliverability case studies to lean on.
@@ -884,7 +884,7 @@ export default function LemlistAlternativesPage() {
                       <td className="p-3.5 sm:p-4 font-mono font-bold text-emerald-400">$39 flat</td>
                       <td className="p-3.5 sm:p-4 font-mono">Flat monthly</td>
                       <td className="p-3.5 sm:p-4 font-mono">50,000</td>
-                      <td className="p-3.5 sm:p-4 text-[#8e8e93]">50 inboxes, up to 10 seats; no lead database</td>
+                      <td className="p-3.5 sm:p-4 text-[#8e8e93]">Unlimited inboxes, up to 10 seats; no lead database</td>
                     </tr>
                     <tr className="hover:bg-[#151515]">
                       <td className="p-3.5 sm:p-4 font-bold text-[#f5f5f0]">
