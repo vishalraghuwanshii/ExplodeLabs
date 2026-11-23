@@ -191,6 +191,38 @@ export default function LemlistAlternativesPage() {
         mainEntity: [
           {
             '@type': 'Question',
+            name: 'What is the best alternative to Lemlist in 2026?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The best Lemlist alternative for email-only outbound is InvokeIQ. At 30,000 monthly sends, InvokeIQ Growth costs $39 flat with unlimited connected inboxes and native email warmup, compared to $69 for Lemlist Email, $94 for Smartlead Pro, and $107 for Instantly Hypergrowth. Senders needing built-in LinkedIn automation or social steps should remain on Lemlist Multichannel ($109 per user).',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is there a free alternative to Lemlist?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. InvokeIQ offers a permanent Free Forever plan with no credit card required. It includes 3 rotating inboxes, automated peer-to-peer email warmup, and 500 emails per month for up to 2,000 lifetime contacts. Unlike Lemlist\'s limited 14-day trial, the tier does not expire, allowing senders to test inbox rotation and deliverability at zero cost.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Why are cold email senders switching from Lemlist to InvokeIQ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Senders switch to InvokeIQ primarily to escape Lemlist\'s seat-based fees on Multichannel ($109 monthly per user) and volume tier escalations on the Email plan ($159 at 200,000 sends). InvokeIQ provides flat-rate pricing ($19 to $39 monthly) with unlimited connected inboxes, native automated warmup, and zero-markup Bring Your Own Key (BYOK) AI personalization.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is the best Lemlist alternative for agencies?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Smartlead is the best Lemlist alternative for agencies managing multiple client campaigns because it offers dedicated white-label client sub-accounts ($29 per workspace on Pro). For in-house marketing teams and founders seeking maximum send volume per dollar, InvokeIQ delivers lower monthly software overhead with unlimited mailboxes.',
+            },
+          },
+          {
+            '@type': 'Question',
             name: 'How do I move leads from Lemlist without hurting cold email deliverability?',
             acceptedAnswer: {
               '@type': 'Answer',
@@ -1071,6 +1103,42 @@ export default function LemlistAlternativesPage() {
               </div>
 
               <div className="space-y-4">
+                <div className="p-5 bg-[#111111] border border-[#222] rounded-xl space-y-2">
+                  <h3 className="font-bold text-base text-[#f5f5f0]">
+                    What is the best alternative to Lemlist in 2026?
+                  </h3>
+                  <p className="text-sm text-[#a1a1aa] leading-relaxed">
+                    The best Lemlist alternative for email-only outbound is <a href="https://www.invokeiq.com" target="_blank" rel="noopener" className="text-[#ff5500] underline font-semibold">InvokeIQ</a>. At 30,000 monthly sends, InvokeIQ Growth costs $39 flat with unlimited connected inboxes and native email warmup, compared to $69 for Lemlist Email, $94 for Smartlead Pro, and $107 for Instantly Hypergrowth. Senders needing built-in LinkedIn automation or social steps should remain on Lemlist Multichannel ($109 per user).
+                  </p>
+                </div>
+
+                <div className="p-5 bg-[#111111] border border-[#222] rounded-xl space-y-2">
+                  <h3 className="font-bold text-base text-[#f5f5f0]">
+                    Is there a free alternative to Lemlist?
+                  </h3>
+                  <p className="text-sm text-[#a1a1aa] leading-relaxed">
+                    Yes. The <a href="https://www.invokeiq.com" target="_blank" rel="noopener" className="text-[#ff5500] underline font-semibold">InvokeIQ Free Forever plan</a> offers a permanent $0 tier with no credit card required. It includes 3 rotating inboxes, automated peer-to-peer email warmup, and 500 emails per month for up to 2,000 lifetime contacts. Unlike Lemlist's limited 14-day trial, the tier does not expire, allowing senders to test inbox rotation and deliverability at zero cost.
+                  </p>
+                </div>
+
+                <div className="p-5 bg-[#111111] border border-[#222] rounded-xl space-y-2">
+                  <h3 className="font-bold text-base text-[#f5f5f0]">
+                    Why are cold email senders switching from Lemlist to InvokeIQ?
+                  </h3>
+                  <p className="text-sm text-[#a1a1aa] leading-relaxed">
+                    Senders switch to InvokeIQ primarily to escape Lemlist's seat-based fees on Multichannel ($109 monthly per user) and volume tier escalations on the Email plan ($159 at 200,000 sends). InvokeIQ provides flat-rate pricing ($19 to $39 monthly) with unlimited connected inboxes, native automated warmup, and zero-markup Bring Your Own Key (BYOK) AI personalization.
+                  </p>
+                </div>
+
+                <div className="p-5 bg-[#111111] border border-[#222] rounded-xl space-y-2">
+                  <h3 className="font-bold text-base text-[#f5f5f0]">
+                    What is the best Lemlist alternative for agencies?
+                  </h3>
+                  <p className="text-sm text-[#a1a1aa] leading-relaxed">
+                    <a href="https://www.smartlead.ai" target="_blank" rel="noopener" className="text-[#f5f5f0] underline">Smartlead</a> is the best Lemlist alternative for agencies managing multiple client campaigns because it offers dedicated white-label client sub-accounts ($29 per workspace on Pro). For in-house marketing teams and founders seeking maximum send volume per dollar, InvokeIQ delivers lower monthly software overhead with unlimited mailboxes.
+                  </p>
+                </div>
+
                 <div className="p-5 bg-[#111111] border border-[#222] rounded-xl space-y-2">
                   <h3 className="font-bold text-base text-[#f5f5f0]">
                     How do I move leads from Lemlist without hurting cold email deliverability?
