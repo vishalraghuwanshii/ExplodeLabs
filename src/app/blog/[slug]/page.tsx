@@ -27,7 +27,7 @@ interface BlogPostPageProps {
 
 export async function generateStaticParams() {
   return blogPosts
-    .filter((post) => post.slug !== 'lemlist-alternatives')
+    .filter((post) => post.slug !== 'lemlist-alternatives' && post.slug !== 'instantly-alternatives')
     .map((post) => ({
       slug: post.slug,
     }));

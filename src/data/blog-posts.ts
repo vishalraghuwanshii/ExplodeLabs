@@ -466,5 +466,52 @@ export const blogPosts: BlogPost[] = [
         ]
       }
     ]
+  },
+  {
+    id: 'post-8',
+    slug: 'instantly-alternatives',
+    title: '7 Best Instantly Alternatives in 2026 (Pricing Wall Teardown)',
+    excerpt: 'Compare the 7 best Instantly alternatives in 2026. We break down Instantly\'s $47 contact cap, $107 jump, and live pricing across 7 competitors.',
+    category: 'Growth & Outbound',
+    publishedDate: 'November 25, 2026',
+    readTime: '13 min read',
+    featured: true,
+    author: {
+      name: 'Outbound Infrastructure Team',
+      role: 'Email Infrastructure & Deliverability Research',
+      avatarInitials: 'OI'
+    },
+    tags: [
+      'Instantly Alternatives',
+      'Cold Email Software',
+      'Email Warmup',
+      'Inbox Rotation',
+      'Cold Email Deliverability'
+    ],
+    keyTakeaways: [
+      'Instantly\'s $47 Growth tier locks workspaces at 1,000 fixed uploaded contacts across all campaigns and 5,000 monthly sends, forcing a jump to Hypergrowth at $107/month.',
+      'Combining Hypergrowth ($107), Supersonic Data Credits ($97), and Hypergrowth Inbox Placement ($97) pushes Instantly software costs to $291 to $301/month before buying mailboxes.',
+      'InvokeIQ Pro ($19/mo founding, $39 regular) covers 20,000 monthly sends, unlimited contacts, unlimited inboxes, and AES-256 BYOK AI; Growth ($39 founding, $89 regular) covers 50,000 sends.',
+      'Woodpecker caps free warmup slots at 3 to 30 depending on tier ($5/mo per extra warmup), while Smartlead gates Growth and Premium warmup pools at $94 and $174/month.'
+    ],
+    tableOfContents: [
+      { id: 'pricing-wall', title: '1. Inside the Instantly Pricing Wall' },
+      { id: 'at-a-glance', title: '2. 7 Alternatives at a Glance' },
+      { id: 'reviews', title: '3. Detailed Reviews (1 - 7)' },
+      { id: 'volume-scenarios', title: '4. Cost Across 3 Volume Scenarios' },
+      { id: 'replace-database', title: '5. Replacing the 450M+ Lead DB' },
+      { id: 'migration-playbook', title: '6. Safe Migration Checklist' },
+      { id: 'decision-matrix', title: '7. Decision Matrix' },
+      { id: 'faqs', title: '8. Frequently Asked Questions' }
+    ],
+    contentSections: [
+      {
+        id: 'pricing-wall',
+        heading: '1. Inside the Instantly Pricing Wall',
+        paragraphs: [
+          'Instantly splits email sending, lead data credits, and inbox placement tests into three separate subscriptions. The $47 Growth tier limits your account to 1,000 fixed uploaded contacts across all campaigns and drops full Unibox CRM access after a 14-day trial, pushing active teams into the $107 Hypergrowth tier.'
+        ]
+      }
+    ]
   }
 ];
